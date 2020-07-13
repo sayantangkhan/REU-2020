@@ -1,0 +1,87 @@
+\documentclass[11pt, notitlepage]{article}
+\usepackage[utf8]{inputenc}
+
+% \usepackage[nottoc]{tocbibind}
+\usepackage{datetime}
+\usepackage{graphicx}
+\usepackage[nointegrals]{wasysym}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{enumerate}
+\usepackage{marginnote}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{bbm}
+% \usepackage{thm-autoref}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{unthm}{Theorem}
+
+\newtheorem{lem}[thm]{Lemma}
+% \newcommand{\lemautorefname}{Lemma}
+
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+
+\theoremstyle{definition}
+\newtheorem*{question}{Question}
+
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\usepackage[top=2cm, bottom=2cm, inner=2cm, outer=4cm, marginparwidth=3.4cm]{geometry}
+
+\usepackage{gentium}
+% \usepackage[euler-digits,small]{eulervm}
+\usepackage{enumerate}
+\usepackage{xcolor}
+
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand*{\incfig}[2][1]{%
+    \def\svgscale{#1}
+    \import{./images/}{#2.pdf_tex}
+}
+
+
+\title{REU 2020}
+\author{Partin and Khan}
+% \date{\formatdate{3}{10}{2019}}
+
+
+\def\sectionautorefname{Section}
+\def\thmautorefname{Theorem}
+\def\lemautorefname{Lemma}
+
+\makeatletter
+
+\makeatother
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\input{steps1to2}
+
+\input{factoringlemma}
+
+\end{document}
