@@ -1,0 +1,58 @@
+\section{Pushforward of fibrations along covers}
+\label{sec:pushf-fibr-along}
+
+In this section, we'll prove a criterion for when a fibration $\wt{f}: \wt{M} \to S^1$ of a
+$3$-manifold $\wt{M}$ over $S^1$ (more specifically $\RR/\ZZ$) can be pushed forward to a fibration
+$f$ of a $3$-manifold $M$ covered by $\wt{M}$ such that $\wt{f} = f \circ p$, where $p$ is the
+covering map. More specifically, we'll be interested in the case when $M$ is a non-orientable $3$-manifold,
+and $\wt{M}$ the orientation double cover.
+
+To understand what the ingredients of the criterion ought to be, it helps to think about the
+correspondence between fibrations over $\RR/\ZZ$ and $1$-forms on $\wt{M}$ of a specific kind. Given
+such a fibration $\wt{f}$, we can pull back the $1$-form $d\theta$ on $S^1$ along the map $\wt{f}$
+to get $1$-form $\wt{\alpha}$. Since $\wt{f}$ is regular, and $d\theta$ is nowhere vanishing, the
+pullback $\wt{\alpha}$ is also nowhere vanishing, or as Thurston refers to it, a \emph{non-singular}
+$1$-form. Furthermore, $\wt{\alpha}$ also has integer periods, i.e. its integral over any closed
+loop lies in $\ZZ$. To see this, pushforward the loop to $S^1$, and it's clear that the integral of
+$d\theta$ on an closed loop in $\RR/\ZZ$ must lie in $\ZZ$. To sum it up, the pullback $1$-form
+$\wt{\alpha}$ is a non-singular $1$-form with integer periods. It turns out that this condition
+describes a fibration completely. That is to say, given any other non-singular $1$-form $\beta$ with
+integer periods, one gets a fibration $g: \wt{M} \to \RR/\ZZ$ from the following formula (here $x_0$
+is some arbitrarily chosen basepoint).
+\begin{align*}
+  g(x) \coloneqq \left( \int_{x_0}^x \beta \right) \bigg/ \ZZ
+\end{align*}
+It's clear that pulling back $d\theta$ along this map gives $\beta$ once again, which gives us the
+correspondence between fibrations over $S^1$ and non-singular $1$-forms with integer periods.
+
+For the fibration $\wt{f}: \wt{M} \to \RR/\ZZ$ to descend to the quotient $M$, we must have the
+following identity hold for any deck transformation $\iota$.
+\begin{align*}
+  \wt{f}(x) = \wt{f}(\iota(x))
+\end{align*}
+We can express the terms in the above identity as integrals of $\wt{\alpha}$: doing so tells us that
+we need to have the following identity hold.
+\begin{align*}
+  \left(   \int_{x_0}^x \wt{\alpha} - \int_{x_0}^{\iota(x)} \wt{\alpha}\right) \in \ZZ
+\end{align*}
+By the change of variables formula, the first term in the expression can be written in the
+following manner.
+\begin{align*}
+  \int_{x_0}^x \wt{\alpha} = \int_{\iota(x_0)}^{\iota(x)} (\iota^{-1})^{\ast} \wt{\alpha}
+\end{align*}
+If $( \iota^{-1})^{\ast}\wt{\alpha} = \wt{\alpha}$, we can substitute the right hand term into the identity we want
+to prove, and simplify it to the following criterion.
+\begin{align*}
+  \left(   \int_{x_0}^{\iota(x_0)} \wt{\alpha}\right) \in \ZZ
+\end{align*}
+This gives us a sufficient condition for determining when a fibration can be pushed forward.
+\begin{lem}
+  If $\wt{f}$ is a fibration from $\wt{M}$ to $\RR/\ZZ$, and $\wt{M}$ is a finite sheeted cover of
+  $M$, then the fibration $f$ can be pushed forward to a fibration from $M$ to $\RR/\ZZ$ if the
+  following conditions on $\wt{\alpha}$ (the pullback of $d\theta$) hold for all deck
+  transformations $\iota$.
+  \begin{enumerate}[(i)]
+  \item $\wt{\alpha}$ is $\iota^{-1}$ invariant.
+  \item $\displaystyle \int_{x_0}^{\iota(x_0)} \wt{\alpha}$ is an integer.
+  \end{enumerate}
+\end{lem}
