@@ -1,0 +1,38 @@
+\section{Filling in the Gaps}
+
+\textbf{Step 5:}
+\textcolor{red}{I'm just going to try and write out the argument for now, not worrying about format or how it sounds in context of a paper}
+
+Recall that $\wt{P_{n,k}}$ and $\wt{Q_{n,k}}$ are the double orientation covers of our surfaces and also the fibers of $\wt{M^i_{n,k}}$ for $i = 1,2$ respectively. As in Yazdi, we are going to be considering the homology classes $[\wt{P^r_{n,k}}] \coloneqq [\wt{P_{n,k}}] + r[\wt{F^1_{n,k}}]$ and $[\wt{Q^r_{n,k}}] \coloneqq [\wt{Q_{n,k}}] + r[\wt{F^2_{n,k}}]$. Representatives for these homology classes can be found by taking the oriented sum.
+
+At this point we should be able to cite Yazdi's Lemma 3.5 as the proof will go the exact same and say:
+
+\begin{lem}
+The surfaces $\wt{P^r_{n,k}}$ and $\wt{Q^r_{n,k}}$ are Thurston norm-minimizing, with genera equal to $\wt{g^r_{n,k}} \coloneqq \wt{g_{n,k}} + r$ and $g^{r,'}_{n,k} \coloneqq \wt{g'_{n,k}} + r$. As $r$ varies between $0$ and $14n$ (or $15n$ for $Q$), the genera of $P^r_{n,k}$ and $Q^r_{n,k}$ cover the range between $\wt{g_{n,k}}$ and $\wt{g_{n,k+1}}$ ($\wt{g'_{n,k}}$ and $\wt{g'_{n,k+1}}$ resp.). Moreover, $P^r_{n,k}$ and $Q^r_{n,k}$ are fibrations of $M^i_{n,k}$ with pseudo-Anosov monodromy that fixes $4n$ of the singularities of the invariant foliation.
+\end{lem}
+
+The only adjustment that needs to made to Yazdi's argument for the above to be true for us is in the fixing of the singularities. We just need to state that the singularities of the stable foliation of $f_{n,k}$ and $h_{n,k}$ that are fixed by the maps are the $2n$ points of intersection of the axis of $\rho_1$ with $P_{n,k}$ and $Q_{n,k}$. Thus the lifted maps $\wt{f_{n,k}}$ and $\wt{h_{n,k}}$ will fix $4n$ of the singularities of their invariant foliations.
+
+We can now prove our version of Yazdi's Lemma 3.6:
+
+\begin{lem}
+There are constants $C,D > 0$ such that for every $n \geq 1$, $k \geq 3$, and $0 \leq r \leq 6n$ we have $$\log(\lambda^r_{n,k}) \leq C\frac{n}{\wt{g^r_{n,k}}}, \vspace{1em} \log(\mu^r_{n,k}) \leq D\frac{n}{g^{r,'}_{n,k}}$$
+\end{lem}
+\begin{proof}
+    Let $\mathcal{C} = \wt{\mathcal{C}^i_{n,k}}$ be our fibered faces and $h: \mathcal{C} \xrightarrow[]{} \mathbb{R}$ the function described in Theorem X. Note that we have 
+    $$\wt{g^r_{n,k}} = \wt{g_{n,k}} + r \leq \wt{g_{n,k}} + 14n < 2\wt{g_{n,k}} < 2g_{n,k}$$
+    Thus
+    $$h([\wt{P^r_{n,k}}]) < h([\wt{P_{n,k}}]) \leq C'\frac{n}{g_{n,k}} \leq 2C'\frac{n}{\wt{g^r_{n,k}}} $$
+    
+    The proof for $\mu^r_{n,k}$ is exactly the same.
+\end{proof}
+
+So now we have that our surfaces $\wt{P^r_{n,k}}$ and $\wt{Q^r_{n,k}}$ are fibers of fibrations of $\wt{M^i_{n,k}}$ and their monodromies are pseudo-Anosov with their stretch factors bounded. The question now is, which of these fibrations are lifts of fibrations from $M^i_{n,k}$? Recall our established criteria from the beginning of the paper though, we need to see that the 1-forms associated to $[\wt{P^r_{n,k}}]$ and $[\wt{Q^r_{n,k}}]$ are left invariant by deck transformation and that the integral from the basepoint to its image under $\iota$ along the 1-form is an integer. 
+
+What do we know about these homology classes though? We have already shown that $[\wt{P^r_{n,k}}],[\wt{Q^r_{n,k}}]$ and $[\wt{F^i_{n,k}}]$ are all in the -1 eigenspace of the action of $\iota$ on second homology. This implies that the homology classes $[\wt{P^r_{n,k}}]$ and $[\wt{Q^r_{n,k}}]$ are also in the -1 eigenspace by linearity. Though we also have shown that if an element is in the -1 eigenspace in second homology, then its Poincar\'e dual will be in the 1 eigenspace of the action of $\iota$ on first cohomology. Thus all of our fibrations satisfy our first criteria to be a lift, but which ones satisfy the second?  
+
+Recall that $[\wt{P^r_{n,k}}] = [\wt{P_{n,k}}] + r[\wt{F^1_{n,k}}]$ (and likewise for $\wt{Q^r_{n,k}}$), and thus the Poincar\'e dual of $[\wt{P^r_{n,k}}]$ is just a sum of the duals of $[\wt{P_{n,k}}]$ and $r$ of $[\wt{F^1_{n,k}}]$. Let $\omega$ be the dual of $[\wt{P^r_{n,k}}]$. We know that $\omega$ is the one-form associated to a fibration of $\wt{M^i_{n,k}}$ and is a lift of a fibration of $M^i_{n,k}$. Thus if we let $x_0 \in \wt{M^i_{n,k}}$ be our chosen basepoint, we know that $\int_{x_0}^\iota(x_0) \omega \in \mathbb{Z}$. If now let $\alpha$ be the dual of $[\wt{F^1_{n,k}}]$, we know that $\omega + r\alpha$ is a 1-form corresponding to a fibration of $\wt{M^1_{n,k}}$ for all values of $r$. Thus we know that the integral of $\omega + r\alpha$ around a loop is an integer, thus the integral of $\alpha$ around a loop must be an integer. Thus we can only guarantee that $\int_{x_0}^\iota(x_0) \alpha \in 0.5\mathbb{Z}$ and so $\int_{x_0}^\iota(x_0) \omega + r\alpha \in \mathbb{Z}$ when $r$ is even. This tells us that we can only guarantee that our fibrations $[\wt{P^r_{n,k}}]$ and $[\wt{Q^r_{n,k}}]$ are lifts when $r$ is even. This is why we need two infinite families in order to guarantee that we cover all possible cases.
+
+Now for our fibrations that are lifts, the corresponding pseudo-Anosov monodromies $\wt{f^r_{n,k}}$ and $\wt{h^r_{n,k}}$ descend to pseudo-Anosov monodromies on $M^i_{n,k}$ with the same stretch factor. Thus our upper bound of $2C'\frac{n}{\wt{g^{r}_{n,k}}}$ still holds, but we do need to make a slight modification. This bound is in terms of $\wt{g^r_{n,k}}$, the genus on the fiber in the double orientation cover, but the genus of our fiber downstairs will be one greater, thus $2C'\frac{n}{\wt{g^r_{n,k}}} = 2C'\frac{n}{g^r_{n,k} - 1} \leq 2C'\frac{n}{\frac{1}{2}g^r_{n,k}} = 4C'\frac{n}{g^r_{n,k}}$.
+
+We can now think of $f^r_{n,k}$ as a map on a non-orientable surface of genus $g^r_{n,k}$ and $h^r_{n,k}$ as a map on a non-orientable surface of genus $g^{r,'}_{n,k}$. Note from above we know that $g^r_{n,k}$ covers all natural numbers between $g_{n,k}$ and $g_{n,k+1}$, thus this set of genera for all $r$ covers all natural numbers larger than $g_{n,3} = 40n + 2$ or $g'_{n,3} = 43n + 2$ (\textcolor{red}{Need to check, is it still k = 3?}). Though recall, we are only dealing with genera when $r$ is even, but if $n$ is odd, then since $40n + 2$ will be even and $43n + 2$ odd, we will recover all genera greater than or equal to $43n + 2$. Also recall that all of these surfaces will have $2n$ singularities, so we can either puncture $n$ or $n + 1$ to account for all possible number of punctures.

@@ -1,0 +1,29 @@
+\section{Lifts and Mapping Tori}
+
+Let $M^1_{n,k}$ be the mapping torus of $f_{n,k}$ and $M^2_{n,k}$ be the mapping torus of $h_{n,k}$. Likewise, let $\widetilde{M^1_{n,k}}$ and $\widetilde{M^2_{n,k}}$ denote the mapping tori of $\widetilde{f_{n,k}}$ and $\widetilde{h_{n,k}}$ respectively, where $\widetilde{f_{n,k}}$ and $\widetilde{h_{n,k}}$ are lifts of $f_{n,k}$ and $h_{n,k}$ to the orientation double covers of $P_{n,k}$ and $Q_{n,k}$. Note that it follows that $\widetilde{M^i_{n,k}}$ is the orientation double cover of $M^i_{n,k}$ for $i = 1,2$. 
+
+\textbf{Step 3:} Let $C^i_{n,k}$ denote the fibered face of $H_2(\widetilde{M^i_{n,k}},\mathbb{R})$ corresponding to the map $\widetilde{f_{n,k}}$ for $i = 1$ and $\widetilde{h_{n,k}}$ for $i = 2$. We will show that $M^i_{n,k}$ contains a closed non-orientable surface of genus 3 that lifts to a closed orientable surface of genus 2 in $\widetilde{M^i_{n,k}}$ that is contained in the closure of $C^i_{n,k}$ for $i = 1,2$.
+
+\begin{lem}
+For $i = 1,2$, there is a non-trivial homology classes $0 \neq [\widetilde{F^i_{n,k}}] \in H_2(\widetilde{M^i_{n,k}};\mathbb{Z})$ represented by orientable surfaces of genus two that is a lift of a non-orientable surfaces of genus three $F^i_{n,k}$ in $M^i_{n,k}$. Moreover, $\widetilde{F^i_{n,k}}$ is Thurston norm-minimizing and lie in the closures $\overline{\mathcal{C}^i_{n,k}}$.
+\end{lem}
+\begin{proof}
+
+\end{proof}
+
+\begin{lem}
+Let $\iota: \widetilde{M^i_{n,k}} \xrightarrow[]{} \widetilde{M^i_{n,k}}$ denote the deck transformation that generates the deck group of the orientation double cover. Likewise, let $\iota_*: H_2(\widetilde{M^i_{n,k}};\mathbb{R}) \xrightarrow[]{} H_2(\widetilde{M^i_{n,k}};\mathbb{R})$ denote its action on second homology. Then $\iota_*([\wt{F^i_{n,k}}]) = -[\wt{F^i_{n,k}}]$.
+\end{lem}
+\begin{proof}
+
+By the way we have defined $\wt{F^i_{n,k}}$ as a lift of an embedded subsurface in $M^i_{n,k}$, we know that $\iota$ sends $\wt{F^i_{n,k}}$ to itself. We want to see that $\iota$ is also orientation reversing when restricted to $\wt{F^i_{n,k}}$.
+
+To begin, we first need to see what our surface $\wt{F^i_{n,k}}$ looks like embedded in $\wt{M^i_{n,k}}$. Recall the way that $F^i_{n,k}$ is defined as an embedded $\mathcal{N}_1$ with two boundary components, $\gamma$ and $f^k(\gamma) = \hat{\gamma}$in one of the fibers of $M^i_{n,k}$ union the tubes formed by following $\gamma$ $k$ times around the suspension flow in $M^i_{n,k}$. Let's observe what happens to our embedded genus 1 with 2 boundary components in a single fiber after it is lifted to the orientation double cover. The orientation double cover of a genus 1 nonorientable surface is $S^2$, and we can see here that our embedded surface will lift to a sphere with four boundary components, one can see this by imagining two copies of our embedded subsurface being glued along their single cross-cap. For ease of notation, let's denote the two lifts of $\gamma$ and $\hat{\gamma}$ as $\gamma_0,\gamma_1$ and $\hat{\gamma}_0,\hat{\gamma}_1$ respectively. These curves form the boundary of the sphere with four boundary components that is sitting in our single fiber in $\wt{M^i_{n,k}}$. 
+
+Recall that $\wt{M^i_{n,k}}$ is not only the double orientation cover of $M^i_{n,k}$, but is also the mapping torus of $\wt{f_{n,k}}$ for $i = 1$ and $\wt{h_{n,k}}$ for $i = 2$. Looking at these maps, if we let $p$ denote the covering map for both $\wt{P_{n,k}} \xrightarrow[]{} P_{n,k}$ and $\wt{Q_{n,k}} \xrightarrow[]{} Q_{n,k}$, then we know that $p \circ \wt{f_{n,k}} = f_{n,k} \circ p$ (and likewise for $h_{n,k}$). This tells us that $\wt{f_{n,k}}$ sends $\gamma_0$ to $\hat{\gamma_0}$ and $\gamma_1$ to $\hat{\gamma}_1$. Thus we can see that the tube traced out by following the suspension flow of $\gamma$ to $\hat{\gamma}$ gets lifted to tubes following the suspension flow of $\gamma_0$ to $\hat{\gamma_0)}$ and $\gamma_1$ to $\hat{\gamma_1}$. These tubes glued to our sphere with four boundary components give us our genus 2 surface in the cover. 
+
+We will now show that $\iota$ restricted to $\wt{F^i_{n,k}}$ is orientation reversing by showing that it is orientation reversing on the individual components, i.e. the sphere with boundary and the two tubes. First note that the boundary components of the of the sphere with boundary are also curves that lie in one of the fibers of $\wt{M^i_{n,k}}$. Suppose that we give an orientation to our fiber which induces orientations on our curves. Since $\iota$ is orientation reversing on the fiber, it must reverse the orientation of our curves, and thus reverses the orientations of the boundaries of our sphere when we restrict $\iota$. Thus $\iota$ must be orientation reversing on the whole of the sphere with boundary components. \textcolor{red}{I know you made a slightly different argument for tubes Sayantan, but we can't we just use the same exact arguement for the tubes since the tubes are bounded by these curves?}
+
+Now that we know that $\iota$ is orientation reversing on $\wt{F^i_{n,k}}$, we know that $\iota_*: H_2(\wt{F^i_{n,k}}) \xrightarrow{} \wt{F^i_{n,k}}$ acts by sending the fundamental class $[\wt{F^i_{n,k}}]$ to its negative. We also know that $\wt{F^i_{n,k}}$ is viewed as a representative for an element of $H_2(\wt{M^i_{n,k}})$ by the image of $[\wt{F^i_{n,k}}] \in H_2(\wt{F^i_{n,k}})$ under the map on second homology induced by the inclusion $i: \wt{F^i_{n,k}} \xrightarrow[]{} \wt{M^i_{n,k}}$. Since $\iota$ can be restricted to $\wt{F^i_{n,k}}$, it is a map of the pair $(\wt{M^i_{n,k}},\wt{F^i_{n,k}})$ and thus by the naturality of the long exact sequence of a pair, $\iota_*$ and $i_*$ commute. This tells us that $\iota_*: H^2(\wt{M^i_{n,k}}) \xrightarrow[]{} H^2(\wt{M^i_{n,k}})$ acts by $\iota_*([\wt{F^i_{n,k}}]) = -[\wt{F^i_{n,k}}]$, giving us our desired result.
+
+\end{proof}

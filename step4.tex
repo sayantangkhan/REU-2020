@@ -1,0 +1,27 @@
+\section{Bounding the Stretch Factor}
+
+\textbf{Step 4:} In \cite{yazdi2018pseudo}, Yazdi shows that the family of pseudo-Anosov maps that we have constructed all have the log of their stretch factor bounded above by a similar factor. He does this by considering the associated matrix that comes along with a pseudo-Anosov homeomorphism and showing based on the combinatorics of the curves of the constructed examples, that the spectral radius is bounded by Lemma 1. We want to prove the same thing for our families of examples. Namely that if we let $\lambda_{n,k}$ be the stretch factor of $f_{n,k}$ and $\mu_{n,k}$ be the stretch factor of $h_{n,k}$, then we have the following lemma: 
+\begin{lem}
+There exists universal positive constants $C'$ and $C''$ such that for every $n \geq 1$ and $k \geq 3$:
+$$\log(\lambda_{n,k}) \leq C'\frac{n}{g_{n,k}} \hspace{2em} \log(\mu_{n,k}) \leq C''\frac{n}{g'_{n,k}}$$
+\end{lem}
+\begin{proof}
+We have purposefully constructed our examples so our curves are in the same "general form" as Yazdi's were and thus they will still satisfy the criteria of Lemma 1. Though we still want to explicitly show that this is the case.
+
+We will first show that this is true for $f_{n,k}$ and the curves on $P_{n,k}$. First for consistency of notation, let
+$$\mathcal{A} \coloneqq \mathcal{B} \cup \mathcal{R} \cup \{\alpha_1,\beta_1\}, \overline{\mathcal{A}} \coloneqq \mathcal{A} \cup \rho_1(\mathcal{A}) \cup \dots \cup \rho_1^{n-1}(\mathcal{A})$$
+$$\hat{\mathcal{A}} \coloneqq \overline{\mathcal{A}} \cup \rho_2(\overline{\mathcal{A}}) \cup \dots \cup \rho_2^{k-1}(\overline{\mathcal{A}})$$. Thus $\hat{\mathcal{A}}$ is all the curves on our surface we are Dehn twisting around to get $f_{n,k}$. 
+
+Now let $A$ associated to our pseudo-Anosov $f_{n,k}$ and $\gamma$ the adjacency graph of $A$. In order to bound the spectral radius of $A$, we need to show that $\gamma$ satisfies the criteria of Lemma 1. In order to do this we first need to partition the vertices of $\gamma$, which is equivalent to a partition of the curves in $\hat{\mathcal{A}}$: $$\mathcal{A} = \bigcup_{i=1}^k \rho_2^{i-2}(\overline{\mathcal{A}}).$$ Then define $V_i$ for $1 \leq i \leq k$ as the vertices of $\gamma$ corresponding to elements in $\rho_2^{i-2}(\overline{\mathcal{A}})$.
+
+We can now check the conditions of Lemma 1, based on the combinatorics of the curves on our surface:
+\begin{enumerate}
+    \item 
+    \item 
+    \item 
+    \item 
+    \item All the curves corresponding to an element of $V_j$, $3 < j \leq k$ are disjoint from all the curves in $\overline{A}$. Thus $f_{n,k}$ and $h_{n,k}$ just act by rotation
+\end{enumerate}
+
+\end{proof}
+
