@@ -1,0 +1,27 @@
+\section{Questions}
+
+I decided to list here a number of questions that will be useful to have answers to in order to organize all of our various ideas into a cohesive statement, and figure out exactly what's going on.
+
+For the following questions, let $M$ be a non-orientable 3-manifold that fibers over $S^1$, $\wt{M}$ its double orientation cover, and $p$ and $\iota$ the corresponding covering map and deck transformation.
+
+\begin{enumerate}
+    \item This is probably the most important question and one I realized that I haven't been clear on the entire time. Are the following three statements equivalent?
+    \begin{enumerate}
+        \item $\wt{f} = f \circ p$
+        \item $\wt{f} = \wt{f} \circ \iota$
+        \item $\wt{\alpha} = p^*\alpha$
+    \end{enumerate}\becca[inline]{Maybe I don't have the definition of $\widetilde{f}$ right, but I don't think the two sides of the equation of (a) have the same range.  Maybe what you want is (a) $p\widetilde{f}=fp$ and (b) $\iota\widetilde{f}=\widetilde{f}\iota$.  For (c), you probably want $\alpha\in p_*(\pi_1(\wt M))$}
+    It isn't too hard to show that $(a)$ implies both $(b)$ and $(c)$. I'm not sure at the moment if they are all equivalent though. We can also show that $(b) \implies (a)$ since we can define $f(y) = \wt{f}(p^{-1}(y))$ which is well defined by $(b)$ and locally continuous (\textcolor{red}{I think what's bothering me here is trying to make $p^{-1}$ a well-defined map, which I think on its own isn't continuous}). Now the issue is with $(c)$.
+    
+    If $\wt{\alpha} = p^*\alpha$, then we get that $[f_{\wt{\alpha}}]$ and $[f_\alpha \circ p]$ induce the same maps on cohomology, but that by itself won't tell us that they're homotopic. So how are we going to say that they're equal? Perhaps it's just the case that $\wt{\alpha}$ being a pullback doesn't imply the map we get is a lift. We do get that $(c) \implies$ $\iota^*\wt{\alpha} = \wt{\alpha}$ though.
+     
+    \item Let $\alpha \in H^1(\wt{M})$ and $[f_\alpha]$ the unique homotopy class of maps to $S^1$ such that $f_\alpha^*d\theta = \alpha$. If $\iota^*\alpha = \alpha$ and thus $f \circ \iota \sim f$ for all $f \in [f_\alpha]$, can we choose $f$ such that $f \circ \iota = f$. If not, could we at least say that $f \sim g \circ p$ for $g:M \xrightarrow[]{} S^1$?
+    \becca[inline]{if you agree that it should be $f\iota=\iota f,$ then you can use Birman--Hilden from early in the REU (though maybe adapt it for nonorientable?}
+    \caleb[inline]{I moved Sayantan's proof to a section below}
+    \item Let $[S] \in H_2(\wt{M})$ such that $\iota_*[S] = -[S]$, can we always find a representative $\wt{S} \in [S]$ such that $\iota$ acts on $\wt{S}$ as an orientation-reversing homeomorphism?
+    \becca[inline]{I think as long as $\iota(S)$ and $S$ do not intersect, then $S$ will be an appropriate representative}
+    \item Again let $[S] \in H_2(\wt{M})$ and $\alpha$ its Poincar\'e dual. We know as above that there exists a homotopy class of maps $[f_\alpha]$ such that every representative pulls back $d\theta$ to $\alpha$. We also know that for $f \in [f_\alpha]$ smooth with regular value $y$, $f^{-1}(y)$ is a representative of $[S]$. The question is, for any representative $\wt{S} \in [S]$, can we choose $f$ and $y$ such that $f^{-1}(y) =
+    \wt{S}$.
+    
+    \item New Question. If we let $f: M \xrightarrow{} S^1$ be a fibration and $S$ the fiber, then is $S$ Thurston-norm minimizing for its homology class? I feel like from reading Thurston and Yazdi this must be true, but I'm not seeing why initially. Perhaps this is the same question but stated in a way that helps more, if I have a one form $\alpha$ on $M$ that corresponds to a fibration, then is there only \textit{one} fibration up to homotopy? As in, this one form also gives us a unique surface as the fiber? Not every surface in the same second homology class as one corresponding to a fibration is a fiber of some fibration? Or perhaps another formulation, what happens if I look at the function $f(x) = \int_{x_0}^x \alpha + \omega$ for some exact form $\omega$?
+\end{enumerate}

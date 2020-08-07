@@ -1,21 +1,31 @@
 \section{Background}
 
-The following lemma from Yazdi will be crucial to bounding the stretch factors on the pseudo-Anosov maps we construct.
+\subsection{The Thurston Norm}
 
-\begin{lem}[Yazdi]
-Let $A$ be a non-negative integral matrix, $\Gamma$ be the adjacency graph of $A$, and $V(\Gamma)$ the set of vertices of $\Gamma$. For each $v \in V(\Gamma)$, define $v^+$ to be the set of vertices $u$ such that there is an oriented edge from $v$ to $u$. Let $D$ and $k$ be fixed natural numbers. Assume the following conditions hold for $\Gamma$: \begin{enumerate}
-    \item For each $v \in V(\Gamma)$ we have $\deg_{\text{out}}(v) \leq D$.
-    \item There is a partition $V(\Gamma) = V_1 \cup \dots \cup V_k$ such that for each $v \in V_i$ we have $v^+ \subset V_{i+1}$, for any $1 \leq i \leq k$ except possibly when $i = 1$ or 3 (indices are mod $k$).
-    \item For each $v \in V_1$, we have $v^+ \subset V_2 \cup V_3$.
-    \item For each $v \in V_3$ we have $v^+ \subset V_3 \cup V_4$, and for $u \in V^+ \cap V_3$ we have $u^+ \subset V_4$.
-    \item For all $3 < j \leq k$ and each $v \in V_j$, the set $v^+$ consists of a single element.
+Thurston defined a semi-norm on the second relative homology of a compact, orientable 3-manifold with real coefficients. This Thurston norm was introduced and given a comprehensive overview in \cite{thurston1986norm}, but we will given an introduction here for the unfamiliar reader.
+
+When looking at an orientable 3-manifold $M$, it is known that $H_2(M,\partial M)$ can be represented by embedded surfaces inside of $M$. We can use this to define the Thurston norm, $x: H_2(M,\partial M) \xrightarrow[]{} \mathbb{R}$, on the integer lattice of $H_2(M,\partial M)$. 
+
+Let $\chi_-(S)$ denote the negative component of the Euler characteristic of a surface $S$, i.e. $\chi_-(S) = \max\{-\chi(S),0\}$, we call this the \textit{complexity} of $S$. If a surface $S$ has multiple components then its complexity is the sum of the $\chi_-$ for the individual components. If $a \in H_2(M,\partial M)$, we can define $x(a)$ as:
+$$x(a) = \min\{\chi_-(S) \,\vert\, [S] = a \text{ and $S$ is compact, properly embedded and oriented}\}.$$
+
+We can then extend $x$ to the rational points by claiming it must be linear on rays that go through the origin, and there is a unique way to extend a function defined on rational points to reals so that it is continuous.
+
+One of the most important uses and results that follow from this norm is its connection with fibrations of fibered 3-manifolds that fiber over the circle. An interesting property of the Thurston norm is that its unit ball is a convex polyhedron and thus it makes sense to discuss faces of Thurston norm, i.e. the faces of the unit ball of Thurston norm. Thurston showed that for a closed, fibered 3-manifold $M$ that fibers over the circle, there is a striking connection between cones on open faces and possible fibers of fibrations of $M$. The following is a result of Thurston as it was restated in \cite{yazdi2018pseudo}
+
+\begin{thm}[Thurston]
+Let $\mathcal{F}$ be the set of homology classes $\in H_2(M)$ that are representable by fibers of fibrations of $M$ over the circle.
+\begin{enumerate}
+    \item Elements of $\mathcal{F}$ are in one-to-one correspondence with (non-zero) lattice points inside some union of cones on open faces of Thurston norm.
+    \item If a surface $F$ is transverse to the suspension flow associated to some fibration of $M \xrightarrow[]{} S^1$ then $[F]$ lies in the closure of the corresponding cone in $H_2(M)$.
 \end{enumerate}
-\end{lem}
+\end{thm}
 
-In order to construct the pseudo-Anosov maps that we will later use in this paper, we need to use the Penner construction for non-orientable surfaces. To see a more detailed description of this, see \cite{Strenner_2017}. The typical Penner construction takes a pair of filling multicurves $A = \{a_1,\dots,a_n\}$ and $B = \{b_1,\dots,b_m\}$ and states that a composition of Dehn twists $T_{a_i}$ and $T_{b_i}^{-1}$ that uses all curves in the multicurves at least once will be pseudo-Anosov. The issue for non-orientable surfaces is that in defining Dehn twists, we don't have a well-defined notion of a left or right Dehn twist (what direction we are choosing to be the Dehn twist and which is its inverse). The way we get around this for non-orientable surfaces is by having a collection of filling two-sided curves that are \textit{marked inconsistently}. Each two-sided curve on a non-orientable surface has a neighborhood homeomorphic to an anulus. We can choose orientations on all these annuli and if at the intersections of our curves these orientations disagree, then we say our curves are marked inconsistently. 
+Note that we refer to the cones in item $(1)$ as \textit{fibered faces}.
 
-\textbf{Necessary Theorems for Last Step of Construction:}
+It is one of the primary goals of this paper to extend this definition of Thurston norm to non-orientable manifolds and be able to state the non-orientable version of the theorem above. 
 
-\textcolor{red}{The question is, is it easier to use the original theorems and discuss our extended versions or to state our extended versions and use those when proving Yazdi for non-orientable}
 
-For the theorems below, let $M$ be an orientable closed, fibered 3-manifold 
+
+
+

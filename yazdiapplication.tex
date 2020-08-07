@@ -1,0 +1,83 @@
+\section{An Application of the Non-Orientable Thurston Norm}
+
+\caleb[inline]{For now the original writing I did on our version of Yazdi is stored in the originalyazdi file. I decided to make a new one so I can approach the writing from the idea that we are applying our previous results, and since we now (hopefully) know we only need one of our infinite families}
+
+The Thurston norm provides us with an excellent tool to study fibrations of fibered 3-manifolds that fiber over the circle. An incredibly nice property of a closed 3-manifold $M$ that fibers over $S^1$ is that $M$ is homeomorphic to a mapping torus for some surface $S$. That is, $S \times [0,1]$ where the endpoints, $S \times \{0\}$ and $S \times \{1\}$ are glued by some homeomorphism of $S$. Thus it is a natural expectation that properties of 3-manifolds that fiber over the circle should be related to properties of the fibers, and thus tell us things about surfaces. In this section we will show that our extension of the Thurston norm to non-orientable 3-manifolds will allows us to extend some interesting results on orientable surfaces by Yazdi, given in \cite{yazdi2018pseudo}, to non-orientable surfaces as well.
+
+We see the connection between properties of mapping tori and properties of their fibers when we begin to explore when two mapping tori are the same. It turns out that the homeomorphism type of a mapping torus doesn't change under isotopies of the homeomorphism of the surface $N$ that is defining it. Thus when studying mapping tori and fibered 3-manifolds, one can restrict theirself to thinking about isotopy classes of homeomorphisms. For our case, non-orientable surfaces, this is exactly the \textit{mapping class group} of the surface, $\text{Mod}(N)$. The Nielsen-Thurston classification tells us that every mapping class, i.e. isotopy class of homeomorphisms, has a representative of one of three types: \textit{periodic}, \textit{reducible}, or \textit{pseudo-Anosov}. The Nielsen-Thurstonn type of a mapping clalss turns out to be heavily related to the corresponding geometry of the mapping torus it defines. Perhaps the most important example of this is that a mapping torus is hyperbolic if and only if the correpsonding homeomorphism is isotopic to a pseudo-Anosov homeomorphism. We will care about the last of these three, pseudo-Anosov homeomorphisms. In terms of its actions on curves on a surface, a pseudo-Anosov homeomorphism $f: N \xrightarrow[]{} N$ is simply one such that no power of $f$ preserves any curves on $N$. The nice part of the Nielsen-Thurston classification though, is that pseudo-Anosovs also have a more concise description, independent of their action on curves.
+
+A homeomorphism $f: N \xrightarrow[]{} N$ is \textit{pseudo-Anosov} if there exist a pair of transverse measured foliations, $(\mathcal{F}^+, \mu^+)$ and $(\mathcal{F}^-, \mu^-)$, and a real number $\lambda > 1$ such that 
+$$f(\mathcal{F}^+,\mu^+) = (\mathcal{F}^+,\lambda\mu^+), \,\,\, f(\mathcal{F}^-,\mu^-) = (\mathcal{F}^-,\lambda^{-1}\mu^-).$$
+
+We call $\lambda$ the \textit{stretch factor} or \textit{dilatation} of $f$, and it measures the "complexity" of the homeomorphism. For an application of our results on the Thurston norm, we will be extending the work of Yazdi in \cite{yazdi2018pseudo} on bounding the \textit{minimal dilatation} of a pseudo-Anosov on a punctured surface. Here Yazdi studies the following quantity associated to an orientable surface of genus $g$ with $n$ punctures, $S_{g,n}$:
+$$l_{g,n} = \min\{\log(\lambda(f)) \, \vert \, f \in \text{Mod}(S_{g,n})\ \text{ is pseudo-Anosov}\}$$
+
+We care about the log of stretch factors due to its connections to \textit{topological entropy} of homeomorphisms and geodesics on the \textit{moduli space} of surfaces. The minimum of this set of numbers exists by \textcolor{red}{CITE}. In his paper, Yazdi proves the following two results on the minimal stretch factor of an orientable surface:
+\begin{thm}[Yazdi]
+~\begin{enumerate}
+    \item For any fixed $n \in \mathbb{N}$, there are positive constants $B_1 = B_1(n)$ and $B_2 = B_2(n)$ such that for any $g \geq 2$ $$\frac{B_1}{g} \leq l_{g,n} \leq \frac{B_2}{g}$$.
+    \item There exists positive constants $A$, $B$ and $C$ such that for any $n \geq 1$ and $g \geq Cn\log^2(n)$ $$\frac{B}{g} \leq l_{g,n} \leq \frac{A}{g}$$
+\end{enumerate}
+
+\end{thm}
+
+Our goal is to show these results also hold for non-orientable surfaces, albeit with possibly different constants. That is, if we let $N_{g,n}$ be the genus $g$ non-orientable surface with $n$ punctures and let
+$$l'_{g,n} = \min\{\log(\lambda(f)) \, \vert \, f \in \text{Mod}(N_{g,n})\ \text{ is pseudo-Anosov}\}$$
+Then we prove the following results
+\begin{thm}
+~\begin{enumerate}
+    \item For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that for any $g \geq 2$ $$\frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}$$.
+    \item There exists positive constants $A'$, $B'$ and $C'$ such that for any $n \geq 1$ and $g \geq C'n\log^2(n)$ $$\frac{B'}{g} \leq l'_{g,n} \leq \frac{A'}{g}$$
+\end{enumerate}
+
+\end{thm}
+
+We should note, that Yazdi's and our lower bound come from previous work done by Penner. In essence we can simply use Yazdi's bound as pseudo-Anosovs on non-orientable surfaces lift to pseudo-Anosovs with the same stretch factor on their double orientation cover. The work in Yazdi's paper is done in constructing a family of pseudo-Anosovs, one for each surface $S_{g,n}$, that have 'small' stretch factors. Our goal will be to replicate Yazdi's construction on non-orientable surfaces, using our extension of the Thurston norm.
+
+\subsection{Preliminary Results}
+
+Before diving into the construction of the examples, we need to state some key theorems and lemmas used by Yazdi in his construction that will also be needed for us.
+
+The primary method that is used in Yadzi's construction of pseudo-Anosov maps with small stretch factors is the Penner construction, introduced in \cite{penner1988construction}. The Penner construction allows one to construct pseudo-Anosov homeomorphisms with easily computable stretch factors, as the stretch factors end up being the largest eigenvalues of certain Perron-Frobenius matrices. We will discuss this construction in further detail in a later section, but for now we will state a result by Yazdi on bounding the spectral radius of certain matrices that will be relevant later.
+
+The following lemma from Yazdi will be crucial to bounding the stretch factors on the pseudo-Anosov maps we construct.
+
+\begin{lem}[Yazdi]
+Let $A$ be a non-negative integral matrix, $\Gamma$ be the adjacency graph of $A$, and $V(\Gamma)$ the set of vertices of $\Gamma$. For each $v \in V(\Gamma)$, define $v^+$ to be the set of vertices $u$ such that there is an oriented edge from $v$ to $u$. Let $D$ and $k$ be fixed natural numbers. Assume the following conditions hold for $\Gamma$: \begin{enumerate}
+    \item For each $v \in V(\Gamma)$ we have $\deg_{\text{out}}(v) \leq D$.
+    \item There is a partition $V(\Gamma) = V_1 \cup \dots \cup V_k$ such that for each $v \in V_i$ we have $v^+ \subset V_{i+1}$, for any $1 \leq i \leq k$ except possibly when $i = 1$ or 3 (indices are mod $k$).
+    \item For each $v \in V_1$, we have $v^+ \subset V_2 \cup V_3$.
+    \item For each $v \in V_3$ we have $v^+ \subset V_3 \cup V_4$, and for $u \in V^+ \cap V_3$ we have $u^+ \subset V_4$.
+    \item For all $3 < j \leq k$ and each $v \in V_j$, the set $v^+$ consists of a single element.
+\end{enumerate}
+\end{lem}
+
+There are two other crucial results that are key in Yazdi's use of the Thurston norm to construct pseudo-Anosovs with small stretch factors. Recall from above that we noted there is a connection between the stretch factor of a pseudo-Anosov homeomorphism and its \textit{topological entropy}. The topological entropy of a homeomorphism is a much broader defintion and is a quantity that can be assigned to any homeomorphism, roughly measuring its "complexity". Any time we are given a fibered 3-manifold that fibers over the circle, it is possible to find different fibrations, each of these fibrations giving us a different description of our 3-manifold as a mapping torus. We call the surface homeomorphism to this mapping torus description the \textit{monodromy}. Thus given Thurston's result above on fibers of fibrations being exactly the lattice points on o of Thurston norm, the topological entropy (and in our case, the logarithm of the stretch factor) defines a function from the lattice points on these fibered faces to $\mathbb{R}$. The first of our results is a theorem of Fried and Matsumoto, in which they extended this function from just the lattice points to the entire fibered cone, and noted this extension had the following properties in \textcolor{red}{CITE}:
+
+\begin{thm}[Fried-Matsumoto]
+Let $M$ be a closed, fibered 3-manifold with $b_1(M) \geq 2$ and $\mathcal{C}$ a fibered cone of $H_2(M;\mathbb{R})$. There is a strictly convex function $h: \mathcal{C} \xrightarrow{} \mathbb{R}$ such that:
+\begin{itemize}
+    \item for all $t > 0$ and $u \in \mathcal{C}$ we have $h(tu) = \frac{1}{t}h(u)$
+    \item for every primitive integral class $u \in \mathcal{C} \cap H_2(M)$, $h(u)$ is equal to the entropy of the monodromy correpsonding to $u$.
+    \item $h(u) \xrightarrow{} \infty when u \xrightarrow{} \partial\mathcal{C}$
+\end{itemize}
+\end{thm}
+
+We will also need the following result providing an additional key property of Fried and Matsumoto's extension.
+
+\begin{prop}[Agol-Leininger-Margalit]
+Let $\mathcal{C}$ be a fibered cone for a mapping torus $M$, and $\overline{\mathcal{C}}$ be its closure in $H_2(M;\mathbb{Z})$. If $u \in \mathcal{C}$ and $v \in \overline{\mathcal{C}}$, then $h(u + v) < h(u)$.
+\end{prop}
+
+\subsection{The Penner Construction}
+
+The last item on our checklist before the construction is to give an overview of how the Penner construction works. This is the initial method that Yazdi employs to construct his examples, and how we are able to determine that these examples are bounded above in our desired form. 
+
+In order to construct the maps in the non-orientable case though, we need to use the Penner construction for non-orientable surfaces. To see a more detailed description of this, see \cite{Strenner_2017}. The typical Penner construction takes a pair of filling multicurves $A = \{a_1,\dots,a_n\}$ and $B = \{b_1,\dots,b_m\}$ and states that a composition of Dehn twists $T_{a_i}$ and $T_{b_i}^{-1}$ that uses all curves in the multicurves at least once will be pseudo-Anosov. The issue for non-orientable surfaces is that in defining Dehn twists, we don't have a well-defined notion of a left or right Dehn twist (what direction we are choosing to be the Dehn twist and which is its inverse). The way we get around this for non-orientable surfaces is by having a collection of filling two-sided curves that are \textit{marked inconsistently}. 
+
+Each two-sided curve $c$ on a non-orientable surface $N$ has a neighborhood homeomorphic to an annulus $A$ by a homeomorphism $\phi: A \xrightarrow{} N$, called a \textit{marking}. In this context, we can define the Dehn twist around $(c,\phi)$, $T_{c,\phi}(x)$ as $$T_{c,\phi}(x) = \begin{cases} \phi \circ T \circ \phi^{-1}(x) & \text{for } x \in \phi(A) \\ x & \text{for } x \in N - \phi(A) \end{cases}$$ where $T$ is the standard Dehn twist on $A$ where $T(\theta,t) = (\theta + 2\pi t,t)$. If we fix an orientation of $A$, then we can pushforward this orientation to $S$. We say two marked curves $(c,\phi_c)$ and $(d,\phi_d)$ that intersect at a point $p$ are marked inconsistently if the pushforward of the orientation of $A$ by $\phi_c$ and $\phi_d$ disagree in a neighborhood of $p$.  If all our curves are marked inconsistently and are filling, then once again a composition of Dehn twists around them that use all the curves at least once will be pseudo-Anosov. 
+
+The Penner construction \cite{penner1988construction} not only promises that our map is pseudo-Anosov, but it also gives a way to compute the stretch factor of our map. Given our collection of curves, we can smooth the intersections of the curves to obtain an \textit{invariant train track}, an embedded graph on our surface that remain unchanged by our homeomorphism. Let $f$ be our homeomorphism, $\tau$ the invariant train track and $\mathcal{S}$ the collection of curves on our surface that define $f$. The following description of this process is largely taken from $\cite{yazdi2018pseudo}$, as we will be replicating this exact process for a collection of curves on a non-orientable surface instead.
+
+Using $f$ and $\tau$, we are going to construct a Perron-Frobenius matrix whose Perron-Frobenius eigenvalue is the stretch factor of $f$. In order to do this, we need to consider transverse measures on our train track $\tau$. For every connected curve $x \subset \mathcal{S}$, there is an associated transverse measure $\mu_x$ for $\tau$ that assigns $1$ to all edges lying in $x$ and 0 to everthing else. Let $V_\tau$ be the cone of transverse measures on $\tau$, and $H$ the subspace of $V_\tau$ spanned by the elements $$\{\mu_x \vert x \text{ is a connected curve in } \mathcal{S}\}.$$ The $\mu_x$ are linearly independent and form the \textit{standard basis} for $H$. This subspace $H$ is invariant under the action of $f$ on $V_\tau$, thus $f$ has a linear action on $H$. If we let $A$ be the matrix representing this action in the standard basis, then the stretch factor of $f$, $\lambda(f)$, is the Perron-Frobenius eigenvalue of $f$.
+

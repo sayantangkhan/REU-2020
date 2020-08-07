@@ -1,0 +1,73 @@
+\section{Thurston Norm for Nonorientable manifolds}
+
+We want to take what Thurston did for orientable 3-manifolds and extend it to non-orientable 3-manifolds. The first question that comes up when doing this is, why can't we just define the Thurston norm for a non-orientable 3-manifold that exact same way that Thurston defines the norm for orientable manifolds? One large obstruction to this is the fact that second homology cannot be represented by embedded surfaces for a non-orientable 3-manifold. To understand why this is true, note that the way one represents second homology in orientable manifolds by embedded surfaces is by looking at the image of the fundamental class of the surface under the inclusion map. Though for non-orientable 3-manifolds we already have an issue, that being the fundamental class of an embedded non-orientable surface is always zero. 
+
+We can extend this idea by also considering the following map from $H^1(M)$ to $H_2(M)$ for any 3-manifold $M$. Given an element $\alpha \in H^1(M)$, we can find a map $f_\alpha: M \xrightarrow[]{} S^1$, unique up to homotopy, such that $f_\alpha^*([S^1]) = \alpha$. This is due to the fact that $S^1$ is a $K(\ZZ,1)$ space and hence $H^1(M)$ is in bijection with homotopy classes of maps $M$ to $S^1$. Now since $f_\alpha$ is unique up to homotopy, we may assume that it is smooth and hence has regular values. Let $y$ be such a regular value, then $f_\alpha^{-1}(y)$ is a closed manifold in $M$, which by inclusion of its fundamental class gives us an element of $H_2(M)$. For orientable manifolds this map will be an isomorphism due to Poincar\'e duality, yet for non-orientable manifolds we have no such duality and this map is not an isomorphism. Thus in going from embedded surfaces to second homology for non-orientable 3-manifolds, we lose information. So in trying to define the Thurston norm for non-orientable 3-manifolds, we will just be defining it for first cohomology. 
+
+In order to define our non-orientable Thurston norm, we need to understand the relationship between $H^1$ of our non-orientable, closed 3-manifold $M$ and its double orientation cover $\wt{M}$. For this we have the following lemma:
+
+\begin{lem}
+    Let $M$ be a non-orientable $3$-manifold, and $\wt{M}$ its orientation double cover. Let $\iota: \wt{M} \to \wt{M}$ be the orientation reversing deck transformation, and $p: \wt{M} \to M$ be the covering map. Then $p^{\ast}$ maps $H^1(M, \RR)$ bijectively to the $\iota^{\ast}$-invariant subspace of $H^1(\wt{M}, \RR)$.
+\end{lem}
+\begin{proof}
+    Clearly, for any $1$-form $\alpha$ on $M$, $p^{\ast}(\alpha)$ will be $\iota^{\ast}$-invariant. This means that the image of $p^{\ast}$ lands inside the $\iota^{\ast}$-invariant subspace. To see that the map is injective at the level of $H^1$ (rather than at the level of $1$-forms), consider a $1$-form $\alpha$ on $M$ such that $p^{\ast}\alpha$ is exact. We thus have a smooth function $f$ on $\wt{M}$ such that the following relation holds.
+    \begin{align*}
+        df = p^{\ast} \alpha
+    \end{align*}
+    But since $p^{\ast}\alpha$ is $\iota^{\ast}$-invariant, we must have $df = \iota^{\ast} df$, and by pushing the $\iota^{\ast}$ inside, we get that $df = d(\iota^{\ast}f)$. That means $f$ and $\iota^{\ast}f$ differ by a constant, but that constant must be $0$ since $\iota$ is finite order. This shows that $f$ descends to a function on $M$, and thus $\alpha$ is exact, which proves injectivity of $p^{\ast}$. Now we show surjectivity. Let $[\alpha]$ be an element in $H^1(\wt{M}, \RR)$ that is $\iota^{\ast}$-invariant. That means if we pick a $1$-form $\alpha$ in this equivalence class, the following identity holds for some smooth function $f$.
+    \begin{align*}
+        \alpha - \iota^{\ast}(\alpha) = df
+    \end{align*}
+    Note that this means $\iota^{\ast}df = -df$. Using these two identities, it's easy to verify that the $1$-form $\alpha - \frac{df}{2}$ is $\iota^{\ast}$-invariant, and thus in the image of $p^{\ast}$. This proves surjectivity, and the lemma.
+\end{proof}
+
+So in order to define our norm on $H^1(M)$, we can just restrict the Thurston norm on $H^1(\wt{M})$ to this eigenspace. Simple enough, but the question is, do we recover the same results that related the Thurston norm and fibrations of $S^1$ for the non-orientable case as well? Namely we want to state a non-orientable version of the following theorem:
+
+\begin{thm}[Thurston]
+Let $M$ be a closed, connected and orientable 3-manifold. Let $\mathcal{F}$ be the set of homology classes $\in$ $H_2(M)$ that are representable by fibers of fibrations of $M$ over $S^1$. Elements of $\mathcal{F}$ are in one-to-one correspondence with (non-zero) lattice points inside some union of cones on open faces of Thurston norm.
+\end{thm}
+
+Though note from everything we have already established, we do have a non-orientable version of this theorem. When we restrict the Thurston norm to the 1-eigenspace of $H^1(\wt{M})$, the unit ball we get is still a polyhedron and faces of this new polyhedron will come from the intersection of the eigenspace with faces of the old unit ball. Thus cones on open faces of Thurston norm will remain cones on open faces of Thurston norm even when restricted. \textcolor{red}{Might need to give proof here as to why all of that is true}. Also note that every fibration of $M$ gives a fibration of $\wt{M}$ by composition with the covering map. Thus every fibration of $M$ corresponds to some lattice point upstairs. The question is which fibrations/lattice points in the double cover correpsond to fibrations of $M$. Though recall that we showed in lemmas 2 and 3 it is precisely the fibrations $\wt{f}$ upstairs that satisfy $\int_{x_0}^{\iota(x_0)} \wt{f}^*d\theta \in \mathbb{Z}$, that is, the fibrations $\wt{f}$ such that $\wt{f}^*d\theta$ has even periods. 
+
+A natural question to ask of this non-orientable Thurston norm is for things that aren't fibrations, what do the even lattice points in the $\iota^*$-invariant subspace of $H^1(\wt{M})$ correpsond to in $H^1(M)$. For orientable manifolds, we know the lattice points correspond to embedded surfaces due to Poincar\'e Duality, so can a similar statement be said about our lattice points in $H^1(\wt{M})$? An answer to this that will become important later on is the following:
+
+\begin{lem}
+    Let $M$ be a non-orientable $3$-manifold, and $\wt{M}$ its orientation double cover. Let $\iota: \wt{M} \to \wt{M}$ be the orientation reversing deck transformation, and $p: \wt{M} \to M$ be the covering map. If $S \subset M$ is an embedded surface, $\wt{S} \coloneqq p^{-1}(S)$ and $\alpha$ the Poincar\'e dual of $[\wt{S}] \in H_2(\wt{M})$, then:
+    $$\int_{x_0}^{\iota(x_0)} \alpha \in \mathbb{Z}$$ For any $x_0 \in \wt{M}$.
+\end{lem}
+\begin{proof}
+    We will begin by first slightly changing the statement of the question. Since $\iota$ maps $\wt{S}$ onto itself and is orientation reversing, we have that $\iota_*[\wt{S}] = -[\wt{S}]$ and thus $\alpha$ is $\iota^*$ invariant by Lemma 4. So if we apply a change of coordinates to $\int_{x_0}^{\iota(x_0)} \alpha$ by $\iota^*$, we get that:
+    \begin{align*}
+        \int_{x_0}^{\iota(x_0)} \alpha = \int_{\iota(x_0)}^{x_0} \alpha.
+    \end{align*}
+    This tell us that if we let $\wt{C}$ be the loop created by going along the path $x_0$ to $\iota(x_0)$ and then back upon its image under $\iota$, our statement above is equivalent to asking if:
+    \begin{align*}
+        \int_{\wt{C}} \alpha \in 2\mathbb{Z}
+    \end{align*}
+    Our goal now is to evaluate this integral. Given any two embedded submanifolds $ S,T \subset \wt{M}$ such that $\dim S + \dim T = \dim \wt{M}$, we can define the intersection number between the second homology classes $[S]$ and $[T]$ to be the signed sum of the number of points of intersection between $S$ and $T$:
+    \begin{align}
+        [S] \cdot [T] \coloneqq \sum_{p \in S \cap T} \pm 1
+    \end{align}
+    Where the sign of the 1 depends on the parity of the intersection. \caleb[margin]{Do I need to go into the full description with orientations on the tangent spaces? Also, since this seems to be a fairly well known result, do I need to cite it from where I found it?}. Then if we let $\eta_S$ and $\eta_T$ denote the Poincar\'e duals of $[S]$ and $[T]$, we have that
+    \begin{align*}
+        \int_S \eta_T = \int_T \eta_S = \int_{\wt{M}} \eta_T \wedge \eta_S = [S] \cdot [T].
+    \end{align*}
+    Applying this result to our situation above, we now have that
+    \begin{align*}
+        \int_{\wt{C}} \alpha = [\wt{C}] \cdot [\wt{S}]
+    \end{align*}
+    So our goal becomes showing that this signed intersection number between $\wt{C}$ and $\wt{S}$ is even. What do we know about both of these submanifolds though? We know that $\wt{S}$ is a lift of $S \subset M$, though note we also have that $\wt{C}$ is the composition of the two lifts of some loop $C$ based at $p(x_0)$ in $M$. Since $p$ is a covering map and thus locally a homeomorphism, every point of intersection of $\wt{S}$ and $\wt{C}$ comes from a lift of an intersection point of $S$ and $C$ in $M$. Likewise, every point of intersection between $S$ and $C$ lifts to two points between $\wt{S}$ and $\wt{C}$, one for each lift of $C$. Thus we have that $\wt{S}$ and $\wt{C}$ intersect an even number of times. 
+    
+    Note that we don't need to care about the signs of the intersections in order to verify the integral evaluates to an even integer. Since we now know that $\int_{\wt{C}} \alpha$ is a sum of an even number of $1$ and $-1$, we can group the $1$ and $-1$'s in pairs and each pair will contribute either $+2,-2$ or $0$ to the total. Thus we get that
+    \begin{align*}
+        \int_{\wt{C}} \alpha \in 2\mathbb{Z}
+    \end{align*}
+    And the result follows.
+    
+\subsection{The Oriented Sum (for Non-Orientable Surfaces) \textcolor{red}{IN PROGRESS}}
+
+A useful construction that Thurston introduces in \cite{thurston1986norm} is the \textit{oriented sum}. This construction takes two embedded surfaces $S$ and $S'$, that intersect transversally in an orientable 3-manifold, and forms a new surface $S''$ such that $[S''] = [S] + [S']$ as homology classes, and $\chi(S'') = \chi(S) + \chi(S')$. An important place this construction is useful is when we are looking at "norm-minimizing" surfaces in a single fibered face. The Thurston norm is linear on fibered faces (cones?) and thus if we had that $S$ and $S'$ are norm-minimizing for $[S]$ and $[S']$, along with $[S]$ and $[S']$ both being in the same fibered cone, then $S''$ would also be norm-minimizing for $[S'']$. This is a key step in the construction in $\cite{yazdi2018pseudo}$ that we will be expanding on later.
+
+We would like to have a notion of "oriented sum" for surfaces in a non-orientable 3-manifold, thus also including embedded non-orientable surfaces. We've already noted above that in a non-orientable 3-manifold $M$, we cannot represent second homology with embedded surfaces, but we can find a way to assign an embedded surface to an element of first cohomology. Let $S \subset M$ be an embedded surface, then we have the following process to get an element of $H^1(M)$. First lift $S$ to the embedded surface $\wt{S} \coloneqq p^{-1}(S)$ in the double orientation cover $\wt{M}$, then let $\wt{\alpha}$ be the Poincar\'e dual of $[p^{-1}(S)]$. We know from above (?), Lemma X, that this implies $\wt{\alpha}$ is in the 1-eigenspace of $H^1(\wt{M})$ under the action of $\iota$. Thus $\wt{\alpha} = p*\alpha$ for some $\alpha \in H^1(M)$. We assign this element of $H^1(M)$ to $S$. \caleb[inline]{Can we make this a full representation? That is, is the 1 to many map from 1-forms to embedded surfaces where one takes the pre-image of a regular point under the map to $S^1$ corresponding to a 1-form an "inverse" to the map described in the text? A true inverse if we were looking at the set of embedded surfaces under the equivalence relation that two surfaces are equivalent if they get sent to the same 1-form.}
+    
+\end{proof}

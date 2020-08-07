@@ -56,6 +56,10 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 
+\usepackage[textwidth=25mm]{todonotes}
+\newcommand{\becca}[2][]{\todo[#1,color=blue!40]{BW: #2}}
+\newcommand{\caleb}[2][]{\todo[#1,color=red!40]{CP: #2}}
+
 \newcommand*{\incfig}[2][1]{%
     \def\svgscale{#1}
     \import{./images/}{#2.pdf_tex}
@@ -83,22 +87,21 @@
 
 \tableofcontents
 
+\input{questions}
+
+\input{Introduction}
+
 \input{background}
 
 \input{factoringlemma}
 
 \input{doubleorientationcover}
 
-\input{steps1to2}
+\input{thurstonnorm}
 
-\input{step3}
+\input{yazdiapplication}
 
-\input{step4}
-
-\input{step5}
-
-
-\input{YazdiSummary}
+\input{yazdiconstruction}
 
 \bibliographystyle{alpha}
 \bibliography{references}
