@@ -2,11 +2,11 @@
 
 In this section we are going to use the results that we discussed above to provide a non-orientable replication of Yazdi's construction of pseudo-Anosov maps with "small stretch factors".
 
-Yazdi provides a 5 step construction in order to produce a pseudo-Anosov map for every punctured orientable surface that has stretch factor bounded above by the desired quantity. We will reproduce each step here, giving our version of Yazdi's construction for nonorientable surfaces. 
+Yazdi provides a 5 step construction in order to produce a pseudo-Anosov map for every punctured orientable surface that has stretch factor bounded above by the desired quantity. We will reproduce each step here, giving our version of Yazdi's construction for nonorientable surfaces.
 
-\textbf{Step 1: Constructing the Surfaces} 
+\textbf{Step 1: Constructing the Surfaces}
 
-The first step in the construction is defining a family of surfaces that exhibit a sort of rotational symmetry. Using this symmetry, if one shows that a power of some homeomorphism is pseudo-Ansoov, then so was the original homeomorphism. Yazdi cites this insight as being due to Penner in his construction in \cite{penner1991bounds}. 
+The first step in the construction is defining a family of surfaces that exhibit a sort of rotational symmetry. Using this symmetry, if one shows that a power of some homeomorphism is pseudo-Ansoov, then so was the original homeomorphism. Yazdi cites this insight as being due to Penner in his construction in \cite{penner1991bounds}.
 
 Note that we will try to follow Yazdi's notation as close as we can, in order to make it clear to the reader how our construction replicates his.
 
@@ -19,7 +19,7 @@ We have two natural shift maps $\overline{\rho_1},\overline{\rho_2}: T_\infty \x
 A question that naturally arises is why did we choose the surface $T$ for our building block? It comes down to two main problems:
 \begin{enumerate}
     \item The combinatorics of the curves make the associated matrix we get from the Penner construction satisfy the conditions of Lemma Y
-    \item Having a curve $\gamma$ such that it and its image under our map form the boundary of an embedded $\mathcal{N}_3$ in our surface, which we will need in later steps (\textcolor{red}{Perhaps this was outlined above}). 
+    \item Having a curve $\gamma$ such that it and its image under our map form the boundary of an embedded $\mathcal{N}_3$ in our surface, which we will need in later steps (\textcolor{red}{Perhaps this was outlined above}).
 \end{enumerate}
 
 \begin{lem}
@@ -30,7 +30,7 @@ Define the sequence
     The genus of $P_{n,k}$ is $g_{n,k}$.
 \end{lem}
 \begin{proof}
-    Consider the subsurface $U \subset P_{n,k}$ defined as $$U = \left( \bigcup_{i =0}^{k-1} T_{0,i} \right)/\sim.$$ Then $U$ is a compact, non-orientable surface of genus $12k$ with $2k$ boundary components, and forms a fundamental domain for the covering action of $\overline{\rho_1}$ on $T_\infty$. We have $$\chi(U) = 2 - 12k - 2k = 2 - 14k.$$ Thus $$\chi(P_{n,k}) = n \cdot \chi(U) = -n(14k - 2),$$ since $P_{n,k}$ is formed by gluing $n$ copies of $U$ together along circle boundary components. Therefore $$\chi(P_{n,k}) = 2 - g_{n,k} = -n(14k - 2) \implies g_{n,k} = n(14k - 2) + 2.
+    Consider the subsurface $U \subset P_{n,k}$ defined as $$U = \left( \bigcup_{i =0}^{k-1} T_{0,i} \right)/\sim.$$ Then $U$ is a compact, non-orientable surface of genus $12k$ with $2k$ boundary components, and forms a fundamental domain for the covering action of $\overline{\rho_1}$ on $T_\infty$. We have $$\chi(U) = 2 - 12k - 2k = 2 - 14k.$$ Thus $$\chi(P_{n,k}) = n \cdot \chi(U) = -n(14k - 2),$$ since $P_{n,k}$ is formed by gluing $n$ copies of $U$ together along circle boundary components. Therefore $\chi(P_{n,k}) = 2 - g_{n,k} = -n(14k - 2) \implies g_{n,k} = n(14k - 2) + 2$.
 \end{proof}
 
 \textbf{Step 2: Constructing the Maps}
@@ -43,9 +43,9 @@ Let $\mathcal{B}$ be the union of all $\beta$ curves except $\beta_1$ in $T_{0,0
 
 Let $\alpha_1,\beta_1 \subset T_{0,0}$ be the curves in Figure Z. Let $\phi$ be the composition of Dehn twists along all the curves $\alpha_1, \rho_1(\alpha_1), \dots, \rho_1^{n-1}(\alpha_1)$ followed by Dehn twists along all the curves $\beta_1,\rho_1(\beta_1),\dots,\rho_1^{n-1}(\beta_1)$. Define
 \begin{align*}
-    f_{n,k} &\coloneqq \rho_2 \circ \phi \circ \phi_b \circ \phi_r 
+    f_{n,k} &\coloneqq \rho_2 \circ \phi \circ \phi_b \circ \phi_r
 \end{align*}
-We are using the same notation as Yazdi, so the composition is from right to left. It follows from the Penner construction that $(f_{n,k})^k$ is pseudo-Anosov. Hence $f_{n,k}$ itself is pseudo-Anosov and invariant train tracks $\tau^1_{n,k}$ for $f_{n,k}$ can be obtained from Penner's construction that we described above. 
+We are using the same notation as Yazdi, so the composition is from right to left. It follows from the Penner construction that $(f_{n,k})^k$ is pseudo-Anosov. Hence $f_{n,k}$ itself is pseudo-Anosov and invariant train tracks $\tau^1_{n,k}$ for $f_{n,k}$ can be obtained from Penner's construction that we described above.
 
 \textbf{Step 3: The Mapping Torus}
 
@@ -71,18 +71,18 @@ Let $\iota: \widetilde{M_{n,k}} \xrightarrow[]{} \widetilde{M_{n,k}}$ denote the
 
 By the way we have defined $\wt{F_{n,k}}$ as a lift of an embedded subsurface in $M_{n,k}$, we know that $\iota$ sends $\wt{F_{n,k}}$ to itself. We want to see that $\iota$ is also orientation reversing when restricted to $\wt{F_{n,k}}$.
 
-To begin, we first need to see what our surface $\wt{F_{n,k}}$ looks like embedded in $\wt{M_{n,k}}$. Recall the way that $F_{n,k}$ is defined as an embedded $\mathcal{N}_1$ with two boundary components, $\gamma$ and $f^k(\gamma) = \hat{\gamma}$ in one of the fibers of $M_{n,k}$ union the tubes formed by following $\gamma$ $k$ times around the suspension flow in $M_{n,k}$. Let's observe what happens to our embedded genus 1 with 2 boundary components in a single fiber after it is lifted to the orientation double cover. The orientation double cover of a genus 1 nonorientable surface is $S^2$, and we can see here that our embedded surface will lift to a sphere with four boundary components, one can see this by imagining two copies of our embedded subsurface being glued along their single cross-cap. For ease of notation, let's denote the two lifts of $\gamma$ and $\hat{\gamma}$ as $\gamma_0,\gamma_1$ and $\hat{\gamma}_0,\hat{\gamma}_1$ respectively. These curves form the boundary of the sphere with four boundary components that is sitting in our single fiber in $\wt{M_{n,k}}$. 
+To begin, we first need to see what our surface $\wt{F_{n,k}}$ looks like embedded in $\wt{M_{n,k}}$. Recall the way that $F_{n,k}$ is defined as an embedded $\mathcal{N}_1$ with two boundary components, $\gamma$ and $f^k(\gamma) = \hat{\gamma}$ in one of the fibers of $M_{n,k}$ union the tubes formed by following $\gamma$ $k$ times around the suspension flow in $M_{n,k}$. Let's observe what happens to our embedded genus 1 with 2 boundary components in a single fiber after it is lifted to the orientation double cover. The orientation double cover of a genus 1 nonorientable surface is $S^2$, and we can see here that our embedded surface will lift to a sphere with four boundary components, one can see this by imagining two copies of our embedded subsurface being glued along their single cross-cap. For ease of notation, let's denote the two lifts of $\gamma$ and $\hat{\gamma}$ as $\gamma_0,\gamma_1$ and $\hat{\gamma}_0,\hat{\gamma}_1$ respectively. These curves form the boundary of the sphere with four boundary components that is sitting in our single fiber in $\wt{M_{n,k}}$.
 
-Recall that $\wt{M_{n,k}}$ is not only the double orientation cover of $M_{n,k}$, but is also the mapping torus of $\wt{f_{n,k}}$. Looking at these maps, if we let $p$ denote the covering map for $\wt{P_{n,k}} \xrightarrow[]{} P_{n,k}$, then we know that $p \circ \wt{f_{n,k}} = f_{n,k} \circ p$. This tells us that $\wt{f_{n,k}}$ sends $\gamma_0$ to $\hat{\gamma_0}$ and $\gamma_1$ to $\hat{\gamma}_1$. Thus we can see that the tube traced out by following the suspension flow of $\gamma$ to $\hat{\gamma}$ gets lifted to tubes following the suspension flow of $\gamma_0$ to $\hat{\gamma_0)}$ and $\gamma_1$ to $\hat{\gamma_1}$. These tubes glued to our sphere with four boundary components give us our genus 2 surface in the cover. 
+Recall that $\wt{M_{n,k}}$ is not only the double orientation cover of $M_{n,k}$, but is also the mapping torus of $\wt{f_{n,k}}$. Looking at these maps, if we let $p$ denote the covering map for $\wt{P_{n,k}} \xrightarrow[]{} P_{n,k}$, then we know that $p \circ \wt{f_{n,k}} = f_{n,k} \circ p$. This tells us that $\wt{f_{n,k}}$ sends $\gamma_0$ to $\hat{\gamma_0}$ and $\gamma_1$ to $\hat{\gamma}_1$. Thus we can see that the tube traced out by following the suspension flow of $\gamma$ to $\hat{\gamma}$ gets lifted to tubes following the suspension flow of $\gamma_0$ to $\hat{\gamma_0)}$ and $\gamma_1$ to $\hat{\gamma_1}$. These tubes glued to our sphere with four boundary components give us our genus 2 surface in the cover.
 
 We will now show that $\iota$ restricted to $\wt{F_{n,k}}$ is orientation reversing by showing that it is orientation reversing on the individual components, i.e. the sphere with boundary and the two tubes. First note that the boundary components of the of the sphere with boundary are also curves that lie in one of the fibers of $\wt{M_{n,k}}$. Suppose that we give an orientation to our fiber which induces orientations on our curves. Since $\iota$ is orientation reversing on the fiber, it must reverse the orientation of our curves, and thus reverses the orientations of the boundaries of our sphere when we restrict $\iota$. Thus $\iota$ must be orientation reversing on the whole of the sphere with boundary components. \textcolor{red}{I know you made a slightly different argument for tubes Sayantan, but we can't we just use the same exact arguement for the tubes since the tubes are bounded by these curves?}
 
 Now that we know that $\iota$ is orientation reversing on $\wt{F_{n,k}}$, we know that $\iota_*: H_2(\wt{F_{n,k}}) \xrightarrow{} \wt{F^i_{n,k}}$ acts by sending the fundamental class $[\wt{F_{n,k}}]$ to its negative. We also know that $\wt{F_{n,k}}$ is viewed as a representative for an element of $H_2(\wt{M_{n,k}})$ by the image of $[\wt{F_{n,k}}] \in H_2(\wt{F_{n,k}})$ under the map on second homology induced by the inclusion $i: \wt{F_{n,k}} \xrightarrow[]{} \wt{M_{n,k}}$. Since $\iota$ can be restricted to $\wt{F_{n,k}}$, it is a map of the pair $(\wt{M_{n,k}},\wt{F_{n,k}})$ and thus by the naturality of the long exact sequence of a pair, $\iota_*$ and $i_*$ commute. This tells us that $\iota_*: H^2(\wt{M_{n,k}}) \xrightarrow[]{} H^2(\wt{M_{n,k}})$ acts by $\iota_*([\wt{F_{n,k}}]) = -[\wt{F_{n,k}}]$, giving us our desired result.
 \end{proof}
 
-\textbf{Step 4: Bounding the Stretch Factor} 
+\textbf{Step 4: Bounding the Stretch Factor}
 
-In \cite{yazdi2018pseudo}, Yazdi shows that the family of pseudo-Anosov maps that we have constructed all have the log of their stretch factor bounded above by a similar factor. He does this by considering the associated matrix that comes along with a pseudo-Anosov homeomorphism and showing based on the combinatorics of the curves of the constructed examples, that the spectral radius is bounded by Lemma 1. We want to prove the same thing for our families of examples. Namely that if we let $\lambda_{n,k}$ be the stretch factor of $f_{n,k}$, then we have the following lemma: 
+In \cite{yazdi2018pseudo}, Yazdi shows that the family of pseudo-Anosov maps that we have constructed all have the log of their stretch factor bounded above by a similar factor. He does this by considering the associated matrix that comes along with a pseudo-Anosov homeomorphism and showing based on the combinatorics of the curves of the constructed examples, that the spectral radius is bounded by Lemma 1. We want to prove the same thing for our families of examples. Namely that if we let $\lambda_{n,k}$ be the stretch factor of $f_{n,k}$, then we have the following lemma:
 
 \begin{lem}
 There exists a universal positive constants $C'$ and such that for every $n \geq 1$ and $k \geq 3$:
@@ -94,20 +94,20 @@ We have purposefully constructed our examples so our curves are in the same "gen
 
 We will first show that this is true for $f_{n,k}$ and the curves on $P_{n,k}$. First for consistency of notation, let
 $$\mathcal{A} \coloneqq \mathcal{B} \cup \mathcal{R} \cup \{\alpha_1,\beta_1\}, \overline{\mathcal{A}} \coloneqq \mathcal{A} \cup \rho_1(\mathcal{A}) \cup \dots \cup \rho_1^{n-1}(\mathcal{A})$$
-$$\hat{\mathcal{A}} \coloneqq \overline{\mathcal{A}} \cup \rho_2(\overline{\mathcal{A}}) \cup \dots \cup \rho_2^{k-1}(\overline{\mathcal{A}})$$. Thus $\hat{\mathcal{A}}$ is all the curves on our surface we are Dehn twisting around to get $f_{n,k}$. 
+$$\hat{\mathcal{A}} \coloneqq \overline{\mathcal{A}} \cup \rho_2(\overline{\mathcal{A}}) \cup \dots \cup \rho_2^{k-1}(\overline{\mathcal{A}})$$. Thus $\hat{\mathcal{A}}$ is all the curves on our surface we are Dehn twisting around to get $f_{n,k}$.
 
 Recall from above that we stated we need to find the eigenvalue of the matrix that represents the action of $f_{n,k}$ on the subspace of the cone of transverse measures that is spanned by the measures assigning $1$ to connected curves in $\hat{\mathcal{A}}$ and 0 to everything else. Let $A$ be said matrix and $\gamma$ the adjacency graph of $A$. In order to bound the spectral radius of $A$, we need to show that $\gamma$ satisfies the criteria of Lemma 1. To do this we first need to partition the vertices of $\gamma$, which is equivalent to a partition of the curves in $\hat{\mathcal{A}}$: $$\mathcal{A} = \bigcup_{i=1}^k \rho_2^{i-2}(\overline{\mathcal{A}}).$$ Then define $V_i$ for $1 \leq i \leq k$ as the vertices of $\gamma$ corresponding to elements in $\rho_2^{i-2}(\overline{\mathcal{A}})$.
 
 We can now check the conditions of Lemma 1, based on the combinatorics of the curves on our surface:
 \begin{enumerate}
-    \item 
-    \item 
-    \item 
-    \item 
+    \item
+    \item
+    \item
+    \item
     \item All the curves corresponding to an element of $V_j$, $3 < j \leq k$ are disjoint from all the curves in $\overline{A}$. Thus $f_{n,k}$ and $h_{n,k}$ just act by rotation
 \end{enumerate}
 
-Setting $\lambda = \lambda_{n,k}$, Lemma \textcolor{red}{Spectral Radius} implies that 
+Setting $\lambda = \lambda_{n,k}$, Lemma \textcolor{red}{Spectral Radius} implies that
 $$\lambda^{k-1} = \rho(A)^{k-1} = \rho(A^{k-1}) \leq 4D^4 \implies (k-1)\cdot \log(\lambda) \leq \log(4D^4)$$ $$\implies \frac{k}{2}\log(\lambda) \leq (k-1)\log(\lambda) \leq \log(4D^4)$$
 
 On the other hand, we know $g_{n,k} = (14k - 2)n + 2 \leq 14kn$. Therefore
@@ -126,15 +126,15 @@ The surfaces $\wt{P^r_{n,k}}$ are Thurston norm-minimizing, with genera equal to
 
 \begin{proof}
     \textcolor{red}{For now I'm going to write this section as if the oriented sum section above didn't exist, because I'm not sure how I want to structure that section yet.}
-    All statements of this lemma except for the last follow in the same way as Lemma 3.5 in \cite{yazdi2018pseudo}. We know that 
+    All statements of this lemma except for the last follow in the same way as Lemma 3.5 in \cite{yazdi2018pseudo}. We know that
     $$\chi(\wt{P^r_{n,k}}) = \chi(\wt{P_{n,k}}) + r\cdot\chi(\wt{F_{n,k}}) = (-2(g_{n,k} - 1) + 2)-2r = -2(g_{n,k} + r - 1) + 2.$$ This proves the identity for the genus of $\wt{P^r_{n,k}}.$ To see that $\wt{P^r_{n,k}}$ is Thurston norm-minimizing, note that $[\wt{P^r_{n,k}}] \subset C_{n,k}$ due to $P_{n,k} \subset C_{n,k}$ and $F_{n,k} \subset \overline{C_{n,k}}$. Note that from Theorem 3 in \cite{thurston1986norm}, one can deduce that the fiber of a fibration of a 3-manifold is Thurston norm-minimizing in its second homology class. This along with Lemma\textcolor{red}{F is minimizing} and the linearity of the Thurston norm on a fibered faace tells us
     $$x([\wt{P^r_{n,k}}]) = x([\wt{P_{n,k}}]) + rx([\wt{F_{n,k}}]) = \chi_-(\wt{P_{n,k}}) + 2r = 2(g_{n,k} + r - 1) - 2$$ so $\wt{P^r_{n,k}}$ is also norm minimizing.
-    
-    Just as Yazdi says, the homology class $[\wt{P^r_{n,k}}] = [P_{n,k}] + r[F_{n,k}]$ is clearly integral. It is also primitive since there is a curve in $\wt{M_{n,k}}$ that intersects $P_{n,k}$ transversely and exactly once, while avoiding $F_{n,k}$. (?). Since $[P^r_{n,k}]$ is integral, primitive and lies in the fibered face $C_{n,k}$, by Theorem X it is the fiber of a fibration of $\wt{M_{n,k}}$. Since the monodromy $\wt{f_{n,k}}$ is pseudo-Anosov, all monodromies that correspond to this face are pseudo-Anosov \textcolor{red}{CITE}, so in particular $\wt{f^r_{n,k}}$ is pseudo-Anosov. 
-    
-    As we see in Yazdi, the singularities of the stable foliation of $f_{n,k}$ that are fixed are the $2n$ intersection points of the axis of $\rho_1$ with $P_{n,k}$. Thus $\wt{f_{n,k}}$ has $4n$ singularities of its stable foliation. Furthermore we have already seen that the surface $\F_{n,k}$ can be isotoped to be transverse to the suspension flow and disjoint from the orbit of the $2n$ singularities of $f_{n,k}$, thus $\wt{F_{n,k}}$ can be isotoped to be disjoint from the orbit of these $4n$ singularities of $\wt{f_{n,k}}$. Thus the monodromy $\wt{f^r_{n,k}}$ still fixes the corresponding $4n$ singularities on $P^r_{n,k}$. 
-    
-    This all suffices for the orietable case, but for the non-orientable case we need to also show that our fibrations of $\wt{M_{n,k}}$ defined by our maps $\wt{f^r_{n,k}}$ and surfaces $P^r_{n,k}$ descend to fibrations on $M_{n,k}$. Recall that Lemma 3 gave us the exact criteria for a fibration of $\wt{M_{n,k}}$ to descend to a fibration of $M_{n,k}$. It is precisely when the corresponding 1-form $\wt{\alpha}$ is the pullback of a 1-form on $M_{n,k}$ and the integral $\int_{x_0}^{\iota(x_0)} \alpha \in \mathbb{Z}$ for some chosen basepoint $x_0 \in \wt{M_{n,k}}$. For our situation, this corresponding 1-form is exactly the Poincar\'e dual of $[P^r_{n,k}]$, which we will denote $\wt{\alpha}$. Since $[\wt{P^r_{n,k}}] = [\wt{P_{n,k}}] + r\cdot[\wt{F_{n,k}}]$ and both of the latter homology classes come from lifting surfaces in $M$, we know that $\wt{\alpha}$ satisifes both of these conditions by Lemmas 4 and 7.. 
+
+    Just as Yazdi says, the homology class $[\wt{P^r_{n,k}}] = [P_{n,k}] + r[F_{n,k}]$ is clearly integral. It is also primitive since there is a curve in $\wt{M_{n,k}}$ that intersects $P_{n,k}$ transversely and exactly once, while avoiding $F_{n,k}$. (?). Since $[P^r_{n,k}]$ is integral, primitive and lies in the fibered face $C_{n,k}$, by Theorem X it is the fiber of a fibration of $\wt{M_{n,k}}$. Since the monodromy $\wt{f_{n,k}}$ is pseudo-Anosov, all monodromies that correspond to this face are pseudo-Anosov \textcolor{red}{CITE}, so in particular $\wt{f^r_{n,k}}$ is pseudo-Anosov.
+
+    As we see in Yazdi, the singularities of the stable foliation of $f_{n,k}$ that are fixed are the $2n$ intersection points of the axis of $\rho_1$ with $P_{n,k}$. Thus $\wt{f_{n,k}}$ has $4n$ singularities of its stable foliation. Furthermore we have already seen that the surface $F_{n,k}$ can be isotoped to be transverse to the suspension flow and disjoint from the orbit of the $2n$ singularities of $f_{n,k}$, thus $\wt{F_{n,k}}$ can be isotoped to be disjoint from the orbit of these $4n$ singularities of $\wt{f_{n,k}}$. Thus the monodromy $\wt{f^r_{n,k}}$ still fixes the corresponding $4n$ singularities on $P^r_{n,k}$.
+
+    This all suffices for the orietable case, but for the non-orientable case we need to also show that our fibrations of $\wt{M_{n,k}}$ defined by our maps $\wt{f^r_{n,k}}$ and surfaces $P^r_{n,k}$ descend to fibrations on $M_{n,k}$. Recall that Lemma 3 gave us the exact criteria for a fibration of $\wt{M_{n,k}}$ to descend to a fibration of $M_{n,k}$. It is precisely when the corresponding 1-form $\wt{\alpha}$ is the pullback of a 1-form on $M_{n,k}$ and the integral $\int_{x_0}^{\iota(x_0)} \alpha \in \mathbb{Z}$ for some chosen basepoint $x_0 \in \wt{M_{n,k}}$. For our situation, this corresponding 1-form is exactly the Poincar\'e dual of $[P^r_{n,k}]$, which we will denote $\wt{\alpha}$. Since $[\wt{P^r_{n,k}}] = [\wt{P_{n,k}}] + r\cdot[\wt{F_{n,k}}]$ and both of the latter homology classes come from lifting surfaces in $M$, we know that $\wt{\alpha}$ satisifes both of these conditions by Lemmas 4 and 7..
 \end{proof}
 
 We can now prove our version of Yazdi's Lemma 3.6:
@@ -143,7 +143,7 @@ We can now prove our version of Yazdi's Lemma 3.6:
 There exists a constant $C > 0$ such that for every $n \geq 1$, $k \geq 3$, and $0 \leq r \leq 6n$ we have $$\log(\lambda^r_{n,k}) \leq C\frac{n}{\wt{g^r_{n,k}}}$$
 \end{lem}
 \begin{proof}
-    Let $\mathcal{C} = \wt{\mathcal{C}^i_{n,k}}$ be our fibered faces and $h: \mathcal{C} \xrightarrow[]{} \mathbb{R}$ the function described in Theorem X. Note that we have 
+    Let $\mathcal{C} = \wt{\mathcal{C}^i_{n,k}}$ be our fibered faces and $h: \mathcal{C} \xrightarrow[]{} \mathbb{R}$ the function described in Theorem X. Note that we have
     $$\wt{g^r_{n,k}} = \wt{g_{n,k}} + r \leq \wt{g_{n,k}} + 14n < 2\wt{g_{n,k}} < 2g_{n,k}$$
     Thus
     $$h([\wt{P^r_{n,k}}]) < h([\wt{P_{n,k}}]) \leq C'\frac{n}{g_{n,k}} \leq 2C'\frac{n}{\wt{g^r_{n,k}}} $$
