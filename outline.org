@@ -5,11 +5,11 @@
 
 #+LaTeX_HEADER: \usepackage[extreme]{savetrees}
 #+LaTeX_HEADER: \usepackage[utf8]{inputenc}
-#+LaTeX_HEADER: \usepackage{ mathrsfs }
+#+LaTeX_HEADER: \usepackage{mathrsfs}
 #+LaTeX_HEADER: \thispagestyle{empty}
 #+LaTeX_HEADER: \newcommand{\PGL}{\mathrm{PGL}}
 #+LaTeX_HEADER: \newcommand{\RR}{\mathbb{R}}
-#+LaTeX_HEADER: \newcommand[1]{\wt}{\widetilde{#1}}
+#+LaTeX_HEADER: \newcommand{\wt}[1]{\widetilde{#1}}
 #+OPTIONS: toc:nil
 
 * Introduction
@@ -65,4 +65,4 @@ Note that this means $\iota^{\ast}df = -df$. Using these two identities, it's ea
 $\alpha + \frac{df}{2}$ is $\iota^{\ast}$-invariant, and thus in the image of $p^{\ast}$. This proves surjectivity,
 and the lemma.
 
-* Minimal stretch factors for pseudo-Anosov maps on non-orientable surfaces
+* An application: minimal stretch factors for pseudo-Anosov maps on non-orientable surfaces
