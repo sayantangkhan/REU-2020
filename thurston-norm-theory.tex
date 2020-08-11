@@ -1,2 +1,119 @@
 \section{Fibered face theory for non-orientable $3$-manifolds}
 \label{sec:fibered-face-theory}
+
+\subsection{The problem with homology in non-orientable $3$-manifolds}
+\label{sec:probl-with-homol}
+
+A first attempt at defining the Thurston norm for a compact non-orientable $3$-manifold might go as
+follows: for any embedded surface $S$ (whether it's orientable or not), one defines the $\chi_-$
+function, much like in the case of orientable $3$-manifolds, and then define the norm of a homology
+class $a \in H^2(M; \ZZ)$ by minimizing $\chi_-(S')$ over all $S'$ representing $a$. This may work,
+but is quite unsatisfying: this construction assigns $0$ norm to all embedded non-orientable
+surfaces, since their fundamental classes are $0$, and thus map to $0$ in $H_2(M; \ZZ)$. This is bad,
+because for orientable $3$-manifolds, it is known that Thurston norm minimizing surfaces are
+precisely the ones that are closed leaves of foliations (see Theorem 5.5 in \cite{gabai1983}). On
+the other hand, it is possible to realize embedded non-orientable surfaces as closed leaves of
+foliations, namely if the original $3$-manifold is the mapping torus of a non-orientable surface.
+
+It turns out that the fundamental problem with non-orientable $3$-manifolds is that homology is a
+very coarse invariant: too coarse to detect embedded non-orientable surfaces. Our workaround will
+be to deal with the first cohomology $H^1(M)$ rather than the second homology $H_2(M)$. The two are
+same in the case of orientable $3$-manifolds, by Poincar\'e duality, but that fails in the case
+of non-orientable $3$-manifolds.
+
+To see why it fails, consider an orientable $3$-manifold $M$. We can explicitly work out the map
+from $H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ given by Poincar\'e duality. Given any $1$-form $\alpha$ such
+that $[\alpha]$ is in $H^1(M; \ZZ)$, one can construct a map $f_{\alpha}$ from $M$ to $\RR/\ZZ$ in
+the following manner.
+\begin{align*}
+  f_{\alpha}(x) \coloneqq \left. \int_{x_0}^x \alpha \right/ \ZZ
+\end{align*}
+Here $x_0$ is a basepoint on $M$ we can choose arbitrarily. The fact that this map is well defined independent
+of the choice of path from $x_0$ to $x$ is a consequence of the fact that $[\alpha]$ lies in $H^1(M; \ZZ)$, i.e.
+its integral around any closed loop is an integer. Consider now the surface $S = f_{\alpha}^{-1}(p)$ for some regular
+value $p \in \RR/\ZZ$. We claim that $[S]$ is the Poincar\'e dual to $\alpha$. More precisely, we claim the following.
+\begin{claim}
+  Let $p$ and $p'$ be two regular values of the function $f_{\alpha}$ and let $S$ and $S'$ be
+  $f_{\alpha}^{-1}(p)$ and $f^{-1}_{\alpha}(p')$ respectively. Then for any closed $2$-form $\omega$ on $M$, the following
+  identity holds.
+  \begin{align*}
+    \int_{S} \omega = \int_{S'} \omega
+  \end{align*}
+  Furthermore, the following identity also holds.
+  \begin{align*}
+    \int_S \omega = \int_M \alpha \wedge \omega
+  \end{align*}
+  In particular, the homology class of $S$ is Poincar\'e dual to $\alpha$.
+\end{claim}
+\begin{proof}
+  The first part of the claim follows from the fact that $S$ and $S'$ are homologous, i.e. $f^{-1}_{\alpha}([p, p'])$
+  is a singular $3$-chain that has $S$ and $S'$ as boundaries. From Stokes' theorem, we get the following.
+  \begin{align*}
+    \int_{S - S'} \omega &= \int_{f_{\alpha}^{-1}([p, p'])} d\omega \\
+                         &= 0
+  \end{align*}
+
+  To prove the second claim, observe that we can break up the second integral as a product integral.
+  \begin{align*}
+    \int_M \alpha \wedge \omega &= \int_{\RR/\ZZ} \left(   \int_{f_{\alpha}^{-1}(x)} \omega \right) dx
+  \end{align*}
+  The above equation is true because $\alpha$ is the pullback of $dx$ along the map $f_{\alpha}$. Observe
+  that the inner integral only makes sense when $x$ is a regular value, but by Sard's theorem, almost
+  every $x \in [0,1]$ is a regular value, so the right hand side is well-defined. By the first part of the
+  claim, the inner integral is a constant function, as we vary over the $x$ which are regular values of $f_{\alpha}$,
+  and the integral of $dx$ over $\RR/\ZZ$ is $1$, giving us the identity we want.
+  \begin{align*}
+    \int_M \alpha \wedge \omega = \int_S \omega
+  \end{align*}
+\end{proof}
+What we have here is an explicit formula for the Poincar\'e duality map. For orientable $3$-manifolds, this
+is an isomorphism, but the formula still makes sense for non-orientable manifolds. In that case, one can see
+that the map from $H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ has a kernel.
+\begin{example}[Failure of Poincar\'e duality for non-orientable $3$-manifolds]
+  Let $\no$ be a non-orientable surface, and let $f$ be any self homeomorphism. Let $M$ be the mapping torus
+  of $(\no, f)$. We then have a map $f: M \to \RR/\ZZ$ given by mapping to the base of the mapping torus.
+  Pulling back the form $dx$ along this map, we get a closed but not exact $1$-form $\alpha$ on $M$. Observe
+  that $f_{\alpha} = f$, because of how we constructed $\alpha$. Furthermore $f_{\alpha}^{-1}(0)$ is $\no$ inside
+  $M$. Thus, the ``Poincar\'e duality map'' for $M$ maps non-trivial element $\alpha \in H^1(M; \ZZ)$ to the
+  zero element $[\no] \in H_2(M; \ZZ)$, since $\no$ is non-orientable. In particular, we end up losing information
+  going from $H^1(M)$ to $H_2(M)$.
+\end{example}
+
+The above example also suggests an alternative method of defining the Thurston norm for
+non-orientable $3$-manifolds: rather than working with $H_2$, we can work with $H^1$ instead,
+because we don't want to lose information by going to $H_2$. {\color{red} Something about inverting this map as well.}
+
+\subsection{Thurston norm for non-orientable $3$-manifolds}
+\label{sec:thurston-norm-non}
+
+For this section, we'll use $M$ to denote a non-orientable $3$-manifold, and $\wt{M}$ to denote its
+orientation double cover. We will denote by $\iota$ the orientation reversing deck transformation of
+$\wt{M}$, and the covering map $\wt{M} \to M$ by $p$. Since we've already concluded that the first
+cohomology is the ``right'' space to define the Thurston norm on, we need to relate $H^1(M; \RR)$
+and $H^1(\wt{M}; \RR)$. The obvious thing to do is to look at the pullback via $p$.
+
+\begin{lem}
+  Let $M$ be a non-orientable $3$-manifold, and $\wt{M}$ its orientation double cover. Let
+  $\iota: \wt{M} \to \wt{M}$ be the orientation reversing deck transformation, and $p: \wt{M} \to M$
+  be the covering map. Then $p^{\ast}$ maps $H^1(M; \RR)$ bijectively to the
+  $\iota^{\ast}$-invariant subspace of $H^1(\wt{M}; \RR)$.
+\end{lem}
+\begin{proof}
+    Clearly, for any $1$-form $\alpha$ on $M$, $p^{\ast}(\alpha)$ will be $\iota^{\ast}$-invariant. This means that the image of $p^{\ast}$ lands inside the $\iota^{\ast}$-invariant subspace. To see that the map is injective at the level of $H^1$ (rather than at the level of $1$-forms), consider a $1$-form $\alpha$ on $M$ such that $p^{\ast}\alpha$ is exact. We thus have a smooth function $f$ on $\wt{M}$ such that the following relation holds.
+    \begin{align*}
+        df = p^{\ast} \alpha
+    \end{align*}
+    But since $p^{\ast}\alpha$ is $\iota^{\ast}$-invariant, we must have $df = \iota^{\ast} df$, and by pushing the $\iota^{\ast}$ inside, we get that $df = d(\iota^{\ast}f)$. That means $f$ and $\iota^{\ast}f$ differ by a constant, but that constant must be $0$ since $\iota$ is finite order. This shows that $f$ descends to a function on $M$, and thus $\alpha$ is exact, which proves injectivity of $p^{\ast}$. Now we show surjectivity. Let $[\alpha]$ be an element in $H^1(\wt{M}, \RR)$ that is $\iota^{\ast}$-invariant. That means if we pick a $1$-form $\alpha$ in this equivalence class, the following identity holds for some smooth function $f$.
+    \begin{align*}
+        \alpha - \iota^{\ast}(\alpha) = df
+    \end{align*}
+    Note that this means $\iota^{\ast}df = -df$. Using these two identities, it's easy to verify that the $1$-form $\alpha - \frac{df}{2}$ is $\iota^{\ast}$-invariant, and thus in the image of $p^{\ast}$. This proves surjectivity, and the lemma.
+\end{proof}
+
+The above lemma tells us that $H^1(M; \RR)$ is a subspace of $H^1(\wt{M}; \RR)$ (and we know
+precisely what that subspace is), and thus the Thurston norm on $H^1(\wt{M}; \RR)$ can be restricted
+to a norm on $H^1(M; \RR)$. Note the presence of the $\RR$-coefficients: when working with
+fibrations over $S^1$, the elements of $H^1(M; \ZZ)$ and $H^1(\wt{M}; \ZZ)$ are the elements of
+interest. The above lemma tells us that $p^{\ast}(H^1(M; \ZZ))$ injectively maps into the
+$\iota^{\ast}$-invariant subspace of $H^1(\wt{M}; \ZZ)$. However, surjectivity is not so clear with
+$\ZZ$ coefficients.
