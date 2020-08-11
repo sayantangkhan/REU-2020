@@ -44,6 +44,12 @@
 \theoremstyle{definition}
 \newtheorem{defn}{Definition}[section]
 
+\newtheorem{manualtheoreminner}{Theorem}
+\newenvironment{manualtheorem}[1]{%
+  \renewcommand\themanualtheoreminner{#1}%
+  \manualtheoreminner
+}{\endmanualtheoreminner}
+
 \usepackage[top=2cm, bottom=2cm, inner=2cm, outer=4cm, marginparwidth=3.4cm]{geometry}
 
 % \usepackage{gentium}
@@ -98,14 +104,16 @@
 
 % \input{thurston-norm-theory}
 
-% \input{factoringlemma}
+\input{factoringlemma}
 
-% \input{doubleorientationcover}
+\input{doubleorientationcover}
 
-% \input{thurstonnorm}
+\input{thurstonnorm}
 
 
- \input{yazdiapplication}
+\input{yazdiapplication}
+
+\input{yazdiapplication2}
 
 % \input{notation}
 
