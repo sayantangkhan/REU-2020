@@ -2,12 +2,12 @@
 
 In this section we will prove the second part of Theorem \ref{thm:stretch}, an extension of Yazdi's upper bound that is independent of the number of punctures. As Yazdi states , the trade off here is that we must assume the genus is sufficiently large when compared to the number of punctures.
 
-\textcolor{red}{List of Results in this section and what they depend on:} \caleb[margin]{I'm trying to figure out which proofs we need to elaborate on and which ones we can completely skip}
+\textcolor{red}{List of Results in this section and what they depend on:} \caleb{I'm trying to figure out which proofs we need to elaborate on and which ones we can completely skip}
 \begin{enumerate}
     \item Lemma 4.1: Just number theory
     \item Lemma 4.3: Just number theory
     \item Lemma 4.5: Depends just on the combinatorics of the curves, and our curves follow the exact same combinatorics
-    \item The graph $\overline{\Gamma}$ that Yazdi defines in this section should be the exact same for our example since the ways our curves intersect outside the building blocks is the same 
+    \item The graph $\overline{\Gamma}$ that Yazdi defines in this section should be the exact same for our example since the ways our curves intersect outside the building blocks is the same
     \item Lemma 4.7: Depends on the graph $\overline{\Gamma}$
     \item Lemma 4.8: This might be something we have to prove. It seems to only depend on the combinatorics of the curves but it might take some more work.
     \item Lemma 4.9: Pretty direct from previous lemmas
@@ -17,16 +17,16 @@ In this section we will prove the second part of Theorem \ref{thm:stretch}, an e
 
 \subsection{Preliminary Results}
 
-Before going into our second construction, we need to state some of the number theoretic results, notations and definitions by Yazdi that we will be using. 
+Before going into our second construction, we need to state some of the number theoretic results, notations and definitions by Yazdi that we will be using.
 
 The Jacobsthal function $j(n)$ is defined as, for a given $n \in \mathbb{N}$, what is the smallest integer $j(n)$ such that any sequence of $j(n)$ consecutive integers contains an element relatively prime to $n$? An important corollary of work done by Iwaniec \cite{iwaniec1978problem} on this function is that:
-\begin{corollary}[Iwaniec, Yazdi (?)]
+\begin{cor}[Iwaniec, Yazdi (?)]
 There exists a number $K \geq 2$ such that for every $n \geq 2$, each of the intervals
 \begin{align*}
     [\log^2(n),K\log^2(n)], [K\log^2(n),2K\log^2(n)],[2K\log^2(n),3K\log^2(n)],\dots
 \end{align*}
 contains a number that is relatively prime to $n$.
-\end{corollary}
+\end{cor}
 
 This result is important in defining the following set.Let $\mathcal{S}_n$ be the following set
 \begin{align*}
@@ -35,14 +35,14 @@ This result is important in defining the following set.Let $\mathcal{S}_n$ be th
 
 Then Yazdi shows that this is not a `sparse' subset of the natural numbers.
 
-\begin{lemma}[Yazdi]
+\begin{lem}[Yazdi]
 The ratio of any two consecutive members of $\mathcal{S}_n$ is bounded above by $2K$, where $K$ is the constant in corollary above. IN particular, $K$ is independent of $n$. Moreover, if $a_1$ is the smallest element of $\mathcal{S}_n$ then $a_1 \leq K\log^2(n)$.
-\end{lemma}
+\end{lem}
 
 In order to define the new maps that we will use for the universal bound, we will introduce notation used by Yazdi in his construction.
 
 Given $n \in \mathbb{N}$, we define $\overline{n} \in \mathbb{Z}$ as follows
 
 \begin{gather*}
-    n \equiv 1 (\mod 2) \implies 
+    n \equiv 1 (\mod 2) \implies
 \end{gather*}
