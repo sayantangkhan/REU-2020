@@ -36,7 +36,7 @@ This result is important in defining the following set.Let $\mathcal{S}_n$ be th
 Then Yazdi shows that this is not a `sparse' subset of the natural numbers.
 
 \begin{lem}[Yazdi]
-The ratio of any two consecutive members of $\mathcal{S}_n$ is bounded above by $2K$, where $K$ is the constant in corollary above. IN particular, $K$ is independent of $n$. Moreover, if $a_1$ is the smallest element of $\mathcal{S}_n$ then $a_1 \leq K\log^2(n)$.
+The ratio of any two consecutive members of $\mathcal{S}_n$ is bounded above by $2K$, where $K$ is the constant in corollary above. In particular, $K$ is independent of $n$. Moreover, if $a_1$ is the smallest element of $\mathcal{S}_n$ then $a_1 \leq K\log^2(n)$.
 \end{lem}
 
 In order to define the new maps that we will use for the universal bound, we will introduce notation used by Yazdi in his construction.
@@ -44,5 +44,18 @@ In order to define the new maps that we will use for the universal bound, we wil
 Given $n \in \mathbb{N}$, we define $\overline{n} \in \mathbb{Z}$ as follows
 
 \begin{gather*}
-    n \equiv 1 (\mod 2) \implies
+    n \equiv 1 \,\,(mod  \,\,2) \implies \overline{n} = \frac{n-1}{2}, \\
+    n \equiv 0 \,\,(mod  \,\,4) \implies \overline{n} = \frac{n-2}{2}, \\
+    n \equiv 2 \,\,(mod  \,\,4) \implies \overline{n} = \frac{n-4}{2}.
 \end{gather*}
+
+And we define $\overline{k}$ in a similar fashion. The important property of these numbers is expressed in the following lemma by Yazdi:
+
+\begin{lem}[Yazdi]
+Let $n \geq 3$. The number $\overline{n}$ satisfies $\gcd(n,\overline{n}) = 1$. Moreover, any integer $r$ that is congruent to $\overline{n}$ or $-\overline{n}$ modulo $n$ satisfies $|r| \geq \frac{n}{6}$.
+\end{lem}
+
+\subsection{Constructing New Maps}
+
+We are again going to imitate Yazdi's construction but for our non-orientable surfaces $P_{n,k}$ that we constructed in the last section. For this construction though, we are just going to care about $k \in \mathcal{S}_n$. Along with keeping the same surfaces, we are going to define the mapping classes $\rho_1$ and $\rho_2$ the exact same, as well as the multi curves $\mathcal{B}$ and $\mathcal{R}$. 
+

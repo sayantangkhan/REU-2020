@@ -45,19 +45,31 @@ to prove, and simplify it to the following criterion.
 \begin{align*}
   \left(   \int_{x_0}^{\iota(x_0)} \wt{\alpha}\right) \in \ZZ
 \end{align*}
-This gives us a sufficient condition for determining when a fibration can be pushed forward.
-\begin{lem}
-  If $\wt{f}$ is a fibration from $\wt{M}$ to $\RR/\ZZ$, and $\wt{M}$ is a finite sheeted cover of
-  $M$, then the fibration $f$ can be pushed forward to a fibration from $M$ to $\RR/\ZZ$ if the
-  following conditions on $\wt{\alpha}$ (the pullback of $d\theta$) hold for all deck
-  transformations $\iota$.
-  \begin{enumerate}[(i)]
-  \item $\wt{\alpha}$ is $\iota^{-1}$ invariant.
-  \item $\displaystyle \int_{x_0}^{\iota(x_0)} \wt{\alpha}$ is an integer.
-  \end{enumerate}
-\end{lem}
+This gives us the following sufficient conditions for determining when a fibration can be pushed forward.
 
-We can actually strengthen the above lemma and say that:
+\begin{enumerate}[(i)]
+    \item $\wt{\alpha}$ is $\iota^{-1}$ invariant.
+    \item $\displaystyle \int_{x_0}^{\iota(x_0)} \wt{\alpha}$ is an integer.
+\end{enumerate}
+
+We can strengthen these sufficient conditions to necessary ones. To see this suppose that the fibration $\wt{f}$ from $\wt{M}$ to $\RR/\ZZ$ does descend to a fibration $f$ from $M$ to $\RR/\ZZ$. If we let $p: \wt{M} \xrightarrow[]{} M$ be the covering map, then we must have that $\wt{f} = f \circ p$. Note that this means for any deck transformation $\iota$, 
+\begin{align*}
+    \wt{f} \circ \iota^{-1} = f \circ p \circ \iota^{-1} = f \circ p = \wt{f}
+\end{align*}
+Thus if we look at our 1-form $\wt{\alpha} = \wt{f}^*d\theta$, then we have that
+\begin{align*}
+    (\iota^{-1})^*\wt{\alpha} = (\iota^{-1})^*(\wt{f}^*d\theta) = (\wt{f} \circ \iota^{-1})^*d\theta = \wt{f}^*d\theta = \wt{\alpha}, 
+\end{align*}
+so $\wt{\alpha}$ is invariant under $\iota^{-1}$.
+
+Now that condition $(i)$ is satisfied, $(ii)$ follows naturally. Note as we mentioned above, since $\wt{f}$ descends to $f$, we know that $\wt{f} = \wt{f}(\iota(x))$ for any deck transformation $\iota$. Thus as above, this reduces to the following integrals being equivalent:
+\begin{align*}
+  \int_{x_0}^x \wt{\alpha} = \int_{\iota(x_0)}^{\iota(x)} (\iota^{-1})^{\ast} \wt{\alpha}
+\end{align*}
+
+Which again by the fact that condition $(i)$ is satisfied, reduces to $(ii)$ being true. So $\wt{f}$ pushing forward to a fibration $f$ implies conditions $(i)$ and $(ii)$.
+
+This allows us to state the following lemma:
 
 \begin{lem}
   If $\wt{f}$ is a fibration from $\wt{M}$ to $\RR/\ZZ$, and $\wt{M}$ is a finite sheeted cover of
@@ -70,16 +82,3 @@ We can actually strengthen the above lemma and say that:
   \end{enumerate}
 \end{lem}
 
-We have already seen the first direction, we just need to also show that the reverse direction holds.
-
-\begin{proof}
-Suppose that the fibration $\wt{f}$ from $\wt{M}$ to $\RR/\ZZ$ does descend to a fibration $f$ from $M$ to $\RR/\ZZ$. If we let $p: \wt{M} \xrightarrow[]{} M$ be the covering map, then we must have that $\wt{f} = f \circ p$. Note that this means for any deck transformation $\iota$, $\wt{f} \circ \iota^{-1} = f \circ p \circ \iota^{-1} = f \circ p = \wt{f}$. Thus if we look at our 1-form $\wt{\alpha} = \wt{f}^*d\theta$, then we have that $(\iota^{-1})^*\wt{\alpha} = (\iota^{-1})^*(\wt{f}^*d\theta) = (\wt{f} \circ \iota^{-1})^*d\theta = \wt{f}^*d\theta = \wt{\alpha}$, so $\wt{\alpha}$ is invariant under $\iota^{-1}$.
-
-Now that condition $(i)$ is satisfied, $(ii)$ follows naturally. Note as we mentioned above, since $\wt{f}$ descends to $f$, we know that $\wt{f} = \wt{f}(\iota(x))$ for any deck transformation $\iota$. Thus as above, this reduces to the following integrals being equivalent:
-\begin{align*}
-  \int_{x_0}^x \wt{\alpha} = \int_{\iota(x_0)}^{\iota(x)} (\iota^{-1})^{\ast} \wt{\alpha}
-\end{align*}
-
-Which again by the fact that condition $(i)$ is satisfied, reduces to $(ii)$ being true. Thus $\wt{f}$ pushing forward to a fibration $f$ implies conditions $(i)$ and $(ii)$.
-
-\end{proof}
