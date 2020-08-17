@@ -21,7 +21,7 @@
   citecolor   = blue %Colour of citations
 }
 
-\newtheorem{thm}{Theorem}
+\newtheorem{thm}{Theorem}[section]
 \newtheorem*{unthm}{Theorem}
 
 \newtheorem{lem}[thm]{Lemma}
@@ -33,7 +33,7 @@
 \newtheorem{conj}[thm]{Conjecture}
 
 \theoremstyle{definition}
-\newtheorem{example}{Example}
+\newtheorem{example}[thm]{Example}
 
 \theoremstyle{definition}
 \newtheorem*{question}{Question}
@@ -42,7 +42,7 @@
 \newtheorem*{rem}{Remark}
 
 \theoremstyle{definition}
-\newtheorem{defn}{Definition}[section]
+\newtheorem{defn}[thm]{Definition}
 
 \newtheorem{manualtheoreminner}{Theorem}
 \newenvironment{manualtheorem}[1]{%
