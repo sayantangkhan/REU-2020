@@ -187,14 +187,14 @@ elements on $H^1(\wt{M}; \ZZ)$ that are not pullbacks of elements of $H^1(M; \ZZ
   respect to some pseudo-Anosov map. We can then consider $\gamma$ and $\wt{\gamma}$ as curves
   inside the $3$-manifolds $M$ and $\wt{M}$.
 
-  Pick a basis of $H_1(\wt{M}; \ZZ)$ containing $\wt{\gamma}$. Using this basis, we can construct an
-  element of $H^1(\wt{M}; \ZZ)$ by simply assigning values to the basis elements. \caleb[margin]{Is this not an element of $H^1(\wt{M}, \RR)$?} Pick an element
-  $\alpha$ that assigns $0.5$ to $\wt{\gamma}$ and an integer value to every other basis
-  element. Consider the cohomology class $\alpha + \iota^{\ast}\alpha$. Since
-  $\iota \wt{\gamma} = \wt{\gamma}$ (because $\wt{\gamma}$ is the pre-image of a curve of $M$),
-  $\alpha + \iota^{\ast}\alpha$ is an $\iota^{\ast}$-invariant element of $H^1(\wt{M}; \ZZ)$ that
-  assigns $1$ to $\wt{\gamma}$. Such a cohomology class cannot be a pullback of a class on $M$ since
-  the pullback of a cohomology class on $M$ would assign an even value to $\wt{\gamma}$.
+  Pick a basis of $H_1(\wt{M}; \ZZ)$ containing $\wt{\gamma}$. Using this basis, we can construct an element
+  of $H^1(\wt{M}; \ZZ)$ by simply assigning integer values to the basis elements. \caleb{Is this not an
+    element of $H^1(\wt{M}, \RR)$? SK: Yes, it is, but $\alpha + \iota^{\ast}\alpha$ becomes an integer $1$-form.} Pick an element $\alpha$ that assigns $0.5$ to $\wt{\gamma}$ and an
+  integer value to every other basis element. Consider the cohomology class $\alpha +
+  \iota^{\ast}\alpha$. Since $\iota \wt{\gamma} = \wt{\gamma}$ (because $\wt{\gamma}$ is the pre-image of a
+  curve of $M$), $\alpha + \iota^{\ast}\alpha$ is an $\iota^{\ast}$-invariant element of $H^1(\wt{M}; \ZZ)$
+  that assigns $1$ to $\wt{\gamma}$. Such a cohomology class cannot be a pullback of a class on $M$ since the
+  pullback of a cohomology class on $M$ would assign an even value to $\wt{\gamma}$.
 \end{example}
 
 What the above example does show is that for any $\iota^{\ast}$-invariant $\alpha$ in
@@ -310,6 +310,82 @@ We now have everything we need to finish proving Theorem \ref{thm:Poincare-duali
   is the pullback of the form $d\theta$ on $S^1$ along the map $f_{\alpha}$. This proves the result.
 \end{proof}
 
+\subsection{Oriented sums of surfaces}
+\label{sec:orient-sums-surf}
+
+We now have a way of going from an embedded surface to an element of $H^1(M; \ZZ)$. To make this mapping even
+more useful, we'll define an operation the operation so taking \emph{oriented sums} of surfaces which is
+additive in two senses: the Euler characteristic, and the cohomology class of the dual. This operation
+is standard knowledge in the case of orientable $3$-manifolds (along with orientable embedded surfaces), but
+we will sketch out the relevant details for completeness. The same construction works for non-orientable surfaces;
+one just needs to verify consistency.
+
+\paragraph{Oriented sum for oriented manifolds}
+Let $S$ and $S'$ be oriented embedded surfaces in an oriented manifold $M$. Assume that $S$ and $S'$ intersect
+transversely. Thus, $S \cap S'$ is a disjoint union of copies of $S^1$. Pick a small neighbourhood of each
+component of the intersection such that the cross section looks like the following.
+\begin{figure}[h]
+  \centering
+  \incfig[0.2]{cross-section}
+  \caption{Cross section of intersection of $S$ and $S'$.}
+  \label{fig:cross-section}
+\end{figure}
+
+We then perform a local surgery such that each $S$ leaf joins an $S'$ leaf. We have two possible choices: we
+could join the left $S$ leaf to either the top or the bottom $S'$ leaf. Since both $S$ and $S'$ are oriented
+submanifolds of $M$, there is an outward pointing normal vector field on $S$ and $S'$. Suppose the outward
+normal vector field on $S$ points upwards and the outward normal vector on $S'$ points to the right. In that
+case, we'd glue the left $S$ leaf to the bottom $S'$ leaf to maintain a consistent outward normal vector
+field. See \autoref{fig:surgery} to see how the choice affects orientability.
+\begin{figure}[h]
+  \centering
+  \incfig[0.3]{surgery}
+  \caption{On the left, the normal vectors on $S$ and $S'$ are consistent. On the right, they aren't.}
+  \label{fig:surgery}
+\end{figure}
+
+By performing this surgery at all the intersections, we get a new submanifold $S''$ (which may have
+multiple components). This new submanifold $S''$ is the oriented sum of $S$ and $S'$. The operation of
+taking oriented sums adds the Euler characteristic, as well as the homology classes (and thus the cohomology
+classes of their Poincar\'e duals).
+\begin{align*}
+  \chi(S'') &= \chi(S) + \chi(S') \\
+  [S''] &= [S] + [S'] \\
+\end{align*}
+
+\paragraph{Oriented sum for non-orientable manifolds}
+Observe that in order to canonically choose the right leaves to join, we needed to use orientability of the
+ambient manifold as well as the embedded surfaces. Suppose now we have embedded surfaces $S$ and $S'$ in a
+non-orientable $3$-manifold $M$. Like in the case of an orientable ambient manifold, the intersection
+$S \cap S'$ will consist of a disjoint unions of $S^1$. We wish to perform the surgery in the orientation
+double cover, and push it downstairs. Pick any point $\gamma$ in $S \cap S'$, and let $\wt{\gamma}_1$ and
+$\wt{\gamma}_2$ be its pre-images in $\wt{M}$. Let $\wt{S}$ and $\wt{S'}$ be the pre-images of $S$ and $S'$
+respectively. We need to verify that if we glue a leaf of $\wt{S}$ and $\wt{S'}$, then their images under
+the orientation reversing deck transformation $\iota$ also get glued together. Consider \autoref{fig:consistency},
+which shows the outward point normal vectors to $\wt{S}$ and $\wt{S'}$, which dictate which leaves are glued
+together.
+\begin{figure}[h]
+  \centering
+  \incfig[0.4]{consistency}
+  \caption{Neighbourhoods of $\wt{\gamma}_1$ and $\wt{\gamma}_2$, with the outward pointing normal vector field.}
+  \label{fig:consistency}
+\end{figure}
+
+The normal vector field tells us that the left $\wt{S}$ leaf gets glued to the bottom $\wt{S'}$ leaf near
+$\wt{\gamma}_1$ and $\wt{\gamma}_2$. Consider now the deck transformation $\iota$. Note that $\iota$ is an
+orientation reversing self map for $\wt{M}$, $\wt{S}$ and $\wt{S'}$. That means the direction of the normal
+vector field to both $\wt{S}$ and $\wt{S'}$ is preserved by the deck transformation $\iota$ (note that this
+argument was used to show that the Poincar\'e dual to something in the $-1$-eigenspace of the $\iota_{\ast}$
+action on $H_2(\wt{M})$ lies in the $1$-eigenspace of the $\iota^{\ast}$ action on $H^1(\wt{M})$). Since $\iota$
+preserves the normal directions of both $\wt{S}$ and $\wt{S'}$, that means the gluing is $\iota$-invariant, i.e.
+two leaves get glued iff their images under $\iota$ get glued. This shows that the gluing descends to $M$, and
+we can thus define an oriented sum operation on embedded surfaces in $M$ that is consistent with the oriented
+sum on the orientation double cover.
+
+By the consistency of the oriented sum in $M$ and $\wt{M}$, it easily follows that the oriented sum is additive
+in Euler characteristic, as well as in terms of Poincar\'e dual, since the Poincar\'e dual was also defined
+by going to the orientation double cover.
+
 \subsection{Relating $1$-forms and fibrations over $\RR/\ZZ$}
 \label{sec:relating-1-forms}
 While we have informally described what a fibration over $S^1$ is prior to this section, it will be
@@ -319,20 +395,19 @@ useful to formally define a fibration at this stage.
   that the derivative of $f$ has full rank at all points in $M$. The pre-image of every point in
   $S^1$ is an embedded surface in $M$, which is called the fiber of the fibration.
 \end{defn}
-Note that any $3$-manifold that admits a fibration over $S^1$ is a mapping torus of the fiber (which
-is a surface), along with the homeomorphism that comes from the transition map when changing
-coordinate charts on $S^1$. We can instead look at homotopy classes of fibrations, and every
-equivalence class will correspond to a homotopy class of a homeomorphism of the fiber, i.e. a
-mapping class. Since we're mostly interested in mapping tori of mapping classes rather than mapping
-classes of specific homeomorphisms in those mapping classes, we'll be focusing on homotopy classes
-of fibrations.
+Note that any $3$-manifold that admits a fibration over $S^1$ is a mapping torus of the fiber (which is a
+surface), along with the homeomorphism that comes from the transition map when changing coordinate charts on
+$S^1$. We can instead look at homotopy classes of fibrations, and every equivalence class will correspond to a
+homotopy class of a homeomorphism of the fiber, i.e. a mapping class. Since we're mostly interested in mapping
+tori of mapping classes rather than mapping classes of specific homeomorphisms in those mapping classes, we'll
+be focusing on homotopy classes of fibrations.
 
-It turns out that the ``right'' way to think about fibrations $f: M \to S^1$ is by studying a specific kind
-of $1$-form on $M$, namely \emph{non-singular integer $1$-forms}.
+It turns out that the ``right'' way to think about fibrations $f: M \to S^1$ is by studying a specific kind of
+$1$-form on $M$, namely \emph{non-singular integer $1$-forms}.
 
 \begin{defn}
-  A non-singular integer $1$-form on a $3$-manifold $M$ is a smooth nowhere vanishing $1$-form $\alpha$ on
-  $M$ such that for any closed loop $\gamma$, the integral of $\alpha$ along $\gamma$ lies in $\ZZ$.
+  A non-singular integer $1$-form on a $3$-manifold $M$ is a smooth nowhere vanishing $1$-form $\alpha$ on $M$
+  such that for any closed loop $\gamma$, the integral of $\alpha$ along $\gamma$ lies in $\ZZ$.
   \begin{align*}
     \int_{\gamma} \alpha \in \ZZ
   \end{align*}
@@ -343,14 +418,15 @@ $S^1$, as we've seen before. The map $f_{\alpha}$ is given by the following form
 \begin{align*}
   f_{\alpha}(x) \coloneqq \left. \int_{x_0}^x \alpha \right/ \ZZ
 \end{align*}
-Conversely, given a fibration $f: M \to S^1$, one can obtain a non-singular integer $1$-form by
-pulling back a $1$-form along the map $f$. The correct $1$-form to pull back is $d\theta$, i.e.  the
-non-vanishing $1$-form on $S^1$ such that $\int_{S^1} d\theta = 1$ (note that despite the notation,
-this is not an exact form). These two constructions are inverses of each other, which is fairly easy
-to verify. Furthermore, if we change $\alpha$ to $\alpha + df$, where $df$ is an exact form, then
-the associated map to $S^1$ is not the same, but homotopic to the original map. Conversely, if we
-pull back $d\theta$ along a map homotopic to $f$ rather than $f$, we get a form that differs from
-the original form by an exact form (see Section 5.2.1 of \cite{calegari2007foliations} for the
-details). The takeaway here is that if we only care about the mapping torus structure of the mapping
-classes, we can focus our attention to the elements of $H^1(M; \ZZ)$ that admit a non-singular $1$-form
-representative.
+Conversely, given a fibration $f: M \to S^1$, one can obtain a non-singular integer $1$-form by pulling back a
+$1$-form along the map $f$. The correct $1$-form to pull back is $d\theta$, i.e.  the non-vanishing $1$-form
+on $S^1$ such that $\int_{S^1} d\theta = 1$ (note that despite the notation, this is not an exact form). These
+two constructions are inverses of each other, which is fairly easy to verify. Furthermore, if we change
+$\alpha$ to $\alpha + df$, where $df$ is an exact form, then the associated map to $S^1$ is not the same, but
+homotopic to the original map. Conversely, if we pull back $d\theta$ along a map homotopic to $f$ rather than
+$f$, we get a form that differs from the original form by an exact form (see Section 5.2.1 of
+\cite{calegari2007foliations} for the details). The takeaway here is that if we only care about the mapping
+torus structure of the mapping classes, we can focus our attention to the elements of $H^1(M; \ZZ)$ that admit
+a non-singular $1$-form representative.
+
+We now have all we need
