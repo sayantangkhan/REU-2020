@@ -1,19 +1,19 @@
 \section{Minimal stretch factors for non-orientable surfaces with marked points}
 \label{sec:application}
 
-Recall that associated to every pseudo-Anosov homeomorphism there is a number, the \textit{dilatation} or \textit{stretch factor}, the amount that the stable and unstable foliations of the pseudo-Anosov change by. Given a surface $S$, it is natural to ask what we can say about the set of all possible stretch factors, i.e.
+Recall that associated to every pseudo-Anosov homeomorphism $f$ there is a number $\lambda(f)$, the \textit{dilatation} or \textit{stretch factor}, the amount that the stable and unstable foliations of the pseudo-Anosov change by. Given a surface $S$, it is natural to ask what we can say about the set of all possible stretch factors, i.e.
 \begin{align*}
     \{\log(\lambda(f)) | f \in \text{Mod}(S) \text{ is pseudo-Anosov}\}
 \end{align*}
 
-We call this set the \textit{spectrum} of $S$. We define the spectrum in terms of the logarithm of the stretch factors, as this is equivalent to the \textit{topological entropy} of a pseudo-Anosov homeomorphism. Topological entropy is a natural measure of complexity that one can assign to any topological map. A first step at understanding this set of entropies associated to a surface is considering the following quantity
+We call this set the \textit{spectrum} of $S$. A first step at understanding this set of entropies associated to a surface is considering the following quantity
 \begin{align*}
     l_{g,n} =\min\{\log(\lambda(f)) | f \in \text{Mod}(\mathcal{S}_{g,n}) \text{ is pseudo-Anosov}\}.
 \end{align*}
 
 The study of this minimal stretch factor $l_{g,n}$ was initiated by Penner in his work \cite{penner1991bounds}. In this work Penner studied the asymptotic behavior of minimal stretch factors of non punctured orientable surfaces, i.e. the behavior of $l_{g,0}$. He showed that there exists positive constants $A_1$ and $A_2$ such that for any $g \geq 2$
 \begin{align*}
-    \frac{A_1}{g} \leq l_{g,0} \leq \frac{A_2}{g}.
+    \frac{A_1}{g} \leq l_{g,0} \leq \frac{A_2}{g},
 \end{align*}
 Hence showing that asymptotically $l_{g,0}$ behaves like $\frac{1}{g}$ for $g \geq 2$. The work by Yazdi in \cite{yazdi2018pseudo} that we aim to generalize using our results on the Thurston norm for non-orientable manifolds is a generalization of these first steps by Thurston. Yazdi asks what the asymptotic behavior of $l_{g,n}$ is when we look at rays in the $(g,n)$ plane with $n$ being constant. To this extent he proves the following result.
 \begin{thm}[Yazdi]
@@ -41,12 +41,12 @@ Then we prove the following results
 \begin{thm}
 \label{thm:stretch}
 ~\begin{enumerate}
-    \item For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that for any $g \geq 2$ $$\frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}$$.
-    \item There exists positive constants $A'$, $B'$ and $C'$ such that for any $n \geq 1$ and $g \geq C'n\log^2(n)$ $$\frac{B'}{g} \leq l'_{g,n} \leq \frac{A'}{g}$$
+    \item For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that for any $g \geq 2$ $$\frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}.$$
+    \item There exists positive constants $A'$, $B'$ and $C'$ such that for any $n \geq 1$ and $g \geq C'n\log^2(n)$ $$\frac{B'}{g} \leq l'_{g,n} \leq \frac{A'}{g}.$$
 \end{enumerate}
 \end{thm}
 
-Recall that Proposition \ref{prop:2} states a pseudo-Anosov on a non-orientable surface lifts to a pseudo-Anosov with the same stretch factor on the double orientation cover. Thus, overlooking a few details we will describe at the end of this section, Yazdi's lower bound ``lifts" to a lower bound for non-orientable surfaces. The work in Yazdi's paper is done in constructing a family of pseudo-Anosovs, one for each surface $S_{g,n}$, that have 'small' stretch factors. Our goal, and the primary part of the proof of the first part of Theorem \ref{thm:stretch}, will be to replicate Yazdi's construction on non-orientable surfaces, using our extension of the Thurston norm.
+Recall that Proposition \ref{prop:2} states a pseudo-Anosov on a non-orientable surface lifts to a pseudo-Anosov with the same stretch factor on the double orientation cover. Thus, overlooking a few details we will describe at the end of this section, Yazdi's lower bound ``lifts" to a lower bound for non-orientable surfaces. The work in Yazdi's paper is done in constructing a family of pseudo-Anosovs, one for each surface $\mathcal{S}_{g,n}$, that have 'small' stretch factors. Our goal, and the primary part of the proof of the first part of Theorem \ref{thm:stretch}, will be to replicate Yazdi's construction on non-orientable surfaces, using our extension of the Thurston norm.
 
 \subsection{The Yazdi Construction}
 
@@ -87,11 +87,12 @@ Note that these maps commute. Define the surface $P_{n,k}$ as the quotient of th
 
 A question that naturally arises is why did we choose the surface $T$ for our building block? It comes down to two main problems:
 \begin{enumerate}
-    \item The combinatorics of the curves make the associated matrix we get from the Penner construction satisfy the conditions of Lemma Y
-    \item Having a curve $\gamma$ such that it and its image under our map form the boundary of an embedded $\mathcal{N}_3$ in our surface, which we will need in later steps (\textcolor{red}{Perhaps this was outlined above}).
+    \item The combinatorics of the curves make the associated matrix we get from the Penner construction satisfy the conditions of Lemma \ref{lem:spectral}. This is an important lemma by Yazdi that is used to prove our family of pseudo-Anosovs have stretch factors bounded above by the form that we desire.
+    \item Having a curve $\gamma$ such that it and its image under our map form the boundary of an embedded $\mathcal{N}_3$ in our surface, which will come into play when extending our family of surfaces in Step 3 (\textcolor{red}{Perhaps this was outlined above}).
 \end{enumerate}
 
 \begin{lem}
+\label{lem:genera}
 Define the sequence
 \begin{align*}
     g_{n,k} &= (14k - 2)n + 2, k \geq 3, n \geq 1
@@ -107,7 +108,7 @@ Define the sequence
 \end{center}
 
 
-Following Yazdi, we will now construct maps $f_{n,k}: P_{n,k} \xrightarrow[]{} P_{n,k}$ that are defined as a composition of specific Dehn twists followed by a finite order mapping class. The key insight is that a power of this map will be a composition of Dehn twists that satisfy the criteria to be a Penner construction and thus pseudo-Anosov. This is how we take advantage of the rotational symmetry given to us by how the $P_{n,k}$ are constructed.
+Following Yazdi, we will now construct maps $f_{n,k}: P_{n,k} \xrightarrow[]{} P_{n,k}$ that are defined as a composition of specific Dehn twists followed by a finite order mapping class. The key insight is that a power of this map will be a composition of Dehn twists that satisfy the criteria to be a Penner construction and thus pseudo-Anosov. This is how we take advantage of the rotational symmetry of the $P_{n,k}$.
 
 \begin{figure}[h]
     \centering
@@ -118,21 +119,21 @@ Following Yazdi, we will now construct maps $f_{n,k}: P_{n,k} \xrightarrow[]{} P
 
 \caleb[inline]{I have the graphics fully drawn I just need to mess around with the labeling on the curves to make them readable}
 
-Recall that for non-orientable surfaces, we don't initially have a well-defined notion of a positive or negative Dehn twist. In order to do a Penner construction, we need to ensure that the curves we are working with are marked inconsistently. Then do Dehn twists around the curves according to these markings. Note that our labeling of the curves already gives us an inconsistent marking though. For any alpha curve $\alpha_i$, we let the marking $\phi_{\alpha_i}$ be orientation preserving and for beta curves $\beta_j$ let $\phi_{\beta_j}$ be orientation reversing. Since alpha curves only intersect beta curves (and vice versa), we have an inconsistent marking at each point of intersection.
+Recall that for non-orientable surfaces, we don't initially have a well-defined notion of a positive or negative Dehn twist. As we saw in Section \ref{sec:mapping-classes-non}, in order to perform a Penner construction, we need to ensure that the curves we are working with are marked inconsistently. Note that our labeling of the curves already gives us an inconsistent marking. For any alpha curve $\alpha_i$, we let the marking $\phi_{\alpha_i}$ be orientation preserving and for beta curves $\beta_j$ let $\phi_{\beta_j}$ be orientation reversing. Since alpha curves only intersect beta curves (and vice versa), we have an inconsistent marking at each point of intersection.
 
-Let $\mathcal{B}$ be the union of all $\beta$ curves except $\beta_1$ in $T_{0,0} \cup T_{0,1} \cup T_{1,0}$ (see figures below). Let $\rho_1(\mathcal{B})$ be the image of $\mathcal{B}$ under $\rho_1$. Define $\phi_b$ as the composition of Dehn twists along all the curves in the set $\overline{\mathcal{B}} \coloneqq \mathcal{B} \cup \rho_1(\mathcal{B}) \cup \dots \cup \rho_1^{n-1}(\mathcal{B})$. Since the curves in $\overline{\mathcal{B}}$ are disjoint, Dehn twists along them commute. Therefore, it is not necessary to specify the order in which we compose these Dehn twists in $\phi_b$. Let $\mathcal{R}$ be the union of all $\alpha$ curves except $\alpha_1$ in $T_{0,0}$. Define $\mathcal{R}$ and $\phi_r$ in the exact same way.
+Let $\mathcal{B}$ be the union of all $\beta$ curves except $\beta_1$ in $T_{0,0} \cup T_{0,1} \cup T_{1,0}$ (see figures below). Let $\rho_1(\mathcal{B})$ be the image of $\mathcal{B}$ under $\rho_1$. Define $\phi_b$ as the composition of Dehn twists along all the curves in the set $\overline{\mathcal{B}} \coloneqq \mathcal{B} \cup \rho_1(\mathcal{B}) \cup \dots \cup \rho_1^{n-1}(\mathcal{B})$. Since the curves in $\overline{\mathcal{B}}$ are disjoint, Dehn twists along them commute and therefore it is not necessary to specify the order in which we compose these Dehn twists in $\phi_b$. Let $\mathcal{R}$ be the union of all $\alpha$ curves except $\alpha_1$ in $T_{0,0}$. Define $\overline{\mathcal{R}}$ and $\phi_r$ in the exact same way.
 
-Let $\alpha_1,\beta_1 \subset T_{0,0}$ be the curves in Figure Z. Let $\phi$ be the composition of Dehn twists along all the curves $\alpha_1, \rho_1(\alpha_1), \dots, \rho_1^{n-1}(\alpha_1)$ followed by Dehn twists along all the curves $\beta_1,\rho_1(\beta_1),\dots,\rho_1^{n-1}(\beta_1)$. Define
+Let $\alpha_1,\beta_1 \subset T_{0,0}$ be the curves in Figure \ref{fig:curves}. Let $\phi$ be the composition of Dehn twists along all the curves $\alpha_1, \rho_1(\alpha_1), \dots, \rho_1^{n-1}(\alpha_1)$ followed by Dehn twists along all the curves $\beta_1,\rho_1(\beta_1),\dots,\rho_1^{n-1}(\beta_1)$. Define
 \begin{align*}
     f_{n,k} &\coloneqq \rho_2 \circ \phi \circ \phi_b \circ \phi_r
 \end{align*}
-We are using the same notation as Yazdi, so the composition is from right to left. It follows from the Penner construction that $(f_{n,k})^k$ is pseudo-Anosov. Hence $f_{n,k}$ itself is pseudo-Anosov and invariant train tracks $\tau^1_{n,k}$ for $f_{n,k}$ can be obtained from Penner's construction that we described above.
+We are using the same notation as Yazdi, so the composition is from right to left. It follows from the Penner construction that $(f_{n,k})^k$ is pseudo-Anosov. Hence $f_{n,k}$ itself is pseudo-Anosov and an invariant train track $\tau_{n,k}$ for $f_{n,k}$ can be obtained from Penner's construction that we described in Section \ref{sec:mapping-classes-non}.
 
 \begin{center}
 \textbf{Step 3: The Mapping Torus}
 \end{center}
 
-We have now constructed an infinite family of non-orientable surfaces and pseudo-Anosov maps, but there's an alarming issue with it. Looking back at Lemma Z, the genera of this family of surfaces does not encapsulate every positive integer. We are going to use our extension of the Thurston norm to "fill in the gaps", by constructing fibers for fibrations of the mapping tori of the pseudo-Anosov maps we defined above.
+We have now constructed an infinite family of non-orientable surfaces and pseudo-Anosov maps, but there's an alarming issue with it. Looking back at Lemma \ref{lem:genera}, the genera of this family of surfaces does not encapsulate every positive integer. We are going to use our extension of the Thurston norm to ``fill in the gaps", by constructing fibers for fibrations of the mapping tori of the pseudo-Anosov maps we defined above.
 
 Let $M_{n,k}$ be the mapping torus of $f_{n,k}$ .Likewise, let $\widetilde{M_{n,k}}$ denote the mapping tori of $\widetilde{f_{n,k}}$, where $\widetilde{f_{n,k}}$ is the orientation preserving lift of $f_{n,k}$ to the orientation double cover of $P_{n,k}$. Note that it follows that $\widetilde{M_{n,k}}$ is the orientation double cover of $M_{n,k}$.
 
@@ -142,12 +143,25 @@ Let $\mathcal{K}_{n,k}$ denote the fibered face of $H_2(\widetilde{M_{n,k}},\mat
 
 \begin{lem}
 \label{lem:genus3}
-There is a non-trivial homology classes $0 \neq [\widetilde{F_{n,k}}] \in H_2(\widetilde{M_{n,k}};\mathbb{Z})$ represented by orientable surfaces of genus two that is a lift of a non-orientable surfaces of genus three $F_{n,k}$ in $M_{n,k}$. Moreover, $\widetilde{F_{n,k}}$ is Thurston norm-minimizing and lie in the closure $\overline{\mathcal{K}_{n,k}}$.
+There is a non-trivial homology class $0 \neq [\widetilde{F_{n,k}}] \in H_2(\widetilde{M_{n,k}};\mathbb{Z})$ represented by orientable surfaces of genus two that is a lift of a non-orientable surfaces of genus three $F_{n,k}$ in $M_{n,k}$. Moreover, $\widetilde{F_{n,k}}$ is Thurston norm-minimizing and lie in the closure $\overline{\mathcal{K}_{n,k}}$.
 \end{lem}
 \begin{proof}
-
+    We will first construct $F_{n,k}$, a non-orientable surface of genus 3, in  similar fashion as Yazdi. Let $\gamma \subset T_{0,0}$ be the curve as shown in Figure X. Note that as we mentioned in Step 1, $\gamma$ was specifically chosen so that $\gamma$ and $\phi(\gamma)$ bound a non-orientable surface $\hat{F}$ of genus 1 with boundary, i.e. cutting along them creates an an annulus with a cross-cap. For ease of notation and to stay consistent with Yazdi, we will let $\hat{\gamma} = \phi(\gamma)$. We are going to follow the image of $\gamma$ under iterations of our pseudo-Anosov map $f_{n,k}$, this will allow us to attach tubes (annuli) to the boundary of $\hat{F}$ to get a closed $\mathcal{N}_3$. Following $\gamma$ under $f_{n,k}$ gives us:
+    \begin{align*}
+        f_{n,k}(\gamma) &= \rho_2 \circ \phi \circ \phi_b \circ \phi_r(\gamma) = \rho_2 \circ \phi(\gamma) = \rho_2(\hat{\gamma}) \\
+        f^2_{n,k} &= \rho_2^2(\hat{\gamma}) \\
+        \vdots& \\
+        f^k_{n,k}(\gamma) &= \rho_2^k(\hat{\gamma}) = \hat{\gamma}
+    \end{align*}
+    As in Yazdi, let $T_i$ be a tube (annulus) that connects $f_{n,k}^{i-1}(\gamma)$ to $f_{n,k}^i(\gamma)$ (which as we saw above will just be $\gamma$ or copies of $\hat{\gamma}$ on a $\rho_2$ rotation of $T_{0,0}$ ) in the mapping torus $M_{n,k}$, for $1 \leq i \leq k$. We obtain these tubes by following the suspension flow of $f_{n,k}$ around $M_{n,k}$. We can now obtain our embedded surface $F_{n,k}$ by taking the union of $T_1,T_2,\dots,T_k$ and $\hat{F}$. Since we are ``adding an orientable genus" to a non-orientable surface of genus 1, we get that $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
+    
+    
+    We can now lift $F_{n,k}$ to the double orientation cover of $M_{n,k}$ to get a surface $\wt{F_{n,k}}$. Since $F_{n,k}$ is non-orientable, the lift will be the double orientation cover of $F_{n,k}$, which in this case is a surface of genus two. We now want to show that our genus 2 surface living inside of $\wt{M_{n,k}}$ is Thurston norm-minimizing and lies in the closure of $\mathcal{K}_{n,k}$ as in Yazdi. \textcolor{red}{Using the same argument as Yazdi, we can conclude that $F_{n,k}$ is transverse to the suspension flow of $f_{n,k}$. This fact will not change when lifting to the double cover and thus $F_{n,k}$ \subset $\overline{\mathcal{K}_{n,k}}$ by \ref{thm:Thur1}.}
+    
+    \caleb[inline]{I believe Thurston-norm minimizing for $\wt{F_{n,k}}$ is also the same, but why is it in Yazdi originally that surface homologous to $F$ but with smaller Thurston norm would have to contain an essential torus or sphere?}
 \end{proof}
 
+\caleb[inline]{Unless I'm missing something, I don't believe we need Lemma 4.6 anymore. From lemma 2.8 combined with the fact that something is in the 1 eigenspace of the action of the deck transformation on cohomology if and only if its Poincar\'e dual is in the -1 eigenspace of the action on homology, we know that the homology class of a surface upstairs that is a lift of a surface downstairs must be in the -1 eigenspace of the action on homology.}
 \begin{lem}
 Let $\iota: \widetilde{M_{n,k}} \xrightarrow[]{} \widetilde{M_{n,k}}$ denote the deck transformation that generates the deck group of the orientation double cover. Likewise, let $\iota_*: H_2(\widetilde{M_{n,k}};\mathbb{R}) \xrightarrow[]{} H_2(\widetilde{M_{n,k}};\mathbb{R})$ denote its action on second homology. Then $\iota_*([\wt{F_{n,k}}]) = -[\wt{F_{n,k}}]$.
 \end{lem}
@@ -226,7 +240,6 @@ where $C' \coloneqq 28\log(4D^4)$.
 \textbf{Step 5: Filling in the Gaps}
 \end{center}
 
-Recall that $\wt{P_{n,k}}$ is the double orientation cover of $P_{n,k}$ and also the fiber of $\wt{M_{n,k}}$. Like Yazdi, we are going to be considering the homology classes $[\wt{P^r_{n,k}}] \coloneqq [\wt{P_{n,k}}] + r[\wt{F_{n,k}}]$. Representatives for these homology classes can be found by taking the oriented sum.
 
 \begin{lem}
 The surfaces $\wt{P^r_{n,k}}$ are Thurston norm-minimizing, with genera equal to $\wt{g^r_{n,k}} \coloneqq g_{n,k} + r - 1$. As $r$ varies between $0$ and $14n$, the genera of $\wt{P^r_{n,k}}$ cover the range between $\wt{g_{n,k}}$ and $\wt{g_{n,k+1}}$. Moreover, $\wt{P^r_{n,k}}$ are fibers of fibrations of $\wt{M_{n,k}}$ with pseudo-Anosov monodromy that fixes $4n$ of the singularities of the invariant foliation and descend to fibrations of $M_{n,k}$.
@@ -235,13 +248,13 @@ The surfaces $\wt{P^r_{n,k}}$ are Thurston norm-minimizing, with genera equal to
 \begin{proof}
     %\textcolor{red}{For now I'm going to write this section as if the oriented sum section above didn't exist, because I'm not sure how I want to structure that section yet.}
     All statements of this lemma except for the last follow in the same way as Lemma 3.5 in \cite{yazdi2018pseudo}. We know that
-    $$\chi(\wt{P^r_{n,k}}) = \chi(\wt{P_{n,k}}) + r\cdot\chi(\wt{F_{n,k}}) = (-2(g_{n,k} - 1) + 2)-2r = -2(g_{n,k} + r - 1) + 2.$$ This proves the identity for the genus of $\wt{P^r_{n,k}}.$ To see that $\wt{P^r_{n,k}}$ is Thurston norm-minimizing, note that $[\wt{P^r_{n,k}}] \subset \mathcal{K}_{n,k}$ due to $\wt{P_{n,k}} \subset \mathcal{K}_{n,k}$ and $\wt{F_{n,k}} \subset \overline{\mathcal{K}_{n,k}}$. Note that from Theorem 3 in \cite{thurston1986norm}, one can deduce that the fiber of a fibration of a 3-manifold is Thurston norm-minimizing in its second homology class. This along with Lemma \ref{lem:genus3} and the linearity of the Thurston norm on a fibered face tells us
+    $$\chi(\wt{P^r_{n,k}}) = \chi(\wt{P_{n,k}}) + r\cdot\chi(\wt{F_{n,k}}) = (-2(g_{n,k} - 1) + 2)-2r = -2(g_{n,k} + r - 1) + 2.$$ This proves the identity for the genus of $\wt{P^r_{n,k}}.$ To see that $\wt{P^r_{n,k}}$ is Thurston norm-minimizing, note that $[\wt{P^r_{n,k}}] \subset \mathcal{K}_{n,k}$ due to $\wt{P_{n,k}} \subset \mathcal{K}_{n,k}$ and $\wt{F_{n,k}} \subset \overline{\mathcal{K}_{n,k}}$. From Theorem 3 in \cite{thurston1986norm}, one can deduce that the fiber of a fibration of a 3-manifold is Thurston norm-minimizing in its second homology class. This along with Lemma \ref{lem:genus3} and the linearity of the Thurston norm on a fibered face tells us
     \begin{align*}
         x([\wt{P^r_{n,k}}]) = x([\wt{P_{n,k}}]) + rx([\wt{F_{n,k}}]) = \chi_-(\wt{P_{n,k}}) + 2r = 2(g_{n,k} + r - 1) - 2
     \end{align*}
     so $\wt{P^r_{n,k}}$ is also norm minimizing.
 
-    Just as Yazdi says, the homology class $[\wt{P^r_{n,k}}] = [P_{n,k}] + r[F_{n,k}]$ is clearly integral. It is also primitive since there is a curve in $\wt{M_{n,k}}$ that intersects $P_{n,k}$ transversely and exactly once, while avoiding $F_{n,k}$. (?). Since $[P^r_{n,k}]$ is integral, primitive and lies in the fibered face $C_{n,k}$, by Theorem \ref{thm:Thur1} it is the fiber of a fibration of $\wt{M_{n,k}}$. Since the monodromy $\wt{f_{n,k}}$ is pseudo-Anosov, all monodromies that correspond to this face are pseudo-Anosov by Theorem \ref{thm:ThurHyp}, so in particular $\wt{f^r_{n,k}}$ is pseudo-Anosov.
+    The homology class $[\wt{P^r_{n,k}}] = [\wt{P_{n,k}}] + r[\wt{F_{n,k}}]$ is clearly integral, and it is also primitive since there is a curve in $\wt{M_{n,k}}$ that intersects $\wt{P_{n,k}}$ transversely and exactly once, while avoiding $\wt{F_{n,k}}$. (?) \caleb[margin]{Maybe I'm getting myself turned around, but why does this have to be primitive? Are }. Since $[P^r_{n,k}]$ is integral, primitive and lies in the fibered face $C_{n,k}$, by Theorem \ref{thm:Thur1} it is the fiber of a fibration of $\wt{M_{n,k}}$. Since the monodromy $\wt{f_{n,k}}$ is pseudo-Anosov, all monodromies that correspond to this face are pseudo-Anosov by Theorem \ref{thm:ThurHyp}, so in particular $\wt{f^r_{n,k}}$ is pseudo-Anosov.
 
     As we see in Yazdi, the singularities of the stable foliation of $f_{n,k}$ that are fixed are the $2n$ intersection points of the axis of $\rho_1$ with $P_{n,k}$. Thus $\wt{f_{n,k}}$ has $4n$ singularities of its stable foliation. Furthermore we have already seen that the surface $F_{n,k}$ can be isotoped to be transverse to the suspension flow and disjoint from the orbit of the $2n$ singularities of $f_{n,k}$, thus $\wt{F_{n,k}}$ can be isotoped to be disjoint from the orbit of these $4n$ singularities of $\wt{f_{n,k}}$. Hence the monodromy $\wt{f^r_{n,k}}$ still fixes the corresponding $4n$ singularities on $P^r_{n,k}$.
 
