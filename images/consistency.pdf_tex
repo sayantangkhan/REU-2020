@@ -20,7 +20,7 @@
 %%   \import{<path to file>}{<filename>.pdf_tex}
 %% Alternatively, one can specify
 %%   \graphicspath{{<path to file>/}}
-%% 
+%%
 %% For more information, please see info/svg-inkscape on CTAN:
 %%   http://tug.ctan.org/tex-archive/info/svg-inkscape
 %%
@@ -54,17 +54,17 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{consistency.pdf}}%
-    \put(0.24122485,0.16256815){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{\gamma}_1$\end{tabular}}}}%
-    \put(0.19532448,0.35793999){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
-    \put(0.19368776,0.00217109){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
-    \put(-0.00110504,0.17764916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
-    \put(0.4119173,0.17525998){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
+    \put(0.19922485,0.15256815){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{\gamma}_1$\end{tabular}}}}%
+    \put(0.21532448,0.35793999){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
+    \put(0.21532448,-0.01217109){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
+    \put(0.05110504,0.17164916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
+    \put(0.4119173,0.17164916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{consistency.pdf}}%
-    \put(0.76749085,0.16256884){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{\gamma}_2$\end{tabular}}}}%
-    \put(0.72159038,0.35794068){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
-    \put(0.71995366,0.00217181){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
-    \put(0.52515894,0.17764986){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
-    \put(0.93818329,0.17526068){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
+    \put(0.72449085,0.15256815){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{\gamma}_2$\end{tabular}}}}%
+    \put(0.74159038,0.35793999){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
+    \put(0.74159038,-0.01217109){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S'}$\end{tabular}}}}%
+    \put(0.57515894,0.17164916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
+    \put(0.93818329,0.17164916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\wt{S}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{consistency.pdf}}%
   \end{picture}%
 \endgroup%

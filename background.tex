@@ -4,16 +4,16 @@
 \subsection{Mapping classes on non-orientable surfaces}
 \label{sec:mapping-classes-non}
 
-Compact non-orientable surfaces with marked points are classified by their genus and number of
-marked points, just like compact orientable surfaces. A genus $g$ non-orientable surface is the
-connect-sum of $g$ copies of $\mathbb{RP}^2$, much like how a genus $g$ surface is the connect-sum
-of $g$ copies of a torus $S^1 \times S^1$. A non-orientable surface $\no_{g,n}$ of genus $g$ with
-$n$ marked points has an orientable double cover, which is an orientable surface $\os_{g-1,
-  2n}$. Associated to this double cover is an orientation reversing deck transformation
-$\iota: \os_{g-1, 2n} \to \os_{g-1, 2n}$. The orientation double cover is often used when proving
-statements about a non-orientable surface. If the genus and the number of marked points is clear
-from the context, or unimportant, we will drop the subscripts, and just use $\no$ and $\os$ for the
-non-orientable surface and its orientable double cover respectively.
+Compact non-orientable surfaces with marked points are classified by their genus and number of marked points,
+just like compact orientable surfaces. A genus $g$ non-orientable surface is the connect-sum of $g$ copies of
+$\mathbb{RP}^2$, analogous to how a genus $g$ surface is the connect-sum of $g$ copies of a torus
+$S^1 \times S^1$. A non-orientable surface $\no_{g,n}$ of genus $g$ with $n$ marked points has an orientable
+double cover, which is an orientable surface $\os_{g-1, 2n}$ of genus $g-1$ and $2n$ marked points. Associated
+to this double cover is an orientation reversing deck transformation $\iota: \os_{g-1, 2n} \to \os_{g-1,
+  2n}$. The covering map from $\os_{g-1,2n}$ to $\no_{g,n}$ will be denoted by $p$. If
+the genus and the number of marked points is clear from the context, or unimportant, we will drop the
+subscripts, and just use $\no$ and $\os$ for the non-orientable surface and its orientable double cover
+respectively.
 
 Given any homeomorphism $\varphi: \no \to \no$ on the non-orientable surface, it is always possible
 to lift it to a unique orientation preserving homeomorphism $\wt{\varphi}: \os \to \os$. This is an
@@ -58,16 +58,17 @@ quantitatively, as the following proposition shows.
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  It's easy to see that if $\varphi$ is periodic, so it $\wt{\varphi}$, and the other way round. If $\varphi$ is reducible, that means
-  it leaves some multi-curve on $\no$ invariant, which means $\wt{\varphi}$ leaves the lift of that multi-curve invariant as
-  well. Conversely, if $\wt{\varphi}$ leaves some multi-curve $\gamma$ invariant, so does $\iota \circ \wt{\varphi}$, since they
-  commute. That means the union of $\gamma$ and $\iota(\gamma)$ is also a multi-curve and thus descends
-  to a multi-curve on $\no$ that is left invariant by $\varphi$. By the process of exclusion, any pseudo-Anosov
-  on $\no$ must lift to a psuedo-Anosov on $\no$ and vice versa. This proves part (i) of the proposition.
+  It's easy to see that if $\varphi$ is periodic, so it $\wt{\varphi}$, and the other way round. If $\varphi$
+  is reducible, that means it leaves some multi-curve on $\no$ invariant, which means $\wt{\varphi}$ leaves
+  the lift of that multi-curve invariant as well. Conversely, if $\wt{\varphi}$ leaves some multi-curve
+  $\gamma$ invariant, so does $\iota \circ \wt{\varphi}$, since they commute. That means the union of $\gamma$
+  and $\iota(\gamma)$ is also a multi-curve and thus descends to a multi-curve on $\no$ that is left invariant
+  by $\varphi$. By the process of exclusion, any pseudo-Anosov on $\no$ must lift to a psuedo-Anosov on $\no$
+  and vice versa. This proves part (i) of the proposition.
 
-  Suppose now that $\varphi$ is a psuedo-Anosov on $\no$ with stretch factor $k$ and expanding and contracting foliations
-  $\lambda_e$ and $\lambda_c$ respectively. Since $\varphi$ is a pseudo-Anosov map, the following identity holds
-  for all closed curves $\gamma$.
+  Suppose now that $\varphi$ is a psuedo-Anosov on $\no$ with stretch factor $k$ and expanding and contracting
+  foliations $\lambda_e$ and $\lambda_c$ respectively. Since $\varphi$ is a pseudo-Anosov map, the following
+  identity involving the intersection form $i$ holds for all closed curves $\gamma$.
   \begin{align}
     \label{eq:1}
     i(\varphi^{-1}\gamma, \lambda_e) &= i(\gamma, \varphi(\lambda_e)) \\
@@ -79,10 +80,13 @@ quantitatively, as the following proposition shows.
     i(\varphi^{-1}\gamma, \lambda_c) &= i(\gamma, \varphi(\lambda_c)) \\
                                &= \frac{1}{k} \cdot i(\gamma, \lambda_c)
   \end{align}
-  Note now that the foliations can be lifted to the double cover: call their lifts $\wt{\lambda}_e$
-  and $\wt{\lambda}_c$. For any closed curve $\wt{\gamma}$ on $\os$, consider its intersection number
-  with the foliations. Since computing the intersection number is a {\color{red} local  calculation}, we have the following
-  identity.
+  Note now that the foliations can be lifted to the double cover: call their lifts $\wt{\lambda}_e$ and
+  $\wt{\lambda}_c$. For any closed curve $\wt{\gamma}$ on $\os$, consider its intersection number with the
+  foliations. Observe that computing the intersection number is a local calculation. Start by picking an open
+  cover $U$ on $\no$ such that all the open sets in $U$ are homeomorphic to the connected components of their
+  pre-image in $\os$. By picking a partition of unity subordinate to this cover, one can compute the intersection
+  number by restricting computation on each open set in the cover. This calculation lifts to the orientation double
+  cover, giving us the following identity.
   \begin{align}
     \label{eq:3}
     i(\wt{\gamma}, \wt{\lambda}_e) = i(\gamma, \lambda_e)
@@ -95,9 +99,9 @@ quantitatively, as the following proposition shows.
   We get a similar expression for $\wt{\lambda}_c$, which proves that $\wt{\varphi}$ has the same stretch factor
   as $f$, thus proving the proposition.
 \end{proof}
-Part (ii) of Proposition \ref{prop:2} is going to be useful in an application of our main result,
-where we'll be computing asymptotics for the minimal stretch factor of a pseudo-Anosov map on
-$\no_{g,n}$.
+% Part (ii) of Proposition \ref{prop:2} is going to be useful in an application of our main result,
+% where we'll be computing asymptotics for the minimal stretch factor of a pseudo-Anosov map on
+% $\no_{g,n}$.
 
 Finally, the last thing we need to know about mapping classes on non-orientable surfaces is how to
 construct examples of pseudo-Anosov maps. In the case of orientable surfaces, the Penner
@@ -106,14 +110,13 @@ turns out the Penner construction also works in the non-orientable setting, with
 modifications. This construction is presented in detail in Section 2 of \cite{Strenner_2017}, but
 we'll give an outline of the key ideas.
 
-The Penner construction in the orientable setting takes a pair of filling multicurves
-$A = \{a_1,\dots,a_n\}$ and $B = \{b_1,\dots,b_m\}$ and claims that a composition of Dehn twists
-$T_{a_i}$ and $T_{b_i}^{-1}$ that uses all curves in the multicurves at least once will be
-pseudo-Anosov. The problem with making this work for non-orientable surfaces is that when defining
-Dehn twists about curves on a non-orientable surface, we don't have a well-defined notion of a left
-or right Dehn twist (what direction we are choosing to be the Dehn twist and which is its
-inverse). The way we get around this for non-orientable surfaces is by having a collection of
-filling two-sided curves that are \textit{marked inconsistently}.
+The Penner construction in the orientable setting takes a pair of filling multicurves $A = \{a_1,\dots,a_n\}$
+and $B = \{b_1,\dots,b_m\}$ and claims that a composition of Dehn twists $T_{a_i}$ and $T_{b_i}^{-1}$ that
+uses all curves in the multicurves at least once will be pseudo-Anosov. The problem with making this work for
+non-orientable surfaces is that when defining Dehn twists about curves on a non-orientable surface, we don't
+have a well-defined notion of a left or right Dehn twist (i.e. which direction is the Dehn twist, and which
+direction is the inverse Dehn twist). The way we get around this for non-orientable surfaces is by having a
+collection of filling two-sided curves that are \textit{marked inconsistently}.
 
 Each two-sided curve $c$ on a non-orientable surface $N$ has a neighborhood homeomorphic to an
 annulus $A$ by a homeomorphism $\phi: A \xrightarrow{} N$, called a \textit{marking}. In this
@@ -141,7 +144,7 @@ unchanged by the homeomorphism, which we'll call $f$. Let $\tau$ be the invarian
 $\mathcal{C}$ the collection of curves on our surface that are used when defining $f$. Consider now
 the collection of transverse measures on our train track $\tau$. For every curve (i.e. a single
 element subset of $\mathcal{C}$) $x \subset \mathcal{C}$, there is an associated transverse measure
-$\mu_x$ for $\tau$ that assigns $1$ to all edges lying in $x$ and 0 to everthing else. Let $V_\tau$
+$\mu_x$ for $\tau$ that assigns $1$ to all edges lying in $x$ and 0 to everything else. Let $V_\tau$
 be the cone of transverse measures on $\tau$, and $H$ the subspace of $V_\tau$ spanned by the
 transverse measure associated to curves in $\mathcal{C}$.
 \begin{align*}
@@ -155,14 +158,14 @@ $\lambda(f)$, is the Perron-Frobenius eigenvalue of $f$.
 \subsection{Thurston's fibered faces}
 \label{sec:thurst-fiber-face}
 
-Given a surface $S$ and a self homeomorphism $f: S \to S$, one can construct a $3$-manifold $M$ via
+Given a surface $S$ and a self homeomorphism $\varphi: S \to S$, one can construct a $3$-manifold $M$ via
 the \emph{mapping torus} construction.
 \begin{align*}
-  M = \frac{S \times [0,1]}{(x,1) \sim (f(x), 0)}
+  M \coloneqq \frac{S \times [0,1]}{(x,1) \sim (\varphi(x), 0)}
 \end{align*}
-Inverting this construction is also an interesting problem: given a $3$-manifold $M$, is it the
-mapping torus of some surface and self-homeomorphism $(S,f)$? In how many ways can one express a
-$3$-manifold as a mapping torus? Another way to think about these mapping torii is by observing that
+Inverting this construction is also a problem of interest: given a $3$-manifold $M$, is it the
+mapping torus of some surface and self-homeomorphism $(S,\varphi)$? In how many ways can one express a
+$3$-manifold as a mapping torus? Another way to think about these mapping tori is by observing that
 these correspond exactly to surface bundles over $S^1$, or \emph{fibrations over $S^1$}. The surface
 $S$ then is just the \emph{fiber} of the fibration. Such a fibration also defines a {flow} on $M$,
 called the \emph{suspension flow}, where $(x, t_0)$ gets sent to $(x, t_0 + t)$, where $x$ is a point
@@ -176,7 +179,7 @@ $S$, i.e. $\chi_-(S) = \max\{-\chi(S),0\}$, we call this the \textit{complexity}
 surface $S$ has multiple components then its complexity is the sum of the $\chi_-$ for the
 individual components.  Furthermore, for an \emph{orientable} 3-manifold $M$, it is known that
 elements in $H_2(M ; \ZZ)$ can be represented by embedded surfaces inside of $M$. This lets us
-define a norm function $x$ for every homology class $a$ in $H_2(M, \ZZ)$.
+define a norm function $x$ for every homology class $a$ in $H_2(M; \ZZ)$.
 \begin{align*}
   x(a) = \min\{\chi_-(S) \mid [S] = a \text{ and $S$ is compact, properly embedded and oriented}\}
 \end{align*}
@@ -244,18 +247,43 @@ theorems, due to Fried-Matsumoto (see \cite{fried1982flow}, \cite{fried1983trans
   Let $\mathcal{K}$ be a fibered cone for a mapping torus $M$ and let $\overline{\mathcal{K}}$ be its closure
   in $H_2(M;\RR)$. If $u \in \mathcal{K}$ and $v \in \overline{\mathcal{K}}$, then $h(u+v) < h(u)$.
 \end{thm}
-Theorems \ref{thm:fm} and \ref{thm:alm} make a quantitative link between the lattice points in the cones
-over the fibered faces and the stretch factor of the associated pseudo-Anosov maps, outlining the power
-of Thurston fibered face theory.
+Theorems \ref{thm:fm} and \ref{thm:alm} make a quantitative link between the lattice points in the cones over
+the fibered faces and the stretch factor of the associated pseudo-Anosov maps, demonstrating the power of
+Thurston's fibered face theory.
 
-One of the primary goals of this paper to extend this definition of Thurston norm to non-orientable
-manifolds and be able to state the non-orientable version of the theorems above. Most of the work in
-doing so is concentrated in determining the right analog of Thurston norm for non-orientable
-surfaces, and then making Theorem \ref{thm:Thur1} work with that definition. Once we have that, the
-rest of the theorems follow with relatively little work. That is what we will do in Section
-\ref{sec:fibered-face-theory}. Once we have the versions of the theorems for non-orientable
-surfaces, we'll prove bounds on the asymptotics of minimal stretch factors for non-orientable
-surfaces in Section \ref{sec:application} by adapting the methods in \cite{yazdi2018pseudo} for
-non-orientable surfaces. The results of Yazdi crucially rely upon Thurston's fibered face theory,
-and the non-orientable variant of fibered face theory lets us generalize Yazdi's results to the
-non-orientable setting, with some work.
+It's also useful to know if an embedded surface $S$ minimizes the Thurston norm in its homology class. That ends
+up happening if the embedded surface is incompressible.
+\begin{defn}[Incompressible surface]
+  A surface $S$ (such that $S$ is not a sphere) inside a $3$-manifold $M$ is said to be incompressible if there
+  exists no embedded disc $D$ in $M$ such that $D \cap S = \partial D$, and $D$ intersects $S$ transversally.
+\end{defn}
+The following theorem is due to Thurston.
+\begin{thm}
+  A surface $S$ minimizes the Thurston norm in its homology class iff it is incompressible.
+\end{thm}
+The following two families of examples of incompressible surfaces will be fairly important for us.
+\begin{example}
+  Let $M$ be a hyperbolic $3$-manifold that fibers over $S^1$. Then an embedded surface $S$ is incompressible
+  if either of the two following conditions hold.
+  \begin{enumerate}[(i)]
+  \item $S$ is the fiber of a fibration.
+  \item $S$ has genus $2$. In this case, $S$ is incompressible, because if it weren't norm minimizing in its homology
+    class, a genus $1$ or genus $0$ surface would be. But one can't have genus $0$ or $1$ incompressible surfaces
+    in hyperbolic $3$-manifolds.
+  \end{enumerate}
+\end{example}
+The first example encompasses a large class of incompressible surfaces, as demonstrated by the following theorem.
+\begin{thm}[Theorem 4 from \cite{thurston1986norm}]
+  \label{thm:ThurIsotope}
+  Any incompressible surface $S$ in the homology class of a fiber of a fibration is isotopic to the fiber.
+\end{thm}
+
+One of the primary goals of this paper to extend this definition of Thurston norm to non-orientable manifolds
+and be able to state the non-orientable version of the theorems above. Most of the work in doing so is
+concentrated in determining the right analog of Thurston norm for non-orientable surfaces, and then making
+Theorem \ref{thm:Thur1} work with that definition. Once we have that, the rest of the theorems follow with
+relatively little work. That is what we will do in Section \ref{sec:fibered-face-theory}. Once we have the
+versions of the theorems for non-orientable surfaces, we'll generalize to non-orientable surfaces a trick due
+to McMullen that lets one construct pseudo-Anosov maps with small stretch factor. That will be used to prove
+bounds on the asymptotics of minimal stretch factors for non-orientable surfaces in Section
+\ref{sec:application} by adapting the methods in \cite{yazdi2018pseudo} for non-orientable surfaces.

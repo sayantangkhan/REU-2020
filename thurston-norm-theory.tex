@@ -1,29 +1,25 @@
 \section{Fibered face theory for non-orientable $3$-manifolds}
 \label{sec:fibered-face-theory}
 
-In what follows, we will restrict our attention our attention on two kinds of compact $3$-manifolds:
-mapping tori of orientable surfaces with a pseudo-Anosov map (these will be the $3$-manifolds we
-will be referring to when talking about orientable $3$-manifolds), and the mapping tori of
-non-orientable $3$-manifolds, again with a psuedo-Anosov map (these will be the manifolds we will be
-referring to when talking about non-orientable $3$-manifolds). While a lot of our statements will
-hold more generally for compact non-orientable $3$-manifolds, it will be easier to describe examples
-when working in this restricted setting; additionally, our application will only involve mapping
-tori of pseudo-Anosov maps.
+In what follows, we will restrict our attention our attention on two kinds of compact $3$-manifolds: mapping
+tori of orientable surfaces with a pseudo-Anosov map (these will be the $3$-manifolds we will be referring to
+when talking about orientable $3$-manifolds), and the mapping tori of non-orientable $3$-manifolds, again with
+a pseudo-Anosov map (these will be the manifolds we will be referring to when talking about non-orientable
+$3$-manifolds). While a lot of our statements will hold more generally for compact non-orientable
+$3$-manifolds, it will be easier to describe examples when working in this restricted setting; additionally,
+our application will only involve mapping tori of pseudo-Anosov maps.
 
 \subsection{The problem with homology in non-orientable $3$-manifolds}
 \label{sec:probl-with-homol}
 
-A first attempt at defining the Thurston norm for a compact non-orientable $3$-manifold might go as
-follows: for any embedded surface $S$ (whether it's orientable or not), one defines the $\chi_-$
-function, much like in the case of orientable $3$-manifolds, and then define the norm of a homology
-class $a \in H^2(M; \ZZ)$ by minimizing $\chi_-(S')$ over all $S'$ representing $a$. This may work,
-but is quite unsatisfying: this construction assigns $0$ norm to all embedded non-orientable
-surfaces, since their fundamental classes are trivial, and thus map to $0$ in $H_2(M; \ZZ)$. This is bad,
-because for orientable $3$-manifolds, it is known that Thurston norm minimizing surfaces are
-precisely the ones that are closed leaves of foliations (see Theorem 5.5 in \cite{gabai1983}). On
-the other hand, it is possible to realize embedded non-orientable surfaces as closed leaves of
-foliations, namely if the original $3$-manifold is the mapping torus of a non-orientable surface,
-then one can think of that surface embedded inside the $3$-manifold.
+A first attempt at defining the Thurston norm for a compact non-orientable $3$-manifold might go as follows:
+for any embedded surface $S$ (whether it's orientable or not), one defines the complexity function $\chi_-$,
+much like in the case of orientable $3$-manifolds, and then define the norm of a homology class
+$a \in H^2(M; \ZZ)$ by minimizing $\chi_-(S')$ over all $S'$ representing $a$. This may work, but is quite
+unsatisfying: this construction assigns $0$ norm to all embedded non-orientable surfaces, since their
+fundamental classes are trivial, and thus map to $0$ in $H_2(M; \ZZ)$. This is bad, because we'd like
+incompressible surfaces in non-orientable $3$-manifolds to have a positive norm. There are plenty of
+incompressible surfaces even in non-orientable $3$-manifolds, namely fibers of fibrations over $S^1$.
 
 It turns out that the fundamental problem with non-orientable $3$-manifolds is that homology is a
 very coarse invariant: too coarse to detect embedded non-orientable surfaces. Our workaround will
@@ -31,26 +27,28 @@ be to deal with the first cohomology $H^1(M)$ rather than the second homology $H
 same in the case of orientable $3$-manifolds, by Poincar\'e duality, but that fails in the case
 of non-orientable $3$-manifolds.
 
-To see why it fails, consider an orientable $3$-manifold $M$. We can explicitly work out the map
-from $H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ given by Poincar\'e duality. Given any $1$-form $\alpha$ such
-that $[\alpha]$ is in $H^1(M; \ZZ)$, one can construct a map $f_{\alpha}$ from $M$ to $\RR/\ZZ$ in
-the following manner.
+To see why it fails, consider an orientable $3$-manifold $M$. We can explicitly work out the map from
+$H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ given by Poincar\'e duality.
+To do so, we set up a correspondence between elements of $H^1(M; \ZZ)$ and homotopy classes of maps from
+$M$ to $S^1$. Given a cohomology class $[\alpha]$ in $H^1(M; \ZZ)$, pick a representative $1$-form $\alpha$,
+and a basepoint $x_0$ in $M$. The associated map $f_{\alpha}$ is given by the following formula
 \begin{align*}
   f_{\alpha}(x) \coloneqq \left. \int_{x_0}^x \alpha \right/ \ZZ
 \end{align*}
-Here $x_0$ is a basepoint on $M$ we can choose arbitrarily. The fact that this map is well defined
-independent of the choice of path from $x_0$ to $x$ is a consequence of the fact that $[\alpha]$
-lies in $H^1(M; \ZZ)$, i.e.  its integral around any closed loop is an integer. Consider now the
-surface $S = f_{\alpha}^{-1}(p)$ for some regular value $p \in \RR/\ZZ$. Note that we have $S$
-merely as a subset of $M$ right now. To get a homology class, we pick an orientation on $S$ by
-declaring that the outwards pointing normal vectors on $S$ are the ones which get assigned a
-positive value by the form $\alpha$. This defines an orientation of $S$ because we already have an
-orientation on $M$, and thus defines a fundamental class $[S]$. We claim that $[S]$ is the
-Poincar\'e dual to $\alpha$. More precisely, we claim the following.
+Changing the basepoint or the representative $1$-form gives a different map to $S^1$ that is homotopic to the
+original map (see Section 5.1 of \cite{calegari2007foliations} for the details). One can recover the $1$-form
+$\alpha$ from the map $f_{\alpha}$ by pulling back the canonical volume form $d\theta$ on $S^1$ along $f_{\alpha}$.
+
+Consider now the surface $S = f_{\alpha}^{-1}(p)$ for some regular value $p \in S^1$. Note that we have
+$S$ merely as a subset of $M$ right now. To get a homology class, we pick an orientation on $S$ by declaring
+that the outwards pointing normal vectors on $S$ are the ones which get assigned a positive value by the form
+$\alpha$. This defines an orientation of $S$ because we already have an orientation on $M$, and thus defines a
+fundamental class $[S]$. We claim that $[S]$ is the Poincar\'e dual to $\alpha$. More precisely, we claim the
+following.
 \begin{claim}
   Let $p$ and $p'$ be two regular values of the function $f_{\alpha}$ and let $S$ and $S'$ be
-  $f_{\alpha}^{-1}(p)$ and $f^{-1}_{\alpha}(p')$ respectively. Then for any closed $2$-form $\omega$ on $M$, the following
-  identity holds.
+  $f_{\alpha}^{-1}(p)$ and $f^{-1}_{\alpha}(p')$ respectively. Then for any closed $2$-form $\omega$ on $M$,
+  the following identity holds.
   \begin{align*}
     \int_{S} \omega = \int_{S'} \omega
   \end{align*}
@@ -61,8 +59,9 @@ Poincar\'e dual to $\alpha$. More precisely, we claim the following.
   In particular, the homology class of $S$ is Poincar\'e dual to $\alpha$.
 \end{claim}
 \begin{proof}
-  The first part of the claim follows from the fact that $S$ and $S'$ are homologous, i.e. $f^{-1}_{\alpha}([p, p'])$
-  is a singular $3$-chain that has $S$ and $S'$ as boundaries. From Stokes' theorem, we get the following.
+  The first part of the claim follows from the fact that $S$ and $S'$ are homologous,
+  i.e. $f^{-1}_{\alpha}([p, p'])$ is a singular $3$-chain that has $S$ and $S'$ as boundaries. From Stokes'
+  theorem, we get the following.
   \begin{align*}
     \int_{S - S'} \omega &= \int_{f_{\alpha}^{-1}([p, p'])} d\omega \\
                          &= 0
@@ -70,36 +69,43 @@ Poincar\'e dual to $\alpha$. More precisely, we claim the following.
 
   To prove the second claim, observe that we can break up the second integral as a product integral.
   \begin{align*}
-    \int_M \alpha \wedge \omega &= \int_{\RR/\ZZ} \left(   \int_{f_{\alpha}^{-1}(x)} \omega \right) dx
+    \int_M \alpha \wedge \omega &= \int_{S^1} \left(   \int_{f_{\alpha}^{-1}(x)} \omega \right) d\theta
   \end{align*}
   The above equation is true because $\alpha$ is the pullback of $dx$ along the map $f_{\alpha}$. Observe
   that the inner integral only makes sense when $x$ is a regular value, but by Sard's theorem, almost
   every $x \in [0,1]$ is a regular value, so the right hand side is well-defined. By the first part of the
   claim, the inner integral is a constant function, as we vary over the $x$ which are regular values of $f_{\alpha}$,
-  and the integral of $dx$ over $\RR/\ZZ$ is $1$, giving us the identity we want.
+  and the integral of $d\theta$ over $S^1$ is $1$, giving us the identity we want.
   \begin{align*}
     \int_M \alpha \wedge \omega = \int_S \omega
   \end{align*}
 \end{proof}
 What we have here is an explicit formula for the Poincar\'e duality map. For orientable $3$-manifolds, this
-is an isomorphism, but the formula still makes sense for non-orientable manifolds. In that case, one can see
-that the map from $H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ has a kernel.
+is an isomorphism, and more specifically the following theorem is true.
+\begin{thm}[Poincar\'e duality for orientable $3$-manifolds]
+  Let $M$ be an orientable $3$-manifold, and let $S$ be an oriented embedded surface. Then there exists a $1$-form
+  $\alpha$ such that $S = f_{\alpha}^{-1}(p)$ for some regular value $p$.
+\end{thm}
+
+Note however that this technique of getting from a $1$-form to an embedded surface to the homology class of
+that surface still makes sense for a non-orientable $3$-manifold $M$. In that case, one can see that the map from
+$H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ has a kernel.
 \begin{example}[Failure of Poincar\'e duality for non-orientable $3$-manifolds]
-  Let $\no$ be a non-orientable surface, and let $f$ be any self homeomorphism. Let $M$ be the mapping torus
-  of $(\no, f)$. We then have a map $f: M \to \RR/\ZZ$ given by mapping to the base of the mapping torus.
-  Pulling back the form $dx$ along this map, we get a closed but not exact $1$-form $\alpha$ on $M$. Observe
+  Let $\no$ be a non-orientable surface, and let $\varphi$ be any self homeomorphism. Let $M$ be the mapping torus
+  of $(\no, f)$. We then have a map $f: M \to S^1$ given by mapping to the base of the mapping torus.
+  Pulling back the form $d\theta$ along this map, we get a closed but not exact $1$-form $\alpha$ on $M$. Observe
   that $f_{\alpha} = f$, because of how we constructed $\alpha$. Furthermore $f_{\alpha}^{-1}(0)$ is $\no$ inside
   $M$. Thus, the ``Poincar\'e duality map'' for $M$ maps a non-trivial element $\alpha \in H^1(M; \ZZ)$ to the
   zero element $[\no] \in H_2(M; \ZZ)$, since $\no$ is non-orientable. In particular, we end up losing information
   going from $H^1(M)$ to $H_2(M)$.
 \end{example}
 
-The above example also suggests an alternative method of defining the Thurston norm for
-non-orientable $3$-manifolds: rather than working with $H_2(M)$, we can work with $H^1(M)$ instead,
-because we don't want to lose information by going to $H_2(M)$. We'll also be interested in getting
-a partial inverse for this map. More specifically, given a non-orientable surface $\no$ inside a
-non-orientable $3$-manifold $M$, we'd like to understand if $M$ can be realized as the mapping
-torus of some homeomorphism of $\no$.
+The above example also suggests an alternative method of defining the Thurston norm for non-orientable
+$3$-manifolds: rather than working with $H_2(M; \RR)$, we can instead work with $H^1(M; \RR)$, because we
+don't want to lose information by going to $H_2(M; \RR)$. We'll also be interested in getting a partial
+inverse for this map. More specifically, given a non-orientable surface $\no$ inside a non-orientable
+$3$-manifold $M$, we'd like to understand if $M$ can be realized as the mapping torus of some homeomorphism of
+$\no$.
 
 \subsection{Thurston norm for non-orientable $3$-manifolds}
 \label{sec:thurston-norm-non}
@@ -117,10 +123,8 @@ is to look at the pullback via $p$.
 
 \begin{lem}
   \label{lem:injective}
-  Let $M$ be a non-orientable $3$-manifold, and $\wt{M}$ its orientation double cover. Let
-  $\iota: \wt{M} \to \wt{M}$ be the orientation reversing deck transformation, and
-  $p: \wt{M} \to M$ be the covering map. Then $p^{\ast}$ maps $H^1(M; \RR)$ bijectively to the
-  $\iota^{\ast}$-invariant subspace of $H^1(\wt{M}; \RR)$.
+  The pullback $p^{\ast}$ maps $H^1(M; \RR)$ bijectively to the $\iota^{\ast}$-invariant subspace of
+  $H^1(\wt{M}; \RR)$.
 \end{lem}
 \begin{proof}
   Clearly, for any $1$-form $\alpha$ on $M$, $p^{\ast}(\alpha)$ will be
@@ -151,19 +155,18 @@ precisely what that subspace is), and thus the Thurston norm on $H^1(\wt{M}; \RR
 restricted to a norm on $H^1(M; \RR)$.
 
 \begin{defn}[Thurston norm for non-orientable $3$-manifolds]
-  Let $M$ is a non-orientable $3$-manifold, and $\wt{M}$ is its orientation double cover, with the covering
-  map $p: \wt{M} \to M$. The Thurston norm $x$ is a norm on $H^1(M; \RR)$, defined using the Thurston norm $\wt{x}$
+  The Thurston norm $x$ is a norm on $H^1(M; \RR)$, defined using the Thurston norm $\wt{x}$
   on $H^1(\wt{M}; \RR)$ (identified with $H_2(M; \RR)$ via Poincar\'e duality) in the following manner.
   \begin{align*}
     x(\alpha) \coloneqq \wt{x}(p^{\ast}\alpha)
   \end{align*}
 \end{defn}
-Now that we have a Thurston norm on $H^1(M; \RR)$, we need to describe some of its properties. All of these properties
-follow fairly easily from the orientable version.
+Now that we have a Thurston norm on $H^1(M; \RR)$, we need to describe some of its properties. All of these
+properties follow fairly easily from the orientable version.
 \begin{thm}
   The unit ball with respect to the dual Thurston norm on $\left( H^1(M; \RR) \right)^{\ast}$ is a polyhedron
-  whose vertices are lattice points $\{\pm \beta_1, \ldots \pm \beta_k\}$. The unit ball $B_1$ with respect to Thurston
-  norm is a polyhedron given by the following inequalities.
+  whose vertices are lattice points $\{\pm \beta_1, \ldots \pm \beta_k\}$. The unit ball $B_1$ with respect to
+  Thurston norm is a polyhedron given by the following inequalities.
   \begin{align*}
     B_1 = \left\{ a \mid \left| \beta_i(a) \right| \leq 1 \text{ for $1\leq i \leq k$} \right\}
   \end{align*}
@@ -179,12 +182,12 @@ follow fairly easily from the orientable version.
 \end{proof}
 
 Observe that the way we defined the Thurston norm for non-orientable $3$-manifolds is lacking in two
-ways. First of all, in the orientable case, the Thurston norm is a norm on the second homology, and
-thus also embedded surfaces. In other words, the Thurston norm tells us something about embedded
-surfaces in the manifold. We've already seen how working with second homology doesn't quite work,
-which is why we had to go to first cohomology instead. We would still like to talk about the
-norm of an embedded surface though, even if the homology class of that surface may be trivial.
-This is something we'll see in subsection \ref{sec:invert-poincare}.
+ways. First of all, in the orientable case, the Thurston norm is a norm on the second homology, and thus also
+embedded surfaces. In other words, the Thurston norm tells us something about embedded surfaces in the
+manifold. We've already seen how working with second homology doesn't quite work, which is why we had to go to
+first cohomology instead. We would still like to talk about the norm of an embedded surface though, even if
+the homology class of that surface may be trivial.  This is something we'll see in subsection
+\ref{sec:invert-poincare}.
 
 The other issue is that when working with fibrations over $S^1$, the elements of $H^1(M; \ZZ)$ are
 the elements of interest, rather than things in $H^1(M; \RR)$. Lemma \ref{lem:injective} tells us
@@ -192,21 +195,20 @@ that elements of $H^1(M; \RR)$ are precisely the $\iota^{\ast}$-invariant elemen
 $H^1(\wt{M}; \RR)$. That does not hold for $\ZZ$-coefficients: there are $\iota^{\ast}$-invariant
 elements on $H^1(\wt{M}; \ZZ)$ that are not pullbacks of elements of $H^1(M; \ZZ)$.
 \begin{example}[Failure of surjectivity]
-  {\color{red} Turn this into a theorem.}
-  Let $\no$ be a non-orientable surface, $\os$ its orientation double cover. Let $\gamma$ be a
-  one-sided curve on $\no$, i.e. a curve whose lift to $\os$ is an arc, and the pre-image is a
-  single closed curve, which is twice as ``long''. Call the pre-image $\wt{\gamma}$. Let the
-  $3$-manifolds $M$ and $\wt{M}$ we're considering be the mapping tori of $\no$ and $\os$ with
-  respect to some pseudo-Anosov map. We can then consider $\gamma$ and $\wt{\gamma}$ as curves
-  inside the $3$-manifolds $M$ and $\wt{M}$.
+  Let $\no$ be a non-orientable surface, $\os$ its orientation double cover. Let $\gamma$ be a one-sided curve
+  on $\no$, i.e. a curve whose lift to $\os$ is an arc, and the pre-image is a single closed curve, which is
+  twice as long. Call the pre-image $\wt{\gamma}$. Let the $3$-manifolds $M$ and $\wt{M}$ we're
+  considering be the mapping tori of $\no$ and $\os$ with respect to some pseudo-Anosov map. We can then
+  consider $\gamma$ and $\wt{\gamma}$ as curves inside the $3$-manifolds $M$ and $\wt{M}$.
 
   Pick a basis of $H_1(\wt{M}; \ZZ)$ containing $\wt{\gamma}$. Using this basis, we can construct an element
-  of $H^1(\wt{M}; \ZZ)$ by simply assigning integer values to the basis elements. Pick an element $\alpha$ that assigns $0.5$ to $\wt{\gamma}$ and an
-  integer value to every other basis element. Consider the cohomology class $\alpha +
-  \iota^{\ast}\alpha$. Since $\iota \wt{\gamma} = \wt{\gamma}$ (because $\wt{\gamma}$ is the pre-image of a
-  curve of $M$), $\alpha + \iota^{\ast}\alpha$ is an $\iota^{\ast}$-invariant element of $H^1(\wt{M}; \ZZ)$
-  that assigns $1$ to $\wt{\gamma}$. Such a cohomology class cannot be a pullback of a class on $M$ since the
-  pullback of a cohomology class on $M$ would assign an even value to $\wt{\gamma}$.
+  of $H^1(\wt{M}; \ZZ)$ by simply assigning integer values to the basis elements. Pick an element $\alpha$
+  that assigns $0.5$ to $\wt{\gamma}$ and an integer value to every other basis element. Consider the
+  cohomology class $\alpha + \iota^{\ast}\alpha$. Since $\iota \wt{\gamma} = \wt{\gamma}$ (because
+  $\wt{\gamma}$ is the pre-image of a curve of $M$), $\alpha + \iota^{\ast}\alpha$ is an
+  $\iota^{\ast}$-invariant element of $H^1(\wt{M}; \ZZ)$ that assigns $1$ to $\wt{\gamma}$. Such a cohomology
+  class cannot be a pullback of a class on $M$ since the pullback of a cohomology class on $M$ would assign an
+  even value to $\wt{\gamma}$.
 \end{example}
 
 What the above example does show is that for any $\iota^{\ast}$-invariant $\alpha$ in
@@ -236,16 +238,26 @@ $3$-manifold $M$, we define the notion of \emph{relative orientability}.
   oriented with respect to $M$ if there is a nowhere vanishing normal vector field on $S$. Two
   such normal vector fields are said to induce the same orientation if locally they induce the
   same orientation after picking a local frame for $S$. A surface $S$ is \emph{relatively oriented}
-  if the positive normal vector field is specified along with the data of $S$.
+  if both $S$ and the choice of positive normal vector field are specified.
 \end{defn}
 
 Note that relative orientability is a strictly weaker notion than orientability. If $S$ and $M$ are
 orientable, then $S$ is relatively orientable with respect to $M$. But even if $M$ is
 non-orientable, $S$ may be relatively orientable with respect to $M$. For instance, if $S$ is
 the fiber of a non-orientable mapping torus, then one can get a non-vanishing normal vector field
-by looking at the pre-image of a non-vanishing vector field on $S^1$. For relatively oriented
-surfaces in $M$, it turns out one can go from surfaces to $1$-forms.
+by looking at the pre-image of a non-vanishing vector field on $S^1$.
+It is not the case that every embedded surface in a non-orientable $3$-manifold is relatively orientable.
+\begin{example}[Relatively non-orientable surface]
+  Let $S$ be the standard torus, i.e. $\RR^2/\ZZ^2$, and let $\varphi$ map $(x,y)$ to $(-x, y)$. This is an
+  orientation reversing homeomorphism, and thus the mapping torus of this homeomorphism will be a
+  non-orientable $3$-manifold $M$. Consider a vertical line in $S$ preserved by $\varphi$, i.e. the line
+  $x = 0$. The image of this closed curve in $S$ under the suspension flow in $M$ is a subsurface of $M$,
+  which we'll call $S'$. The normal direction to $S'$ when restricted to $S$ is $\frac{\partial}{\partial x}$. But
+  this can't be continuously extended to all of $M$, since that direction gets reversed by the suspension flow.
+  This means that the surface $S'$ is relatively non-orientable in $M$ (despite being orientable itself.)
+\end{example}
 
+We care about relatively orientable surfaces because for these surfaces can be mapped to cohomology classes.
 \begin{thm}[Poincar\'e duality for non-orientable $3$-manifolds]
   \label{thm:Poincare-duality}
   Let $M$ be a non-orientable $3$-manifold, and let $S$ be a relatively oriented embedded
@@ -348,18 +360,17 @@ We now have everything we need to finish proving Theorem \ref{thm:Poincare-duali
 \subsection{Oriented sums of surfaces}
 \label{sec:orient-sums-surf}
 
-We now have a way of going from an embedded surface to an element of $H^1(M; \ZZ)$. To make this
-mapping even more useful, we'll define an operation the operation so taking \emph{oriented sums} of
-surfaces which is additive in two senses: the Euler characteristic, and the cohomology class of the
-dual. This operation is standard knowledge in the case of orientable $3$-manifolds (along with
-orientable embedded surfaces), but we will sketch out the relevant details for completeness. The
-same construction works for relatively orientable surfaces; one just needs to verify consistency.
+We now have a way of going from an embedded surface to an element of $H^1(M; \ZZ)$. To make this mapping even
+more useful, we'll describe a way of adding two surfaces via the operation of taking \emph{oriented sums}:
+this will be additive in two senses: the Euler characteristic, and the cohomology class of the dual. This
+operation is well-known in the case of orientable $3$-manifolds (along with orientable embedded
+surfaces), but we will sketch out the relevant details for completeness. The same construction works for
+relatively orientable surfaces; one just needs to verify consistency.
 
 \paragraph{Oriented sum for oriented manifolds}
-Let $S$ and $S'$ be oriented embedded surfaces in an oriented manifold $M$. Assume that $S$ and
-$S'$ intersect transversely. Thus, $S \cap S'$ is a disjoint union of copies of $S^1$. Pick a small
-neighbourhood of each component of the intersection such that the cross section looks like the
-following.
+Let $S$ and $S'$ be oriented embedded surfaces in an oriented manifold $M$. Assume that $S$ and $S'$ intersect
+trasversally. Thus, $S \cap S'$ is a disjoint union of copies of $S^1$. Pick a small neighbourhood of each
+component of the intersection such that the cross section looks like \autoref{fig:cross-section}.
 \begin{figure}[h]
   \centering
   \incfig[0.2]{cross-section}
@@ -422,7 +433,7 @@ By the consistency of the oriented sum in $M$ and $\wt{M}$, it easily follows th
 is additive in Euler characteristic, as well as in terms of Poincar\'e dual, since the Poincar\'e
 dual was also defined by going to the orientation double cover.
 
-\subsection{Relating $1$-forms and fibrations over $\RR/\ZZ$}
+\subsection{Relating $1$-forms and fibrations over $S^1$}
 \label{sec:relating-1-forms}
 While we have informally described what a fibration over $S^1$ is prior to this section, it will be
 useful to formally define a fibration at this stage.
@@ -526,24 +537,16 @@ $3$-manifolds.
   restricted to $H^1(M; \RR)$ and proves part (ii) of the result.
 \end{proof}
 
-Part (ii) of the above theorem (and Theorem \ref{thm:Thur1}) is especially useful when one is
-trying to decompose a $3$-manifold into a mapping torus. Suppose one starts off with a mapping
-torus $M = (\no, \varphi)$. One then constructs another relatively oriented surface $\no'$ inside
-$M$ such that $\no'$ is transverse to the suspension flow direction. By the above theorem, the
-Poincar\'e dual to $\no$, which we'll call $\alpha$, lies in a cone with other $1$-forms also
-coming from fibrations. Furthermore, the Poincar\'e dual to $\no'$, which we'll call $\alpha'$,
-lies in the closure of said cone. By taking positive integer linear combinations of $\alpha$ and
-$\alpha'$, we can get lots of other elements of the cone. At the level of surfaces, that
-corresponds to taking oriented sums of $\no$ and $\no'$ to get new relatively oriented surfaces in
-$M$. Under reasonably mild conditions on $\no$ and $\no'$, we can actually realize their oriented
-sums as fibers of fibrations. To see this, we'll need to use a theorem due to Thurston.
-
-\begin{thm}[Theorem 4 of \cite{thurston1986norm}]
-  \label{thm:ThurIsotope}
-  Let $\wt{M}$ be an orientable $3$-manifold that fibers over a circle with fiber $S$. If
-  $S'$ is another embedded surface in $\wt{M}$ homologous to $S$ and also Thurston norm
-  minimizing, then $S'$ is isotopic to $S$.
-\end{thm}
+Part (ii) of the above theorem (and Theorem \ref{thm:Thur1}) is especially useful when one is trying to
+decompose a $3$-manifold into a mapping torus. Suppose one starts off with a mapping torus
+$M = (\no, \varphi)$. One then constructs another relatively oriented surface $\no'$ inside $M$ such that
+$\no'$ is transverse to the suspension flow direction. By the above theorem, the Poincar\'e dual to $\no$,
+which we'll call $\alpha$, lies in a cone with other $1$-forms also coming from fibrations. Furthermore, the
+Poincar\'e dual to $\no'$, which we'll call $\alpha'$, lies in the closure of said cone. By taking positive
+integer linear combinations of $\alpha$ and $\alpha'$, we can get other elements of the cone. At the level of
+surfaces, that corresponds to taking oriented sums of $\no$ and $\no'$ to get new relatively oriented surfaces
+in $M$. Under reasonably mild conditions on $\no$ and $\no'$, we can actually realize their oriented sums as
+fibers of fibrations.
 
 \begin{thm}
   Let $M$, $\no$ and $\no'$ be as described above. Suppose that $\no'$ is incompressible, and the
@@ -577,11 +580,11 @@ sums as fibers of fibrations. To see this, we'll need to use a theorem due to Th
   \item The fibration is the mapping torus of an orientable surface along with an orientation
     reversing homeomorphism.
   \end{enumerate}
-  In the first case, the fiber is a non-orientable surface homologous to $\no + \no'$. By passing
-  to the double cover, we get two homologous non-orientable surfaces, both of which minimize the
-  Thurston norm. By Theorem \ref{thm:ThurIsotope}, we have that $\no + \no'$ is isotopic to the
-  fiber, which means $M$ can be realized as the mapping torus of some homeomorphism on
-  $\no + \no'$.
+  In the first case, the fiber is a non-orientable surface homologous to $\no + \no'$. By passing to the
+  double cover, we get two homologous orientable surfaces, both of which minimize the Thurston norm. By
+  Theorem \ref{thm:ThurIsotope}, we have that the double cover of $\no + \no'$ is isotopic to the fiber, which
+  means $\no + \no'$ is isotopic to the fiber in $M$, and $M$ can be realized as the mapping torus of some
+  homeomorphism on $\no + \no'$.
 
   The second case can be ruled out using a similar argument. In the case that $M$ is the mapping
   torus of an orientable surface $S$ with an orientation reversing homeomorphism, we can pass to
