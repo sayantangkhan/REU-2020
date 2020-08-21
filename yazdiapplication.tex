@@ -135,15 +135,11 @@ We are using the same notation as Yazdi, so the composition is from right to lef
 
 We have now constructed an infinite family of non-orientable surfaces and pseudo-Anosov maps, but there's an alarming issue with it. Looking back at Lemma \ref{lem:genera}, the genera of this family of surfaces does not encapsulate every positive integer. We are going to use our extension of the Thurston norm to ``fill in the gaps", by constructing fibers for fibrations of the mapping tori of the pseudo-Anosov maps we defined above.
 
-Let $M_{n,k}$ be the mapping torus of $f_{n,k}$ .Likewise, let $\widetilde{M_{n,k}}$ denote the mapping tori of $\widetilde{f_{n,k}}$, where $\widetilde{f_{n,k}}$ is the orientation preserving lift of $f_{n,k}$ to the orientation double cover of $P_{n,k}$. Note that it follows that $\widetilde{M_{n,k}}$ is the orientation double cover of $M_{n,k}$.
-
-Let $\mathcal{K}_{n,k}$ denote the fibered face of $H_2(\widetilde{M_{n,k}},\mathbb{R})$ corresponding to the map $\widetilde{f_{n,k}}$. We will show that $M_{n,k}$ contains a closed non-orientable surface of genus 3 that lifts to a closed orientable surface of genus 2 in $\widetilde{M_{n,k}}$ that is contained in the closure of $\mathcal{K}_{n,k}$.
-
-\textcolor{red}{Will come back to this section later, first I need to go and do the oriented sum}
+Let $M_{n,k}$ be the mapping torus of $f_{n,k}$ .Likewise, let $\mathcal{K}_{n,k}$ denote the fibered cone of $H^1(M_{n,k},\mathbb{R})$ corresponding to the map $f_{n,k}$. We will show that $M_{n,k}$ contains a closed, relatively orientable, incompressible surface homeomorphic to $\mathcal{N}_3$ that is transverse to the suspension flow direction. This will allow us to apply Theorem \textcolor{red}{Not yet labeled} to construct new fibrations of $M_{n,k}$. 
 
 \begin{lem}
 \label{lem:genus3}
-There is a non-trivial homology class $0 \neq [\widetilde{F_{n,k}}] \in H_2(\widetilde{M_{n,k}};\mathbb{Z})$ represented by orientable surfaces of genus two that is a lift of a non-orientable surfaces of genus three $F_{n,k}$ in $M_{n,k}$. Moreover, $\widetilde{F_{n,k}}$ is Thurston norm-minimizing and lie in the closure $\overline{\mathcal{K}_{n,k}}$.
+There is a relatively orientable incompressible surface, $F_{n,k}$, that is homeomorphic to $\mathcal{N}_3$ and embedded in $M_{n,k}$. Moreover it is transverse to the suspension flow direction given by $f_{n,k}$ and its Poincar\'e dual is in the closure $\overline{\mathcal{K}_{n,k}}$
 \end{lem}
 \begin{proof}
     We will first construct $F_{n,k}$, a non-orientable surface of genus 3, in  similar fashion as Yazdi. Let $\gamma \subset T_{0,0}$ be the curve as shown in Figure X. Note that as we mentioned in Step 1, $\gamma$ was specifically chosen so that $\gamma$ and $\phi(\gamma)$ bound a non-orientable surface $\hat{F}$ of genus 1 with boundary, i.e. cutting along them creates an an annulus with a cross-cap. For ease of notation and to stay consistent with Yazdi, we will let $\hat{\gamma} = \phi(\gamma)$. We are going to follow the image of $\gamma$ under iterations of our pseudo-Anosov map $f_{n,k}$, this will allow us to attach tubes (annuli) to the boundary of $\hat{F}$ to get a closed $\mathcal{N}_3$. Following $\gamma$ under $f_{n,k}$ gives us:
@@ -161,7 +157,7 @@ There is a non-trivial homology class $0 \neq [\widetilde{F_{n,k}}] \in H_2(\wid
     \caleb[inline]{I believe Thurston-norm minimizing for $\wt{F_{n,k}}$ is also the same, but why is it in Yazdi originally that surface homologous to $F$ but with smaller Thurston norm would have to contain an essential torus or sphere?}
 \end{proof}
 
-\caleb[inline]{Unless I'm missing something, I don't believe we need Lemma 4.6 anymore. From lemma 2.8 combined with the fact that something is in the 1 eigenspace of the action of the deck transformation on cohomology if and only if its Poincar\'e dual is in the -1 eigenspace of the action on homology, we know that the homology class of a surface upstairs that is a lift of a surface downstairs must be in the -1 eigenspace of the action on homology.}
+\textcolor{red}{No longer need this lemma}
 \begin{lem}
 Let $\iota: \widetilde{M_{n,k}} \xrightarrow[]{} \widetilde{M_{n,k}}$ denote the deck transformation that generates the deck group of the orientation double cover. Likewise, let $\iota_*: H_2(\widetilde{M_{n,k}};\mathbb{R}) \xrightarrow[]{} H_2(\widetilde{M_{n,k}};\mathbb{R})$ denote its action on second homology. Then $\iota_*([\wt{F_{n,k}}]) = -[\wt{F_{n,k}}]$.
 \end{lem}
