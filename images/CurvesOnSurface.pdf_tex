@@ -20,7 +20,7 @@
 %%   \import{<path to file>}{<filename>.pdf_tex}
 %% Alternatively, one can specify
 %%   \graphicspath{{<path to file>/}}
-%% 
+%%
 %% For more information, please see info/svg-inkscape on CTAN:
 %%   http://tug.ctan.org/tex-archive/info/svg-inkscape
 %%
@@ -61,11 +61,11 @@
     \put(0.45117858,1.27846667){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$s$\end{tabular}}}}%
     \put(0.7672231,1.28445238){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
     \put(0.07144133,0.63523734){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_2$\end{tabular}}}}%
-    \put(0.21030938,0.55622625){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_2$\end{tabular}}}}%
+    \put(0.23030938,0.55622625){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_2$\end{tabular}}}}%
     \put(0.55149381,0.45207526){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_3$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{CurvesOnSurface.pdf}}%
     \put(0.673577,1.16032056){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_8$\end{tabular}}}}%
-    \put(0.81007575,0.96564759){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_6$\end{tabular}}}}%
+    \put(0.82407575,0.96564759){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_6$\end{tabular}}}}%
     \put(0.60416795,1.04944732){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_6$\end{tabular}}}}%
     \put(0.68234474,0.70105088){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_5$\end{tabular}}}}%
     \put(0.63774542,0.78898594){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_1$\end{tabular}}}}%

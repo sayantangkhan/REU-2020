@@ -64,7 +64,7 @@ We will define a family of surfaces $P_{n,k}$ in the way originally done by Yazd
 
 \begin{figure}[]
     \centering
-    \resizebox{.25\totalheight}{!}{\incfig{YazdiTypeSurface}}
+    \incfig[0.4]{YazdiTypeSurface}
     \caption{The surface $T$, the building block for our Yazdi construction}
     \label{fig:buildingblock}
 \end{figure}
@@ -108,27 +108,41 @@ Define the sequence
 \end{center}
 
 
-Following Yazdi, we will now construct maps $f_{n,k}: P_{n,k} \xrightarrow[]{} P_{n,k}$ that are defined as a composition of specific Dehn twists followed by a finite order mapping class. The key insight is that a power of this map will be a composition of Dehn twists that satisfy the criteria to be a Penner construction and thus pseudo-Anosov. This is how we take advantage of the rotational symmetry of the $P_{n,k}$.
+Following Yazdi, we will now construct maps $f_{n,k}: P_{n,k} \xrightarrow[]{} P_{n,k}$ that are defined as a
+composition of specific Dehn twists followed by a finite order mapping class. The key insight is that a power
+of this map will be a composition of Dehn twists that satisfy the criteria to be a Penner construction and
+thus pseudo-Anosov. This is how we take advantage of the rotational symmetry of the $P_{n,k}$.
 
 \begin{figure}[h]
     \centering
-    \resizebox{.35\totalheight}{!}{\incfig{CurvesOnSurface}}
+    \incfig[0.65]{CurvesOnSurface}
     \caption{The curves that lie on $T_{0,0}$}
     \label{fig:curves}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \resizebox{.4\totalheight}{!}{\incfig{ExtraCurves}}
+    \incfig[0.4]{ExtraCurves}
     \caption{The parts of curves $\beta_2$ and $\beta_7$ on $T_{0,1}$ and $T_{1,0}$}
     \label{fig:extracurves}
 \end{figure}
 
-\caleb[inline]{I have the graphics fully drawn I just need to mess around with the labeling on the curves to make them readable}
+Recall that for non-orientable surfaces, we don't initially have a well-defined notion of a positive or
+negative Dehn twist. As we saw in Section \ref{sec:mapping-classes-non}, in order to perform a Penner
+construction, we need to ensure that the curves we are working with are marked inconsistently. Note that our
+labeling of the curves already gives us an inconsistent marking. For any alpha curve $\alpha_i$, we let the
+marking $\phi_{\alpha_i}$ be orientation preserving and for beta curves $\beta_j$ let $\phi_{\beta_j}$ be
+orientation reversing. Since alpha curves only intersect beta curves (and vice versa), we have an inconsistent
+marking at each point of intersection.
 
-Recall that for non-orientable surfaces, we don't initially have a well-defined notion of a positive or negative Dehn twist. As we saw in Section \ref{sec:mapping-classes-non}, in order to perform a Penner construction, we need to ensure that the curves we are working with are marked inconsistently. Note that our labeling of the curves already gives us an inconsistent marking. For any alpha curve $\alpha_i$, we let the marking $\phi_{\alpha_i}$ be orientation preserving and for beta curves $\beta_j$ let $\phi_{\beta_j}$ be orientation reversing. Since alpha curves only intersect beta curves (and vice versa), we have an inconsistent marking at each point of intersection.
-
-Let $\mathcal{B}$ be the union of all $\beta$ curves except $\beta_1$ in $T_{0,0} \cup T_{0,1} \cup T_{1,0}$ (see figures below). Let $\rho_1(\mathcal{B})$ be the image of $\mathcal{B}$ under $\rho_1$. Define $\phi_b$ as the composition of Dehn twists along all the curves in the set $\overline{\mathcal{B}} \coloneqq \mathcal{B} \cup \rho_1(\mathcal{B}) \cup \dots \cup \rho_1^{n-1}(\mathcal{B})$. Since the curves in $\overline{\mathcal{B}}$ are disjoint, Dehn twists along them commute and therefore it is not necessary to specify the order in which we compose these Dehn twists in $\phi_b$. Let $\mathcal{R}$ be the union of all $\alpha$ curves except $\alpha_1$ in $T_{0,0}$. Define $\overline{\mathcal{R}}$ and $\phi_r$ in the exact same way.
+Let $\mathcal{B}$ be the union of all $\beta$ curves except $\beta_1$ in $T_{0,0} \cup T_{0,1} \cup T_{1,0}$
+(see figures below). Let $\rho_1(\mathcal{B})$ be the image of $\mathcal{B}$ under $\rho_1$. Define $\phi_b$
+as the composition of Dehn twists along all the curves in the set
+$\overline{\mathcal{B}} \coloneqq \mathcal{B} \cup \rho_1(\mathcal{B}) \cup \dots \cup
+\rho_1^{n-1}(\mathcal{B})$. Since the curves in $\overline{\mathcal{B}}$ are disjoint, Dehn twists along them
+commute and therefore it is not necessary to specify the order in which we compose these Dehn twists in
+$\phi_b$. Let $\mathcal{R}$ be the union of all $\alpha$ curves except $\alpha_1$ in $T_{0,0}$. Define
+$\overline{\mathcal{R}}$ and $\phi_r$ in the exact same way.
 
 Let $\alpha_1,\beta_1 \subset T_{0,0}$ be the curves in Figure \ref{fig:curves}. Let $\phi$ be the composition of Dehn twists along all the curves $\alpha_1, \rho_1(\alpha_1), \dots, \rho_1^{n-1}(\alpha_1)$ followed by Dehn twists along all the curves $\beta_1,\rho_1(\beta_1),\dots,\rho_1^{n-1}(\beta_1)$. Define
 \begin{align*}
@@ -142,7 +156,7 @@ We are using the same notation as Yazdi, so the composition is from right to lef
 
 We have now constructed an infinite family of non-orientable surfaces and pseudo-Anosov maps, but there's an alarming issue with it. Looking back at Lemma \ref{lem:genera}, the genera of this family of surfaces does not encapsulate every positive integer. We are going to use our extension of the Thurston norm to ``fill in the gaps", by constructing fibers for fibrations of the mapping tori of the pseudo-Anosov maps we defined above.
 
-Let $M_{n,k}$ be the mapping torus of $f_{n,k}$ .Likewise, let $\mathcal{K}_{n,k}$ denote the fibered cone of $H^1(M_{n,k},\mathbb{R})$ corresponding to the map $f_{n,k}$. We will show that $M_{n,k}$ contains a closed, relatively orientable, incompressible surface homeomorphic to $\mathcal{N}_3$ that is transverse to the suspension flow direction. This will allow us to apply Theorem \textcolor{red}{Not yet labeled} to construct new fibrations of $M_{n,k}$. 
+Let $M_{n,k}$ be the mapping torus of $f_{n,k}$ .Likewise, let $\mathcal{K}_{n,k}$ denote the fibered cone of $H^1(M_{n,k},\mathbb{R})$ corresponding to the map $f_{n,k}$. We will show that $M_{n,k}$ contains a closed, relatively orientable, incompressible surface homeomorphic to $\mathcal{N}_3$ that is transverse to the suspension flow direction. This will allow us to apply Theorem \textcolor{red}{Not yet labeled} to construct new fibrations of $M_{n,k}$.
 
 \begin{lem}
 \label{lem:genus3}
@@ -157,10 +171,10 @@ There is a relatively orientable incompressible surface, $F_{n,k}$, that is home
         f^k_{n,k}(\gamma) &= \rho_2^k(\hat{\gamma}) = \hat{\gamma}
     \end{align*}
     As in Yazdi, let $T_i$ be a tube (annulus) that connects $f_{n,k}^{i-1}(\gamma)$ to $f_{n,k}^i(\gamma)$ (which as we saw above will just be $\gamma$ or copies of $\hat{\gamma}$ on a $\rho_2$ rotation of $T_{0,0}$ ) in the mapping torus $M_{n,k}$, for $1 \leq i \leq k$. We obtain these tubes by following the suspension flow of $f_{n,k}$ around $M_{n,k}$. We can now obtain our embedded surface $F_{n,k}$ by taking the union of $T_1,T_2,\dots,T_k$ and $\hat{F}$. Since we are ``adding an orientable genus" to a non-orientable surface of genus 1, we get that $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
-    
-    
+
+
     We can now lift $F_{n,k}$ to the double orientation cover of $M_{n,k}$ to get a surface $F_{n,k}$. Since $F_{n,k}$ is non-orientable, the lift will be the double orientation cover of $F_{n,k}$, which in this case is a surface of genus two. We now want to show that our genus 2 surface living inside of $\wt{M_{n,k}}$ is Thurston norm-minimizing and lies in the closure of $\mathcal{K}_{n,k}$ as in Yazdi. \textcolor{red}{Using the same argument as Yazdi, we can conclude that $F_{n,k}$ is transverse to the suspension flow of $f_{n,k}$. This fact will not change when lifting to the double cover and thus $F_{n,k} \subset \overline{\mathcal{K}_{n,k}}$ by \ref{thm:Thur1}.}
-    
+
 \end{proof}
 
 \begin{center}
@@ -201,7 +215,7 @@ Recall from above that we stated we need to find the eigenvalue of the matrix th
 
 We can now check the conditions of Lemma 1, based on the combinatorics of the curves on our surface:
 \begin{enumerate}
-    \item From the way that the curves are constructed, there will exist a constant $D'$, independent of $n$ and $k$, such that for every connected curve (single element subset) $c \subset \hat{A}$, the geometric intersection number between $c$ and $\overline{A}$ is at most $D'$. 
+    \item From the way that the curves are constructed, there will exist a constant $D'$, independent of $n$ and $k$, such that for every connected curve (single element subset) $c \subset \hat{A}$, the geometric intersection number between $c$ and $\overline{A}$ is at most $D'$.
     Recall from Section \ref{sec:mapping-classes-non} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of transverse measures on our invariant train track corresponding to connected curves in $\hat{A}$ as $A$. Following Yazdi we can write
     \begin{align*}
         A = M_4M_3M_2M_1,
@@ -212,7 +226,7 @@ We can now check the conditions of Lemma 1, based on the combinatorics of the cu
     \begin{align*}
         X = \{\mu_y \,\vert\, \exists i \text{s.t. $y$ is a connected curve in } \rho_1(\rho_2^{-1}(\beta_8))\}.
     \end{align*}
-    One can see from the picture of the curves that elements corresponding to $X$ will have $v^+ \subset V_2 \cup V_3$. 
+    One can see from the picture of the curves that elements corresponding to $X$ will have $v^+ \subset V_2 \cup V_3$.
     \item The elements $v \in V_3$ such that $v^+ \not\subset V_4$ are the ones that correspond to
     \begin{align*}
         Y = \{\mu_y \,\vert\, \exists i \text{s.t. $y$ is a connected curve in } \rho_1^i(\rho_2(\alpha_8))\}.
@@ -246,9 +260,9 @@ The surface $P^r_{n,k}$ have genus equal to $g^r_{n,k} = g_{n,k} + r$. In partic
 
 \begin{proof}
     We know that
-    $$\chi(P^r_{n,k}) = \chi(P_{n,k}) + r\cdot\chi(F_{n,k}) = (-2(g_{n,k} - 1) + 2)-2r = -2(g_{n,k} + r - 1) + 2.$$ This proves the identity for the genus of $P^r_{n,k}.$ 
-    
-    From Theorem \ref{thm:oriented-sum}, we know that $P^r_{n,k}$ is isotopic to a fiber of a fibration of $M_{n,k}$ since we showed that $F_{n,k}$ is incompressible and transverse to the suspension flow in Lemma \ref{lem:genus3}. If we now let $f^r_{n,k}$ be the first return map of this new fibration, since one monodromy of $M_{n,k}$ is pseudo-Anosov, all monodromies are and $f^r_{n,k}$ is a pseudo-Anosov map. 
+    $$\chi(P^r_{n,k}) = \chi(P_{n,k}) + r\cdot\chi(F_{n,k}) = (-2(g_{n,k} - 1) + 2)-2r = -2(g_{n,k} + r - 1) + 2.$$ This proves the identity for the genus of $P^r_{n,k}.$
+
+    From Theorem \ref{thm:oriented-sum}, we know that $P^r_{n,k}$ is isotopic to a fiber of a fibration of $M_{n,k}$ since we showed that $F_{n,k}$ is incompressible and transverse to the suspension flow in Lemma \ref{lem:genus3}. If we now let $f^r_{n,k}$ be the first return map of this new fibration, since one monodromy of $M_{n,k}$ is pseudo-Anosov, all monodromies are and $f^r_{n,k}$ is a pseudo-Anosov map.
 
     As we see in Yazdi, the singularities of the stable foliation of $f_{n,k}$ that are fixed are the $2n$ intersection points of the axis of $\rho_1$ with $P_{n,k}$. Furthermore we have already seen that the surface $F_{n,k}$ can be isotoped to be transverse to the suspension flow and disjoint from the orbit of the $2n$ singularities of $f_{n,k}$, hence the monodromy $f^r_{n,k}$ still fixes the corresponding $2n$ singularities on $P^r_{n,k}$.
 \end{proof}
@@ -266,7 +280,7 @@ There exists a constant $C > 0$ such that for every $n \geq 1$, $k \geq 3$, and 
     $$h([\omega]) < h([\alpha]) \leq C'\frac{n}{g_{n,k}} \leq 2C'\frac{n}{g^r_{n,k}} $$
 \end{proof}
 
-So now we have that our surfaces $P^r_{n,k}$ are isotopic to fibers of fibrations of $M_{n,k}$ with pseudo-Anosov monodromies are pseudo-Anosov that have their stretch factors bounded. 
+So now we have that our surfaces $P^r_{n,k}$ are isotopic to fibers of fibrations of $M_{n,k}$ with pseudo-Anosov monodromies are pseudo-Anosov that have their stretch factors bounded.
 
 We can now think of $f^r_{n,k}$ as a map on a non-orientable surface of genus $g^r_{n,k}$. Note from above we know that $g^r_{n,k}$ covers all natural numbers between $g_{n,k}$ and $g_{n,k+1}$, thus this set of genera for all $r$ covers all natural numbers larger than $g_{n,3} = 40n + 2$. Recall that all of these surfaces will have $2n$ singularities, so we can either puncture $n$ or $n + 1$ to account for all possible number of punctures.
 
