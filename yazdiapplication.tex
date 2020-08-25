@@ -1,66 +1,108 @@
 \section{Minimal stretch factors for non-orientable surfaces with marked points}
 \label{sec:application}
 
-Recall that associated to every pseudo-Anosov homeomorphism $f$ there is a number $\lambda(f)$, the \textit{dilatation} or \textit{stretch factor}, the amount that the stable and unstable foliations of the pseudo-Anosov change by. Given a surface $S$, it is natural to ask what we can say about the set of all possible stretch factors, i.e.
+Recall that associated to every pseudo-Anosov homeomorphism $f$ there is a number $\lambda(f)$, the
+\textit{dilatation} or \textit{stretch factor}, the amount that the stable and unstable foliations of the
+pseudo-Anosov change by. Given a surface $S$, it is natural to ask what we can say about the set of all
+possible stretch factors, i.e.
 \begin{align*}
-    \{\log(\lambda(f)) | f \in \text{Mod}(S) \text{ is pseudo-Anosov}\}
+    \left\{\log(\lambda(f)) \mid f \in \text{Mod}(S) \text{ is pseudo-Anosov}\right\}
 \end{align*}
 
-We call this set the \textit{spectrum} of $S$. A first step at understanding this set of entropies associated to a surface is considering the following quantity
+We call this set the \textit{spectrum} of $S$. A first step at understanding this set of all stretch factors
+associated to a surface is considering the following quantity
 \begin{align*}
-    l_{g,n} =\min\{\log(\lambda(f)) | f \in \text{Mod}(\mathcal{S}_{g,n}) \text{ is pseudo-Anosov}\}.
+    l_{g,n} =\min\{\log(\lambda(f)) \mid f \in \text{Mod}(\mathcal{S}_{g,n}) \text{ is pseudo-Anosov}\}.
 \end{align*}
 
-The study of this minimal stretch factor $l_{g,n}$ was initiated by Penner in his work \cite{penner1991bounds}. In this work Penner studied the asymptotic behavior of minimal stretch factors of non punctured orientable surfaces, i.e. the behavior of $l_{g,0}$. He showed that there exists positive constants $A_1$ and $A_2$ such that for any $g \geq 2$
+The study of this minimal stretch factor $l_{g,n}$ was initiated by Penner in his work
+\cite{penner1991bounds}. In this work Penner studied the asymptotic behavior of minimal stretch factors of non
+punctured orientable surfaces, i.e. the behavior of $l_{g,0}$. He showed that there exist positive constants
+$A_1$ and $A_2$ such that the following inequalities held for any $g \geq 2$.
 \begin{align*}
-    \frac{A_1}{g} \leq l_{g,0} \leq \frac{A_2}{g},
+    \frac{A_1}{g} \leq l_{g,0} \leq \frac{A_2}{g}
 \end{align*}
-Hence showing that asymptotically $l_{g,0}$ behaves like $\frac{1}{g}$ for $g \geq 2$. The work by Yazdi in \cite{yazdi2018pseudo} that we aim to generalize using our results on the Thurston norm for non-orientable manifolds is a generalization of these first steps by Thurston. Yazdi asks what the asymptotic behavior of $l_{g,n}$ is when we look at rays in the $(g,n)$ plane with $n$ being constant. To this extent he proves the following result.
-\begin{thm}[Yazdi]
+This showed that asymptotically $l_{g,0}$ behaves like $\frac{1}{g}$ for $g \geq 2$.
+It turns out something similar is true when one looks at punctured orientable surfaces instead. Yazdi showed
+that for any fixed $n$, $l_{g,n}$ behaves like $\frac{1}{g}$. More precisely, he proved the following theorem.
+\begin{thm}[Theorem 1.2 of \cite{yazdi2018pseudo}]
 \label{thm:yazdi1}
-For any fixed $n \in \mathbb{N}$, there are positive constants $B_1 = B_1(n)$ and $B_2 = B_2(n)$ such that for any $g \geq 2$
+For any fixed $n \in \mathbb{N}$, there are positive constants $B_1 = B_1(n)$ and $B_2 = B_2(n)$ such that the following inequalities hold for
+any $g \geq 2$.
 \begin{align*}
     \frac{B_1}{g} \leq l_{g,n} \leq \frac{B_2}{g}.
 \end{align*}
 \end{thm}
 
-Yazdi's result is one of many recent results in studying the aymptotics of $l_{g,n}$ for different subsets of the $(g,n)$ plane. See the introductions of \cite{yazdi2018pseudo} and \cite{tsai2009asymptotic} for more examples of results of this form. Yazdi proves an additional result along these lines for a large subset of the $(g,n)$ plane, one containing balls of arbitrary large radii.
+Yazdi's result is one of many recent results in studying the asymptotics of $l_{g,n}$ for different subsets of
+the $(g,n)$ plane. See the introductions of \cite{yazdi2018pseudo} and \cite{tsai2009asymptotic} for more
+examples of results of this form. Yazdi proves an additional result along these lines for a large subset of
+the $(g,n)$ plane, one containing balls of arbitrary large radii.
 
 \begin{thm}[Yazdi]
     \label{thm:yazdi2}
-    There exists positive constants $A$, $B$ and $C$ such that for any $n \geq 1$ and $g \geq Cn\log^2(n)$ we have
+    There exists positive constants $A$, $B$ and $C$ such that for any $n \geq 1$ and $g \geq Cn\log^2(n)$ such that
+    the following inequalities hold.
     \begin{align*}
         \frac{B}{g} \leq l_{g,n} \leq \frac{A}{g}
     \end{align*}
 
 \end{thm}
-
-Our goal is to show these results also hold for non-orientable surfaces, albeit with possibly different constants. That is, if we let $\mathcal{N}_{g,n}$ be the genus $g$ non-orientable surface with $n$ punctures and let
-$$l'_{g,n} = \min\{\log(\lambda(f)) \, \vert \, f \in \text{Mod}(\mathcal{N}_{g,n})\ \text{ is pseudo-Anosov}\}$$
-Then we prove the following results
+A key tool in Yazdi's proof was the fibered face theory of Thurston. With the non-orientable analog of
+Thurston's fibered face theory we developed in the previous section, it's possible to prove an analogous
+theorem for non-orientable punctured surfaces.  Let $\mathcal{N}_{g,n}$ be the genus $g$ non-orientable
+surface with $n$ punctures and let $l_{g,n}'$ be the minimal stretch factor of $\no_{g,n}$.
+\begin{align*}
+  l'_{g,n} = \min\left\{\log(\lambda(f)) \mid f \in \text{Mod}(\mathcal{N}_{g,n})\ \text{is pseudo-Anosov}\right\}
+\end{align*}
+Then we have the following results, analogous to Yazdi's results.
 \begin{thm}
-\label{thm:stretch}
-~\begin{enumerate}
-    \item For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that for any $g \geq 2$ $$\frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}.$$
-    \item There exists positive constants $A'$, $B'$ and $C'$ such that for any $n \geq 1$ and $g \geq C'n\log^2(n)$ $$\frac{B'}{g} \leq l'_{g,n} \leq \frac{A'}{g}.$$
-\end{enumerate}
+  \label{thm:stretch1}
+  For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that
+  for any $g \geq 2$, the stretch factor satisfies the following inequalities.
+  \begin{align*}
+    \frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}
+  \end{align*}
 \end{thm}
 
-Recall that Proposition \ref{prop:2} states a pseudo-Anosov on a non-orientable surface lifts to a pseudo-Anosov with the same stretch factor on the double orientation cover. Thus, overlooking a few details we will describe at the end of this section, Yazdi's lower bound ``lifts" to a lower bound for non-orientable surfaces. The work in Yazdi's paper is done in constructing a family of pseudo-Anosovs, one for each surface $\mathcal{S}_{g,n}$, that have 'small' stretch factors. Our goal, and the primary part of the proof of the first part of Theorem \ref{thm:stretch}, will be to replicate Yazdi's construction on non-orientable surfaces, using our extension of the Thurston norm.
+\begin{thm}
+  \label{thm:stretch2}
+  There exist positive constants $A'$, $B'$ and $C'$ such that for any $n \geq 1$ and $g \geq C'n\log^2(n)$,
+  the stretch factor satisfies the following inequalities.
+  \begin{align*}
+    \frac{B'}{g} \leq l'_{g,n} \leq \frac{A'}{g}
+  \end{align*}
+\end{thm}
 
-\subsection{The Yazdi Construction}
+Observe that the lower bound for the non-orientable case follows easily from the lower bound for the orientable case.
+Let $f$ be the pseudo-Anosov map with the minimal stretch factor on $\no_{g,n}$. Then, by Proposition \ref{prop:2},
+this map lifts to a map $\wt{f}$ on $\os_{g-1, 2n}$ (possibly after squaring). Furthermore, $\wt{f}$ has the same
+stretch factor as $f$. The former is bounded below by $\frac{B}{g}$, and thus the stretch factor of $f$ is bounded
+below as well. The more challenging part of the proof is showing the upper bound holds. This will be done by explicitly
+constructing pseudo-Anosov maps with small stretch factors, adapting Yazdi's techniques to the non-orientable setting.
 
-Yazdi provides a 5 step construction in order to produce a pseudo-Anosov map for every punctured orientable surface that has stretch factor bounded above by the desired quantity. We will reproduce each step here, giving our version of Yazdi's construction for non-orientable surfaces.
+The construction of Yazdi proceeds in five steps: in steps 1 and 2, a family of small dilatation psuedo-Anosov
+maps is constructed on $\os_{g_i,n}$, where $\{g_i\}$ is a sequence of genera going off to infinity, by not
+containing every element of $\mathbb{N}$, i.e. there are plenty of gaps. Steps 3 to 5 deal with filling in the
+gaps, i.e. constructing small dilatation pseudo-Anosov maps on the missing surfaces, and this is where
+Thurston's fibered face theory enters the picture. In this section, we will adapt the steps to work for
+non-orientable surfaces.
 
-\begin{center}
-\textbf{Step 1: Constructing the Surfaces}
-\end{center}
+\paragraph{Step 1: Constructing the surfaces}
 
-The first step in the construction is defining a family of surfaces that exhibit a sort of rotational symmetry. Using this symmetry, if one shows that a power of some homeomorphism is pseudo-Ansov, then so was the original homeomorphism. Yazdi cites this insight as being due to Penner in his construction in \cite{penner1991bounds}.
+The first step in the construction is defining a family of surfaces that exhibit a sort of rotational
+symmetry. Using this symmetry, if one shows that a power of some homeomorphism is pseudo-Ansov, then so is
+the original homeomorphism. Yazdi cites this insight as being due to Penner in his construction in
+\cite{penner1991bounds}.
 
-Note that we will try to follow Yazdi's notation as close as we can, in order to make it clear to the reader how our construction replicates his.
+Note that we will try to follow Yazdi's notation as close as we can, in order to make it clear to the reader
+how our construction replicates his.
 
-We will define a family of surfaces $P_{n,k}$ in the way originally done by Yazdi. Let $T$ be an orientable surface of genus 5 with 3 boundary components $c,d$ and $e$. Orient $T$ and give $c,d$ and $e$ the induced orientations from this orientation. Now add two cross-caps to $T$ but keep the boundaries of $T$ oriented. Let $p$ (respectively $q$) be a puncture (respectively a marked point) on the boundary component $e$ of $T$, with oriented arcs $r$ and $s$ connecting them on $\partial T$. See Figure \ref{fig:buildingblock} for a picture of $T$.
+We begin by defining a family of surfaces $P_{n,k}$. Let $T$ be an orientable surface of genus 5 with 3
+boundary components $c,d$ and $e$. Orient $T$ and give $c,d$ and $e$ the induced orientations from this
+orientation. Now add two cross-caps to $T$ but keep the boundaries of $T$ oriented. Let $p$ (respectively $q$)
+be a puncture (respectively a marked point) on the boundary component $e$ of $T$, with oriented arcs $r$ and
+$s$ connecting them on $\partial T$. See Figure \ref{fig:buildingblock} for a picture of $T$.
 
 \begin{figure}[]
     \centering
@@ -69,14 +111,17 @@ We will define a family of surfaces $P_{n,k}$ in the way originally done by Yazd
     \label{fig:buildingblock}
 \end{figure}
 
-Let $T_{i,j}$ be copies of the surface $T$, where $i,j \in \mathbb{Z}$. We will use similar notations to refer to the boundary components of $T_{i,j}$. Define an infinite surface $S_\infty$ as the quotient
-$$S_\infty \coloneqq \left( \bigcup T_{i,j} \right)/\sim,$$
-where $i,j \in \mathbb{Z}$. The equivalence relation $\sim$ is defined as
+Let $T_{i,j}$ be copies of the surface $T$, where $i,j \in \mathbb{Z}$. We will use similar notation to refer
+to the boundary components of $T_{i,j}$. Define an infinite surface $S_\infty$ as the following quotient.
 \begin{align*}
-    c_{i,j} \sim d_{i+1,j} \hspace{1em}, \hspace{1em} r_{i,j} \sim s_{i,j+1}
+  S_\infty \coloneqq \left. \left( \bigcup T_{i,j} \right)\right/\sim
 \end{align*}
-and the gluing maps for the boundary components are by orientation-reversing homeomorphisms.
-
+Here, $i$ and $j$ are integers. The equivalence relation $\sim$ is generated by the following two families of identifications.
+\begin{align*}
+  c_{i,j} &\sim d_{i+1,j} \\
+  r_{i,j} &\sim s_{i,j+1}
+\end{align*}
+Furthermore, the boundary components are glued by an orientation-reversing homeomorphisms.
 We have two natural shift maps $\overline{\rho_1},\overline{\rho_2}: T_\infty \xrightarrow[]{} T_\infty$ that act by
 \begin{gather*}
     \overline{\rho_1} \text{ sends } T_{i,j} \text{ to } T_{i+1,j}, \\
@@ -284,9 +329,9 @@ So now we have that our surfaces $P^r_{n,k}$ are isotopic to fibers of fibration
 
 We can now think of $f^r_{n,k}$ as a map on a non-orientable surface of genus $g^r_{n,k}$. Note from above we know that $g^r_{n,k}$ covers all natural numbers between $g_{n,k}$ and $g_{n,k+1}$, thus this set of genera for all $r$ covers all natural numbers larger than $g_{n,3} = 40n + 2$. Recall that all of these surfaces will have $2n$ singularities, so we can either puncture $n$ or $n + 1$ to account for all possible number of punctures.
 
-We can now give a proof of the first half of Theorem \ref{thm:stretch}:
+We can now give a proof of the first half of Theorem \ref{thm:stretch1}:
 
-\begin{manualtheorem}{\ref{thm:stretch}.1}
+\begin{manualtheorem}{\ref{thm:stretch1}}
 For any fixed $n \in \mathbb{N}$, there are positive constants $B_1' = B_1'(n)$ and $B_2' = B_2'(n)$ such that for any $g \geq 2$
 $$\frac{B_1'}{g} \leq l'_{g,n} \leq \frac{B_2'}{g}$$
 \end{manualtheorem}
