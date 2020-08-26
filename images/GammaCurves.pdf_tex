@@ -1,0 +1,83 @@
+%% Creator: Inkscape 1.0 (4035a4fb49, 2020-05-01), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'GammaCurves.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{428.45697838bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.57606721)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{GammaCurves.pdf}}%
+    \put(0.69130214,1.5491264){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.68128303,1.43655327){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$q$\end{tabular}}}}%
+    \put(-0.00264964,0.83139167){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c$\end{tabular}}}}%
+    \put(0.5787557,0.00617106){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$d$\end{tabular}}}}%
+    \put(0.47122694,1.33527617){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$s$\end{tabular}}}}%
+    \put(0.80131511,1.34152793){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
+    \put(0.07461581,0.66346464){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_2$\end{tabular}}}}%
+    \put(0.21965457,0.58094256){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_2$\end{tabular}}}}%
+    \put(0.57599983,0.47216377){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{GammaCurves.pdf}}%
+    \put(0.70350785,1.2118802){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_8$\end{tabular}}}}%
+    \put(0.63101447,1.0960802){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_6$\end{tabular}}}}%
+    \put(0.71266514,0.73220264){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_5$\end{tabular}}}}%
+    \put(0.66608402,0.82404514){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_1$\end{tabular}}}}%
+    \put(0.47097173,0.96229453){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_1$\end{tabular}}}}%
+    \put(0.36094236,0.7809961){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_4$\end{tabular}}}}%
+    \put(0.40845506,1.14984465){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_7$\end{tabular}}}}%
+    \put(0.40095307,0.53718101){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\beta_3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{GammaCurves.pdf}}%
+    \put(0.36094236,0.58344332){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_4$\end{tabular}}}}%
+    \put(0.66998043,0.58729865){\color[rgb]{0,0,0}\transparent{0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\alpha_5$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{GammaCurves.pdf}}%
+    \put(0.64299501,0.9740405){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\gamma$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{GammaCurves.pdf}}%
+    \put(0.69250563,0.76215891){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\hat{\gamma}$\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
