@@ -256,6 +256,19 @@ It is not the case that every embedded surface in a non-orientable $3$-manifold 
   this can't be continuously extended to all of $M$, since that direction gets reversed by the suspension flow.
   This means that the surface $S'$ is relatively non-orientable in $M$ (despite being orientable itself.)
 \end{example}
+We do however get relative orientability for free when working with only non-orientable surfaces and $3$-manifolds.
+\begin{prop}
+  \label{prop:relative-orientability}
+  Let $M$ be a non-orientable $3$-manifold, and let $S$ be an embedded connected non-orientable surface in $M$.
+  Then $S$ is relatively orientable with respect to $M$.
+\end{prop}
+\begin{proof}
+  Let $\wt{M}$ be the orientation double cover of $M$, and $\wt{S}$ be the pre-image of $S$. Then the
+  restriction of the orientation deck transformation $\iota$ to $\wt{S}$ is orientation reversing on $\wt{S}$
+  as well, since the quotient $S$ is non-orientable. That means $S$ leaves the outward pointing normal
+  direction from $\wt{S}$ invariant, and that descends to an outward pointing normal direction on $S$. This
+  shows that $S$ is relatively orientable with respect to $M$.
+\end{proof}
 
 We care about relatively orientable surfaces because for these surfaces can be mapped to cohomology classes.
 \begin{thm}[Poincar\'e duality for non-orientable $3$-manifolds]
