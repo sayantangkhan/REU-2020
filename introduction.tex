@@ -1,12 +1,55 @@
 \section{Introduction}
 \label{sec:introduction}
 
+Let $M$ be a closed, fibered 3-manifold that fibers over $S^1$. It is a well known fact that these surface
+bundles over the circle all have a separate description, that of the mapping torus of some homeomorphism of a
+closed surface. Not only that, but a single 3-manifold can have many, possibly infinite, descriptions as a
+mapping torus. Thus when studying these 3-manifolds, an important question is whether one can understand or
+give a description of all these possible fibrations.
 
+In 1986, Thurston gave a way to answer this question, a semi-norm on the second homology of an orientable
+3-manifold that was able to ``detect'' when an embedded surface of the 3-manifold was the fiber of a fibration
+of said manifold. This \textit{Thurston norm} is given a full treatment in \cite{thurston1986norm}, in which
+Thurston shows that not only does this norm have unit ball which is a polyhedron, but the fibers of fibrations
+of one of these 3-manifolds $M$ were in one-to-one correspondence with cones on open faces of this polyhedron
+unit ball. This almost combinatorial description of the fibers turns out to be a powerful tool in studying
+these fibered 3-manifolds.
 
-% Let $M$ be a closed, fibered 3-manifold that fibers over $S^1$. It is a well known fact that these surface bundles over the circle all have a separate description, that of the mapping torus of some homeomorphism of a closed surface. Not only that, but a single 3-manifold can have many, possibly infinite, descriptions as a mapping torus. Thus when studying these 3-manifolds, an important question is whether one can understand or give a description of all these possible fibrations.
+All this also plays a key role in understanding mapping class groups of surfaces, since a surface and
+a mapping class on it is associated to a $3$-manifold, namely, the mapping torus of the mapping class.
+By relating the different ways a given mapping torus can fiber, one is able to relate mapping classes
+on different surfaces, and in doing so, construct mapping classes of interest.
 
-% In 1986, Thurston gave a way to answer this question, a semi-norm on the second homology of an orientable 3-manifold that was able to "detect" when an embedded surface of the 3-manifold was the fiber of a fibration of said manifold. This \textit{Thurston norm} is given a full treatment in \cite{thurston1986norm}, in which Thurston shows that not only does this norm have unti ball a polyhedron, but the fibers of fibrations of one of these 3-manifolds $M$ were in one-to-one correpsondence with cones on open faces of this polyhedron unit ball. This almost combinatorial description of the fibers turns out to be a powerful tool in studying these fibered 3-manifolds.
+However, there is a small issue with using Thurston norm based techniques: Thurston defines his norm on the
+second homology of an \textit{orientable} 3-manifold. This leads to the question of whether the results that
+depend on the Thurston norm work in the non-orientable setting as well. While Thurston himself does comment on
+this in \cite{thurston1986norm}, writing, ``(m)ost of this paper also works for non-oriented manifolds, but
+simplicity we deal only with the oriented case.'' It is the goal of this paper to deal with the other case, to
+see what works and what, if anything, possibly goes wrong when trying to extend the Thurston norm and its
+consequences for fibered 3-manifolds to the non-orientable setting.
 
-% There is a small catch to this norm, note above we said that Thurston defines his norm on the second homology of an \textit{orientable} 3-manifold. Now while in most cases of its use, this orientibilty issue hasn't caused too much of a problem, yet it does beg the question of whether this norm works in the non-orientable case as well. Thurston himself gives a comment on this in \cite{thurston1986norm}, writing "Most of this paper also works for non-oriented manifolds, but simplicity we deal only with the oriented case." It is the goal of this paper to deal with the other case, to see what works and what, if anything, possibly goes wrong when trying to extend the Thurston norm and its consequences for fibered 3-manifolds to the non-orientable setting.
+One of the ways Thurston's results are used in the study of mapping classes is via the operation of
+\emph{oriented sum}. Given the mapping torus $M$ of some surface $S$ and some homeomorphism $\varphi$, one can
+identify $S$ with an embedded surface in $M$. By picking another embedded surface $S'$ in an appropriate
+manner, one can perform local surgery to combine $S$ and $S'$: the resulting surface is called the oriented
+sum of $S$ and $S'$ and denoted $S+S'$. Under the appropriate hypothesis, the oriented sum is also the fiber
+of some other fibration, and thus has a mapping class $\varphi'$ on it. It turns out one can relate the
+stretch factors of $\varphi$ (which is a mapping class on $S$) and $\varphi'$ (which is a mapping class on
+$S + S'$). We generalize this operation of oriented sum for non-orientable surfaces in Theorem
+\ref{thm:oriented-sum}.
 
-% As we stated above...
+To show that this paper isn't just generalization for the sake of generalization, we use this generalization
+of Thurston's results and oriented sums to study the asymptotic behaviour of the minimal stretch factor of
+punctured non-orientable surfaces. The result for orientable punctured surfaces was proven by Yazdi in 2019,
+and relied heavily on Thurston's result, among others. We are able to essentially ``plug in'' the
+non-orientable version of Thurston's results to get a non-orientable version of Yazdi's results. This is one
+of the main theorems of this paper.
+\begin{manualtheorem}{\ref{thm:stretch1}}
+  Let $\no_{g,n}$ be a non-orientable surface of genus $g$ with $n$ marked points, and let $l_{g,n}'$ be
+  the smallest stretch factor of the pseudo-Anosov mapping classes acting on $\no_{g,n}$.
+  Then for any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such
+  that for any $g \geq 2$, the stretch factor satisfies the following inequalities.
+  \begin{align*}
+    \frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}
+  \end{align*}
+\end{manualtheorem}
