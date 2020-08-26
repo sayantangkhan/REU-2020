@@ -16,14 +16,13 @@ associated to a surface is considering the following quantity
 \end{align*}
 
 The study of this minimal stretch factor $l_{g,n}$ was initiated by Penner in his work
-\cite{penner1991bounds}. In this work Penner studied the asymptotic behavior of minimal stretch factors of non
-punctured orientable surfaces, i.e. the behavior of $l_{g,0}$. He showed that there exist positive constants
+\cite{penner1991bounds}. In this paper Penner studied the asymptotic behavior of minimal stretch factors of orientable surfaces without punctures, i.e. the behavior of $l_{g,0}$. He showed that there exist positive constants
 $A_1$ and $A_2$ such that the following inequalities held for any $g \geq 2$.
 \begin{align*}
     \frac{A_1}{g} \leq l_{g,0} \leq \frac{A_2}{g}
 \end{align*}
 This showed that asymptotically $l_{g,0}$ behaves like $\frac{1}{g}$ for $g \geq 2$.
-It turns out something similar is true when one looks at punctured orientable surfaces instead. Yazdi showed
+It turns out something similar is true when one starts adding punctures. Yazdi showed
 that for any fixed $n$, $l_{g,n}$ behaves like $\frac{1}{g}$. More precisely, he proved the following theorem.
 \begin{thm}[Theorem 1.2 of \cite{yazdi2018pseudo}]
 \label{thm:yazdi1}
@@ -48,7 +47,7 @@ the $(g,n)$ plane, one containing balls of arbitrary large radii.
     \end{align*}
 
 \end{thm}
-A key tool in Yazdi's proof was the fibered face theory of Thurston. With the non-orientable analog of
+A key tool in Yazdi's proof of both these theorems was the fibered face theory of Thurston. With the non-orientable analog of
 Thurston's fibered face theory we developed in the previous section, it's possible to prove an analogous
 theorem for non-orientable punctured surfaces.  Let $\mathcal{N}_{g,n}$ be the genus $g$ non-orientable
 surface with $n$ punctures and let $l_{g,n}'$ be the minimal stretch factor of $\no_{g,n}$.
@@ -64,15 +63,6 @@ Then we have the following result, analogous to Yazdi's results.
     \frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}
   \end{align*}
 \end{thm}
-
-% \begin{thm}
-%   \label{thm:stretch2}
-%   There exist positive constants $A'$, $B'$ and $C'$ such that for any $n \geq 1$ and $g \geq C'n\log^2(n)$,
-%   the stretch factor satisfies the following inequalities.
-%   \begin{align*}
-%     \frac{B'}{g} \leq l'_{g,n} \leq \frac{A'}{g}
-%   \end{align*}
-% \end{thm}
 
 Observe that the lower bound for the non-orientable case follows easily from the lower bound for the orientable case.
 Let $f$ be the pseudo-Anosov map with the minimal stretch factor on $\no_{g,n}$. Then, by Proposition \ref{prop:2},
@@ -112,7 +102,7 @@ $s$ connecting them on $\partial T$. See Figure \ref{fig:buildingblock} for a pi
 \end{figure}
 
 Let $T_{i,j}$ be copies of the surface $T$, where $i,j \in \mathbb{Z}$. We will use similar notation to refer
-to the boundary components of $T_{i,j}$. Define an infinite surface $S_\infty$ as the following quotient.
+to the boundary components of $T_{i,j}$. Define an infinite surface $S_\infty$ as the following quotient:
 \begin{align*}
   S_\infty \coloneqq \left. \left( \bigcup T_{i,j} \right)\right/\sim
 \end{align*}
@@ -142,8 +132,7 @@ two main problems:
   the conditions of Lemma \ref{lem:spectral}. This is used to prove our family of pseudo-Anosov maps have
   stretch factors bounded above by the quantity we desire.
 \item Having a curve $\gamma$ such that it and its image under our map form the boundary of an embedded
-  $\mathcal{N}_3$ in the mapping torus, which will come into play when extending our family of surfaces in
-  Step 3.
+  $\RR P^2$ with two boundary components in the mapping torus, which will come into play when extending our family of surfaces in Step 3.
 \end{itemize}
 
 \begin{lem}
@@ -235,7 +224,7 @@ positive integer. In fact, it misses infinitely many integers. We will use our e
 fibered face theory to fill in the gaps, by constructing fibers for fibrations of the mapping tori of the
 pseudo-Anosov maps we defined above.
 
-Let $M_{n,k}$ be the mapping torus of $f_{n,k}$ .Likewise, let $\mathcal{K}_{n,k}$ denote the fibered cone of
+Let $M_{n,k}$ be the mapping torus of $f_{n,k}$. Likewise, let $\mathcal{K}_{n,k}$ denote the fibered cone of
 $H^1(M_{n,k},\mathbb{R})$ corresponding to the map $f_{n,k}$. We will show that $M_{n,k}$ contains a closed,
 relatively orientable, incompressible surface homeomorphic to $\mathcal{N}_3$ that is transverse to the
 suspension flow direction. This will allow us to apply Theorem \ref{thm:oriented-sum} to construct
