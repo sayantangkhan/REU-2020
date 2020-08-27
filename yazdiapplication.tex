@@ -348,13 +348,13 @@ We can now check the conditions of Lemma 1, based on the combinatorics of the cu
   $k$, such that for every connected curve (single element subset) $c \subset \hat{A}$, the geometric
   intersection number between $c$ and $\overline{A}$ is at most $D'$.  Recall from Section
   \ref{sec:mapping-classes-non} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of
-  transverse measures on our invariant train track corresponding to connected curves in $\hat{A}$ as
+  transverse measures on our invariant train track corresponding to connected curves in $\hat{\mathcal{A}}$ as
   $A$. Following Yazdi we express $A$ as the following product.
   \begin{align*}
     A = M_4M_3M_2M_1
   \end{align*}
   Here each $M_i$ is the linear action of $\rho_2,\phi,\phi_b$ and $\phi_r$ respectively. For a connected
-  curve $x \in \hat{A}$, the $L^1$-norm of $A(\mu_x)$ is bounded above by the geometric intersection of
+  curve $x \in \hat{\mathcal{A}}$, the $L^1$-norm of $A(\mu_x)$ is bounded above by the geometric intersection of
   $f_{n,k}(x)$ with the curves in $\overline{A}$, thus each of $M_1$, $M_2$ and $M_3$ will change the norm by
   a factor of at most $(1 + D')$. Since $\rho_2$ won't change intersection numbers, $M_4$ will preserve the
   $L^1$-norm. If we let $D = (1 + D')^3$, then the outward degree of each vertex in $\Gamma$ is at most $D$.
@@ -370,18 +370,18 @@ We can now check the conditions of Lemma 1, based on the combinatorics of the cu
 \item We need to see which vertices in $v \in V_1$ have $v^+ \not\subset V_2$. As in Yazdi, this is precisely
   the vertices corresponding to the following set.
   \begin{align*}
-    X = \{\mu_y \mid \exists i\ \text{s.t. $y$ is a connected curve in } \rho_1(\rho_2^{-1}(\beta_8))\}
+    X = \{\mu_y \mid \exists \,i\ \text{ s.t. $y$ is a connected curve in } \rho_1(\rho_2^{-1}(\beta_8))\}
   \end{align*}
   One can see from the picture of the curves that elements corresponding to $X$ will have
   $v^+ \subset V_2 \cup V_3$.
 \item The elements $v \in V_3$ such that $v^+ \not\subset V_4$ are the ones that correspond to the elements of
   the following set.
   \begin{align*}
-    Y = \{\mu_y \mid \exists i \text{ s.t. $y$ is a connected curve in } \rho_1^i(\rho_2(\alpha_8))\}
+    Y = \{\mu_y \mid \exists \,i \text{ s.t. $y$ is a connected curve in } \rho_1^i(\rho_2(\alpha_8))\}
   \end{align*}
   This is due to the intersection of the curves $\rho_1^i(\rho_2(\alpha_8))$ with the curves
   $\rho_1^i(\beta_8)$. Moreover, for any element $v \in V_3$ corresponding to $Y$ and any
-  $u \in v^+ \cap V_3$, $u$ no longer correpsonds to $Y$ and hence $u^+ \subset V_4$.
+  $u \in v^+ \cap V_3$, $u$ no longer corresponds to $Y$ and hence $u^+ \subset V_4$.
 \item All the curves corresponding to an element of $V_j$, $3 < j \leq k$ are disjoint from all the curves in
   $\overline{A}$. Thus $f_{n,k}$ just acts by rotation.
 \end{enumerate}
@@ -417,8 +417,8 @@ $F_{n,k}$ $r$ times as defined in Theorem $\ref{thm:oriented-sum}$.
   We know that the Euler characteristic of an oriented sum is the sum of the Euler characteristics of the summands.
   \begin{align*}
     \chi(P^r_{n,k}) &= \chi(P_{n,k}) + r\cdot\chi(F_{n,k}) \\
-                    &= (-2(g_{n,k} - 1) + 2)-2r \\
-                    &= -2(g_{n,k} + r - 1) + 2
+                    &= (-2g_{n,k} + 2)-2r \\
+                    &= -2(g_{n,k} - 1) + 2
   \end{align*}
   This proves the identity for the genus of $P^r_{n,k}.$
 
@@ -450,8 +450,7 @@ Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$.Then there exists a c
               &\leq g_{n,k} + 14n \\
               &< 2g_{n,k}
   \end{align*}
-  Now if we let $\omega$ be the Poincar\'e dual of $P^r_{n,k}$, $\alpha$ the Poincar\'e dual of $P_{n,k}$ and
-  $\alpha'$ the Poincar\'e dual of $F_{n,k}$, we have the following bounds by the convexity of the entropy
+  Now if we let $\omega$ be the Poincar\'e dual of $P^r_{n,k}$ and $\alpha$ the Poincar\'e dual of $P_{n,k}$, we have the following bounds by the convexity of the entropy
   function $h$.
   \begin{align*}
     h([\omega]) &< h([\alpha]) \\
