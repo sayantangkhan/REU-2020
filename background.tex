@@ -10,14 +10,15 @@ $S^1 \times S^1$.  A common way of visualizing non-orientable surfaces is to thi
 surfaces with \emph{crosscaps} attached. We attach a crosscap to a surface $S$ by first deleting a small open disc $D\subset S$, and
 identifying the boundary of that disc (on the surface) via the antipodal map. In pictures, this is often denoted by
 an X inscribed in a circle, see \autoref{fig:buildingblock} for an example of a surface with two crosscaps
-attached.  Let $\no_{g,n}$ be a non-orientable surface obtained by attaching $g$ crosscaps to $S^2$ and marking $n$ points in $S^2$.  The integer $g$ is referred to as the genus of $\no_{g,n}$.  The compact non-orientable surfaces are classified by the triple $(g,n,b)$ where $g$ is the genus, $n$ is the number of marked points and $b$ is the boundary.  
+attached.  Let $\no_{g,n}$ be a non-orientable surface obtained by attaching $g$ crosscaps to $S^2$ and marking $n$ points in $S^2$.  The integer $g$ is referred to as the genus of $\no_{g,n}$.  The compact non-orientable surfaces are classified by the triple $(g,n,b)$ where $g$ is the genus, $n$ is the number of marked points and $b$ is the boundary.
 
 \p{The orientation double cover} The orientation double cover of $\no_{g,n}$ is an orientable surface $\os_{g-1, 2n}$ of genus $g-1$ and $2n$ marked points and a covering map $p$ defined as follows. The surface $\os_{g-1,2n}$ has an orientation reversing deck transformation $\iota: \os_{g-1, 2n} \to \os_{g-1,
   2n}$ of order 2. The covering map from $p:\os_{g-1,2n}\to \no_{g,n}$ is the quotient of $\os_{g-1,2n}$. If the genus and the
 number of marked points is clear from the context, we will drop the subscripts and just use
 $\no$ and $\os$ for the non-orientable surface and its orientation double cover respectively.
 
-Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift, that is a homeomorphism $\wt{\varphi}: \os \to \os$ with $p\wt{\varphi}=\varphi p$. %This is an easy exercise in covering space theory, but we'll give a proof here for completeness.
+Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift, that is a homeomorphism $\wt{\varphi}: \os \to \os$ with $p\wt{\varphi}=\varphi p$.
+% This is an easy exercise in covering space theory, but we'll give a proof here for completeness.
 %\begin{prop}
  % For any homeomorphism $\varphi: \no \to \no$, there exists a unique orientation preserving lift
  % $\wt{\varphi}: \os \to \os$. If the non-orientable surface has marked points fixed by $\varphi$,
@@ -43,19 +44,19 @@ Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving 
  % pre-images as well, which proves the second part of the proposition.
 %\end{proof}
 
-A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\os$.  Every homotopy of $\no$ lifts to a homotopy of $\os$.  Moreover, if $f,g:\no\to\no$ are homeomomorphisms such that their orientation preserving lifts $\widetilde{f},\widetilde{g}$ of $\os$ are homotopic, then $f$ and $g$ are homotopic.  Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\os$.  This inclusion also respects the Nielsen-Thurston classification of mapping classes, both qualitatively, and
+A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\os$.  Every homotopy of $\no$ lifts to a homotopy of $\os$.  Moreover, if $f,g:\no\to\no$ are homeomorphisms such that their orientation preserving lifts $\widetilde{f},\widetilde{g}$ of $\os$ are homotopic, then $f$ and $g$ are homotopic.  Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\os$.  This inclusion also respects the Nielsen-Thurston classification of mapping classes, both qualitatively, and
 quantitatively, as the following proposition shows.
 \begin{prop}
   \label{prop:2}
   If $\varphi$ is a self-homeomorphism of $\no$ and $\wt{\varphi}$ is its orientation preserving lift on $\os$, then:
   \begin{enumerate}[(i)]
   \item $\varphi$ is periodic if and only if $\wt{\varphi}$ is periodic,
-  \item $\varphi$ is reducible if and only if $\wt{\varphi}$, 
+  \item $\varphi$ is reducible if and only if $\wt{\varphi}$,
   \item $\varphi$ is pseudo-Anosov if and only if $\wt{\varphi}$ is pseudo-Anosov.  Moreover if $\varphi$ has stretch factor $\lambda$, then $\wt{\varphi}$ also has stretch factor $\lambda$.
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  It's easy to see that if $\varphi$ is periodic, so it $\wt{\varphi}$, and the other way round. If $\varphi$
+  It's easy to see that if $\varphi$ is periodic, so it $\wt{\varphi}$, and vice versa. If $\varphi$
   is reducible, that means it leaves some multicurve $\gamma$ in $\no$ invariant, which means $\wt{\varphi}$ leaves
   the preimage of $\gamma$ invariant as well. Conversely, if $\wt{\varphi}$ leaves some multicurve
   $\wt\gamma$ invariant, so does $\iota \circ \wt{\varphi}$, since they commute. That means the union of $\wt\gamma$
@@ -100,7 +101,7 @@ quantitatively, as the following proposition shows.
 % where we'll be computing asymptotics for the minimal stretch factor of a pseudo-Anosov map on
 % $\no_{g,n}$.
 
-%Finally, the last thing we need to know about mapping classes on non-orientable surfaces is how to construct examples of pseudo-Anosov maps. 
+%Finally, the last thing we need to know about mapping classes on non-orientable surfaces is how to construct examples of pseudo-Anosov maps.
 In the case of orientable surfaces, the Penner construction is used to construct pseudo-Anosov maps, as well compute their stretch factors. It turns out the Penner construction also works in the non-orientable setting, with some minor modifications. This construction is presented in detail in Section 2 of \cite{Strenner_2017}, but we give an outline of the key ideas below.
 
 \p{The Penner construction} The Penner construction in the orientable setting starts with a pair of filling multicurves $A = \{a_1,\dots,a_n\}$
@@ -127,7 +128,7 @@ twists around them that use all the curves at least once will be pseudo-Anosov.
 \p{Train tracks} The Penner construction not only promises that our map is pseudo-Anosov, but it also gives a way to
 compute the stretch factor of our map (see \cite{penner1988construction}).  The proof of the fact
 that the composition is pseudo-Anosov, and the computation of its stretch factor works the same is
-in the orientable setting.  Let $\varphi$ be a pseudo-Anosov homeomorphism of $\no$.  A {\it train track} is an embedded graph in $\no$ such that for every vertex of valence three or greater, all adjacent edges have the same tangent vector.  An {\it invariant train track for $\varphi$} is a train track track $\tau$ such that $\varphi(\tau)$ is homotopic to $\tau$.  Let $\mathcal{C}$ be a collection of curves in $\no$. %Consider now the collection of transverse measures on our train track $\tau$. 
+in the orientable setting.  Let $\varphi$ be a pseudo-Anosov homeomorphism of $\no$.  A {\it train track} is an embedded graph in $\no$ such that for every vertex of valence three or greater, all adjacent edges have the same tangent vector.  An {\it invariant train track for $\varphi$} is a train track track $\tau$ such that $\varphi(\tau)$ is homotopic to $\tau$.  Let $\mathcal{C}$ be a collection of curves in $\no$. %Consider now the collection of transverse measures on our train track $\tau$.
 For every curve $\gamma \in\mathcal{C}$, there is an associated transverse measure
 $\mu_\gamma$ for $\tau$ that assigns $1$ to all edges lying in $\gamma$ and 0 to everything else. Let $V_\tau$
 be the cone of transverse measures on $\tau$, and $H$ the subspace of $V_\tau$ spanned by the
@@ -142,30 +143,32 @@ $\lambda(\varphi)$, is the Perron-Frobenius eigenvalue of $\varphi$.
 \subsection{Thurston's theory of fibered faces}
 \label{sec:thurst-fiber-face}
 
-\becca[inline]{Does this first paragraph belong here or after the definition of Thurston norm?} Given a surface $S$ and a homeomorphism $\varphi: S \to S$, one can construct a $3$-manifold $M_\varphi$ via
-the \emph{mapping torus} construction.
-\begin{align*}
-  M_\varphi \coloneqq \frac{S \times [0,1]}{(x,1) \sim (\varphi(x), 0)}
-\end{align*}
-%Inverting this construction is also a problem of interest: given a $3$-manifold $M$, is it the mapping torus of some surface and self-homeomorphism $(S,\varphi)$? In how many ways can one express a $3$-manifold as a mapping torus? 
-Mapping tori are exactly the surface bundles over $S^1$, or \emph{fibrations over $S^1$}, denoted $S\rightarrow M\rightarrow S^1$. A fibration defines a {flow} on $M$,
-called the \emph{suspension flow}, where for any $x_0\in S$ and $t_0\in S^1$ the pair $(x_0,t_0)$ is sent to $(x_0,t_0+t)$. %It turns out that the Thurston norm is an extremely useful tool when studying fibrations over $S^1$ (and other related objects).
-
-Given a orientable closed $3$-manifold $M$, the Thurston norm is a semi-norm on its second homology
-group $H_2(M; \RR)$: to define the norm, we need to make some preliminary remarks and define a
-function.  Let $S$ be a connected surfaces  Define the complexity of $S$ to be $\chi_-(S) = \max\{-\chi(S),0\}$. If a
-surface $S$ has multiple components $S_1,\cdots,S_m$ then $\chi_-(S)=\displaystyle\sum_{i=1}^m\chi_-(S_i)$.  Furthermore, for an \emph{orientable} 3-manifold $M$, it is known that
-elements in $H_2(M ; \ZZ)$ can be represented by embedded surfaces inside of $M$. This lets us
-define a norm function $x$ for every homology class $a$ in $H_2(M; \ZZ)$:
+Given a orientable closed $3$-manifold $M$, the Thurston norm is a semi-norm on its second
+homology group $H_2(M; \RR)$: to define the norm, we need to make some preliminary remarks and
+define a function.  Let $S$ be a connected surface. Define the complexity of $S$ to be
+$\chi_-(S) = \max\left\{-\chi(S),0\right\}$. If a surface $S$ has multiple components $S_1,\ldots,S_m$
+then $\chi_-(S)=\displaystyle\sum_{i=1}^m\chi_-(S_i)$.  Furthermore, for an \emph{orientable}
+3-manifold $M$, it is known that elements in $H_2(M ; \ZZ)$ can be represented by embedded
+surfaces inside of $M$. This lets us define a norm function $x$ for every homology class $a$
+in $H_2(M; \ZZ)$:
 \begin{align*}
   x(a) = \min\{\chi_-(S) \mid [S] = a \text{ and $S$ is compact, properly embedded and oriented}\}.
 \end{align*}
 
-We then linearly extend $x$ to the rational points.  There is then a is a unique continuous extention of $x$ to $\RR$, that is: a $\RR$-valued function on $H_2(M; \RR)$ called the {\it Thurston norm}. The unit ball for the Thurston norm is a convex polyhedron, and thus it makes
+We then linearly extend $x$ to the rational points.  There is then a is a unique continuous extension of $x$ to $\RR$: an $\RR$-valued function on $H_2(M; \RR)$ called the {\it Thurston norm}. The unit ball for the Thurston norm is a convex polyhedron, and thus it makes
 sense to talk about the \emph{faces} of the unit ball.
 
-The way this ties back up with the question of realizing the $3$-manifold $M$ as a fibration over
-$S^1$ is via the following remarkable theorem of Thurston \cite{thurston1986norm}.  We use the restatement from \cite{yazdi2018pseudo}.
+Consider now the seemingly unrelated notion of \emph{mapping tori}.  Given a surface $S$ and a
+homeomorphism $\varphi: S \to S$, one can construct a $3$-manifold $M_\varphi$ via the
+\emph{mapping torus} construction.
+\begin{align*}
+  M_\varphi \coloneqq \frac{S \times [0,1]}{(x,1) \sim (\varphi(x), 0)}
+\end{align*}
+%Inverting this construction is also a problem of interest: given a $3$-manifold $M$, is it the mapping torus of some surface and self-homeomorphism $(S,\varphi)$? In how many ways can one express a $3$-manifold as a mapping torus?
+Mapping tori are surface bundles over $S^1$, or \emph{fibrations over $S^1$}, denoted $S\rightarrow M\rightarrow S^1$. A fibration defines a {flow} on $M$,
+called the \emph{suspension flow}, where for any $x_0\in S$ and $t_0\in S^1$ the pair $(x_0,t_0)$ is sent to $(x_0,t_0+t)$. %It turns out that the Thurston norm is an extremely useful tool when studying fibrations over $S^1$ (and other related objects).
+
+The way mapping tori are related to the faces of the unit ball in $H_2(M; \RR)$ is via the following question: In how many different ways can a $3$-manifold decompose as the mapping torus? This question was answered by the following remarkable theorem of Thurston \cite{thurston1986norm}.  We use the restatement from \cite{yazdi2018pseudo}.
 
 \begin{thm}[Thurston]
   \label{thm:Thur1}
@@ -178,7 +181,7 @@ $S^1$ is via the following remarkable theorem of Thurston \cite{thurston1986norm
   $M \xrightarrow[]{} S^1$ then $[F]$ lies in the closure of the corresponding cone in $H_2(M;\RR)$.
 \end{enumerate}
 \end{thm}
-%Note that one needs to clarify here what the homology class $[F]$ actually is, since given an embedded surface $F$, one has two canonical choices of $[F]$ depending upon the orientation of $F$. 
+%Note that one needs to clarify here what the homology class $[F]$ actually is, since given an embedded surface $F$, one has two canonical choices of $[F]$ depending upon the orientation of $F$.
 The class $[F]$ referred to in the theorem has orientation such that the positive flow direction is pointing outwards relative to the surface.
 
 The open faces whose cones contain the fibers of fibrations are what are referred to as
@@ -216,7 +219,7 @@ Theorems \ref{thm:fm} and \ref{thm:alm} make a quantitative link between the lat
 the fibered faces and the stretch factor of the associated pseudo-Anosov maps, demonstrating the power of
 Thurston's fibered theory of fibered faces.
 
-\p{Incompressible surfaces} %It is also useful to know if an embedded surface $S$ minimizes the Thurston norm in its homology class. It turns out that incompressible surfaces 
+\p{Incompressible surfaces} %It is also useful to know if an embedded surface $S$ minimizes the Thurston norm in its homology class. It turns out that incompressible surfaces
 Let $S$ be a surface with positive genus embedded in a $3$-manifold $M$.  The surface $S$ is said to be {\it incompressible} if there
   exists no embedded disc $D$ in $M$ such that $D \cap S = \partial D$, and $D$ intersects $S$ transversally.  The following theorem is due to Thurston.
 \begin{thm}
