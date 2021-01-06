@@ -1,0 +1,254 @@
+\section{Fibered faces}
+\label{sec:fibered-faces}
+
+\subsection{Thurston's theory of fibered faces}
+\label{sec:thurst-fiber-face}
+
+\becca[inline]{Does this first paragraph belong here or after the definition of Thurston norm?} Given a surface $S$ and a homeomorphism $\varphi: S \to S$, one can construct a $3$-manifold $M_\varphi$ via
+the \emph{mapping torus} construction.
+\begin{align*}
+  M_\varphi \coloneqq \frac{S \times [0,1]}{(x,1) \sim (\varphi(x), 0)}
+\end{align*}
+%Inverting this construction is also a problem of interest: given a $3$-manifold $M$, is it the mapping torus of some surface and self-homeomorphism $(S,\varphi)$? In how many ways can one express a $3$-manifold as a mapping torus?
+Mapping tori are exactly the surface bundles over $S^1$, or \emph{fibrations over $S^1$}, denoted $S\rightarrow M\rightarrow S^1$. A fibration defines a {flow} on $M$,
+called the \emph{suspension flow}, where for any $x_0\in S$ and $t_0\in S^1$ the pair $(x_0,t_0)$ is sent to $(x_0,t_0+t)$. %It turns out that the Thurston norm is an extremely useful tool when studying fibrations over $S^1$ (and other related objects).
+
+Given a orientable closed $3$-manifold $M$, the Thurston norm is a semi-norm on its second homology
+group $H_2(M; \RR)$: to define the norm, we need to make some preliminary remarks and define a
+function.  Let $S$ be a connected surfaces  Define the complexity of $S$ to be $\chi_-(S) = \max\{-\chi(S),0\}$. If a
+surface $S$ has multiple components $S_1,\cdots,S_m$ then $\chi_-(S)=\displaystyle\sum_{i=1}^m\chi_-(S_i)$.  Furthermore, for an \emph{orientable} 3-manifold $M$, it is known that
+elements in $H_2(M ; \ZZ)$ can be represented by embedded surfaces inside of $M$. This lets us
+define a norm function $x$ for every homology class $a$ in $H_2(M; \ZZ)$:
+\begin{align*}
+  x(a) = \min\{\chi_-(S) \mid [S] = a \text{ and $S$ is compact, properly embedded and oriented}\}.
+\end{align*}
+
+We then linearly extend $x$ to the rational points.  There is then a is a unique continuous extention of $x$ to $\RR$, that is: a $\RR$-valued function on $H_2(M; \RR)$ called the {\it Thurston norm}. The unit ball for the Thurston norm is a convex polyhedron, and thus it makes
+sense to talk about the \emph{faces} of the unit ball.
+
+The way this ties back up with the question of realizing the $3$-manifold $M$ as a fibration over
+$S^1$ is via the following remarkable theorem of Thurston \cite{thurston1986norm}.  We use the restatement from \cite{yazdi2018pseudo}.
+
+\begin{thm}[Thurston]
+  \label{thm:Thur1}
+  Let $\mathcal{F}$ be the set of homology classes in $H_2(M; \RR)$ that are representable by fibers of
+  fibrations of $M$ over the circle.
+\begin{enumerate}[(i)]
+\item Elements of $\mathcal{F}$ are in one-to-one correspondence with (non-zero) lattice points
+  inside some union of cones over open faces of the unit ball in the Thurston norm.
+\item If a surface $F$ is transverse to the suspension flow associated to some fibration of
+  $M \xrightarrow[]{} S^1$ then $[F]$ lies in the closure of the corresponding cone in $H_2(M;\RR)$.
+\end{enumerate}
+\end{thm}
+%Note that one needs to clarify here what the homology class $[F]$ actually is, since given an embedded surface $F$, one has two canonical choices of $[F]$ depending upon the orientation of $F$.
+The class $[F]$ referred to in the theorem has orientation such that the positive flow direction is pointing outwards relative to the surface.
+
+The open faces whose cones contain the fibers of fibrations are what are referred to as
+\emph{fibered faces}.  %It turns out one can recover even more information about the homeomorphism $\phi$ of which $M$ is the mapping torus. The following result of Thurston tells us precisely when the map $f$ is psuedo-Anosov.
+
+\begin{thm}[Thurston's Hyperbolization Theorem]
+    \label{thm:ThurHyp}
+  If $M_\varphi$ is the mapping torus of $(S, \varphi)$, then $M_\varphi$ is hyperbolic if and only if $\varphi$ is pseudo-Anosov.
+\end{thm}
+
+In particular, a consequence of the above theorem is that if $M_\varphi$ is the mapping torus of $(S', \varphi')$ then $\varphi'$ is pseudo-Anosov if and only if $\varphi$ is pseudo-Anosov. From Theorem \ref{thm:Thur1}, we know that all such pairs $(S, \varphi)$ correspond to lattice points in some union of
+cones in $H_2(M;\RR)$. One strategy to study possible stretch factors of pseudo-Anosov mapping classes is to study how the stretch factors change within a cone in $H_2(M_\varphi,\RR)$. To this end, we have the following two
+theorems, due to Fried-Matsumoto (see \cite{fried1982flow}, \cite{fried1983transitive}, and
+\cite{matsumoto1987topological}) and Agol-Leininger-Margalit (see \cite{agol6983pseudo}).
+
+\begin{thm}[Fried-Matsumoto]
+  \label{thm:fm}
+  Let $M$ be a hyperbolic $3$-manifold and let $\mathcal{K}$ be the union of cones in
+  $H_2(M; \RR)$ whose lattice points correspond to fibrations over $S^1$.  There exists a strictly
+  convex function $h: \mathcal{K} \to \RR$ satisfying the following properties.
+  \begin{enumerate}[(i)]
+  \item For all $c > 0$ and $u \in \mathcal{K}$, $h(cu) =  \frac{1}{c}h(u)$.
+  \item For every primitive lattice point $u \in \mathcal{K}$, $h(u) = \log(\lambda)$, where $\lambda$ is the
+    stretch factor of the pseudo-Anosov map associated to this lattice point.
+  \item $h(u)$ goes to $\infty$ as $u$ approaches $\partial \mathcal{K}$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Agol-Leininger-Margalit]
+  \label{thm:alm}
+  Let $\mathcal{K}$ be a fibered cone for a mapping torus $M$ and let $\overline{\mathcal{K}}$ be its closure
+  in $H_2(M;\RR)$. If $u \in \mathcal{K}$ and $v \in \overline{\mathcal{K}}$, then $h(u+v) < h(u)$.
+\end{thm}
+Theorems \ref{thm:fm} and \ref{thm:alm} make a quantitative link between the lattice points in the cones over
+the fibered faces and the stretch factor of the associated pseudo-Anosov maps, demonstrating the power of
+Thurston's fibered theory of fibered faces.
+
+\p{Incompressible surfaces} %It is also useful to know if an embedded surface $S$ minimizes the Thurston norm in its homology class. It turns out that incompressible surfaces
+Let $S$ be a surface with positive genus embedded in a $3$-manifold $M$.  The surface $S$ is said to be {\it incompressible} if there
+  exists no embedded disc $D$ in $M$ such that $D \cap S = \partial D$, and $D$ intersects $S$ transversally.  The following theorem is due to Thurston.
+\begin{thm}
+  A surface $S$ minimizes the Thurston norm in its homology class if and only if it is incompressible.
+\end{thm}
+
+\p{Examples} The following two families of examples of incompressible surfaces will be fairly important for us.
+  Let $M$ be a hyperbolic $3$-manifold that fibers over $S^1$. Then an embedded surface $S$ is incompressible
+  if either of the two following conditions hold:
+  \begin{enumerate}[(i)]
+  \item $S$ is the fiber of a fibration.
+  \item $S$ has genus $2$. In this case, $S$ is incompressible.  Indeed, if it were not norm minimizing in its homology
+    class, there would be an embedded surface of genus 0 or 1. But then $M$ cannot be hyperbolic.
+  \end{enumerate}
+
+The first example encompasses a large class of incompressible surfaces, as demonstrated by the following theorem.
+\begin{thm}[Theorem 4 from \cite{thurston1986norm}]
+  \label{thm:ThurIsotope}
+  Any incompressible surface $S$ in the homology class of a fiber of a fibration is isotopic to the fiber.
+\end{thm}
+
+%\becca[inline]{good paragraph, probably belongs in the intro} One of the primary goals of this paper to extend this definition of Thurston norm to non-orientable manifolds and be able to state the non-orientable version of the theorems above. Most of the work in doing so is concentrated in determining the right analog of Thurston norm for non-orientable surfaces, and then making Theorem \ref{thm:Thur1} work with that definition, which is what we will do in Section \ref{sec:fibered-face-theory}. Once we have the versions of the theorems for non-orientable surfaces, we'll generalize a trick due to McMullen that lets one construct pseudo-Anosov maps with small stretch factor to non-orientable surfaces. Finally we will prove bounds on the asymptotics of minimal stretch factors for non-orientable surfaces in Section \ref{sec:application} by adapting the methods in \cite{yazdi2018pseudo} for non-orientable surfaces.
+
+\subsection{Relating $1$-forms and fibrations over $S^1$}
+\label{sec:relating-1-forms}
+%While we have informally described what a fibration over $S^1$ is prior to this section, it will be useful to formally define a fibration at this stage.
+%\begin{defn}[Fibration over $S^1$]
+  Given a $3$-manifold $M$, a fibration (or a fiber bundle) over $S^1$ is a map $f: M \to S^1$ such
+  that the derivative of $f$ has full rank at all points in $M$. The pre-image of every point in
+  $S^1$ is an relatively oriented embedded surface in $M$, where the positive normal direction is
+  the pre-image of the positive direction in $S^1$. This surface is called the fiber of the
+  fibration.
+%\end{defn}
+%Note that any $3$-manifold that admits a fibration over $S^1$ is a mapping torus of the fiber, along with the homeomorphism that comes from the transition map when changing coordinate charts on $S^1$. We can instead look at homotopy classes of fibrations, and every equivalence class will correspond to a homotopy class of a homeomorphism of the fiber, i.e. a mapping class. Since we're mostly interested in mapping tori of mapping classes rather than mapping classes of specific homeomorphisms in those mapping classes, we'll be focusing on homotopy classes of fibrations.
+
+%For the purposes of our work, we will  \emph{non-singular integer $1$-forms}.
+
+\p{Non-singular integer 1-forms}  A {\it non-singular integer $1$-form} on a $3$-manifold $M$ is a smooth nowhere vanishing $1$-form $\alpha$ on $M$
+  such that for any closed loop $\gamma$, the integral of $\alpha$ along $\gamma$ lies in $\ZZ$.
+  \begin{align*}
+    \int_{\gamma} \alpha \in \ZZ
+  \end{align*}
+
+Given a non-singular integer $1$-form $\alpha$, the map
+\begin{align*}
+  f_{\alpha}(x) \coloneqq \int_{x_0}^x \alpha \mod \ZZ
+\end{align*}
+is a fibration over $S^1.$
+
+As above, given a fibration $f: M \to S^1$, we obtain a non-singular integer $1$-form by
+pulling back $d\theta$ under $f$. %The correct $1$-form to pull back is $d\theta$, i.e. the non-vanishing $1$-form on $S^1$ such that $\int_{S^1} d\theta = 1$ (note that despite the notation, this is not an exact form). These two constructions are inverses of each other, which is fairly easy to verify. Furthermore,
+If we change $\alpha$ to $\alpha + df$, where $df$ is an exact form, then the associated map to $S^1$ is not the same, but homotopic to the original map. Conversely, if we pull back $d\theta$ along a map homotopic to $f$ rather than $f$, we get a form that differs from the original form by an exact form (see Section 5.2.1 of \cite{calegari2007foliations} for the details). %The takeaway here is that if we only care about the mapping torus structure of the mapping classes, we can focus our attention to the elements of $H^1(M; \ZZ)$ that admit a non-singular $1$-form representative.
+
+We now have all we need to prove a version of Theorem \ref{thm:Thur1} for non-orientable
+$3$-manifolds.
+
+\begin{thm}
+  \label{thm:NOThur1}
+  Let $M$ be a non-orientable $3$-manifold, and let $\mathcal{F}$ be the set of all possible
+  ways $M$ fibers over $S^1$ (up to homotopy). Then the following results hold for $\mathcal{F}$.
+  \begin{enumerate}[(i)]
+  \item Elements of $\mathcal{F}$ are in a one-to-one correspondence with (non-zero) lattice points
+    inside a union of cones over open faces of the unit ball with respect to the Thurston norm
+    in $H^1(M; \RR)$.
+  \item If an embedded relatively oriented surface $S$ is transverse to the suspension flow
+    associated to some fibration $f$ such that the flow direction is the outwards normal direction,
+    then the Poincar\'e dual to $S$ lies in the closure of the cone in $H^1(M;\RR)$ corresponding to $f$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  We proceed by reducing to the the orientable case. Let $p:\wt{M}\rightarrow M$ be the orientation double cover of $M$.  %To get the union of cones $\mathcal{K}$ in $H^1(M; \RR)$ corresponding to fibrations, we
+ % look at the corresponding union of cones
+ Let $\wt{\mathcal{K}}$ be the union of cones over the open faces of the unit Thurston norm ball in $H^1(\wt{M};\RR)$. Recall that $H^1(M; \RR)$ bijectively maps into
+  $H^1(\wt{M}; \RR)$ as a subspace. Let $\mathcal{K}$ be the preimage of $\mathcal{\wt{K}}\cap p^\ast(H_1(M;\ZZ))$ under $p^\ast$.  %We define $\mathcal{K}$ to be the restriction of $\wt{\mathcal{K}}$ to the subspace $p^\ast(H^1(M; \RR))$.
+
+ %observe that
+ Define a map $\mathcal{L}:\mathcal{F}\rightarrow \mathcal{K}$ as follows.  % Let $f: M \to S^1$ be a fibration. Define $\mathcal{L}(f)$ to be the pullback of $d\theta$ under $f^\ast$.  To see the injectivity of $\mathcal{L}$,
+ The map $f\circ p$ is a fibration of $\wt{M}\to S^1$.  Then by Theorem \ref{thm:Thur1} and Poincar\'e duality, $f\circ p$ corresponds to an element $\wt{\alpha}\in \wt{K}$.  The 1-form $\wt{\alpha}$ is the pullback of $d\theta$ under $(f\circ p)^\ast$.  But $\wt{\alpha}$ is also the pullback of $f^\ast(d\theta)$ under $p^\ast$ and therefore $\wt{\alpha}$ lies not only in $\wt{K}$ but also in the image of $H^1(\wt{M};\ZZ)$ under $p^\ast$.  So we define $\mathcal{L}(f)$ to be $f^\ast(d\theta)$, the element of $\mathcal{K}$ that $p^\ast$ maps to $\wt{\alpha}$.
+ %the composition $f \circ p: \wt{M} \to S^1$ is a fibration of $\wt{M}$ over $S^1$. Let $\widetilde{\alpha}$ be the pullback of $d\theta$ under $f\circ p$.  The 1-form $\wt{\alpha}$ lies in $\wt{\mathcal{K}}\subset H^1(\wt{M};\ZZ)$ by Theorem \ref{thm:Thur1}. Moreover, $\wt{\alpha}$ is also a pullback of $f^{\ast}(d\theta) \in H^1(M; \ZZ)$ under $p^\ast$, and
+  %therefore $\wt{\alpha}$ lies in $p^\ast(H^1(M; \ZZ))$. % We define $\mathcal{L}(f)$ to be  \becca{Why is it injective?}Therefore $p^\ast$ maps every homotopy class of fibrations injectively maps into $\mathcal{K}$.
+
+  Let $\alpha\in\mathcal{K}$ and let $\wt{\alpha}$ be the pullback of $\alpha$ under $p^\ast$. Then $\wt{\alpha}$ lies in $\wt{\mathcal{K}}$,
+  and therefore corresponds to a fibration $f_{\wt{\alpha}}: \wt{M} \to S^1$. We would like
+  to pushforward this map to a map from $M$ to $S^1$. By Lemma \ref{lem:PD2}, this means that $\wt{\alpha}$ satisfies the following condition
+  for any basepoint $x_0$ in $\wt{M}$:
+  \begin{align*}
+    \int_{x_0}^{\iota(x_0)} \wt{\alpha} \in \ZZ.
+  \end{align*}
+  Any path from $x_0$ to $\iota(x_0)$ is a lift of a closed curve $\gamma$
+  on $M$ from $p(x_0)$ to $p(\iota(x_0)) = p(x_0)$, and $\wt{\alpha}$ is the pullback of
+  the $\alpha \in H^1(M; \ZZ)$, the above integral is equal to an integral on $M$.
+  \begin{align*}
+    \int_{x_0}^{\iota(x_0)} \wt{\alpha} = \int_{\gamma} \alpha
+  \end{align*}
+  The right hand side term is clearly an integer, since $\alpha$ is an integer $1$-form. This
+  shows that the map $f_{\wt{\alpha}}$ descends to a map on $M$, and therefore $\alpha$ corresponds
+  to a fibration. This proves part (i) of the theorem.
+
+  For part (ii), let $\alpha\in H^1(M;\RR)$ be the Poincar\'e dual of $S$. Let $\wt\alpha$ be the pullback of $\alpha$ under $p^\ast$.  Then $\wt{\alpha}$ is the Poincar\'e dual to the $\wt{S}=p^{-1}(S)$.  Let $\widetilde{f}$ be the orientation preserving lift of $f$ under $p$.  Because $S$ is
+  transverse to the suspension flow direction associated to $f$ with outward flow direction, $\wt{S}$ must be transverse to the suspension flow on the suspension flow direction associated to $\wt{f}$ with outward flow direction. Therefore $\wt{\alpha}$ lies in the closure of the cone of $H^1(\widetilde{M};\ZZ)$ associated to $\wt{f}$. Since $\wt{\alpha}$ is also a pullback of $\alpha$, it must be that $\wt{\alpha}\in p^\ast(H^1(M;\RR))$. Therefore $\alpha$ lies in the restriction to $H^1(M;\RR)$ of the closure of the cone associated to $f$.
+\end{proof}
+
+Part (ii) of the above theorem (and Theorem \ref{thm:Thur1}) is especially useful when trying to
+decompose a $3$-manifold into a mapping torus. Let
+$M_\varphi = (\no, \varphi)$ and $f:M\rightarrow S^1$ the bundle map. We can construct another relatively oriented surface $\no'$ inside $M$ such that
+$\no'$ is transverse to the suspension flow direction associated to $f$. Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ be the Poincar\'e dual of $\no'$.  By Theorem \ref{thm:NOThur1} $\alpha$ lies in a cone $\mathcal{C}_\varphi$ associated to $\varphi$ with other $1$-forms also coming from fibrations. Furthermore, $\alpha'$ lies in $\mathcal{C}_\varphi$. All positive
+integer linear combinations of $\alpha$ and $\alpha'$ are elements of $\mathcal{C}_\varphi$. Each linear combination of $\alpha$ and $\alpha'$ is Poincar\'e dual to an oriented sum of $\no$ and $\no'$ in $M$. Under reasonably mild conditions on $\no$ and $\no'$, we can actually realize their oriented sum as
+fibers of a fibration.
+
+\begin{thm}
+  \label{thm:oriented-sum}
+  Let $\no$ be a non-orientable surface and $\varphi$ a homeomorphism of $\no$.  Let $M_\varphi$ be the mapping torus $(\no,\varphi)$ and $f:M\rightarrow S^1$ the bundle map.  Let $\no'$ be an incompressible surface embedded in $M$ that is transverse to the suspension flow direction associated to $f$.  Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ the Poincar\'e dual of $\no'$. If the oriented sum of $\no$ and $\no'$ is connected, then
+  $\no + \no'$ is isotopic to the fiber of the fibration given by $\alpha + \alpha'$.
+\end{thm}
+\begin{proof}
+  %The first step is to observe that in this case, one can compute the Thurston norm of $\alpha$ and $\alpha'$ using $\no$ and $\no'$.
+  Let $p:\wt{M}\rightarrow M$ be the orientation double cover of $M$.  %Let $\widetilde{f}:\wt{M}\rightarrow S^1$ be the orientation preserving lift of $f$. \becca[inline]{Is this the right fibration of $\wt{M}$?}
+  The surface $\no$ is incompressible because it is a fiber of $f$; therefore its preimage under $p$ is also incompressible.  By Theorem \ref{thm:ThurHyp}, the Thurston norm of $\alpha$ is
+  $2\chi_-(\no)$.  Since $\no'$ is also incompressible, the Thurston norm of $\alpha'$ is $2\chi_-(\no')$.
+
+  Since $\alpha$ and $\alpha'$ lie in a cone over a fibered face, the Thurston norm $x$ on $H^1(M;\ZZ)$ is linear.  Indeed:
+  %We can thus compute the Thurston norm of $\alpha + \alpha'$ in terms of $\no + \no'$.
+  \begin{align*}
+    x(\alpha + \alpha') &= x(\alpha) + x(\alpha') \\
+                        &= 2\chi_-(\no) + 2\chi_-(\no') \\
+                        &= 2\chi_-(\no + \no').
+  \end{align*}
+  The last equality follows from the linearity of the oriented sum. Because the preimage of $\no + \no'$ in the orientation double cover of $M$ must be Thurston norm minimizing.  Therefore the surface $\no+\no'$ is incompressible.
+
+  By Theorem \ref{thm:NOThur1}, we have that $\alpha + \alpha'$ corresponds to some other fibration
+  of $f'':M\rightarrow S^1$. Let $\wt{f}''$ be the orientation-preserving lift of $f''$ to $\wt{M}$.\becca{Is this the right choice?}  Since $M$ is non-orientable, there are two possibilities:
+  \begin{enumerate}[(i)]
+  \item $f''$ is the mapping torus of a non-orientable surface and a homeomorphism.
+  \item $f''$ is the mapping torus of an orientable surface and an orientation
+    reversing homeomorphism.
+  \end{enumerate}
+  In the first case, the fiber of $f''$ is a non-orientable surface homologous to $\no + \no'$. The preimage of $\no+\no'$ under $p$ is two homologous orientable surfaces, both of which minimize the Thurston norm. By
+  Theorem \ref{thm:ThurIsotope}, we have that preimage of $\no + \no'$ under $p$ is isotopic to a fiber of $\wt{f}''$.   Therefore $\no + \no'$ is isotopic to the fiber in $M$, and $M$ can be realized as the mapping torus of some
+  homeomorphism on $\no + \no'$.
+
+  For the second case, let $M$ be the mapping
+  torus of an orientable surface $S$ with an orientation reversing homeomorphism.  A fiber of $\wt{f}$ is two homologous copies of $S$. But
+  that is homologous to the preimage of $\no + \no'$ under $p$, which will have a single component since
+  $\no + \no'$ is non-orientable. Theorem \ref{thm:NOThur1} says these two surfaces must be
+  isotopic, but that is a contradiction since they have a different number of connected components.
+\end{proof}
+
+The non-orientable versions of Theorems \ref{thm:fm} and \ref{thm:alm} follow in a straightforward
+manner from the orientable versions.
+
+\begin{thm}
+  \label{thm:NOfm}
+  Let $M$ be a non-orientable hyperbolic $3$-manifold and let $\mathcal{K}$ be the union of cones
+  in $H^1(M; \RR)$ whose lattice points correspond to fibrations over $S^1$. There exists a
+  strictly convex function $h: \mathcal{K} \to \RR$ satisfying the following properties.
+  \begin{enumerate}[(i)]
+  \item For all $t > 0$ and $u \in \mathcal{K}$, $h(tu) = \frac{1}{t} h(u)$.
+  \item For every primitive lattice point $u \in \mathcal{K}$, $h(u) = \log(\lambda)$, where $\lambda$ is
+    the stretch factor of the pseudo-Anosov map associated to this lattice point.
+  \item $h(u)$ goes to $\infty$ as $u$ approaches $\partial \mathcal{K}$.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  By Theorems \ref{thm:fm} and \ref{thm:alm}, there is a function $\wt{h}$ on $H^1(\wt{M}; \RR)$ that satisfies properties (i)-(iii). Restricting $\wt{h}$
+  to the subspace corresponding to $H^1(M; \RR)$, we get a convex function satisfying properties
+  (i) and (iii). By Proposition \ref{prop:2}, the stretch factor of a pseudo-Anosov
+  map on a non-orientable surface is the same as the stretch factor of the unique lift to its
+  double cover. By Theorem \ref{thm:fm}, (ii) also holds.
+\end{proof}
+
+The exact statement of Theorem \ref{thm:alm} holds for the non-orientable setting too: one just
+restricts the function $h$ on $H^1(\wt{M}; \RR)$ to the subspace corresponding to $H^1(M; \RR)$.
