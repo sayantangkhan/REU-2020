@@ -43,7 +43,7 @@ Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving 
  % pre-images as well, which proves the second part of the proposition.
 %\end{proof}
 
-A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\os$.  Every homotopy of $\no$ lifts to a homotopy of $\os$.  Moreover, if $f,g:\no\to\no$ are homeomomorphisms such that their orientation preserving lifts $\widetilde{f},\widetilde{g}$ of $\os$ are homotopic, then $f$ and $g$ are homotopic.  Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\os$.  This inclusion also respects the Nielsen-Thurston classification of mapping classes, both qualitatively, and
+A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\os$.  Every homotopy of $\no$ lifts to a homotopy of $\os$.  Moreover, if $f,g:\no\to\no$ are homeomorphisms such that their orientation preserving lifts $\widetilde{f},\widetilde{g}$ of $\os$ are homotopic, then $f$ and $g$ are homotopic.  Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\os$.  This inclusion also respects the Nielsen-Thurston classification of mapping classes, both qualitatively, and
 quantitatively, as the following proposition shows.
 \begin{prop}
   \label{prop:2}
@@ -140,23 +140,65 @@ be the matrix representing this action in the standard basis, then the stretch f
 $\lambda(\varphi)$, is the Perron-Frobenius eigenvalue of $\varphi$.
 
 Another tool that is used to study mapping classes is the associated \emph{mapping torus}, a $3$-manifold, constructed using a surface $\no$ and a mapping class $[\varphi]$.
+Given a surface $S$ and a
+homeomorphism $\varphi: S \to S$, one can construct a $3$-manifold $M_\varphi$ via the
+\emph{mapping torus} construction.
+\begin{align*}
+  M_\varphi \coloneqq \frac{S \times [0,1]}{(x,1) \sim (\varphi(x), 0)}
+\end{align*}
+%Inverting this construction is also a problem of interest: given a $3$-manifold $M$, is it the mapping torus of some surface and self-homeomorphism $(S,\varphi)$? In how many ways can one express a $3$-manifold as a mapping torus?
+Mapping tori are surface bundles over $S^1$, or \emph{fibrations over $S^1$}, denoted
+$S\rightarrow M\rightarrow S^1$. A fibration defines a {flow} on $M$, called the
+\emph{suspension flow}, where for any $x_0\in S$ and $t_0\in S^1$ the pair $(x_0,t_0)$ is sent
+to $(x_0,t_0+t)$.  The \emph{fiber} of a fibration is the pre-image in $M$ of any point in
+$S^1$. The mapping torus for any non-orientable surface and any mapping class will always be a
+non-orientable $3$-manifold, but that is not the only way to get a non-orientable mapping
+torus. The mapping torus of an orientable surface, and a non-orientable mapping class is also
+a non-orientable $3$-manifold. To distinguish between the two kinds of non-orientable mapping
+tori, we consider the fiber in the double cover. Suppose $M$ is a non-orientable mapping
+torus, $f: M \to S^1$ is the fibration, and $\wt{M}$ is the orientation double cover of $M$.
+Consider the fiber of $f$, i.e. $f^{-1}(\theta)$ for some $\theta \in S^1$. In the first case,
+it will be a non-orientable surface, and in the second case, it will be an orientable surface.
+We can then take the pre-image of the fiber under the covering map $p: \wt{M} \to M$. In the
+first case, the pre-image of the fiber will be a single connected component, consisting of the
+orientation double cover of the fiber, and in the second case, it will be two connected components, consisting of disjoint copies of the fiber. {\color{red} Turn this into a lemma?}
 
+In what follows, we will restrict our attention to mapping tori of surfaces and pseudo-Anosov
+mapping classes. The goal of this section is to transport some of the background machinery, namely the theory of Thurston norm to non-orientable surfaces, and in \autoref{sec:fibered-faces} use those results to construct pseudo-Anosov mapping classes with
+small stretch factors on non-orientable surfaces. We recall the context and definition of the
+Thurston norm for orientable $3$-manifolds.
 
-In what follows, we will restrict our attention to mapping
-tori of surfaces with a pseudo-Anosov homeomorphism.  %When the surface is orientable, we will call the resulting mapping torus orientable and when the surface is non-orientable, we will call the resulting mapping torus non-orientable.
-The goal of this section is to prove the necessary results for mapping tori of non-orientable surfaces with a pseudo-Anosov map.% (these will be the $3$-manifolds we will be referring to when talking about orientable $3$-manifolds), and the mapping tori of non-orientable $3$-manifolds, again with a pseudo-Anosov map (these will be the manifolds we will be referring to when talking about non-orientable $3$-manifolds). While a lot of our statements will hold more generally for compact non-orientable $3$-manifolds, it will be easier to describe examples when working in this restricted setting; additionally, our application will only involve mapping tori of pseudo-Anosov maps.
+\paragraph{Thurston norm on orientable $3$-manifolds}
+Given a orientable closed $3$-manifold $M$, the Thurston norm is a semi-norm on its second
+homology group $H_2(M; \RR)$: to define the norm, we need to make some preliminary remarks and
+define a function.  Let $S$ be a connected surface. Define the complexity of $S$ to be
+$\chi_-(S) = \max\{-\chi(S),0\}$. If a surface $S$ has multiple components $S_1,\ldots,S_m$
+then $\chi_-(S)=\displaystyle\sum_{i=1}^m\chi_-(S_i)$.  Furthermore, for an \emph{orientable}
+3-manifold $M$, it is known that elements in $H_2(M ; \ZZ)$ can be represented by embedded
+surfaces inside of $M$. This lets us define a norm function $x$ for every homology class $a$
+in $H_2(M; \ZZ)$:
+\begin{align*}
+  x(a) = \min\{\chi_-(S) \mid [S] = a \text{ and $S$ is compact, properly embedded and oriented}\}.
+\end{align*}
+
+We then linearly extend $x$ to the rational points.  There is then a is a unique continuous extention of $x$ to $\RR$, that is: a $\RR$-valued function on $H_2(M; \RR)$ called the {\it Thurston norm}. The unit ball for the Thurston norm is a convex polyhedron, and thus it makes
+sense to talk about the \emph{faces} of the unit ball.
+
+{\color{red} Mention incompressible surfaces here.}
 
 \subsection{The problem with homology in non-orientable $3$-manifolds}
 \label{sec:probl-with-homol}
 
-A first attempt at defining the Thurston norm for a compact non-orientable $3$-manifold might be $M$ as follows.
-Let $S$ be an embedded surface.  Define the complexity function $\chi_-$,
-much like in the case of orientable $3$-manifolds, and then define the norm of a homology class
-$a \in H^2(M; \ZZ)$ by minimizing $\chi_-(S')$ over all $S'$ representing $a$. This may work, but is quite
-unsatisfying: this construction assigns zero norm to all embedded non-orientable surfaces, since their
-fundamental classes are trivial, and thus map to $0$ in $H_2(M; \ZZ)$. But we would like the
-incompressible surfaces in non-orientable $3$-manifolds to have a positive norm! There are plenty of
-incompressible surfaces even in non-orientable $3$-manifolds, namely fibers of fibrations over $S^1$, and a useful definition of Thurston norm should find them.
+A first attempt at defining the Thurston norm for a compact non-orientable $3$-manifold might
+go as follows.  Let $S$ be an embedded surface in a non-orientable $3$-manifold $M$.  Define
+the complexity function $\chi_-$, much like in the case of orientable $3$-manifolds, and then
+define the norm of a homology class $a \in H^2(M; \ZZ)$ by minimizing $\chi_-(S')$ over all
+$S'$ representing $a$. This is quite unsatisfying: the construction assigns
+zero norm to all embedded non-orientable surfaces, since their fundamental classes are
+trivial, and thus map to $0$ in $H_2(M; \ZZ)$. But we would like the incompressible surfaces
+in non-orientable $3$-manifolds to have a positive norm. There are plenty of incompressible
+surfaces even in non-orientable $3$-manifolds, namely fibers of fibrations over $S^1$, and a
+useful definition of Thurston norm should find them.
 
 It turns out that the fundamental problem with non-orientable $3$-manifolds is that homology is a
 very coarse invariant: too coarse to detect embedded non-orientable surfaces. Our workaround will
@@ -246,7 +288,7 @@ non-orientable surface $\no$ and a pseudo-Anosov map $\varphi: \no \to \no$, the
 mapping torus of $(\os, \wt{\varphi})$, where $\os$ is the orientable double cover of $\no$, and
 $\wt{\varphi}$ is the orientation preserving lift of $\varphi$.
 
-Since we have already concluded that the first cohomology is the ``right'' space on which to define the
+Since we have already concluded that the first cohomology is the right space on which to define the
 Thurston norm, we need to relate $H^1(M; \RR)$ and $H^1(\wt{M}; \RR)$.  In particular, we will pullback $H^1(M;\RR)$ to $H^1(\wt{M};\RR)$ under $p$.
 
 \begin{lem}
