@@ -332,6 +332,7 @@ To do so, we will need to define \emph{incompressible surfaces}, and state a res
   Let $S$ be a surface with positive genus embedded in a $3$-manifold $M$.
   The surface $S$ is said to be \emph{incompressible} if there exists no embedded disc $D$ in $M$ such that $D \cap S = \partial D$, and $D$ intersects $S$ transversally.
 \end{defn}
+
 \begin{thm}[Theorem 4 of \cite{thurston1986norm}]
   \label{thm:Thur2}
 If $S$ is an incompressible surface in an oriented $3$-manifold $M$ which fibers over $S^1$, and $S$ is homologous to the fiber, then $S$ is isotopic to the fiber.
@@ -376,6 +377,24 @@ Before we prove this theorem, we need the following lemma.
   Note that the above proof doesn't tell us if $S$ and $f_{\alpha}^{-1}(\theta)$ are isotopic.
   To have that, we would require the isotopy on the orientation double cover to be $\iota^{\ast}$-invariant, which could be true, but we didn't show that because the current implication is strong enough for our application.
 \end{rem}
+
+If we associate to each fibration of $M$ the $1$-form obtained by pulling back the canonical form $d\theta$ on $S^1$, we are able state a non-orientable version of Theorem \ref{thm:Thur1}.
+\begin{thm}
+  \label{thm:classifying-fibrations}
+  Let $M$ be a compact non-orientable $3$-manifold, and let $\mathcal{F}$ be the elements of $H^1(M; \ZZ)$ corresponding to fibrations of $M$ over $S^1$.
+  \begin{enumerate}[(i)]
+  \item Elements of $\mathcal{F}$ are in a one-to-one correspondence with (non-zero) lattice points (i.e. points of $H^1(M; \ZZ)$) inside some union of cones over open faces of the unit ball in the Thurston norm.
+  \item If a relatively oriented surface $S$ is transverse to the suspension flow associated to some fibration $f: M \to S^1$, then the Poincar\'e dual $[\alpha]$ to $S$ lies in the  closure of the cone in $H^1(M; \RR)$ containing the $1$-form corresponding to $f$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  The union of cones in $H^1(M; \RR)$ is determined by intersecting the pullback of $H^1(M; \RR)$ to the cohomology of the orientable double cover with the union of cones in $H^1(\wt{M}; \RR)$.
+  Clearly, every lattice point in this union of cones corresponds to a fibration, since the pullback to $H^1(\wt{M}; \ZZ)$ corresponds to a fibration.
+  Conversely, every fibration of $M$ must lie in one of these cones, since the composition with the covering map $p$ gives a fibration of $\wt{M}$ over $S^1$.
+
+  If the surface $S$ is transverse to the suspension flow of a fibration $f$, then $\wt{S}$ is transverse to $p \circ f$, and thus the Poincar\'e dual $\wt{\alpha}$ to $\wt{S}$ lies in the closure of the cone in $H^1(\wt{M}; \RR)$.
+  But since the dual $\alpha$ to $S$ pulls back to $\wt{\alpha}$, this means $\alpha$ lies in the closure of the cone in $H^1(M; \RR)$.
+\end{proof}
 
 \subsection{Oriented sums}
 \label{sec:oriented-sums}
