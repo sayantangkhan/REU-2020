@@ -154,7 +154,6 @@ Since we have already concluded that the first cohomology is the right space on 
 \end{proof}
 \begin{rem}
   Note that if we change the coefficients in the statement of this lemma from $\RR$ to $\ZZ$, the proof of injectivity follows through, but the proof of surjectivity does not.
-  {\color{red} In general, one does not have surjectivity with $\ZZ$ coefficients, }
 \end{rem}
 
 Lemma \ref{lem:injective} tells us that $H^1(M; \RR)$ is a subspace of $H^1(\wt{M}; \RR)$, so we define the Thurston norm on $H^1(M; \RR)$ by restricting the Thurston norm on the orientable 3-manifold $\widetilde{M}$ to the subspace $p^*(H^1(M;\RR))$ of $H^1(\widetilde{M};\RR)$.
@@ -189,5 +188,262 @@ In Section \ref{sec:weak-inverse-poinc}, we develop a version of Poincar\'e dual
 \subsection{Weak inverse to the Poincar\'e duality map}
 \label{sec:weak-inverse-poinc}
 
+For either an orientable or non-orientable compact 3-manifold $M$, given $\alpha\in H^1(M; \ZZ)$, we can construct a dual map $f_\alpha$, using \eqref{form:map}.
+The pre-image of a regular value $\theta \in S^1$, denoted by $f_{\alpha}^{-1}(\theta)$, will be an embedded surface.
+% We will partially invert this construction in the non-orientable setting: given an embedded non-orientable surface $S$, we will get a closed $1$-form $\alpha$ such that the pre-image $f_{\alpha}^{-1}(\theta)$ is
+When $M$ is orientable, Poincar\'e duality determines a cohomology class in $H^1(M; \ZZ)$ corresponding any embedded surface $S$.
+For any $1$-form representative $\alpha$ of the cohomology class, and for any regular value $\theta$ of $f_{\alpha}$, the surfaces $f_{\alpha}^{-1}(\theta)$ and $S$ are homologous.
+In this section, we state a weaker version of Poincar\'e duality for non-orientable surfaces in Theorem \ref{thm:Poincare-duality}, that lets us associate $1$-forms to a certain class of embedded surfaces in non-orientable $3$-manifolds.
+The condition we need to impose upon the embedded surfaces is \emph{relative orientability}.
+
+\begin{defn}[Relative orientability]
+  Let $M$ be a $3$-manifold, and $S$ an embedded surface in $M$.
+  The surface $S$ is said to be \emph{relatively oriented with respect to $M$} if there is a nowhere vector field on $S$ that is transverse to the tangent plane of $S$.
+  Two such vector fields are said to induce the same orientation if locally they induce the same orientation after picking a local frame for $S$.
+  A surface $S$ is \emph{relatively oriented} if both $S$ and the choice of positive normal vector field are specified.
+\end{defn}
+Note that relative orientability is a strictly weaker notion than orientability.
+If $S$ and $M$ are orientable, then $S$ is relatively orientable with respect to $M$.
+But even if $M$ is non-orientable, a non-orientable embedded surface $S$ may be relatively orientable with respect to $M$.
+For instance, let $S$ be the fiber of a non-orientable mapping torus $M$.
+The pre-image under the projection map to $S^1$ of a non-vanishing vector field is a non-orientable vector field on $M$.
+
+\begin{example}[A surface that is not relatively orientable in a 3-manifold]
+  Let $S$ be the standard torus $\RR^2/\ZZ^2$, and let $\varphi$ map $(x,y)$ to $(-x, y)$.
+  Then $\varphi$ is an orientation-reversing homeomorphism.
+  Therefore the mapping torus $M_\varphi$ is non-orientable.
+  Consider a vertical line $\gamma$ in $S$ preserved by $\varphi$, i.e. the line
+  $x = 0$.
+  The image of $\gamma$ in $S$ under the suspension flow in $M$ is a subsurface of $M$, which we'll call $S'$.
+  The normal direction to $S'$ when restricted to $S$ is $\frac{\partial}{\partial x}$.
+  Because the suspension flow reverses the direction of $\gamma$, the normal vector field cannot be continuously extended to all of $M$.
+  This means that the surface $S'$ is not relatively orientable in $M$ (despite being orientable itself.)
+\end{example}
+
+However, if both $M$ and an embedded surface are non-orientable, the surface will be relatively orientable.
+\begin{prop}
+  \label{prop:relative-orientability}
+  Let $M$ be a non-orientable $3$-manifold, and let $S$ be an embedded connected non-orientable surface in $M$.
+  Then $S$ is relatively orientable with respect to $M$.
+\end{prop}
+\begin{proof}
+  Let $\wt{M}$ be the orientation double cover of $M$, and $\wt{S}$ be the pre-image of $S$ under the double cover.
+  The restriction of the orientation reversing deck transformation $\iota:\wt{M}\rightarrow\wt{M}$ to $\wt{S}$ is an orientation reversing homeomorphism of $\wt{S}$.
+  Let $(v_1, v_2)$ be positively oriented local frame for the tangent space to $\wt{S}$.
+  Let $n$ be an outward pointing transverse vector to $\wt{S}$ so the local frame $(v_1, v_2, n)$ is positively oriented.
+  Since $\iota$ reverses the orientation of both $\wt{S}$ and $\wt{M}$, $(\iota(v_1), \iota(v_2))$ and $(\iota(v_1), \iota(v_2), \iota(n))$ are both negatively oriented.
+  Then $\iota(n)$ is outward pointing.
+  Therefore the outward pointing transverse direction on $\wt{S}$ descends to an outward pointing transverse direction on $S$, and $S$ is relatively orientable in $M$.
+\end{proof}
+
+We care about relatively orientable surfaces because these surfaces can be mapped to cohomology classes.
+\begin{thm}[Poincar\'e duality for non-orientable $3$-manifolds]
+  \label{thm:Poincare-duality}
+  Let $M$ be a non-orientable $3$-manifold, and let $S$ be a relatively oriented embedded surface.
+  Then there exists a cohomology class $[\alpha]$ in $H^1(M; \ZZ)$, such that for any $1$-form representative $\alpha$, and any regular value $\theta$ of $f_{\alpha}$, the pre-images of $S$ and $f_{\alpha}^{-1}(\theta)$ are homologous in the orientation double cover $\wt{M}$.
+  Furthermore, $\alpha$ assigns positive values to the positively oriented transverse vector field on $S$.
+\end{thm}
+\begin{rem}
+  The only statement in the above theorem that does not follow from the orientable version of Poincar\'e duality is the fact that the dual to the pre-image of $S$ in the double cover $\wt{M}$ is a pullback of an element of $H^1(M; \ZZ)$. Also, the conclusion of the theorem is not strong enough for our application: we will later need to show that $S$ and $f_{\alpha}^{-1}(q)$ are homeomorphic surfaces, but to do so, we will need to impose stronger conditions on $S$ and $M$, as well as use a result of Thurston.
+\end{rem}
+
+The idea of the proof of this theorem is fairly straightforward.
+Starting with the embedded surface $S$ in $M$, we look at the pre-image $\wt{S}$ in the orientation double cover $\wt{M}$.
+We show that the Poincar\'e dual to $\wt{S}$ is $\iota^{\ast}$-invariant.
+\begin{lem}
+  \label{lem:PD1}
+  Let $S$ be a relatively oriented embedded surface in $M$, and $\wt{S}$ its pre-image in $\wt{M}$.
+  Then the Poincar\'e dual to $[\wt{S}]$ is $\iota^{\ast}$-invariant.
+\end{lem}
+\begin{proof}
+  If $S$ is relatively oriented with respect to $M$, then the relative orientation lifts to a relative orientation of $\wt{S}$ with respect to $\wt{M}$.
+  Since $\wt{M}$ is oriented, the relative orientation of $\wt{S}$ defines an actual orientation as well, and thus the homology class $[\wt{S}]$ is well defined.
+
+  The deck transformation $\iota$ reverses the orientation on $\wt{S}$.
+  Indeed, let $(v_1, v_2, v_3)$ be a local frame for some point in $\wt{S}$ such that
+  $v_3$ is the outward pointing transverse vector field.
+  Because $S$ is relatively oriented in $M$, the outward pointing transverse vector field on $\wt{S}$ must descend to an outward pointing transverse vector field on $S$.
+  That means $\iota$ takes outward pointing vector fields to outward point vector fields, and $\iota(v_3)$ must be outward pointing.
+  Since $\iota$ reverses the orientation on $\wt{M}$ but preserves the direction of $\iota(v_3)$, $\iota$ must reversing the orientation on the pair $(v_1, v_2)$.
+  In particular, that means $\iota$ reverses the orientation on $\wt{S}$.
+
+  This means $[\wt{S}]$ is in the $-1$-eigenspace of the $\iota_{\ast}$ action on $H_2(\wt{M}; \RR)$.
+  Let the cohomology class $[\wt{\alpha}]$ be the the Poincar\'e dual to $[\wt{S}]$.
+  Then there exists representative 1-form $\wt{\alpha}$ that is $\iota^{\ast}$-invariant.
+  This follows from the following chain of equalities which hold for all closed $2$-forms $\omega$.
+  We use the fact that $\iota^2= \mathrm{id}$ in the first and third equalities.
+  \begin{align*}
+    \int_{\iota_{\ast}\wt{S}} \omega &= \int_{\wt{S}} \iota^{\ast}\omega &&\text{(By a change of variables)} \\
+                                     &= \int_{\wt{M}} \wt{\alpha} \wedge \iota^{\ast} \omega &&\text{(Poincar\'e duality)} \\
+                                     &=\int_{\wt{M}} \iota^{\ast} \left( \iota^{\ast}\wt{\alpha} \wedge \omega \right) \\
+    &= \int_{\wt{M}} - \left( \iota^{\ast} \wt{\alpha} \wedge \omega \right) &&\text{($\iota$ is orientation reversing)}
+  \end{align*}
+  On the other hand, the following equalities follow from the fact that $\iota_{\ast}[\wt{S}] = -[\wt{S}]$.
+  \begin{align*}
+    \int_{\iota_{\ast}\wt{S}} \omega &= - \int_{\wt{S}} \omega \\
+                              &= - \int_{\wt{M}} \wt{\alpha} \wedge \omega
+  \end{align*}
+  Because $$\int_{\wt{M}}\wt{\alpha}\wedge\omega=\int_{\wt{M}}\iota^\ast\wt{\alpha}\wedge\omega$$ for all $\omega$, it follows that $\wt{\alpha}$ is
+  $\iota^{\ast}$-invariant.
+\end{proof}
+
+Let us continue denoting the Poincar\'e dual to $[\wt{S}]$ as $[\wt{\alpha}]$.
+$[\wt{\alpha}]$ is an $\iota^{\ast}$-invariant element of $H^1(\wt{M}; \ZZ)$, but it is not clear that $[\wt{\alpha}]$ is the pullback of an element of $H^1(M; \ZZ)$ under the projection map.
+In the next lemma, we show that is indeed the case, i.e. $[\wt{\alpha}]$ is the pullback of an element in $H^1(M; \ZZ)$.
+\begin{lem}
+  \label{lem:PD2}
+  There exists an $[\alpha] \in H^1(M; \ZZ)$ such that $\wt{\alpha} = p^{\ast} \alpha$, where $p$ is the covering map $\wt{M} \to M$.
+\end{lem}
+\begin{proof}
+  To show that $[\wt{\alpha}]$ is the pullback of an element in $H^1(M; \ZZ)$, it will suffice to show that the integral of $\wt{\alpha}$ along any closed curve or arc in $\wt{M}$ to projects down to a closed curve in $M$ is an integer.
+  Since $\wt{\alpha} \in H^1(\wt{M}; \ZZ)$, the integral along any closed curve will be an integers, it will suffice to check along arcs that project down to closed curves in $M$.
+  Let $\delta$ be such an arc, starting at a point $x_0 \in \wt{M}$.
+  Since its image in $M$ must close up, $\delta$ must necessarily end at $\iota(x_0)$.
+  We would like to show the following.
+  \begin{align}
+    \label{eq:integer-pairing}
+    \int_{\delta} \wt{\alpha} \in \ZZ
+  \end{align}
+  Consider the closed curve $\wt{\gamma}$, obtained by taking the union of $\delta$ and $\iota(\delta)$.
+  By the $\iota^{\ast}$-invariance of $\wt{\alpha}$, the integral along $\delta$ and $\iota(\delta)$ must be equal.
+  \begin{align*}
+    \int_{\delta} \wt{\alpha} = \int_{\iota(\delta)} \wt{\alpha}
+  \end{align*}
+  This means that the integral of $\wt{\alpha}$ along $\wt{\gamma}$ is twice that of the integral in \eqref{eq:integer-pairing}, and it will suffice to show that the integral along $\wt{\gamma}$ is an even integer.
+  \begin{align*}
+    \int_{\wt{\gamma}} \wt{\alpha} \in 2\ZZ
+  \end{align*}
+  Without loss of generality, we can assume that the curve $\wt{\gamma}$ intersects the surface $\wt{S}$ transversally at all points.
+  Since $\wt{\alpha}$ is a representative of the Poincar\'e dual to $[\wt{S}]$, the integral of $\wt{\alpha}$ along $\wt{\gamma}$ is the signed intersection number of $\wt{\gamma}$ with $\wt{S}$.
+  The intersection number must be even, for if $\wt{\gamma}$ and $\wt{S}$ intersect at a point $y$, then they also intersect at $\iota(y)$, by $\iota$-invariance of $\wt{S}$ and $\wt{\gamma}$. This proves the lemma.
+\end{proof}
+We now have everything we need to finish proving Theorem \ref{thm:Poincare-duality}.
+\begin{proof}[Proof of Theorem \ref{thm:Poincare-duality}]
+  Starting with a relatively oriented surface $S$ in $M$, we look at its pre-image $\wt{S}$ in $\wt{M}$ under the orientation double cover.
+  The relative orientation of the pre-image gives us the homology class $[\wt{S}]$, and we get a $1$-form $\wt{\alpha}$, which is Poincar\'e dual to the homology class of $\wt{S}$.
+  By Lemmas \ref{lem:PD1} and \ref{lem:PD2}, we have that $[\wt{\alpha}]$ is the pullback of an element in $H^1(M; \ZZ)$, which is the Poincar\'e dual to the relatively oriented surface $S$.
+  It follows from the orientable version of Poincar\'e duality that $\wt{S}$ and $p^{_1}(f_{\alpha}^{-1}(\theta))$ are homologous surfaces in $\wt{M}$.
+\end{proof}
+
+We will now strengthen the conclusion of Theorem \ref{thm:Poincare-duality} to get a more concrete relationship between $S$ and $f_{\alpha}^{-1}(\theta)$.
+To do so, we will need to define \emph{incompressible surfaces}, and state a result of Thurston.
+
+\begin{defn}[Incompressible surface]
+  Let $S$ be a surface with positive genus embedded in a $3$-manifold $M$.
+  The surface $S$ is said to be \emph{incompressible} if there exists no embedded disc $D$ in $M$ such that $D \cap S = \partial D$, and $D$ intersects $S$ transversally.
+\end{defn}
+\begin{thm}[Theorem 4 of \cite{thurston1986norm}]
+  \label{thm:Thur2}
+If $S$ is an incompressible surface in an oriented $3$-manifold $M$ which fibers over $S^1$, and $S$ is homologous to the fiber, then $S$ is isotopic to the fiber.
+\end{thm}
+
+We can now state the strengthened version of Poincar\'e duality for non-orientable $3$-manifolds.
+\begin{thm}
+  \label{thm:strong-duality}
+  Let $M$ be a compact non-orientable $3$-manifold, and let $S$ be a relatively oriented incompressible surface.
+  Let $[\alpha] \in H^1(M; \ZZ)$ be the dual to $S$, as given by Theorem \ref{thm:Poincare-duality}.
+  If $[\alpha]$ has a $1$-form representative $\alpha$ that vanishes nowhere on $M$, then $S$ is homeomorphic to $f_{\alpha}^{-1}(\theta)$ for all $\theta \in S^1$.
+\end{thm}
+
+Before we prove this theorem, we need the following lemma.
+\begin{lem}
+  \label{lem:lift-of-incompressible}
+  If $S$ is a relatively oriented incompressible surface in a non-orientable $3$-manifold $M$, then the lift $\wt{S}$ of $S$ in $\wt{M}$, the orientation double cover of $M$ is also incompressible.
+\end{lem}
+\begin{proof}
+  The fact that $S$ is incompressible in $M$ implies that the inclusion induced map on fundamental groups is injective.
+  \begin{align*}
+    \pi_1(S) \hookrightarrow \pi_1(M)
+  \end{align*}
+  Since $\pi_1(\wt{S})$ and $\pi_1(\wt{M})$ are subgroups of $\pi_1(S)$ and $\pi_1(M)$ respectively, the map $\pi_1(\wt{S}) \to \pi_1(\wt{M})$ must also be injective.
+  Furthermore, $\wt{S}$ is two-sided in $\wt{M}$: in such cases, the induced map on fundamental groups being injective is equivalent to incompressibility.
+  This proves the lemma.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:strong-duality}]
+  We have that the representative $1$-form $\alpha$ vanishes nowhere.
+  That means the map $f_{\alpha}: M \to S^1$ is a fibration, since it has full rank everywhere.
+  Consider now the lift $\wt{S}$ of $S$ and $f_{\alpha} \circ p$ of $f_{\alpha}$ to the orientation double cover $\wt{M}$.
+  By Lemma \ref{lem:lift-of-incompressible}, $\wt{S}$ is incompressible, and the lift of the fibration is still a fibration.
+  By Theorem \ref{thm:Poincare-duality}, we must have that $\wt{S}$ and $p^{-1}(f_{\alpha}^{-1}(\theta))$ are homologous.
+  Theorem \ref{thm:Thur2} then tells us $\wt{S}$ must be isotopic to the fiber of $p \circ f_{\alpha}$.
+  But $\wt{S}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ are two sheeted covers of the surfaces $S$ and $f_{\alpha}^{-1}(\theta)$ respectively.
+  If $\wt{S}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ are homeomorphic, then $S$ and $f_{\alpha}^{-1}(\theta)$ must also be homeomorphic.
+  This proves the result.
+\end{proof}
+
+\begin{rem}
+  Note that the above proof doesn't tell us if $S$ and $f_{\alpha}^{-1}(\theta)$ are isotopic.
+  To have that, we would require the isotopy on the orientation double cover to be $\iota^{\ast}$-invariant, which could be true, but we didn't show that because the current implication is strong enough for our application.
+\end{rem}
+
 \subsection{Oriented sums}
 \label{sec:oriented-sums}
+
+The next step in studying embedded non-orientable surfaces will be to describe \emph{oriented sums}.
+The oriented sum of two surfaces embedded in a manifold $M$ is additive in both the Euler characteristic and $H^1(M;\RR)$.
+This operation is well-known in the case of orientable $3$-manifolds (along with orientable embedded surfaces), but we will sketch out the relevant details.
+We then extend the construction relatively orientable embedded surfaces.
+
+\paragraph{Oriented sum for oriented manifolds}
+
+Let $S$ and $S'$ be oriented embedded surfaces in an oriented manifold $M$.
+Assume that $S$ and $S'$ intersect transversally.
+Thus, $S \cap S'$ is a disjoint union of copies of $S^1$.
+For each component of $S\cap S'$, take a tubular neighborhood that has cross section as in Figure \ref{fig:cross-section}.
+
+%\autoref{fig:cross-section}.
+\begin{figure}
+  \centering
+  \incfig[0.2]{cross-section}
+  \caption{Cross section of intersection of $S$ and $S'$.}
+  \label{fig:cross-section}
+\end{figure}
+
+We then perform a surgery on the leaves of $S$ and $S'$ so that the outward pointing normal vector fields match as in Figure \ref{fig:surgery}.
+\begin{figure}
+  \centering
+  \incfig[0.3]{surgery}
+  \caption{On the left, the normal vectors on $S$ and $S'$ are consistent. On the right, they are not.}
+  \label{fig:surgery}
+\end{figure}
+
+By performing this surgery at all the intersections, we get a new submanifold $S''$ (which may have multiple components).
+This new submanifold $S''$ is the oriented sum of $S$ and $S'$.
+The operation of taking oriented sums is additive on Euler characteristic, as well as the homology classes (and thus the cohomology classes of their Poincar\'e duals).
+\begin{align*}
+  \chi(S'') &= \chi(S) + \chi(S') \\
+  [S''] &= [S] + [S'] \\
+\end{align*}
+
+\paragraph{Oriented sum for non-orientable manifolds}
+
+Let $M$ be a non-orientable manifold and let $S$ and $S'$ be embedded surfaces in $M$ that are relatively oriented.
+We define the oriented sum on $S$ and $S'$ as follows.
+Let $p:\wt{M}\rightarrow M$ be the orientation double cover and let $\iota$ be the orientation reversing deck transformation of $\wt{M}$.
+As above, let $\wt{S}=p^{-1}(S)$ and $\wt{S}'=p^{-1}(S')$, which are embedded oriented surfaces in $\wt{M}$.
+The oriented sum of $S$ and $S'$ is the image under $p$ of the oriented sum of $\wt{S}$ and $\wt{S}'$ (as defined above for oriented surfaces in oriented manifolds).
+We need to show that this operation is well-defined.
+
+As in the proof of Lemma \ref{lem:PD1}, $\iota$ preserves the relative orientation, and thus leaves the outward normal vector fields on $\wt{S}$ and $\wt{S}'$ invariant.
+Therefore a leaf $\ell$ of $\wt{S}$ is surgered with a leaf of $\ell'$ of $\wt{S}'$ if and only if $\iota(\ell)$ and $\iota(\ell')$ are surgered.
+Therefore surgery factors through $p$ and the oriented double sum is well-defined.
+
+\begin{example}
+  Let $\gamma$ be a component of $S\cap S'$ and $\wt{\gamma}_1$ and $\wt{\gamma}_2$ be the path lifts of $\gamma$.
+  Consider \autoref{fig:consistency}, which shows the outward point normal vectors to $\wt{S}$ and $\wt{S'}$, which determine which leaves are glued together along $\wt{\gamma}_1$ and $\wt{\gamma}_2$.
+
+\begin{figure}
+  \centering
+  \incfig[0.4]{consistency}
+  \caption{Neighborhoods of $\wt{\gamma}_1$ and $\wt{\gamma}_2$, with the outward pointing normal vector field.}
+  \label{fig:consistency}
+\end{figure}
+
+The normal vector field tells us that the left $\wt{S}$ leaf gets glued to the bottom $\wt{S'}$ leaf near $\wt{\gamma}_1$ and $\wt{\gamma}_2$.
+Since $\iota(\wt{\gamma}_1)=\wt{\gamma_2})$, the outward pointing normal vector fields point the same (relative) directions.
+\end{example}
+
+\paragraph{Additivity}
+
+By the consistency of the oriented sum in $M$ and $\wt{M}$, it easily follows that the oriented sum is additive in Euler characteristic, as well as in terms of Poincar\'e dual, since the Poincar\'e dual was also defined by passing to the orientation double cover.
