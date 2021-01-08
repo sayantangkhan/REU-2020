@@ -35,19 +35,22 @@ any $g \geq 2$.
 
 Yazdi's result is one of many recent results in studying the asymptotics of $l_{g,n}$ for different subsets of
 the $(g,n)$ plane. See the introductions of \cite{yazdi2018pseudo} and \cite{tsai2009asymptotic} for more
-examples of results of this form. Yazdi proves an additional result along these lines for a large subset of
-the $(g,n)$ plane, one containing balls of arbitrary large radii.
+examples of results of this form. 
 
-\begin{thm}[Yazdi]
-    \label{thm:yazdi2}
-    There exists positive constants $A$, $B$ and $C$ such that for any $n \geq 1$ and $g \geq Cn\log^2(n)$ such that
-    the following inequalities hold.
-    \begin{align*}
-        \frac{B}{g} \leq l_{g,n} \leq \frac{A}{g}
-    \end{align*}
+%Yazdi proves an additional result along these lines for a large subset of
+%the $(g,n)$ plane, one containing balls of arbitrary large radii.
 
-\end{thm}
-A key tool in Yazdi's proof of both these theorems was the fibered face theory of Thurston. With the non-orientable analog of
+%\begin{thm}[Yazdi]
+%    \label{thm:yazdi2}
+%    There exists positive constants $A$, $B$ and $C$ such that for any $n \geq 1$ and $g \geq Cn\log^2(n)$ such that
+%    the following inequalities hold.
+%    \begin{align*}
+%        \frac{B}{g} \leq l_{g,n} \leq \frac{A}{g}
+%    \end{align*}
+
+%\end{thm}
+
+A key tool in Yazdi's proof of this theorem is the fibered face theory of Thurston. With the non-orientable analog of
 Thurston's fibered face theory we developed in the previous section, it's possible to prove an analogous
 theorem for non-orientable punctured surfaces.  Let $\mathcal{N}_{g,n}$ be the genus $g$ non-orientable
 surface with $n$ punctures and let $l_{g,n}'$ be the minimal stretch factor of $\no_{g,n}$.
@@ -67,20 +70,19 @@ Then we have the following result, analogous to Yazdi's results.
 Observe that the lower bound for the non-orientable case follows easily from the lower bound for the orientable case.
 Let $f$ be the pseudo-Anosov map with the minimal stretch factor on $\no_{g,n}$. Then, by Proposition \ref{prop:2},
 this map lifts to a map $\wt{f}$ on $\os_{g-1, 2n}$ (possibly after squaring). Furthermore, $\wt{f}$ has the same
-stretch factor as $f$. The former is bounded below by $\frac{B}{g}$, and thus the stretch factor of $f$ is bounded
+stretch factor as $f$. The former is bounded below by $\frac{B_1}{g}$, and thus the stretch factor of $f$ is bounded
 below as well. The more challenging part of the proof is showing the upper bound holds. This will be done by explicitly
 constructing pseudo-Anosov maps with small stretch factors, adapting Yazdi's techniques to the non-orientable setting.
 
 The construction of Yazdi proceeds in five steps: in steps 1 and 2, a family of small dilatation psuedo-Anosov
-maps is constructed on $\os_{g_i,n}$, where $\{g_i\}$ is a sequence of genera going off to infinity, by not
-containing every element of $\mathbb{N}$, i.e. there are plenty of gaps. Steps 3 and 5 deal with filling in the
-gaps, i.e. constructing small dilatation pseudo-Anosov maps on the missing surfaces, and this is where
+maps is constructed on $\os_{g_i,n}$, where $\{g_i\}$ is a sequence of genera going off to infinity, but not
+containing every element of $\mathbb{N}$, i.e. there are plenty of gaps. Steps 3 through 5 deal with constructing small dilatation pseudo-Anosov maps on the missing surfaces to fill in the gaps. This is where
 Thurston's fibered face theory enters the picture. In this section, we will adapt the steps to work for
 non-orientable surfaces.
 
 \paragraph{Step 1: Constructing the surfaces}
 
-The first step in the construction is defining a family of surfaces that exhibit a sort of rotational
+The first step in the construction is defining a family of surfaces that exhibit a specific rotational
 symmetry. Using this symmetry, if one shows that a power of some homeomorphism is pseudo-Ansov, then so is
 the original homeomorphism. Yazdi cites this insight as being due to Penner in his construction in
 \cite{penner1991bounds}.
@@ -102,7 +104,7 @@ $s$ connecting them on $\partial T$. See Figure \ref{fig:buildingblock} for a pi
 \end{figure}
 
 Let $T_{i,j}$ be copies of the surface $T$, where $i,j \in \mathbb{Z}$. We will use similar notation to refer
-to the boundary components of $T_{i,j}$. Define an infinite surface $T_\infty$ as the following quotient:
+to the boundary components of $T_{i,j}$, referring to them as $c_{i,j}, d_{i,j}$ and $e_{i,j}$ with $e_{i,j}$ split into oriented arcs $r_{i,j}$ and $s_{i,j}$. Define a connected infinite surface $T_\infty$ as the following quotient:
 \begin{align*}
   T_\infty \coloneqq \left. \left( \bigcup T_{i,j} \right)\right/\sim
 \end{align*}
@@ -128,7 +130,7 @@ and $\rho_2$.
 A natural question at this point is why did we choose the surface $T$ for our building block? It comes down to
 two main problems:
 \begin{itemize}
-\item The combinatorics of the curves make the associated matrix we get from the Penner construction satisfy
+\item The combinatorics of the curves in Figure \ref{fig:curves} make the associated matrix we get from the Penner construction satisfy
   the conditions of Lemma \ref{lem:spectral}. This is used to prove our family of pseudo-Anosov maps have
   stretch factors bounded above by the quantity we desire.
 \item Having a curve $\gamma$ such that it and its image under our map form the boundary of an embedded
@@ -150,18 +152,18 @@ Define the sequence $g_{n,k}$ in the following manner for $n \geq 1$ and $k \geq
   \end{align*}
   Then $U$ is a compact, non-orientable surface of
   genus $12k$ with $2k$ boundary components, and forms a fundamental domain for the covering action of
-  $\overline{\rho_1}$ on $T_\infty$. We have a formula for the Euler characteristic of $U$.
+  $\overline{\rho_1}$ on $T_\infty$. We can compute the Euler characteristic of $U$ in order to determine the Euler characteristic of $P_{n,k}$:
   \begin{align*}
     \chi(U) &= 2 - 12k - 2k \\
-            &= 2 - 14k
+            &= 2 - 14k.
   \end{align*}
-  This gives us a formula for the Euler characteristic of $P_{n,k}$.
+  Thus
   \begin{align*}
     \chi(P_{n,k}) &= n \cdot \chi(U)\\
-                  &= -n(14k - 2)
+                  &= -n(14k - 2),
   \end{align*}
   since $P_{n,k}$ is formed by gluing $n$ copies of $U$ together along circle boundary components. By the
-  relation between genus and Euler characteristic, we have the claimed formula for genus.
+  relation between genus and Euler characteristic, we have the claimed formula for the genus of $P_{n,k}:$
   \begin{align*}
     g_{n,k} = n(14k-2) + 2
   \end{align*}
@@ -188,10 +190,10 @@ advantage of the rotational symmetry of the $P_{n,k}$.
     \label{fig:extracurves}
 \end{figure}
 
-Recall that for non-orientable surfaces, we don't initially have a well-defined notion of a positive or
+Recall that for non-orientable surfaces, we did not initially have a well-defined notion of a positive or
 negative Dehn twist. As we saw in Section \ref{sec:mapping-classes-non}, in order to perform the Penner
 construction, we need to ensure that the curves we are working with are marked inconsistently. Note that our
-labeling of the curves already gives us an inconsistent marking. For any alpha curve $\alpha_i$, we let the
+labeling of the curves in Figure \ref{fig:curves} already gives us an inconsistent marking. For any alpha curve $\alpha_i$, we let the
 marking $\phi_{\alpha_i}$ be orientation preserving and for beta curves $\beta_j$ let $\phi_{\beta_j}$ be
 orientation reversing. Since alpha curves only intersect beta curves (and vice versa), we have an inconsistent
 marking at each point of intersection.
@@ -203,7 +205,7 @@ $\overline{\mathcal{B}} \coloneqq \mathcal{B} \cup \rho_1(\mathcal{B}) \cup \dot
 \rho_1^{n-1}(\mathcal{B})$. Since the curves in $\overline{\mathcal{B}}$ are disjoint, Dehn twists along them
 commute and therefore it is not necessary to specify the order in which we compose these Dehn twists in
 $\phi_b$. Let $\mathcal{R}$ be the union of all $\alpha$ curves except $\alpha_1$ in $T_{0,0}$. Define
-$\overline{\mathcal{R}}$ and $\phi_r$ in the exact same way.
+$\overline{\mathcal{R}}$ and $\phi_r$ in the same manner as above.
 
 Let $\alpha_1,\beta_1 \subset T_{0,0}$ be the curves in Figure \ref{fig:curves}. Let $\phi$ be the composition
 of Dehn twists along all the curves $\alpha_1, \rho_1(\alpha_1), \dots, \rho_1^{n-1}(\alpha_1)$ followed by
@@ -218,7 +220,7 @@ construction that we described in Section \ref{sec:mapping-classes-non}.
 
 \paragraph{Step 3: The Mapping Torus}
 
-We have now constructed an infinite family of non-orientable surfaces and pseudo-Anosov maps, but this isn't
+We have now constructed an infinite family of non-orientable surfaces and pseudo-Anosov maps, but this is not
 enough. Looking back at Lemma \ref{lem:genera}, the genera of this family of surfaces do not include every
 positive integer. In fact, it misses infinitely many integers. We will use our extension of the Thurston's
 fibered face theory to fill in the gaps, by constructing fibers for fibrations of the mapping tori of the
@@ -250,32 +252,31 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
   convenience, we will denote $\phi(\gamma)$ by $\hat{\gamma}$. We are going to follow the image of $\gamma$
   under iterations of our pseudo-Anosov map $f_{n,k}$, this will allow us to attach tubes (annuli) to the
   boundary of $\hat{F}$ to get a closed $\mathcal{N}_3$. Following $\gamma$ under $f_{n,k}$ gives us the
-  following.
+  following
   \begin{align*}
     f_{n,k}(\gamma) &= \rho_2 \circ \phi \circ \phi_b \circ \phi_r(\gamma) \\
                     &= \rho_2 \circ \phi(\gamma) \\
                     &= \rho_2(\hat{\gamma}) \\
-  \end{align*}
-  Applying $f_{n,k}$ repeatedly to ${\gamma}$ gives us the following.
-  \begin{align*}
     f^2_{n,k}(\gamma) &= \rho_2^2(\hat{\gamma}) \\
                       &\vdots \\
     f^k_{n,k}(\gamma) &= \rho_2^k(\hat{\gamma})\\
-                      &= \hat{\gamma}
+                      &= \hat{\gamma}.
   \end{align*}
   Let $T_i$ be a tube (annulus) that connects $f_{n,k}^{i-1}(\gamma)$ to $f_{n,k}^i(\gamma)$
-  (which as we saw above will just be $\gamma$ or copies of $\hat{\gamma}$ on a $\rho_2$ rotation of $T_{0,0}$
+  (which as we saw above will be $\gamma$ or copies of $\hat{\gamma}$ on a $\rho_2$ rotation of $T_{0,0}$
   ) in the mapping torus $M_{n,k}$, for $1 \leq i \leq k$. We obtain these tubes by following the suspension
-  flow of $f_{n,k}$ around $M_{n,k}$. We can now obtain our embedded surface $F_{n,k}$ by taking the union of
-  $T_1,T_2,\dots,T_k$ and $\hat{F}$. Since we are ``adding an orientable genus" to a non-orientable surface of
-  genus 1, we get that $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
+  flow of $f_{n,k}$ around $M_{n,k}$. We can now construct our embedded surface $F_{n,k}$ by taking the union of
+  $T_1,T_2,\dots,T_k$ and $\hat{F}$. Since we are adding an orientable genus to a non-orientable surface of
+  genus 1, we see $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
 
   Since the resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, we have
   relative orientability by Proposition \ref{prop:relative-orientability}.
 
-  The proof of the fact that $F_{n,k}$ can be isotoped to be transverse to the suspension flow is the same as the
+  The proof that $F_{n,k}$ can be isotoped to be transverse to the suspension flow is the same as the
   proof in \cite{yazdi2018pseudo}, which in turn follows the proof in \cite{leininger2013number}. The proof goes
-  through even in this setting essentially because of the local nature of the proof.
+  through even in this setting %essentially
+  because of the local nature of the proof. Moreover, its Poincar\'e dual is in $\overline{\mathcal{K}_{n,k}}$ by Theorem \ref{thm:NOThur1}.
+  \caleb[inline]{Do we need to say more here?}
 
   Finally, $F_{n,k}$ is incompressible in $M_{n,k}$ because $M_{n,k}$ is hyperbolic, and $F_{n,k}$ is genus $3$, the
   lowest possible genus for a hyperbolic non-orientable surface.
@@ -285,8 +286,8 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
 
 In \cite{yazdi2018pseudo}, Yazdi shows that the family of pseudo-Anosov maps that we have constructed all have
 the log of their stretch factor bounded above by a similar factor. In order to to do this, recall in Section
-\ref{sec:background} we saw that pseudo-Anosov maps give rise to matrices whose Perron-Frobenius eigenvalue is
-our stretch factor. So a way to find an upper bound of the stretch factor of the maps we have constructed is
+\ref{sec:mapping-classes-non} we saw that pseudo-Anosov maps give rise to matrices whose Perron-Frobenius eigenvalue is
+the corresponding stretch factor. So a way to find an upper bound of the stretch factor of the maps we have constructed is
 to bound the spectral radius of the associated matrices. The following lemma by Yazdi does just this for a
 specific class of matrices that our examples are based off of.
 
@@ -313,53 +314,49 @@ With this result in hand, we can now show that the stretch factors for our main 
 bounded above in the way we hope.
 
 \begin{lem}
-  Let $\lambda_{n,k}$ be the stretch factor of $f_{n,k}$. Then there exists a universal positive constant $C'$
-  and such that for every $n \geq 1$ and $k \geq 3$, we have the following upper bound on $\log(\lambda_{n,k})$.
+  Let $\lambda_{n,k}$ be the stretch factor of $f_{n,k}$. Then there exists a universal positive constant $C'$ such that for every $n \geq 1$ and $k \geq 3$, we have the following upper bound on $\log(\lambda_{n,k})$.
   \begin{align*}
    \log(\lambda_{n,k}) \leq C'\frac{n}{g_{n,k}}
   \end{align*}
 \end{lem}
 
 \begin{proof}
-  We deliberately constructed our examples so our curves are in the same ``general form" as the ones in
-  \cite{yazdi2018pseudo} and thus they will still satisfy the criteria of Lemma \ref{lem:spectral}. All
-  intersections between the curves happen inside the building block $T$, except for the intersections between
-  building blocks given by the beta curves $\beta_3$ and $\beta_8$. Though we still will explicitly show that
-  it is the case our set of curves will satisfy the above lemma by Yazdi as well.
+ We deliberately constructed our examples so our curves are in the same general form as the ones in
+ \cite{yazdi2018pseudo} with all intersections between the curves happen inside the building block $T$, except for the intersections between building blocks given by the beta curves $\beta_3$ and $\beta_8$. Keeping with this form makes our set of curves also satisfy Lemma \ref{lem:spectral}, but we will still explicitly prove this.
 
-  We define the following multi-curves.
+  We define the following multi-curves:
 \begin{align*}
   \mathcal{A} &\coloneqq \mathcal{B} \cup \mathcal{R} \cup \{\alpha_1,\beta_1\} \\
   \overline{\mathcal{A}} &\coloneqq \mathcal{A} \cup \rho_1(\mathcal{A}) \cup \dots \cup \rho_1^{n-1}(\mathcal{A}) \\
   \widehat{\mathcal{A}} &\coloneqq \overline{\mathcal{A}} \cup \rho_2\left(\overline{\mathcal{A}}\right) \cup \dots \cup \rho_2^{k-1}\left(\overline{\mathcal{A}}\right).
 \end{align*}
-Thus $\hat{\mathcal{A}}$ is all the curves on our surface we are Dehn twisting around to get $f_{n,k}$.
+Thus, $\hat{\mathcal{A}}$ is all the curves on our surface we are Dehn twisting around to get $f_{n,k}$.
 
 Recall from above that we stated we need to find the eigenvalue of the matrix that represents the action of
 $f_{n,k}$ on the subspace of the cone of transverse measures that is spanned by the measures assigning $1$ to
 single curves in $\hat{\mathcal{A}}$ and 0 to everything else. Let $A$ be said matrix and $\Gamma$ the
 adjacency graph of $A$. In order to bound the spectral radius of $A$, we need to show that $\Gamma$ satisfies
-the criteria of Lemma 1. To do this we first need to partition the vertices of $\gamma$, which is equivalent
+the criteria of Lemma \ref{lem:spectral}. To do this we first need to partition the vertices of $\Gamma$, which is equivalent
 to a partition of the curves in $\hat{\mathcal{A}}$:
-$$\mathcal{A} = \bigcup_{i=1}^k \rho_2^{i-2}(\overline{\mathcal{A}}).$$ Then define $V_i$ for
+$$\hat{\mathcal{A}} = \bigcup_{i=1}^k \rho_2^{i-2}(\overline{\mathcal{A}}).$$ Then define $V_i$ for
 $1 \leq i \leq k$ as the vertices of $\Gamma$ corresponding to elements in
 $\rho_2^{i-2}(\overline{\mathcal{A}})$.
 
 We can now check the conditions of Lemma 1, based on the combinatorics of the curves on our surface:
 \begin{enumerate}[(i)]
-\item From the way that the curves are constructed, there will exist a constant $D'$, independent of $n$ and
+\item There exists a constant $D'$, independent of $n$ and
   $k$, such that for every connected curve (single element subset) $c \subset \hat{A}$, the geometric
-  intersection number between $c$ and $\overline{A}$ is at most $D'$.  Recall from Section
+  intersection number between $c$ and $\overline{\mathcal{A}}$ is at most $D'$. Recall from Section
   \ref{sec:mapping-classes-non} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of
   transverse measures on our invariant train track corresponding to connected curves in $\hat{\mathcal{A}}$ as
-  $A$. Following Yazdi we express $A$ as the following product.
+  $A$. Following Yazdi we express $A$ as the following product:
   \begin{align*}
-    A = M_4M_3M_2M_1
+    A = M_4M_3M_2M_1.
   \end{align*}
   Here each $M_i$ is the linear action of $\rho_2,\phi,\phi_b$ and $\phi_r$ respectively. For a connected
   curve $x \in \hat{\mathcal{A}}$, the $L^1$-norm of $A(\mu_x)$ is bounded above by the geometric intersection of
-  $f_{n,k}(x)$ with the curves in $\overline{A}$, thus each of $M_1$, $M_2$ and $M_3$ will change the norm by
-  a factor of at most $(1 + D')$. Since $\rho_2$ won't change intersection numbers, $M_4$ will preserve the
+  $f_{n,k}(x)$ with the curves in $\overline{\mathcal{A}}$, thus each of $M_1$, $M_2$ and $M_3$ will change the norm by
+  a factor of at most $(1 + D')$. Since $\rho_2$ will not change intersection numbers, $M_4$ will preserve the
   $L^1$-norm. If we let $D = (1 + D')^3$, then the outward degree of each vertex in $\Gamma$ is at most $D$.
 \item As above, we now have a partition of our vertices where
   $V_i \coloneqq \rho_2^{i-2}(\overline{\mathcal{A}})$. So suppose that $v \in V_i$, $i \neq 1,3$, is a vertex
@@ -386,7 +383,7 @@ We can now check the conditions of Lemma 1, based on the combinatorics of the cu
   $\rho_1^i(\beta_8)$. Moreover, for any element $v \in V_3$ corresponding to $Y$ and any
   $u \in v^+ \cap V_3$, $u$ no longer corresponds to $Y$ and hence $u^+ \subset V_4$.
 \item All the curves corresponding to an element of $V_j$, $3 < j \leq k$ are disjoint from all the curves in
-  $\overline{A}$. Thus, $f_{n,k}$ just acts by rotation.
+  $\overline{\mathcal{A}}$. Thus, $f_{n,k}$ just acts by rotation.
 \end{enumerate}
 
 Setting $\lambda = \lambda_{n,k}$, Lemma \ref{lem:spectral} implies the following.
@@ -405,13 +402,13 @@ where $C' \coloneqq 28\log(4D^4)$.
 \paragraph{Step 5: Filling in the Gaps}
 
 We now want to use the mapping tori $M_{n,k}$ of our maps $f_{n,k}$ to construct pseudo-Anosov maps with small
-stretch factors on the surfaces of the genera we our missing from our family $P_{n,k}$. To do this we consider
-the following surfaces: $P^r_{n,k} = P_{n,k} + r(F_{n,k})$, that is taking the oriented sum of $P^r_{n,k}$ and
+stretch factors on surfaces of the genera we our missing from our family $P_{n,k}$. To do this we consider
+the following surfaces: $P^r_{n,k} \coloneqq P_{n,k} + r(F_{n,k})$, that is taking the oriented sum of $P^r_{n,k}$ and
 $F_{n,k}$ $r$ times as defined in Theorem $\ref{thm:oriented-sum}$.
 
 \begin{lem}
-  The surface $P^r_{n,k}$ have genus equal to $g^r_{n,k} = g_{n,k} + r$. In particular as $r$ varies between
-  $0$ and $6n$, the genera of $P^r_{n,k}$ cover the range between $g_{n,k}$ and $g_{n,k+1}$. Moreover,
+  The surfaces $P^r_{n,k}$ have genus $g^r_{n,k} = g_{n,k} + r$. In particular, as $r$ varies between
+  $0$ and $14n$, the genera of $P^r_{n,k}$ cover the range between $g_{n,k}$ and $g_{n,k+1}$. Moreover,
   $P^r_{n,k}$ is isotopic to a fiber of a fibration of $M_{n,k}$ with pseudo-Anosov monodromy that fixes $2n$
   of the singularities of its invariant foliation.
 \end{lem}
@@ -421,7 +418,7 @@ $F_{n,k}$ $r$ times as defined in Theorem $\ref{thm:oriented-sum}$.
   \begin{align*}
     \chi(P^r_{n,k}) &= \chi(P_{n,k}) + r\cdot\chi(F_{n,k}) \\
                     &= (-2g_{n,k} + 2)-2r \\
-                    &= -2(g_{n,k} - 1) + 2
+                    &= -2(g_{n,k} + r) + 2
   \end{align*}
   This proves the identity for the genus of $P^r_{n,k}.$
 
@@ -440,13 +437,13 @@ $F_{n,k}$ $r$ times as defined in Theorem $\ref{thm:oriented-sum}$.
 We can now prove the non-orientable version of Lemma 3.6 of \cite{yazdi2018pseudo}.
 \begin{lem}
 \label{lem:bound}
-Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$.Then there exists a constant $C > 0$ such that for every $n \geq 1$, $k \geq 3$, and $0 \leq r \leq 6n$ we have the following upper bound on $\log(\lambda_{n,k}^r)$.
+Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$. Then there exists a constant $C > 0$ such that for every $n \geq 1$, $k \geq 3$, and $0 \leq r \leq 6n$ we have the following upper bound on $\log(\lambda_{n,k}^r)$.
 \begin{align*}
   \log(\lambda^r_{n,k}) \leq C\frac{n}{g^r_{n,k}}
 \end{align*}
 \end{lem}
 \begin{proof}
-  Let $\mathcal{K} = \mathcal{K}_{n,k}$ be our fibered faces and $h: \mathcal{K} \xrightarrow[]{} \mathbb{R}$
+  Let $\mathcal{K} = \mathcal{K}_{n,k}$ be the fibered cone corresponding to $f_{n,k}$ and $h: \mathcal{K} \xrightarrow[]{} \mathbb{R}$
   the function described in Theorem \ref{thm:NOfm}. Note that we have the following bounds on $g_{n,k}^r$.
   \begin{align*}
     g^r_{n,k} &= g_{n,k} + r \\
@@ -454,22 +451,22 @@ Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$.Then there exists a c
               &< 2g_{n,k}
   \end{align*}
   Now if we let $\omega$ be the Poincar\'e dual of $P^r_{n,k}$ and $\alpha$ the Poincar\'e dual of $P_{n,k}$, we have the following bounds by the convexity of the entropy
-  function $h$.
+  function $h$:
   \begin{align*}
     h([\omega]) &< h([\alpha]) \\
                 &\leq C'\frac{n}{g_{n,k}} \\
-                &\leq 2C'\frac{n}{g^r_{n,k}}
+                &\leq 2C'\frac{n}{g^r_{n,k}}. 
   \end{align*}
 \end{proof}
 
-So now we have that our surfaces $P^r_{n,k}$ are isotopic to fibers of fibrations of $M_{n,k}$ with
+So  our surfaces $P^r_{n,k}$ are isotopic to fibers of fibrations of $M_{n,k}$ with
 pseudo-Anosov monodromies with bounded stretch factors.
 
 We can now think of $f^r_{n,k}$ as a map on a non-orientable surface of genus $g^r_{n,k}$. Note from above we
 know that $g^r_{n,k}$ covers all natural numbers between $g_{n,k}$ and $g_{n,k+1}$, thus this set of genera
 for all $r$ covers all natural numbers larger than $g_{n,3} = 40n + 2$. Recall that all of these surfaces will
 have $2n$ singularities, so we can either puncture $n$ or $n + 1$ to account for all possible number of
-punctures.
+punctures. 
 
 We can now give a proof of Theorem \ref{thm:stretch1}.
 

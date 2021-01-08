@@ -1,49 +1,14 @@
 \section{Introduction}
 \label{sec:introduction}
+%Let $S_{g,n}$ be a surface of genus $g$ with $n$ punctures.  The mapping class group of $S_{g,n}$ consists of homotopy classes of orientation preserving homeomorphisms of $\Mod(S_{g,n})$.  The Nielsen--Thurston classification of mapping class groups says that each element of the mapping class is either reducible (preserves a multi-curve), periodic, or is pseudo-Anosov.  Pseudo-Anosov mapping classes play a critical role in Thurston's Hyperbolization Theorem: a mapping torus of a surface and a homeomorphism $\varphi$ is a hyperbolic 3-manifold if and only if $\varphi$ is pseudo-Anosov.
 
-Let $M$ be a closed, fibered 3-manifold that fibers over $S^1$. It is a well known fact that these surface
-bundles over the circle all have a separate description, that of the mapping torus of some homeomorphism of a
-closed surface. Not only that, but a single 3-manifold can have many, possibly infinite, descriptions as a
-mapping torus. Thus when studying these 3-manifolds, an important question is whether one can understand or
-give a description of all these possible fibrations.
+Let $S_{g,n}$ be a surface of genus $g$ with $n$ punctures.  The mapping class group of $S_{g,n}$ is consists of homotopy classes of orientation preserving homeomorphisms of $S_{g,n}$.  The Nielsen--Thurston classification of mapping class groups says that each mapping class is periodic, preserves some multicurve, or has a representative that is pseudo-Anosov.  For each pseudo-Anosov homeomorphism $\varphi:S_{g,n}\rightarrow S_{g,n}$, the stretch factor $\lambda(\varphi)$ is an algebraic integer that describes the amount by which $\varphi$ changes the length of curves.%
 
-In 1986, Thurston gave a way to answer this question, a semi-norm on the second homology of an orientable
-3-manifold that was able to ``detect'' when an embedded surface of the 3-manifold was the fiber of a fibration
-of said manifold. This \textit{Thurston norm} is given a full treatment in \cite{thurston1986norm}, in which
-Thurston shows that not only does this norm have unit ball which is a polyhedron, but the fibers of fibrations
-of one of these 3-manifolds $M$ were in one-to-one correspondence with cones on open faces of this polyhedron
-unit ball. This almost combinatorial description of the fibers turns out to be a powerful tool in studying
-these fibered 3-manifolds.
+The logarithm of $\lambda(\varphi)$ describes the topological entropy of the homeomorphism $\varphi$.  Penner \cite{penner1991bounds} proved that the minimum topological entropy:
+$$l_{g,n}=\min\{\log(\lambda(f)) | f\in\Mod(S_{g,n}\text{ is pseudo-Anosov}\}.$$ 
+He showed the $l_{g,0}$ is bounded $$\frac{A}{g}\leq l_{g,0}\leq \frac{B}{g},$$ where $A,B$ are real constants.  Therefore $l_{g,0}$ asymptoically behaves like $\frac{1}{g}$  Following Penner, many authors have .  Much of this work has focused on orientable surfaces.  Let $\mathcal{N}_{g,n}$ be a non-orientable surface of genus $g$ with $n$ punctures.  In this paper we study the asympototic behavior of:
+as $n$ increases.
 
-All this also plays a key role in understanding mapping class groups of surfaces, since a surface and
-a mapping class on it is associated to a $3$-manifold, namely, the mapping torus of the mapping class.
-By relating the different ways a given mapping torus can fiber, one is able to relate mapping classes
-on different surfaces, and in doing so, construct mapping classes of interest.
-
-However, there is a small issue with using Thurston norm based techniques: Thurston defines his norm on the
-second homology of an \textit{orientable} 3-manifold. This leads to the question of whether the results that
-depend on the Thurston norm work in the non-orientable setting as well. While Thurston himself does comment on
-this in \cite{thurston1986norm}, writing, ``(m)ost of this paper works also for non-oriented manifolds, but
-for simplicity we deal only with the oriented case.'' It is the goal of this paper to deal with the other case, to
-see what works and what, if anything, possibly goes wrong when trying to extend the Thurston norm and its
-consequences for fibered 3-manifolds to the non-orientable setting.
-
-One of the ways Thurston's results are used in the study of mapping classes is via the operation of
-\emph{oriented sum}. Given the mapping torus $M$ of some surface $S$ and some homeomorphism $\varphi$, one can
-identify $S$ with an embedded surface in $M$. By picking another embedded surface $S'$ in an appropriate
-manner, one can perform local surgery to combine $S$ and $S'$: the resulting surface is called the oriented
-sum of $S$ and $S'$ and denoted $S+S'$. Under the appropriate hypothesis, the oriented sum is also the fiber
-of some other fibration, and thus has a mapping class $\varphi'$ on it. It turns out one can relate the
-stretch factors of $\varphi$ (which is a mapping class on $S$) and $\varphi'$ (which is a mapping class on
-$S + S'$). We generalize this operation of oriented sum for non-orientable surfaces in Theorem
-\ref{thm:oriented-sum}.
-
-To show that this paper isn't just generalization for the sake of generalization, we use this generalization
-of Thurston's results and oriented sums to study the asymptotic behaviour of the minimal stretch factor of
-punctured non-orientable surfaces. The result for orientable punctured surfaces was proven by Yazdi in 2019,
-and relied heavily on Thurston's result, among others. We are able to essentially ``plug in'' the
-non-orientable version of Thurston's results to get a non-orientable version of Yazdi's results. This is one
-of the main theorems of this paper.
 \begin{manualtheorem}{\ref{thm:stretch1}}
   Let $\no_{g,n}$ be a non-orientable surface of genus $g$ with $n$ marked points, and let $l_{g,n}'$ be
   the smallest stretch factor of the pseudo-Anosov mapping classes acting on $\no_{g,n}$.
@@ -53,3 +18,45 @@ of the main theorems of this paper.
     \frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}
   \end{align*}
 \end{manualtheorem}
+
+To prove this theorem, we adapt the work of Yazdi \cite{yazdi2018pseudo} to non-orientable surface.  In particular, Yazdi's work uses Thurston's theory of fibered faces.  
+
+\p{Thurston norm for non-orientable 3-manifolds} In Thurston's development of what is now called the Thurston norm for 3-manifolds \cite{thurston1986norm}, his definitions and theorems required that all surfaces were orientable.  Thurston said that the theorems should still be true for non-orientable surfaces, but there are some subtleties that have not been addressed elsewhere in the literature.  To this end, we also adapt Thurston's theory of fibered faces to non-orientable 3-manifolds.
+
+\begin{manualtheorem}{\ref{thm:NOThur1}}
+  The unit ball with respect to the dual Thurston norm on $\left( H^1(M; \RR) \right)^{\ast}$ is a polyhedron in $(H^1(M,\RR))^\ast$
+  whose vertices are lattice points $\{\pm \beta_1, \ldots \pm \beta_k\}$. The unit ball $B_1$ with respect to
+  Thurston norm is a polyhedron given by the following inequalities.
+  \begin{align*}
+    B_1 = \left\{ a\in H^1(M,\RR) \mid \left| \beta_i(a) \right| \leq 1 \text{ for $1\leq i \leq k$} \right\}
+  \end{align*}
+\end{manualtheorem}
+
+%This paper has two main goals: to understand the asymptotic behavior of the stretch factor of pseudo-Anosov homeomorphisms of non-orientable surfaces and to write down the details of the Thurston norm and Thurston's theory of fibered faces for non-orientable surfaces.  In the study of orientable surfaces, Thurston's theory of fibered faces is an important tool in studying dilations.
+
+Let $M$ be a closed, fibered 3-manifold that fibers over $S^1$. It is a well known fact that these surface
+bundles over the circle all have a separate description, that of the mapping torus of some homeomorphism of a
+closed surface. Not only that, but a single 3-manifold can have many, possibly infinite, descriptions as a
+mapping torus. Thus when studying these 3-manifolds, an important question is whether one can understand or
+give a description of all these possible fibrations.
+
+%In 1986, Thurston gave a way to answer this question, a semi-norm on the second homology of an orientable 3-manifold that was able to ``detect'' when an embedded surface of the 3-manifold was the fiber of a fibration of said manifold. This \textit{Thurston norm} is given a full treatment in \cite{thurston1986norm}, in which Thurston shows that not only does this norm have unit ball which is a polyhedron, but the fibers of fibrations of one of these 3-manifolds $M$ were in one-to-one correspondence with cones on open faces of this polyhedron unit ball. This almost combinatorial description of the fibers turns out to be a powerful tool in studying these fibered 3-manifolds.
+
+%All this also plays a key role in understanding mapping class groups of surfaces, since a surface and a mapping class on it is associated to a $3$-manifold, namely, the mapping torus of the mapping class.  By relating the different ways a given mapping torus can fiber, one is able to relate mapping classes on different surfaces, and in doing so, construct mapping classes of interest.
+
+%However, there is a small issue with using Thurston norm based techniques: Thurston defines his norm on the second homology of an \textit{orientable} 3-manifold. This leads to the question of whether the results that depend on the Thurston norm work in the non-orientable setting as well. While Thurston himself does comment on this in \cite{thurston1986norm}, writing, ``(m)ost of this paper works also for non-oriented manifolds, but for simplicity we deal only with the oriented case.'' It is the goal of this paper to deal with the other case, to see what works and what, if anything, possibly goes wrong when trying to extend the Thurston norm and its consequences for fibered 3-manifolds to the non-orientable setting.
+
+%One of the ways Thurston's results are used in the study of mapping classes is via the operation of \emph{oriented sum}. Given the mapping torus $M$ of some surface $S$ and some homeomorphism $\varphi$, one can identify $S$ with an embedded surface in $M$. By picking another embedded surface $S'$ in an appropriate manner, one can perform local surgery to combine $S$ and $S'$: the resulting surface is called the oriented sum of $S$ and $S'$ and denoted $S+S'$. Under the appropriate hypothesis, the oriented sum is also the fiber of some other fibration, and thus has a mapping class $\varphi'$ on it. It turns out one can relate the stretch factors of $\varphi$ (which is a mapping class on $S$) and $\varphi'$ (which is a mapping class on $S + S'$). We generalize this operation of oriented sum for non-orientable surfaces in Theorem \ref{thm:oriented-sum}.
+
+%To show that this paper isn't just generalization for the sake of generalization, we use this generalization of Thurston's results and oriented sums to study the asymptotic behaviour of the minimal stretch factor of punctured non-orientable surfaces. The result for orientable punctured surfaces was proven by Yazdi in 2019, and relied heavily on Thurston's result, among others. We are able to essentially ``plug in'' the non-orientable version of Thurston's results to get a non-orientable version of Yazdi's results. This is one of the main theorems of this paper.
+
+
+
+One of the primary goals of this paper to extend this definition of Thurston norm to non-orientable manifolds
+and be able to state the non-orientable version of the theorems above. Most of the work in doing so is
+concentrated in determining the right analog of Thurston norm for non-orientable surfaces, and then making
+Theorem \ref{thm:Thur1} work with that definition, which is what we will do in Section \ref{sec:fibered-face-theory}. Once we have the
+versions of the theorems for non-orientable surfaces, we'll generalize a trick due
+to McMullen that lets one construct pseudo-Anosov maps with small stretch factor to non-orientable surfaces. Finally we will prove
+bounds on the asymptotics of minimal stretch factors for non-orientable surfaces in Section
+\ref{sec:application} by adapting the methods in \cite{yazdi2018pseudo} for non-orientable surfaces.
