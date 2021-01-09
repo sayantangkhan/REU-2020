@@ -4,10 +4,9 @@
 
 Let $S_{g,n}$ be a surface of genus $g$ with $n$ punctures.  The mapping class group of $S_{g,n}$ is consists of homotopy classes of orientation preserving homeomorphisms of $S_{g,n}$.  The Nielsen--Thurston classification of mapping class groups says that each mapping class is periodic, preserves some multicurve, or has a representative that is pseudo-Anosov.  For each pseudo-Anosov homeomorphism $\varphi:S_{g,n}\rightarrow S_{g,n}$, the stretch factor $\lambda(\varphi)$ is an algebraic integer that describes the amount by which $\varphi$ changes the length of curves.%
 
-The logarithm of $\lambda(\varphi)$ describes the topological entropy of the homeomorphism $\varphi$.  Penner \cite{penner1991bounds} initiated the study of the minimum topological entropy:
+
 $$l_{g,n}=\min\{\log(\lambda(f)) | f\in\Mod(S_{g,n}\text{ is pseudo-Anosov}\}.$$ 
-He showed the $l_{g,0}$ is bounded $$\frac{A}{g}\leq l_{g,0}\leq \frac{B}{g},$$ where $A,B$ are real constants.  Therefore $l_{g,0}$ asymptoically behaves like $\frac{1}{g}$  Following Penner, the study of $l_{g,n}$ where $n\geq 0$  .  Much of this work has focused on orientable surfaces.  Let $\mathcal{N}_{g,n}$ be a non-orientable surface of genus $g$ with $n$ punctures.  In this paper we study the asympototic behavior of:
-as $n$ increases.
+He showed the $l_{g,0}$ is bounded $$\frac{A}{g}\leq l_{g,0}\leq \frac{B}{g},$$ where $A,B$ are real constants.  Therefore $l_{g,0}$ asymptoically behaves like $\frac{1}{g}$.  Following Penner, many authors have found contraints on $l_{g,n}$ for $n\geq 0$.  In particular, Tsai found that when $S_{g,n}$ is orientable surface of fixed genus $g\geq 2$, $l_{g,n}$ is on the order of $\frac{\log(n)}{n}$ \cite{tsai2009asymptotic}. Much of this work has focused on orientable surfaces.  Let $\mathcal{N}_{g,n}$ be a non-orientable surface of genus $g$ with $n$ punctures.  In this paper we study the asympototic behavior of $l_{g,n}$ as $n$ increases.
 
 \begin{manualtheorem}{\ref{thm:stretch1}}
   Let $\no_{g,n}$ be a non-orientable surface of genus $g$ with $n$ marked points, and let $l_{g,n}'$ be
@@ -23,14 +22,12 @@ To prove this theorem, we adapt the work of Yazdi \cite{yazdi2018pseudo} to non-
 
 \p{Thurston norm for non-orientable 3-manifolds} In Thurston's development of what is now called the Thurston norm for 3-manifolds \cite{thurston1986norm}, his definitions and theorems required that all surfaces were orientable.  Thurston said that the theorems should still be true for non-orientable surfaces, but there are some subtleties that have not been addressed elsewhere in the literature.  To this end, we also adapt Thurston's theory of fibered faces to non-orientable 3-manifolds.
 
-\begin{manualtheorem}{\ref{thm:NOThur1}}
-  The unit ball with respect to the dual Thurston norm on $\left( H^1(M; \RR) \right)^{\ast}$ is a polyhedron in $(H^1(M,\RR))^\ast$
-  whose vertices are lattice points $\{\pm \beta_1, \ldots \pm \beta_k\}$. The unit ball $B_1$ with respect to
-  Thurston norm is a polyhedron given by the following inequalities.
-  \begin{align*}
-    B_1 = \left\{ a\in H^1(M,\RR) \mid \left| \beta_i(a) \right| \leq 1 \text{ for $1\leq i \leq k$} \right\}
-  \end{align*}
-\end{manualtheorem}
+%\begin{manualtheorem}{\ref{thm:NOThur1}}
+ % The unit ball with respect to the dual Thurston norm on $\left( H^1(M; \RR) \right)^{\ast}$ is a polyhedron in $(H^1(M,\RR))^\ast$ whose vertices are lattice points $\{\pm \beta_1, \ldots \pm \beta_k\}$. The unit ball $B_1$ with respect to Thurston norm is a polyhedron given by the following inequalities.
+%  \begin{align*}
+ %   B_1 = \left\{ a\in H^1(M,\RR) \mid \left| \beta_i(a) \right| \leq 1 \text{ for $1\leq i \leq k$} \right\}
+ % \end{align*}
+%\end{manualtheorem}
 
 %This paper has two main goals: to understand the asymptotic behavior of the stretch factor of pseudo-Anosov homeomorphisms of non-orientable surfaces and to write down the details of the Thurston norm and Thurston's theory of fibered faces for non-orientable surfaces.  In the study of orientable surfaces, Thurston's theory of fibered faces is an important tool in studying dilations.
 
@@ -55,7 +52,7 @@ give a description of all these possible fibrations.
 One of the primary goals of this paper to extend this definition of Thurston norm to non-orientable manifolds
 and be able to state the non-orientable version of the theorems above. Most of the work in doing so is
 concentrated in determining the right analog of Thurston norm for non-orientable surfaces, and then making
-Theorem \ref{thm:Thur1} work with that definition, which is what we will do in Section \ref{sec:fibered-face-theory}. Once we have the
+Theorem \ref{thm:Thur1} work with that definition, which is what we will do in Section \ref{sec:thur-norm-non-orientable}. Once we have the
 versions of the theorems for non-orientable surfaces, we'll generalize a trick due
 to McMullen that lets one construct pseudo-Anosov maps with small stretch factor to non-orientable surfaces. Finally we will prove
 bounds on the asymptotics of minimal stretch factors for non-orientable surfaces in Section

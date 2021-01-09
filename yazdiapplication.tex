@@ -191,7 +191,7 @@ advantage of the rotational symmetry of the $P_{n,k}$.
 \end{figure}
 
 Recall that for non-orientable surfaces, we did not initially have a well-defined notion of a positive or
-negative Dehn twist. As we saw in Section \ref{sec:mapping-classes-non}, in order to perform the Penner
+negative Dehn twist. As we saw in Section \ref{sec:backgr-mapp-class}, in order to perform the Penner
 construction, we need to ensure that the curves we are working with are marked inconsistently. Note that our
 labeling of the curves in Figure \ref{fig:curves} already gives us an inconsistent marking. For any alpha curve $\alpha_i$, we let the
 marking $\phi_{\alpha_i}$ be orientation preserving and for beta curves $\beta_j$ let $\phi_{\beta_j}$ be
@@ -216,7 +216,7 @@ in the following manner.
 \end{align*}
 It follows from the Penner construction that $(f_{n,k})^k$ is pseudo-Anosov. Hence $f_{n,k}$ itself is
 pseudo-Anosov and an invariant train track $\tau_{n,k}$ for $f_{n,k}$ can be obtained from Penner's
-construction that we described in Section \ref{sec:mapping-classes-non}.
+construction that we described in Section \ref{sec:backgr-mapp-class}.
 
 \paragraph{Step 3: The Mapping Torus}
 
@@ -275,9 +275,9 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
   The proof that $F_{n,k}$ can be isotoped to be transverse to the suspension flow is the same as the
   proof in \cite{yazdi2018pseudo}, which in turn follows the proof in \cite{leininger2013number}. The proof goes
   through even in this setting %essentially
-  because of the local nature of the proof. Moreover, its Poincar\'e dual is in $\overline{\mathcal{K}_{n,k}}$ by Theorem \ref{thm:NOThur1}.
+  because of the local nature of the proof. Moreover, its Poincar\'e dual is in $\overline{\mathcal{K}_{n,k}}$ by Theorem \ref{thm:classifying-fibrations}.
   \caleb[inline]{Do we need to say more here?}
-
+   
   Finally, $F_{n,k}$ is incompressible in $M_{n,k}$ because $M_{n,k}$ is hyperbolic, and $F_{n,k}$ is genus $3$, the
   lowest possible genus for a hyperbolic non-orientable surface.
 \end{proof}
@@ -286,7 +286,7 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
 
 In \cite{yazdi2018pseudo}, Yazdi shows that the family of pseudo-Anosov maps that we have constructed all have
 the log of their stretch factor bounded above by a similar factor. In order to to do this, recall in Section
-\ref{sec:mapping-classes-non} we saw that pseudo-Anosov maps give rise to matrices whose Perron-Frobenius eigenvalue is
+\ref{sec:backgr-mapp-class} we saw that pseudo-Anosov maps give rise to matrices whose Perron-Frobenius eigenvalue is
 the corresponding stretch factor. So a way to find an upper bound of the stretch factor of the maps we have constructed is
 to bound the spectral radius of the associated matrices. The following lemma by Yazdi does just this for a
 specific class of matrices that our examples are based off of.
@@ -347,7 +347,7 @@ We can now check the conditions of Lemma 1, based on the combinatorics of the cu
 \item There exists a constant $D'$, independent of $n$ and
   $k$, such that for every connected curve (single element subset) $c \subset \hat{A}$, the geometric
   intersection number between $c$ and $\overline{\mathcal{A}}$ is at most $D'$. Recall from Section
-  \ref{sec:mapping-classes-non} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of
+  \ref{sec:backgr-mapp-class} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of
   transverse measures on our invariant train track corresponding to connected curves in $\hat{\mathcal{A}}$ as
   $A$. Following Yazdi we express $A$ as the following product:
   \begin{align*}
@@ -444,7 +444,7 @@ Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$. Then there exists a 
 \end{lem}
 \begin{proof}
   Let $\mathcal{K} = \mathcal{K}_{n,k}$ be the fibered cone corresponding to $f_{n,k}$ and $h: \mathcal{K} \xrightarrow[]{} \mathbb{R}$
-  the function described in Theorem \ref{thm:NOfm}. Note that we have the following bounds on $g_{n,k}^r$.
+  the function described in Theorem \ref{thm:fm}. Note that we have the following bounds on $g_{n,k}^r$.
   \begin{align*}
     g^r_{n,k} &= g_{n,k} + r \\
               &\leq g_{n,k} + 14n \\
@@ -462,11 +462,9 @@ Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$. Then there exists a 
 So  our surfaces $P^r_{n,k}$ are isotopic to fibers of fibrations of $M_{n,k}$ with
 pseudo-Anosov monodromies with bounded stretch factors.
 
-We can now think of $f^r_{n,k}$ as a map on a non-orientable surface of genus $g^r_{n,k}$. Note from above we
+Recall that all of the $P^r_{n,k}$ will have $2n$ singularities, and we can puncture $n$ of them to view $f^r_{n,k}$ as a map on a non-orientable surface of genus $g^r_{n,k}$ with $n$ punctures. Also note from above we
 know that $g^r_{n,k}$ covers all natural numbers between $g_{n,k}$ and $g_{n,k+1}$, thus this set of genera
-for all $r$ covers all natural numbers larger than $g_{n,3} = 40n + 2$. Recall that all of these surfaces will
-have $2n$ singularities, so we can either puncture $n$ or $n + 1$ to account for all possible number of
-punctures. 
+for all $r$ covers all natural numbers larger than $g_{n,3} = 40n + 2$. 
 
 We can now give a proof of Theorem \ref{thm:stretch1}.
 
@@ -482,7 +480,7 @@ For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ 
   $C' > 0$ such that for $g \geq 40n + 2$, $l'_{g,n} \leq 2C'\frac{n}{g}$. So we take $B'_2(n)$ to be the
   following quantity.
   \begin{align*}
-    B'_2(n) = \max\{4C'n, l'_{1,n}, 2l'_{2,n}, \dots, (40n + 1)l'_{40n+1,n}\}
+    B'_2(n) = \max\{2C'n, l'_{1,n}, 2l'_{2,n}, \dots, (40n + 1)l'_{40n+1,n}\}
   \end{align*}
 
   The lower bound follows easily from the lower bound in the orientable setting, as demonstrated in the

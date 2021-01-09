@@ -4,7 +4,7 @@
 \subsection{Background on Thurston norm and mapping tori}
 \label{sec:backgr-thurst-norm}
 
-Given a orientable closed $3$-manifold $M$, the Thurston norm is a semi-norm on its second homology group $H_2(M; \RR)$; to define the norm, we need to make some preliminary remarks and define a function.
+Given an orientable closed $3$-manifold $M$, the Thurston norm is a semi-norm on its second homology group $H_2(M; \RR)$; to define the norm, we need to make some preliminary remarks and define a function.
 Let $S$ be a connected surface: define the complexity of $S$ to be $\chi_-(S) = \max\left\{-\chi(S),0\right\}$.
 If the surface $S$ has multiple components $S_1, \ldots, S_m$ then $\chi_-(S) = \displaystyle\sum_{i=1}^m\chi_-(S_i)$.
 Furthermore, for an \emph{orientable} 3-manifold $M$, it is known that elements in $H_2(M ; \ZZ)$ can be represented by embedded surfaces inside of $M$.
@@ -54,7 +54,7 @@ Most of the work in the proof will involve reducing the version for non-orientab
 A na\"ive first attempt at defining the Thurston norm would be to define it on the second homology group, like in the orientable case.
 However, if the norm is defined in that fashion, the non-orientable version of Theorem \ref{thm:Thur1} will not be true.
 Consider a compact non-orientable surface $\no$, a homeomorphism $\varphi: \no \to \no$, and the associated mapping torus $M_{\varphi}$.
-Clearly, $M_{\varphi}$ fibers over $S^1$, and $\no$ is the fiber of this fibration: however, the homology class associated to $\no$ is the $0$ homology class, since the top-dimensional homology of non-orientable compact surfaces is $0$-dimensional.
+Clearly, $M_{\varphi}$ fibers over $S^1$, and $\no$ is the fiber of this fibration: however, the homology class associated to $\no$ is the zero homology class, since the top-dimensional homology of non-orientable compact surfaces is $0$-dimensional.
 
 Our workaround for this problem will be to deal with the first cohomology $H^1(M)$ rather than the second homology $H_2(M)$.
 By Poincar\'e duality they are the same for orientable 3-manifolds, but that is not true for non-orientable $3$-manifolds.
@@ -112,14 +112,14 @@ For orientable $3$-manifolds, this is an isomorphism, and more specifically the 
 \begin{thm}[Poincar\'e duality for orientable $3$-manifolds]
   \label{thm:orientable-poincare-duality}
   Let $M$ be an orientable $3$-manifold, and let $S$ be an oriented embedded surface. Then there exists a $1$-form
-  $\alpha$ and a regular value $q\in M$ such that $S$ and $f_{\alpha}^{-1}(q)$ are homologous surfaces.
+  $\alpha$ and a regular value $\theta \in S^1$ such that $S$ and $f_{\alpha}^{-1}(\theta)$ are homologous surfaces.
 \end{thm}
 
 Note that the map from the space of $1$-forms to homology classes of an embedded surface still makes sense for a non-orientable $3$-manifold $M$.
-However in that case the map from $H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ has a nontrivial kernel, as we saw in the example where $M$ is the mapping torus of a non-orientable surface.
+However in that case the map from $H^1(M; \ZZ)$ to $H_2(M; \ZZ)$ has a nontrivial kernel, as we saw in the example where $M_{\varphi}$ was the mapping torus of a non-orientable surface, and $\no$ was the fiber.
 
 \subsubsection*{Defining the norm on cohomology}
-For this section, we'll use $M$ to denote a non-orientable $3$-manifold, and $\wt{M}$ to denote its orientation double cover.
+For this section, we will use $M$ to denote a non-orientable $3$-manifold, and $\wt{M}$ to denote its orientation double cover.
 We will denote by $\iota$ the orientation reversing deck transformation
 of $\wt{M}$, and the covering map $\wt{M} \to M$ by $p$.
 If $M=M_\varphi$ is the mapping torus of the non-orientable surface $\no$ and a self-homeomorphism $\varphi: \no \to \no$, then $\wt{M}$ is the mapping torus of $(\os, \wt{\varphi})$, where $\os$ is the orientable double cover of $\no$, and $\wt{\varphi}$ is the orientation preserving lift of $\varphi$.
@@ -206,7 +206,7 @@ Note that relative orientability is a strictly weaker notion than orientability.
 If $S$ and $M$ are orientable, then $S$ is relatively orientable with respect to $M$.
 But even if $M$ is non-orientable, a non-orientable embedded surface $S$ may be relatively orientable with respect to $M$.
 For instance, let $S$ be the fiber of a non-orientable mapping torus $M$.
-The pre-image under the projection map to $S^1$ of a non-vanishing vector field is a non-orientable vector field on $M$.
+The pre-image under the projection map to $S^1$ of a non-vanishing vector field is a non-vanishing vector field on $M$ that is always transverse to the fiber.
 
 \begin{example}[A surface that is not relatively orientable in a 3-manifold]
   Let $S$ be the standard torus $\RR^2/\ZZ^2$, and let $\varphi$ map $(x,y)$ to $(-x, y)$.
@@ -244,7 +244,7 @@ We care about relatively orientable surfaces because these surfaces can be mappe
   Furthermore, $\alpha$ assigns positive values to the positively oriented transverse vector field on $S$.
 \end{thm}
 \begin{rem}
-  The only statement in the above theorem that does not follow from the orientable version of Poincar\'e duality is the fact that the dual to the pre-image of $S$ in the double cover $\wt{M}$ is a pullback of an element of $H^1(M; \ZZ)$. Also, the conclusion of the theorem is not strong enough for our application: we will later need to show that $S$ and $f_{\alpha}^{-1}(q)$ are homeomorphic surfaces, but to do so, we will need to impose stronger conditions on $S$ and $M$, as well as use a result of Thurston.
+  The only statement in the above theorem that does not follow from the orientable version of Poincar\'e duality is the fact that the dual to the pre-image of $S$ in the double cover $\wt{M}$ is a pullback of an element of $H^1(M; \ZZ)$. Also, the conclusion of the theorem is not strong enough for our application: we will later need to show that $S$ and $f_{\alpha}^{-1}(q)$ are homeomorphic surfaces, but to do so, we will need to impose stronger conditions on $S$ and $M$, and use a result of Thurston.
 \end{rem}
 
 The idea of the proof of this theorem is fairly straightforward.
@@ -287,7 +287,7 @@ We show that the Poincar\'e dual to $\wt{S}$ is $\iota^{\ast}$-invariant.
   $\iota^{\ast}$-invariant.
 \end{proof}
 
-Let us continue denoting the Poincar\'e dual to $[\wt{S}]$ as $[\wt{\alpha}]$.
+Let us continue denoting the Poincar\'e dual to $[\wt{S}]$ by $[\wt{\alpha}]$.
 $[\wt{\alpha}]$ is an $\iota^{\ast}$-invariant element of $H^1(\wt{M}; \ZZ)$, but it is not clear that $[\wt{\alpha}]$ is the pullback of an element of $H^1(M; \ZZ)$ under the projection map.
 In the next lemma, we show that is indeed the case, i.e. $[\wt{\alpha}]$ is the pullback of an element in $H^1(M; \ZZ)$.
 \begin{lem}
@@ -295,8 +295,8 @@ In the next lemma, we show that is indeed the case, i.e. $[\wt{\alpha}]$ is the 
   There exists an $[\alpha] \in H^1(M; \ZZ)$ such that $\wt{\alpha} = p^{\ast} \alpha$, where $p$ is the covering map $\wt{M} \to M$.
 \end{lem}
 \begin{proof}
-  To show that $[\wt{\alpha}]$ is the pullback of an element in $H^1(M; \ZZ)$, it will suffice to show that the integral of $\wt{\alpha}$ along any closed curve or arc in $\wt{M}$ to projects down to a closed curve in $M$ is an integer.
-  Since $\wt{\alpha} \in H^1(\wt{M}; \ZZ)$, the integral along any closed curve will be an integers, it will suffice to check along arcs that project down to closed curves in $M$.
+  To show that $[\wt{\alpha}]$ is the pullback of an element in $H^1(M; \ZZ)$, it will suffice to show that the integral of $\wt{\alpha}$ along any closed curve or arc in $\wt{M}$ that projects down to a closed curve in $M$ is an integer.
+  Since $\wt{\alpha} \in H^1(\wt{M}; \ZZ)$, the integral along any closed curve will be an integer, it will suffice to check along arcs that project down to closed curves in $M$.
   Let $\delta$ be such an arc, starting at a point $x_0 \in \wt{M}$.
   Since its image in $M$ must close up, $\delta$ must necessarily end at $\iota(x_0)$.
   We would like to show the following.
@@ -322,7 +322,7 @@ We now have everything we need to finish proving Theorem \ref{thm:Poincare-duali
   Starting with a relatively oriented surface $S$ in $M$, we look at its pre-image $\wt{S}$ in $\wt{M}$ under the orientation double cover.
   The relative orientation of the pre-image gives us the homology class $[\wt{S}]$, and we get a $1$-form $\wt{\alpha}$, which is Poincar\'e dual to the homology class of $\wt{S}$.
   By Lemmas \ref{lem:PD1} and \ref{lem:PD2}, we have that $[\wt{\alpha}]$ is the pullback of an element in $H^1(M; \ZZ)$, which is the Poincar\'e dual to the relatively oriented surface $S$.
-  It follows from the orientable version of Poincar\'e duality that $\wt{S}$ and $p^{_1}(f_{\alpha}^{-1}(\theta))$ are homologous surfaces in $\wt{M}$.
+  It follows from the orientable version of Poincar\'e duality that $\wt{S}$ and $p^{-1}(f_{\alpha}^{-1}(\theta))$ are homologous surfaces in $\wt{M}$.
 \end{proof}
 
 We will now strengthen the conclusion of Theorem \ref{thm:Poincare-duality} to get a more concrete relationship between $S$ and $f_{\alpha}^{-1}(\theta)$.
@@ -349,7 +349,7 @@ We can now state the strengthened version of Poincar\'e duality for non-orientab
 Before we prove this theorem, we need the following lemma.
 \begin{lem}
   \label{lem:lift-of-incompressible}
-  If $S$ is a relatively oriented incompressible surface in a non-orientable $3$-manifold $M$, then the lift $\wt{S}$ of $S$ in $\wt{M}$, the orientation double cover of $M$ is also incompressible.
+  If $S$ is a relatively oriented incompressible surface in a non-orientable $3$-manifold $M$, then the lift $\wt{S}$ of $S$ in $\wt{M}$, the orientation double cover of $M$, is also incompressible.
 \end{lem}
 \begin{proof}
   The fact that $S$ is incompressible in $M$ implies that the inclusion induced map on fundamental groups is injective.
@@ -375,7 +375,7 @@ Before we prove this theorem, we need the following lemma.
 
 \begin{rem}
   Note that the above proof doesn't tell us if $S$ and $f_{\alpha}^{-1}(\theta)$ are isotopic.
-  To have that, we would require the isotopy on the orientation double cover to be $\iota^{\ast}$-invariant, which could be true, but we didn't show that because the current implication is strong enough for our application.
+  To have that, we would require the isotopy on the orientation double cover to be $\iota^{\ast}$-invariant, which we have not done because the current implication is strong enough for our application.
 \end{rem}
 
 If we associate to each fibration of $M$ the $1$-form obtained by pulling back the canonical form $d\theta$ on $S^1$, we are able state a non-orientable version of Theorem \ref{thm:Thur1}.
