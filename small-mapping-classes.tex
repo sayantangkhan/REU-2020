@@ -14,16 +14,16 @@ Let $\no_{g,n}$ be a non-orientable surface obtained by attaching $g$ crosscaps 
 The integer $g$ is referred to as the genus of $\no_{g,n}$.
 Compact non-orientable surfaces are classified by the triple $(g,n,b)$ where $g$ is the genus, $n$ is the number of marked points and $b$ is the boundary.
 
-Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift, that is a homeomorphism $\wt{\varphi}: \os \to \os$, where $\os$ is the orientation double cover of $\no$, with $p\wt{\varphi}=\varphi p$, where $p$ is the covering map.
+Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift, that is a homeomorphism $\wt{\varphi}: \wt{\no} \to \wt{\no}$, where $\wt{\no}$ is the orientation double cover of $\no$, with $p\wt{\varphi}=\varphi p$, where $p$ is the covering map.
 
-A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\os$.
-Every homotopy of $\no$ lifts to a homotopy of $\os$.
-Moreover, if $f,g:\no\to\no$ are homeomorphisms such that their orientation preserving lifts $\widetilde{f},\widetilde{g}$ of $\os$ are homotopic, then $f$ and $g$ are homotopic.
-Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\os$.
+A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\wt{\no}$.
+Every homotopy of $\no$ lifts to a homotopy of $\wt{\no}$.
+Moreover, if $f,g:\no\to\no$ are homeomorphisms such that their orientation preserving lifts $\widetilde{f},\widetilde{g}$ of $\wt{\no}$ are homotopic, then $f$ and $g$ are homotopic.
+Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\wt{\no}$.
 This inclusion also respects the Nielsen-Thurston classification of mapping classes, both qualitatively, and quantitatively, as the following proposition shows.
 \begin{prop}
   \label{prop:2}
-  If $\varphi$ is a self-homeomorphism of $\no$ and $\wt{\varphi}$ is its orientation preserving lift on $\os$, then:
+  If $\varphi$ is a self-homeomorphism of $\no$ and $\wt{\varphi}$ is its orientation preserving lift on $\wt{\no}$, then:
   \begin{enumerate}[(i)]
   \item $\varphi$ is periodic if and only if $\wt{\varphi}$ is periodic,
   \item $\varphi$ is reducible if and only if $\wt{\varphi}$,
@@ -51,16 +51,16 @@ This inclusion also respects the Nielsen-Thurston classification of mapping clas
                                &= \frac{1}{\lambda} \cdot i(\gamma, \mu_c)
   \end{align}
   Note now that the foliations can be lifted to the double cover: call their lifts $\wt{\mu}_e$ and $\wt{\mu}_c$.
-  For any closed curve $\wt{\gamma}$ of $\os$, consider its intersection number with the foliations.
+  For any closed curve $\wt{\gamma}$ of $\wt{\no}$, consider its intersection number with the foliations.
   Observe that computing the intersection number is a local calculation.
-  Start by choosing an open cover $U$ on $\no$ such that all the open sets in $U$ are homeomorphic to the connected components of their pre-image in $\os$.
+  Start by choosing an open cover $U$ on $\no$ such that all the open sets in $U$ are homeomorphic to the connected components of their pre-image in $\wt{\no}$.
   By choosing a partition of unity subordinate to this cover, one can compute the intersection number by restricting computation on each open set in the cover.
   This calculation lifts to the orientation double cover, giving us the following identity.
   \begin{align}
     \label{eq:3}
     i(\wt{\gamma}, \wt{\mu}_e) = i(\gamma, \mu_e)
   \end{align}
-  Combining identities \eqref{eq:1} and \eqref{eq:3}, we get the following identity for intersection numbers on $\os$.
+  Combining identities \eqref{eq:1} and \eqref{eq:3}, we get the following identity for intersection numbers on $\wt{\no}$.
   \begin{align*}
     i(\wt{\varphi}^{-1} (\wt{\gamma}), \wt{\mu}_e) = \lambda \cdot i(\wt{\gamma}, \wt{\mu}_e)
   \end{align*}
@@ -131,29 +131,29 @@ We also have the following theorem of Thurston relating hyperbolicity of mapping
 A consequence of the above theorem is that if we can decompose the mapping torus of a pseudo-Anosov map as the mapping torus of some other homeomorphism, then the other homeomorphism must also be pseudo-Anosov.
 
 Let $\no$ be a non-orientable surface, and $\varphi$ be a pseudo-Anosov homeomorphism.
-Let $M_\varphi$ be the associated mapping torus and $f:M\rightarrow S^1$ the associated fibration.
-Suppose we can construct another relatively oriented surface $\no'$ inside $M$ such that $\no'$ is transverse to the suspension flow direction associated to $f$.
+Let $N_\varphi$ be the associated mapping torus and $f:N\rightarrow S^1$ the associated fibration.
+Suppose we can construct another relatively oriented surface $\no'$ inside $N$ such that $\no'$ is transverse to the suspension flow direction associated to $f$.
 Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ be the Poincar\'e dual of $\no'$.
-By Theorem \ref{thm:classifying-fibrations} $\alpha$ lies in a cone $\mathcal{C}_\varphi \subset H^1(M_\varphi; \ZZ)$ associated to $\varphi$ with other $1$-forms also coming from fibrations.
+By Theorem \ref{thm:classifying-fibrations} $\alpha$ lies in a cone $\mathcal{C}_\varphi \subset H^1(N_\varphi; \ZZ)$ associated to $\varphi$ with other $1$-forms also coming from fibrations.
 Furthermore, $\alpha'$ lies in the closure of $\mathcal{C}_\varphi$.
 All positive integer linear combinations of $\alpha$ and $\alpha'$ are lattice elements of $\mathcal{C}_\varphi$.
-Each linear combination of $\alpha$ and $\alpha'$ is Poincar\'e dual to an oriented sum of $\no$ and $\no'$ in $M$.
+Each linear combination of $\alpha$ and $\alpha'$ is Poincar\'e dual to an oriented sum of $\no$ and $\no'$ in $N$.
 Under reasonably mild conditions on $\no$ and $\no'$, we can show that the fiber is homeomorphic to the oriented sum $\no + \no'$ of $\no$ and $\no'$.
 
 \begin{thm}
   \label{thm:oriented-sum}
   Let $\no$ be a non-orientable surface and $\varphi$ a homeomorphism of $\no$.
-  Let $M_\varphi$ be the mapping torus of $(\no,\varphi)$ and $f:M\rightarrow S^1$ the fibration.
-  Let $\no'$ be an incompressible surface embedded in $M$ that is transverse to the suspension flow direction associated to $f$.
+  Let $N_\varphi$ be the mapping torus of $(\no,\varphi)$ and $f:N\rightarrow S^1$ the fibration.
+  Let $\no'$ be an incompressible surface embedded in $N$ that is transverse to the suspension flow direction associated to $f$.
   Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ the Poincar\'e dual of $\no'$.
   If the oriented sum of $\no$ and $\no'$ is connected, then $\no + \no'$ is homeomorphic to the fiber of the fibration given by $\alpha + \alpha'$.
 \end{thm}
 \begin{proof}
-  Let $p:\wt{M}\rightarrow M$ be the orientation double cover of $M$.
+  Let $p:\wt{N}\rightarrow N$ be the orientation double cover of $N$.
   The surface $\no$ is incompressible because it is a fiber of $f$; therefore its pre-image under $p$ is also incompressible.
   Since the surfaces $\no$ and $\no'$ are incompressible, the Thurston norms of  their duals $\alpha$ and $\alpha'$ are $2\chi_-(\no)$ and $2\chi_{-}(\no')$.
 
-  $\alpha$ and $\alpha'$ lie in a cone over a fibered face, which means the Thurston norm $x$ on $H^1(M;\ZZ)$ is linear function on that cone.
+  $\alpha$ and $\alpha'$ lie in a cone over a fibered face, which means the Thurston norm $x$ on $H^1(N;\ZZ)$ is linear function on that cone.
   This lets us compute the Thurston norm of the oriented sum $\no + \no'$, which must be twice the Euler characteristic.
   \begin{align*}
     x(\alpha + \alpha') &= x(\alpha) + x(\alpha') \\
@@ -161,10 +161,10 @@ Under reasonably mild conditions on $\no$ and $\no'$, we can show that the fiber
                         &= 2\chi_-(\no + \no').
   \end{align*}
   The last equality follows from the linearity of the oriented sum.
-  Because the pre-image of $\no + \no'$ in the orientation double cover of $M$ must be Thurston norm minimizing.
+  Because the pre-image of $\no + \no'$ in the orientation double cover of $N$ must be Thurston norm minimizing.
   Therefore the surface $\no+\no'$ is incompressible.
 
-  By Theorem \ref{thm:classifying-fibrations}, we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':M\rightarrow S^1$.
+  By Theorem \ref{thm:classifying-fibrations}, we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':N\rightarrow S^1$.
   But the fiber of this fibration must be homeomorphic to $\no + \no'$, by Theorem \ref{thm:strong-duality}, since the Poincar\'e dual to $\no + \no'$ is $\alpha + \alpha'$, and $\no + \no'$ is incompressible.
 \end{proof}
 
