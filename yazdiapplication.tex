@@ -1,41 +1,51 @@
 \section{Minimal stretch factors for non-orientable surfaces with marked points}
 \label{sec:application}
 
-Recall that associated to every pseudo-Anosov homeomorphism $f$ there is a number $\lambda(f)$, the
-\textit{dilatation} or \textit{stretch factor}, the amount that the stable and unstable foliations of the
-pseudo-Anosov change by. Given a surface $S$, it is natural to ask what we can say about the set of all
-possible stretch factors, i.e.
-\begin{align*}
-    \left\{\log(\lambda(f)) \mid f \in \text{Mod}(S) \text{ is pseudo-Anosov}\right\}
-\end{align*}
-
-We call this set the \textit{spectrum} of $S$. A first step at understanding this set of all stretch factors
-associated to a surface is considering the following quantity
-\begin{align*}
-    l_{g,n} =\min\{\log(\lambda(f)) \mid f \in \text{Mod}(\mathcal{S}_{g,n}) \text{ is pseudo-Anosov}\}.
-\end{align*}
-
-The study of this minimal stretch factor $l_{g,n}$ was initiated by Penner in his work
-\cite{penner1991bounds}. In this paper Penner studied the asymptotic behavior of minimal stretch factors of orientable surfaces without punctures, i.e. the behavior of $l_{g,0}$. He showed that there exist positive constants
-$A_1$ and $A_2$ such that the following inequalities held for any $g \geq 2$.
-\begin{align*}
-    \frac{A_1}{g} \leq l_{g,0} \leq \frac{A_2}{g}
-\end{align*}
-This showed that asymptotically $l_{g,0}$ behaves like $\frac{1}{g}$ for $g \geq 2$.
-It turns out something similar is true when one starts adding punctures. Yazdi showed
-that for any fixed $n$, $l_{g,n}$ behaves like $\frac{1}{g}$. More precisely, he proved the following theorem.
-\begin{thm}[Theorem 1.2 of \cite{yazdi2018pseudo}]
-\label{thm:yazdi1}
-For any fixed $n \in \mathbb{N}$, there are positive constants $B_1 = B_1(n)$ and $B_2 = B_2(n)$ such that the following inequalities hold for
-any $g \geq 2$.
-\begin{align*}
-    \frac{B_1}{g} \leq l_{g,n} \leq \frac{B_2}{g}.
-\end{align*}
+In this section we will use Theorems \ref{thm:classifying-fibrations} and \ref{thm:oriented-sum} to adapt the methods of \cite{yazdi2018pseudo} to non-orientable surfaces. In particular, we prove the following theorem on the asymptotic behavior of the minimal stretch factor of non-orientable surfaces:
+\begin{thm}
+  \label{thm:stretch1}
+  For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that
+  for any $g \geq 2$, the stretch factor satisfies the following inequalities.
+  \begin{align*}
+    \frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}
+  \end{align*}
 \end{thm}
 
-Yazdi's result is one of many recent results in studying the asymptotics of $l_{g,n}$ for different subsets of
-the $(g,n)$ plane. See the introductions of \cite{yazdi2018pseudo} and \cite{tsai2009asymptotic} for more
-examples of results of this form. 
+
+%Recall that associated to every pseudo-Anosov homeomorphism $f$ there is a number $\lambda(f)$, the
+%\textit{dilatation} or \textit{stretch factor}, the amount that the stable and unstable foliations of the
+%pseudo-Anosov change by. Given a surface $S$, it is natural to ask what we can say about the set of all
+%possible stretch factors, i.e.
+%\begin{align*}
+%    \left\{\log(\lambda(f)) \mid f \in \text{Mod}(S) \text{ is pseudo-Anosov}\right\}
+%\end{align*}
+
+%We call this set the \textit{spectrum} of $S$. A first step at understanding this set of all stretch factors associated to a surface is considering the following quantity
+%\begin{align*}
+%    l_{g,n} =\min\{\log(\lambda(f)) \mid f \in \text{Mod}(\mathcal{S}_{g,n}) \text{ is pseudo-Anosov}\}.
+%\end{align*}
+
+%The study of this minimal stretch factor $l_{g,n}$ was initiated by Penner in his work
+%\cite{penner1991bounds}. In this paper Penner studied the asymptotic behavior of minimal stretch factors of orientable surfaces without punctures, i.e. the behavior of $l_{g,0}$. He showed that there exist positive constants
+%$A_1$ and $A_2$ such that the following inequalities held for any $g \geq 2$.
+%\begin{align*}
+%    \frac{A_1}{g} \leq l_{g,0} \leq \frac{A_2}{g}
+%\end{align*}
+%This showed that asymptotically $l_{g,0}$ behaves like $\frac{1}{g}$ for $g \geq 2$.
+%It turns out something similar is true when one starts adding punctures. Yazdi showed
+%that for any fixed $n$, $l_{g,n}$ behaves like $\frac{1}{g}$. More precisely, he proved the following theorem.
+%\begin{thm}[Theorem 1.2 of \cite{yazdi2018pseudo}]
+%\label{thm:yazdi1}
+%For any fixed $n \in \mathbb{N}$, there are positive constants $B_1 = B_1(n)$ and $B_2 = B_2(n)$ such that the following inequalities hold for
+%any $g \geq 2$.
+%\begin{align*}
+%    \frac{B_1}{g} \leq l_{g,n} \leq \frac{B_2}{g}.
+%\end{align*}
+%\end{thm}
+
+%Yazdi's result is one of many recent results in studying the asymptotics of $l_{g,n}$ for different subsets of
+%the $(g,n)$ plane. See the introductions of \cite{yazdi2018pseudo} and \cite{tsai2009asymptotic} for more
+%examples of results of this form. 
 
 %Yazdi proves an additional result along these lines for a large subset of
 %the $(g,n)$ plane, one containing balls of arbitrary large radii.
@@ -50,22 +60,22 @@ examples of results of this form.
 
 %\end{thm}
 
-A key tool in Yazdi's proof of this theorem is the fibered face theory of Thurston. With the non-orientable analog of
-Thurston's fibered face theory we developed in the previous section, it's possible to prove an analogous
-theorem for non-orientable punctured surfaces.  Let $\mathcal{N}_{g,n}$ be the genus $g$ non-orientable
-surface with $n$ punctures and let $l_{g,n}'$ be the minimal stretch factor of $\no_{g,n}$.
-\begin{align*}
-  l'_{g,n} = \min\left\{\log(\lambda(f)) \mid f \in \text{Mod}(\mathcal{N}_{g,n})\ \text{is pseudo-Anosov}\right\}
-\end{align*}
-Then we have the following result, analogous to Yazdi's results.
-\begin{thm}
-  \label{thm:stretch1}
-  For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that
-  for any $g \geq 2$, the stretch factor satisfies the following inequalities.
-  \begin{align*}
-    \frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}
-  \end{align*}
-\end{thm}
+%A key tool in Yazdi's proof of this theorem is the fibered face theory of Thurston. With the non-orientable analog of
+%Thurston's fibered face theory we developed in the previous section, it's possible to prove an analogous
+%theorem for non-orientable punctured surfaces.  Let $\mathcal{N}_{g,n}$ be the genus $g$ non-orientable
+%surface with $n$ punctures and let $l_{g,n}'$ be the minimal stretch factor of $\no_{g,n}$.
+%\begin{align*}
+%  l'_{g,n} = \min\left\{\log(\lambda(f)) \mid f \in \text{Mod}(\mathcal{N}_{g,n})\ \text{is pseudo-Anosov}\right\}
+%\end{align*}
+%Then we have the following result, analogous to Yazdi's results.
+%\begin{thm}
+%  \label{thm:stretch1}
+%  For any fixed $n \in \mathbb{N}$, there are positive constants $B'_1 = B'_1(n)$ and $B'_2 = B'_2(n)$ such that
+%  for any $g \geq 2$, the stretch factor satisfies the following inequalities.
+%  \begin{align*}
+%    \frac{B'_1}{g} \leq l'_{g,n} \leq \frac{B'_2}{g}
+%  \end{align*}
+%\end{thm}
 
 Observe that the lower bound for the non-orientable case follows easily from the lower bound for the orientable case.
 Let $f$ be the pseudo-Anosov map with the minimal stretch factor on $\no_{g,n}$. Then, by Proposition \ref{prop:2},
@@ -269,14 +279,14 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
   $T_1,T_2,\dots,T_k$ and $\hat{F}$. Since we are adding an orientable genus to a non-orientable surface of
   genus 1, we see $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
 
-  Since the resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, we have
+  The resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, so we have
   relative orientability by Proposition \ref{prop:relative-orientability}.
 
   The proof that $F_{n,k}$ can be isotoped to be transverse to the suspension flow is the same as the
   proof in \cite{yazdi2018pseudo}, which in turn follows the proof in \cite{leininger2013number}. The proof goes
   through even in this setting %essentially
-  because of the local nature of the proof. Moreover, its Poincar\'e dual is in $\overline{\mathcal{K}_{n,k}}$ by Theorem \ref{thm:classifying-fibrations}.
-  \caleb[inline]{Do we need to say more here?}
+  because of the local nature of the proof. Therefore, its Poincar\'e dual is in $\overline{\mathcal{K}_{n,k}}$ by Theorem \ref{thm:classifying-fibrations}.
+  \caleb[inline]{Do we need to say more here? SK: I think if the Yazdi paper elides the proof of transversality citing the local nature, we should be able to as well. The safest option would be to see what exactly Yazdi quotes before referring to LM13, and make sure we do the same.}
    
   Finally, $F_{n,k}$ is incompressible in $M_{n,k}$ because $M_{n,k}$ is hyperbolic, and $F_{n,k}$ is genus $3$, the
   lowest possible genus for a hyperbolic non-orientable surface.
@@ -437,7 +447,7 @@ $F_{n,k}$ $r$ times as defined in Theorem $\ref{thm:oriented-sum}$.
 We can now prove the non-orientable version of Lemma 3.6 of \cite{yazdi2018pseudo}.
 \begin{lem}
 \label{lem:bound}
-Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$. Then there exists a constant $C > 0$ such that for every $n \geq 1$, $k \geq 3$, and $0 \leq r \leq 6n$ we have the following upper bound on $\log(\lambda_{n,k}^r)$.
+Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r$. Then there exists a constant $C > 0$ such that for every $n \geq 1$, $k \geq 3$, and $0 \leq r \leq 14n$ we have the following upper bound on $\log(\lambda_{n,k}^r)$.
 \begin{align*}
   \log(\lambda^r_{n,k}) \leq C\frac{n}{g^r_{n,k}}
 \end{align*}
