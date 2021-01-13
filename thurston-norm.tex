@@ -358,7 +358,7 @@ We can now state the strengthened version of Poincar\'e duality for non-orientab
   \label{thm:strong-duality}
   Let $N$ be a compact non-orientable $3$-manifold, and let $\no$ be a relatively oriented incompressible surface.
   Let $[\alpha] \in H^1(N; \ZZ)$ be the dual to $\no$, as given by Theorem \ref{thm:Poincare-duality}.
-  If $[\alpha]$ has a $1$-form representative $\alpha$ that vanishes nowhere on $N$, then $\no$ is homeomorphic to $f_{\alpha}^{-1}(\theta)$ for all $\theta \in \no^1$.
+  If $[\alpha]$ has a $1$-form representative $\alpha$ that vanishes nowhere on $N$, then $\no$ is homeomorphic to $f_{\alpha}^{-1}(\theta)$ for all $\theta \in S^1$.
 \end{thm}
 
 Before we prove this theorem, we need the following lemma.
@@ -377,14 +377,13 @@ Before we prove this theorem, we need the following lemma.
 \end{proof}
 
 \begin{proof}[Proof of Theorem \ref{thm:strong-duality}]
-  We have that the representative $1$-form $\alpha$ vanishes nowhere.
-  That means the map $f_{\alpha}: N \to \no^1$ is a fibration, since it has full rank everywhere.
-  Consider now the lift $\wt{\no}$ of $\no$ and $f_{\alpha} \circ p$ of $f_{\alpha}$ to the orientation double cover $\wt{N}$.
+  Because $\alpha$ is non-vanishing, the map $f_{\alpha}: N \to S^1$ has full rank everywhere.  Therefore $f_\alpha$ is a fibration.
+  Let $\wt{\no}$ be the preimage of $\no$ under $p$.  The map $f_{\alpha} \circ p$ is the lift of $f_{\alpha}$ to under $p$.
   By Lemma \ref{lem:lift-of-incompressible}, $\wt{\no}$ is incompressible, and the lift of the fibration is still a fibration.
   By Theorem \ref{thm:Poincare-duality}, we must have that $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1}(\theta))$ are homologous.
   Theorem \ref{thm:Thur2} then tells us $\wt{\no}$ must be isotopic to the fiber of $p \circ f_{\alpha}$.
-  But $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ are two sheeted covers of the surfaces $\no$ and $f_{\alpha}^{-1}(\theta)$ respectively.
-  If $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ are homeomorphic, then $\no$ and $f_{\alpha}^{-1}(\theta)$ must also be homeomorphic.
+  But $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ are 2-fold covers of the surfaces $\no$ and $f_{\alpha}^{-1}(\theta)$ respectively.
+  Since $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ are homeomorphic, $\no$ and $f_{\alpha}^{-1}(\theta)$ must also be homeomorphic.
   This proves the result.
 \end{proof}
 
@@ -399,16 +398,18 @@ If we associate to each fibration of $N$ the $1$-form obtained by pulling back t
   Let $N$ be a compact non-orientable $3$-manifold, and let $\mathcal{F}$ be the elements of $H^1(N; \ZZ)$ corresponding to fibrations of $N$ over $\no^1$.
   \begin{enumerate}[(i)]
   \item Elements of $\mathcal{F}$ are in a one-to-one correspondence with (non-zero) lattice points (i.e. points of $H^1(N; \ZZ)$) inside some union of cones over open faces of the unit ball in the Thurston norm.
-  \item If a relatively oriented surface $\no$ is transverse to the suspension flow associated to some fibration $f: N \to \no^1$, then the Poincar\'e dual $[\alpha]$ to $\no$ lies in the  closure of the cone in $H^1(N; \RR)$ containing the $1$-form corresponding to $f$.
+  \item If a relatively oriented surface $\no$ is transverse to the suspension flow associated to some fibration $f: N \to \no^1$, then the Poincar\'e dual $[\alpha]$ to $\no$ lies in the closure of the cone in $H^1(N; \RR)$ containing the $1$-form corresponding to $f$.
   \end{enumerate}
 \end{thm}
 \begin{proof}
-  The union of cones in $H^1(N; \RR)$ is determined by intersecting the pullback of $H^1(N; \RR)$ to the cohomology of the orientable double cover with the union of cones in $H^1(\wt{N}; \RR)$.
-  Clearly, every lattice point in this union of cones corresponds to a fibration, since the pullback to $H^1(\wt{N}; \ZZ)$ corresponds to a fibration.
-  Conversely, every fibration of $N$ must lie in one of these cones, since the composition with the covering map $p$ gives a fibration of $\wt{N}$ over $\no^1$.
+By Theorem~\ref{thm:Thur1} the fibrations of $\wt{N}$ are in one-to-one correspondence with lattice points inside a union of cones over open faces of the unit ball in $H_2(\wt{N};\RR)$.  By Poincar\'e duality, the cones in $H_2(\wt{N};\RR)$ map to cones in $H^1(\wt{N};\RR)$.  Let $\wt{\mathcal{K}}$ be the union of cones in $H^1(\wt{N};\RR)$.
 
-  If the surface $\no$ is transverse to the suspension flow of a fibration $f$, then $\wt{\no}$ is transverse to $p \circ f$, and thus the Poincar\'e dual $\wt{\alpha}$ to $\wt{\no}$ lies in the closure of the cone in $H^1(\wt{N}; \RR)$.
-  But since the dual $\alpha$ to $\no$ pulls back to $\wt{\alpha}$, this means $\alpha$ lies in the closure of the cone in $H^1(N; \RR)$.
+  The union of cones in $H^1(N; \RR)$ is determined by intersecting the pullback of $H^1(N; \RR)$ to $H^1(\wt{N}; \RR)$ with $\wt{K}$.
+  Every lattice point in this union of cones corresponds to a fibration $f:N\to S^1$, since the pullback of $f$ to $H^1(\wt{N}; \ZZ)$ corresponds to a fibration of $\wt{N}$.
+  Conversely, every fibration of $f:N\rightarrow S^1$ must lie in one of these cones, since the composition $f\circ p$ is a fibration of $\wt{N}$ over $S^1$.
+
+  If the surface $\no$ is transverse to the suspension flow of a fibration $f$, then $\wt{\no}$ is transverse to $p \circ f$.  Let $\wt{\alpha}$ be the Poincar\'e dual of $p\circ f$ in $\wt{\no}$.  Then $\wt{\alpha}$ lies in the closure of a component of $\wt{\mathcal{K}}$.
+  Since the $1$-form $\alpha$ is dual to $\no$ (in the sense of Theorem \ref{thm:Poincare-duality}) pulls back to $\wt{\alpha}$, this means $\alpha$ lies in the closure of the cone in $H^1(N; \RR)$.
 \end{proof}
 
 \subsection{Oriented sums}
@@ -417,13 +418,13 @@ If we associate to each fibration of $N$ the $1$-form obtained by pulling back t
 The next step in studying embedded non-orientable surfaces will be to describe \emph{oriented sums}.
 The oriented sum of two surfaces embedded in a manifold $M$ is additive in both the Euler characteristic and $H^1(M;\RR)$.
 This operation is well-known in the case of orientable $3$-manifolds (along with orientable embedded surfaces), but we will sketch out the relevant details.
-We then extend the construction relatively orientable embedded surfaces.
+We then extend the construction to relatively orientable embedded surfaces.
 
 \paragraph{Oriented sum for oriented manifolds}
-
-Let $S$ and $S'$ be oriented embedded surfaces in an oriented manifold $M$.
+Let $M$ be an orientable manifold.  
+Let $S$ and $S'$ be oriented embedded surfaces in $M$.
 Assume that $S$ and $S'$ intersect transversally.
-Thus, $S \cap S'$ is a disjoint union of copies of $S^1$.
+Thus $S \cap S'$ is a disjoint union of copies of $S^1$.
 For each component of $S\cap S'$, take a tubular neighborhood that has cross section as in Figure \ref{fig:cross-section}.
 
 %\autoref{fig:cross-section}.
@@ -444,10 +445,10 @@ We then perform a surgery on the leaves of $S$ and $S'$ so that the outward poin
 
 By performing this surgery at all the intersections, we get a new submanifold $S''$ (which may have multiple components).
 This new submanifold $S''$ is the oriented sum of $S$ and $S'$.
-The operation of taking oriented sums is additive on Euler characteristic, as well as the homology classes (and thus the cohomology classes of their Poincar\'e duals).
+The operation of taking oriented sums is additive on Euler characteristic, as well as the homology classes (and thus the cohomology classes of their Poincar\'e duals):
 \begin{align*}
   \chi(S'') &= \chi(S) + \chi(S') \\
-  [S''] &= [S] + [S'] \\
+  [S''] &= [S] + [S'].
 \end{align*}
 
 \paragraph{Oriented sum for non-orientable manifolds}
@@ -474,7 +475,7 @@ Therefore surgery factors through $p$ and the oriented double sum is well-define
   \label{fig:consistency}
 \end{figure}
 
-The normal vector field tells us that the left $\wt{\no}$ leaf gets glued to the bottom $\wt{\no'}$ leaf near $\wt{\gamma}_1$ and $\wt{\gamma}_2$.
+To preserve the normal vector field, glue the left $\wt{\no}$ leaf to the bottom $\wt{\no'}$ leaf near $\wt{\gamma}_1$ and $\wt{\gamma}_2$.
 Since $\iota(\wt{\gamma}_1)=\wt{\gamma_2})$, the outward pointing normal vector fields point the same (relative) directions.
 \end{example}
 
