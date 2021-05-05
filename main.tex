@@ -13,6 +13,7 @@
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{bbm}
 % \usepackage{thm-autoref}
+\usepackage[normalem]{ulem}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
@@ -64,12 +65,15 @@
 
 \usepackage{import}
 \usepackage{xifthen}
-\usepackage{pdfpages}
+\usepackage{pdfpages} 
 \usepackage{transparent}
 
 \usepackage[textwidth=25mm]{todonotes}
 \newcommand{\becca}[2][]{\todo[#1,color=blue!40]{BW: #2}}
+%\newcommand{\becca}[2][]{}
 \newcommand{\caleb}[2][]{\todo[#1,color=red!40]{CP: #2}}
+%\newcommand{\caleb}[2][]{}
+\newcommand{\sayantan}[2][]{\todo[#1,color=green!40]{SK: #2}}
 
 \newcommand*{\incfig}[2][1]{%
     \def\svgscale{#1}
@@ -83,6 +87,7 @@
 \newcommand{\no}{\mathcal{N}}
 \newcommand{\os}{\mathcal{S}}
 \DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\Spec}{Spec}
 
 \title{Thurston's fibered faces for non-orientable $3$-manifolds and an application to minimal stretch factors}
 \author{Sayantan Khan, Caleb Partin, and Becca Winarski}
@@ -92,6 +97,7 @@
 \def\sectionautorefname{Section}
 \def\thmautorefname{Theorem}
 \def\lemautorefname{Lemma}
+\def\quesqutorefname{Question}
 
 \makeatletter
 
@@ -109,7 +115,7 @@
 \input{yazdiapplication}
 % \input{notation}
 
-\bibliographystyle{alpha}
+\bibliographystyle{plain}
 \bibliography{references}
 
 \end{document}

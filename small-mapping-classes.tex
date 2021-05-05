@@ -1,182 +1,181 @@
 \section{Mapping classes with small stretch factors}
 \label{sec:mapping-classes-with}
 
-In this section, we'll see how to construct mapping classes with small stretch factor on non-orientable surfaces.
-The key tools from \autoref{sec:thur-norm-non-orientable} are Theorems \ref{thm:strong-duality} and \ref{thm:classifying-fibrations}, and the operation of oriented sums for non-orientable surfaces.
+In this section, we construct mapping classes with small stretch factor on non-orientable surfaces.
+%The key tools from \autoref{sec:thur-norm-non-orientable} are Theorems \ref{thm:strong-duality} and \ref{thm:classifying-fibrations}, and the operation of oriented sums for non-orientable surfaces.
 
-\subsection{Background on mapping class groups of non-orientable surfaces}
+\subsection{Mapping class groups of non-orientable surfaces}
 \label{sec:backgr-mapp-class}
+Let $\no$ be a non-orientable surface and let $\wt{\no}$ and the covering map $p:\wt{\no}\rightarrow \no$ be its orientation double covering space.  
+Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift $\wt{\varphi}: \wt{\no} \to \wt{\no}$.
 
-We will visualize non-orientable surfaces by thinking of them as orientable surfaces with \emph{crosscaps} attached.
-We attach a crosscap to a surface $S$ by first deleting a small open disc $D\subset S$, and identifying the boundary of that disc (on the surface) via the antipodal map.
-In pictures, this is often denoted by an X inscribed in a circle, see \autoref{fig:buildingblock} for an example of a surface with two crosscaps attached.
-Let $\no_{g,n}$ be a non-orientable surface obtained by attaching $g$ crosscaps to $S^2$ and marking $n$ points in $S^2$.
-The integer $g$ is referred to as the genus of $\no_{g,n}$.
-Compact non-orientable surfaces are classified by the triple $(g,n,b)$ where $g$ is the genus, $n$ is the number of marked points and $b$ is the boundary.
-
-Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift, that is a homeomorphism $\wt{\varphi}: \wt{\no} \to \wt{\no}$, where $\wt{\no}$ is the orientation double cover of $\no$, with $p\wt{\varphi}=\varphi p$, where $p$ is the covering map.
 
 A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\wt{\no}$.
 Every homotopy of $\no$ lifts to a homotopy of $\wt{\no}$.
-Moreover, if $f,g:\no\to\no$ are homeomorphisms such that their orientation preserving lifts $\widetilde{f},\widetilde{g}$ of $\wt{\no}$ are homotopic, then $f$ and $g$ are homotopic.
+In particular, if $f,g:\no\to\no$ are homeomorphisms such that their orientation preserving lifts are homotopic, then $f$ and $g$ are homotopic.
 Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\wt{\no}$.
 This inclusion also respects the Nielsen-Thurston classification of mapping classes, both qualitatively, and quantitatively, as the following proposition shows.
 \begin{prop}
   \label{prop:2}
-  If $\varphi$ is a self-homeomorphism of $\no$ and $\wt{\varphi}$ is its orientation preserving lift on $\wt{\no}$, then:
+  Let $\varphi:\no\rightarrow\no$ be a homeomorphism and let $\wt{\varphi}:\wt{\no}\rightarrow\wt{\no}$ be the orientation preserving lift of $\varphi$.  Then:
   \begin{enumerate}[(i)]
   \item $\varphi$ is periodic if and only if $\wt{\varphi}$ is periodic,
-  \item $\varphi$ is reducible if and only if $\wt{\varphi}$,
+  \item $\varphi$ is reducible if and only if $\wt{\varphi}$, and
   \item $\varphi$ is pseudo-Anosov if and only if $\wt{\varphi}$ is pseudo-Anosov.  Moreover if $\varphi$ has stretch factor $\lambda$, then $\wt{\varphi}$ also has stretch factor $\lambda$.
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  It's easy to see that if $\varphi$ is periodic, so it $\wt{\varphi}$, and the other way round.
-  If $\varphi$ is reducible, that means it leaves some multicurve $\gamma$ in $\no$ invariant, which means $\wt{\varphi}$ leaves the pre-image of $\gamma$ invariant as well.
-  Conversely, if $\wt{\varphi}$ leaves some multicurve $\wt\gamma$ invariant, so does $\iota \circ \wt{\varphi}$, since they commute.\becca[inline]{Need more here.  I'll think about it (See Aramayona--Leininger--Souto ``Injections on mapping class groups": there exist (branched) covering spaces where pA lift to reducible.  This is not such a case, but why?)}
-  That means the union of $\wt\gamma$ and $\iota(\wt\gamma)$, where $\iota$ is the orientation reversing deck transformation, is also a multi-curve and thus descends to a multi-curve on $\no$ that is left invariant by $\varphi$.\becca[inline]{The image of the multicurve may be non-simple or trivial}
-  If $\varphi$ is neither periodic nor reducible, it must be pseudo-Anosov.  By exclusion, $\wt{\varphi}$ must also be pseudo-Anosov.
+ % It's easy to see that if $\varphi$ is periodic, so it $\wt{\varphi}$, and the other way round.
+  %If $\varphi$ is reducible, that means it leaves some multicurve $\gamma$ in $\no$ invariant, which means $\wt{\varphi}$ leaves the pre-image of $\gamma$ invariant as well.
+  %Conversely, if $\wt{\varphi}$ leaves some multicurve $\wt\gamma$ invariant, so does $\iota \circ \wt{\varphi}$, since they commute.\becca[inline]{Need more here.  I'll think about it (See Aramayona--Leininger--Souto ``Injections on mapping class groups": there exist (branched) covering spaces where pA lift to reducible.  This is not such a case, but why?)}
+  %That means the union of $\wt\gamma$ and $\iota(\wt\gamma)$, where $\iota$ is the orientation reversing deck transformation, is also a multi-curve and thus descends to a multi-curve on $\no$ that is left invariant by $\varphi$.\becca[inline]{The image of the multicurve may be non-simple or trivial}
+  %If $\varphi$ is neither periodic nor reducible, it must be pseudo-Anosov.  By exclusion, $\wt{\varphi}$ must also be pseudo-Anosov.
+  The fact that the map from $\Mod(\no)$ to $\Mod(\wt{\no})$ is type-preserving follows from Lemma 10 of \cite{aramayona2009injections} (while the statement of the Lemma is for orientable surfaces, the argument, which we will skip, is identical for non-orientable surfaces).
 
-  Suppose now that $\varphi$ is a psuedo-Anosov on $\no$ with stretch factor $\lambda$ and expanding and contracting foliations $\mu_e$ and $\mu_c$ respectively.
-  Since $\varphi$ is a pseudo-Anosov map, the following identity involving the intersection form $i$ holds for all closed curves $\gamma$ in $\no$.
+  Suppose now that $\varphi$ is a psuedo-Anosov on $\no$ with stretch factor $\lambda$ and stable and unstable foliations $\mathcal{F}_s$ and $\mathcal{F}_u$ respectively.
+  Let $\wt{\mathcal{F}_s}$ and $\wt{\mathcal{F}_u}$ denote the lifts of the stable and unstable foliations to the orientation double cover.
+  We need to show that the following identities hold for all simple closed curves $\gamma$ on $\wt{\no}$.
   \begin{align}
-    \label{eq:1}
-    i(\varphi^{-1}\gamma, \mu_e) &= i(\gamma, \varphi(\mu_e)) \\
-                               &= \lambda \cdot i(\gamma, \mu_e)
+      \label{eq:unstable-foliation}
+      i(\gamma, \wt{\varphi}(\wt{\mathcal{F}_u})) &= \lambda \cdot i(\gamma, \wt{\mathcal{F}_u}) \\
+      \label{eq:stable-foliation}
+      i(\gamma, \wt{\varphi}(\wt{\mathcal{F}_s})) &= \frac{1}{\lambda} \cdot i(\gamma, \wt{\mathcal{F}_s})
   \end{align}
-  A similar identity holds for $\mu_c$.
+  
+  To see that these identities hold, we partition $\gamma$ into short arcs $\{\gamma_i\}$ such that the restriction of the covering map $p$ to a neighbourhood of each arc is a homeomorphism.
+  The local homeomorphism lets us compute the intersection number for each arc $\gamma_i$ by instead computing the intersection number on the surface $\no$.
   \begin{align}
-    \label{eq:2}
-    i(\varphi^{-1}\gamma, \mu_c) &= i(\gamma, \varphi(\mu_c)) \\
-                               &= \frac{1}{\lambda} \cdot i(\gamma, \mu_c)
+  \label{eq:push1}
+    i(\gamma_i, \wt{\mathcal{F}_u}) &= i(p(\gamma_i), \mathcal{F}_u) \\
+  \label{eq:push2}
+    i(\gamma_i, \wt{\varphi}(\wt{\mathcal{F}_u})) &= i(p(\gamma_i), \varphi(\mathcal{F}_u))
   \end{align}
-  Note now that the foliations can be lifted to the double cover: call their lifts $\wt{\mu}_e$ and $\wt{\mu}_c$.
-  For any closed curve $\wt{\gamma}$ of $\wt{\no}$, consider its intersection number with the foliations.
-  Observe that computing the intersection number is a local calculation.
-  Start by choosing an open cover $U$ on $\no$ such that all the open sets in $U$ are homeomorphic to the connected components of their pre-image in $\wt{\no}$.
-  By choosing a partition of unity subordinate to this cover, one can compute the intersection number by restricting computation on each open set in the cover.
-  This calculation lifts to the orientation double cover, giving us the following identity.
+  Since we know that $\mathcal{F}_u$ is the unstable foliation for $\varphi$ with stretch factor $\lambda$, we can compute the ratio of the right hand side of \eqref{eq:push1} and \eqref{eq:push2}.
   \begin{align}
-    \label{eq:3}
-    i(\wt{\gamma}, \wt{\mu}_e) = i(\gamma, \mu_e)
+      \label{eq:ratio}
+      i(p(\gamma_i), \varphi(\mathcal{F}_u)) = \lambda \cdot i(p(\gamma_i), \mathcal{F}_u)
   \end{align}
-  Combining identities \eqref{eq:1} and \eqref{eq:3}, we get the following identity for intersection numbers on $\wt{\no}$.
-  \begin{align*}
-    i(\wt{\varphi}^{-1} (\wt{\gamma}), \wt{\mu}_e) = \lambda \cdot i(\wt{\gamma}, \wt{\mu}_e)
-  \end{align*}
-  We get a similar expression for $\wt{\mu}_c$, which proves that $\wt{\varphi}$ has the same stretch factor as $\varphi$, thus proving the proposition.
+  Combining \eqref{eq:push1}, \eqref{eq:push2}, and \eqref{eq:ratio}, and summing up over all $\gamma_i$ gives us \eqref{eq:unstable-foliation}. A similar argument also proves \eqref{eq:stable-foliation}.
 \end{proof}
 
-In the case of orientable surfaces, the Penner construction is used to construct pseudo-Anosov maps, as well compute their stretch factors. It turns out the Penner construction also works in the non-orientable setting, with some minor modifications. This construction is presented in detail in Section 2 of \cite{Strenner_2017}, but we give an outline of the key ideas below.
+In the case of orientable surfaces, the Penner construction is used to construct pseudo-Anosov maps, as well compute their stretch factors \cite{penner1988construction}. The Penner construction also works in the non-orientable setting, with some minor modifications. We outline the Penner construction for orientable surfaces below, and provide the necessary details to modify the Penner construction to orientable surfaces.  Liechti--Strenner \cite[Section 2]{LS} provide more complete details of the Penner construction for non-orientable surfaces.
 
-\p{The Penner construction} The Penner construction in the orientable setting starts with a pair of filling multicurves $A = \{a_1,\dots,a_n\}$
-and $B = \{b_1,\dots,b_m\}$.  A Penner construction is a composition of positive Dehn twists around curves in $A$ and negative Dehn twists about curves in $B$ that uses a Dehn twist about each curve in $A\cup B$ at least once.  Penner proves that this construction is pseudo-Anosov \cite{penner1988construction}. The problem with making this work for
-non-orientable surfaces is that when defining Dehn twists about curves on a non-orientable surface, there is not a well-defined notion of a left or right Dehn twist. For non-orientable surfaces we will use a set of filling two-sided curves that are \textit{marked inconsistently}.
-
-Each two-sided curve $c$ on a non-orientable surface $N$ has a neighborhood homeomorphic to an
-annulus $A$ by a homeomorphism $\phi: A \xrightarrow{} N$, called a \textit{marking}. In this
-context, we can define the Dehn twist $T_{c,\phi}(x)$ around $(c,\phi)$ in the following manner.
+\p{The Penner construction} Let $S$ be an orientable surface.  Let $A = \{a_1,\dots,a_n\}$
+and $B = \{b_1,\dots,b_m\}$ be multicurves in $S$.  A Penner construction is mapping class given as a composition of Dehn twists that satisfy the following:
+\begin{enumerate}
+\item the complement of $A\cup B$ in $N$ consists of disks with at most one puncture or marked point,
+    \item a Dehn twist about each curve in $A\cup B$ is included in the composition,
+    \item each Dehn twist about a curve in $A$ is a left-handed Dehn twist, and 
+    \item each Dehn twist about a rurve in $B$ is a right-handed Dehn twist.
+\end{enumerate}
+  A set of curves that satisfies the first condition is said to {\it fill} $S$.  Penner proves that this construction is pseudo-Anosov \cite{penner1988construction}. 
+  
+ However, for non-orientable surfaces, there is not a well-defined notion of a left or right Dehn twist. Therefore we use the notion of an inconsistent marking, as follows.  
+ 
+ \p{Inconsistent markings} Each two-sided curve $c$ on a non-orientable surface $\no$ has a neighborhood homeomorphic to an
+annulus $\mathcal{A}_c$. The homeomorphism $\phi: \mathcal{A}_c \xrightarrow{} \no$ is called a \textit{marking} of $c$. A pair consisting of a curve $c$ and the homeomorphism $\phi:\mathcal{A}_c\xrightarrow{} N$ is called a {\it marked curve}.  We define the Dehn twist $T_{c,\phi}(x)$ around a marked curve $(c,\phi)$ as:
 \begin{align*}
   T_{c,\phi}(x) =
   \begin{cases}
-    \phi \circ T \circ \phi^{-1}(x) & \text{for } x \in \phi(A) \\
-    x & \text{for } x \in N - \phi(A)
-  \end{cases}
+    \phi \circ T \circ \phi^{-1}(x) & \text{for } x \in \phi(\mathcal{A}_c) \\
+    x & \text{for } x \in \no - \phi(\mathcal{A}_c)
+  \end{cases}.
 \end{align*}
-Here $T$ is the standard Dehn twist on $A$, i.e. $T(\theta,t) = (\theta + 2\pi t,t)$. If we fix an
-orientation of $A$, then we can pushforward this orientation to $S$. We say two marked curves
-$(c,\phi_c)$ and $(d,\phi_d)$ that intersect at a point $p$ are marked inconsistently if the
-pushforward of the orientation of $A$ by $\phi_c$ and $\phi_d$ disagree in a neighborhood of $p$.
-If all our curves are marked inconsistently and are filling, then once again a composition of Dehn
-twists around them that use all the curves at least once will be pseudo-Anosov.
+Here $T$ is the left-handed Dehn twist on $\mathcal{A}_c$, i.e. $T(\theta,t) = (\theta + 2\pi t,t)$. If we fix an
+orientation of $\mathcal{A}_c$, then we can pushforward this orientation to $N$. Let 
+$(c,\phi_c)$ and $(d,\phi_d)$ be two marked curves that intersect in a point $p$.  We say that $(c,\phi_c)$ and $(d,\phi_d)$ are {\it marked inconsistently} if the
+pushforward of the orientation of $\mathcal{A}_c$ and disagrees with the pushforward of the orientation of $\mathcal{A}_d$ in a neighborhood of $p$.
 
-\p{Train tracks} The Penner construction not only promises that our map is pseudo-Anosov, but it also gives a way to
-compute the stretch factor of our map (see \cite{penner1988construction}).  The proof of the fact
-that the composition is pseudo-Anosov, and the computation of its stretch factor works the same is
-in the orientable setting.  Let $\varphi$ be a pseudo-Anosov homeomorphism of $\no$.  A {\it train track} is an embedded graph in $\no$ such that for every vertex of valence three or greater, all adjacent edges have the same tangent vector.  An {\it invariant train track for $\varphi$} is a train track track $\tau$ such that $\varphi(\tau)$ is homotopic to $\tau$.  Let $\mathcal{C}$ be a collection of curves in $\no$. %Consider now the collection of transverse measures on our train track $\tau$.
-For every curve $\gamma \in\mathcal{C}$, there is an associated transverse measure
+\p{The Penner construction for non-orientable surfaces} Let $\no$ be a non-orientable surface and let $\mathcal{C}$ be a set of marked curves in $N$ that fill $N$.  A Penner construction on $\no$ is a composition of Dehn twists about the marked curves in $\mathcal{C}$ such that:
+\begin{enumerate}
+\item the complement of curves in $\mathcal{C}$ in $\no$ consists of disks with at most one puncture or marked point,
+    \item for any $(c_i,\phi_i),(c_j,\phi_j)\in\mathcal{C}$, the marked curves $(c_i,\phi_i),(c_j,\phi_j)$ for $i\neq j$ are marked inconsistently,
+    \item a Dehn twist about each curve in $\mathcal{C}$ is included in the composition, and
+    \item all powers of Dehn twists are positive (alternatively, all powers are negative).
+\end{enumerate}
+As above, if the set $\mathcal{C}$ satisfies the first condition, it is said to {\it fill} $\no$.
+
+\caleb[inline]{I realized that we don't technically use any of the Penner construction material later in 3.2. This was all put here to just fit in the framework of providing details that we need to to later construct our pA's in section 4. So should I still just move the Train tracks section to Section 4?}
+\becca[inline]{Hmm, that inflates section 4 a lot.  I think it's the right call to move it, but we should rethink the structure of Section 4 and consider splitting it in to two (or more) sections.}
+\caleb[inline]{Alright, so we actually discuss the subspace spanned by the transverse measures specific to our set of curves in the proof of Lemma 4.3. And I think that's enough for our purposes, so I added some of the text below to the beginning of Step 4. I think it sounds a little awkward though.}
+
+\p{Train tracks} Penner not only proved that mapping classes constructed by the Penner construction are pseudo-Anosov, he also determines their stretch factor (see \cite{penner1988construction}).  %The proof that the Penner construction on non-orientable surfaces is pseudo-Anosov, and the computation of stretch factor are the same as in the orientable setting.  
+Let $\varphi$ be a pseudo-Anosov homeomorphism of $\no$.  A {\it train track} is an embedded graph in $\no$ such that for every vertex $v$ of valence three or greater, all edges adjacent to $v$ have the same tangent vector at $v$.  An {\it invariant train track for $\varphi$} is a train track track $\tau$ such that $\varphi(\tau)$ is homotopic to $\tau$.  Let $\mathcal{C}$ be a collection of curves in $\no$. %Consider now the collection of transverse measures on our train track $\tau$.
+For every curve $\gamma \in\mathcal{C}$,\becca[inline]{Do we need a condition on $\mathcal{C}$?  Filling, maybe?} there is an associated transverse measure
 $\mu_\gamma$ for $\tau$ that assigns $1$ to all edges lying in $\gamma$ and 0 to everything else. Let $V_\tau$
 be the cone of transverse measures on $\tau$, and $H$ the subspace of $V_\tau$ spanned by the
 transverse measure associated to curves in $\mathcal{C}$.
 %\begin{align*}
  % H = \mathrm{span}(\{\mu_\gamma \mid \gamma \text{ is a connected curve in } \mathcal{C}\}).
 %\end{align*}
-The measures $\mu_\gamma$ are linearly independent and form the \textit{standard basis} for $H$. The subspace $H$ is invariant under the action of $\varphi$ on $V_\tau$, thus $\varphi$ has a linear action on $H$. If we let $A$
+The measures $\mu_\gamma$ are linearly independent and form the \textit{standard basis} for $H$. The subspace $H$ is invariant under the action of $\varphi$ on $V_\tau$, thus $\varphi$ has a linear action on $H$. If we let $M$
 be the matrix representing this action in the standard basis, then the stretch factor of $\varphi$,
 $\lambda(\varphi)$, is the Perron-Frobenius eigenvalue of $\varphi$.
 
 \subsection{Constructing pseudo-Anosov maps on nearby surfaces using oriented sums}
 \label{sec:constr-psuedo-anos}
+\becca[inline]{I rewrote the section.  The old version is in comments.}
+The goal of this section is to obtain an asymptotic upper bound on the minimum stretch factor of a pseudo-Anosov homeomorphism. We do this in Lemma \ref{lem:asymptotic}.
 
-In this section, we answer the following question.
-\begin{question}
-  If $\no_g$ has a pseudo-Anosov map with stretch factor $\lambda$, does there exist a pseudo-Anosov map on $\no_{g'}$ with stretch factor $\lambda'$, where the difference between $\lambda$ and $\lambda'$ is controlled by the difference between $g$ and $g'$?
-\end{question}
 
-We begin by stating two useful characterizations of incompressible surfaces in orientable $3$-manifolds.
-\begin{fact}
-  \label{thm:norm-minimizing}
-  A surface $S$ minimizes the Thurston norm in its homology class if and only if it is incompressible.
-\end{fact}
+\begin{lem}\label{lem:asymptotic}
+Let $\no_g$ be a non-orientable surface of genus $g$ and let $\varphi:\no_g\rightarrow \no_g$ be a pseudo-Anosov homeomorphism with stretch factor $\lambda$.  Let $N_\varphi$ be the mapping torus of $\no_g$ by $\varphi$.  Let $\no_{g'}$ be an incompressible surface embedded in $N_\varphi$ that is transverse to the supension flow associated to $\varphi$.  Then for all $k\in\ZZ^+$, there is a pseudo-Anosov homeomorphism $\no_{g+kg'}\rightarrow\no_{g+kg'}$ with stretch factor at most $\lambda$.
+\end{lem}
 
-\begin{fact}
-  If $M$ fibers over $S^1$, then the fiber is incompressible.
-\end{fact}
+Our strategy for doing this is to find fiber bundles of $N_{\varphi}$ over $S^1$ that have fiber $\no_g+k\no_{g'}$.  We then apply a special case of Thurston's hyperbolization theorem, which says that the mapping torus of an orientable surface $S$ by a homeomorphism $\varphi$ is hyperbolic if and only if $\varphi$ is pseudo-Anosov \cite[Theorem 0.1]{thurston_hyp}.  In particular, Thurston's theorem implies that if $M$ fibers over $S^1$ in two ways, either both fiber maps are pseudo-Anosov or neither fiber map is pseudo-Anosov.  Finally, we adapt theorems of Fried and Matsumoto (Theorem \ref{thm:fm}) and Agol--Leininger--Margalit (Theorem \ref{thm:alm}) to work for mapping tori with non-orientable fibers.
 
-We also have the following theorem of Thurston relating hyperbolicity of mapping tori and pseudo-Anosov maps.
-\begin{thm}[Thurston's Hyperbolization Theorem]
-  If $M$ is the mapping torus of a surface $S$ and a homeomorphism $\varphi$, then $M$ is hyperbolic if and only if $\varphi$ is pseudo-Anosov.
-\end{thm}
 
-A consequence of the above theorem is that if we can decompose the mapping torus of a pseudo-Anosov map as the mapping torus of some other homeomorphism, then the other homeomorphism must also be pseudo-Anosov.
 
-Let $\no$ be a non-orientable surface, and $\varphi$ be a pseudo-Anosov homeomorphism.
-Let $N_\varphi$ be the associated mapping torus and $f:N\rightarrow S^1$ the associated fibration.
-Suppose we can construct another relatively oriented surface $\no'$ inside $N$ such that $\no'$ is transverse to the suspension flow direction associated to $f$.
-Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ be the Poincar\'e dual of $\no'$.
-By Theorem \ref{thm:classifying-fibrations} $\alpha$ lies in a cone $\mathcal{C}_\varphi \subset H^1(N_\varphi; \ZZ)$ associated to $\varphi$ with other $1$-forms also coming from fibrations.
-Furthermore, $\alpha'$ lies in the closure of $\mathcal{C}_\varphi$.
-All positive integer linear combinations of $\alpha$ and $\alpha'$ are lattice elements of $\mathcal{C}_\varphi$.
-Each linear combination of $\alpha$ and $\alpha'$ is Poincar\'e dual to an oriented sum of $\no$ and $\no'$ in $N$.
-Under reasonably mild conditions on $\no$ and $\no'$, we can show that the fiber is homeomorphic to the oriented sum $\no + \no'$ of $\no$ and $\no'$.
+We will repeatedly use the following two facts for orientable surfaces and 3-manifolds:
+\begin{enumerate}
+ % \label{thm:norm-minimizing}
+ \item An orientable surface minimizes the Thurston norm in its homology class if and only if it is incompressible.
+\item  If an orientable 3-manifold $M$ fibers over $S^1$, then the fiber is incompressible.
+\end{enumerate}
 
-\begin{thm}
+
+%As a consequence, if we can decompose the mapping torus of a pseudo-Anosov map as the mapping torus of some other homeomorphism, then the other homeomorphism must also be pseudo-Anosov.
+
+
+%Let $\no$ be a non-orientable surface, and $\varphi$ be a pseudo-Anosov homeomorphism.
+%Let $N_\varphi$ be the associated mapping torus and $f:N\rightarrow S^1$ the associated fibration.
+%Suppose we can construct another relatively oriented surface $\no'$ inside $N$ such that $\no'$ is transverse to the suspension flow direction associated to $f$. Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ be the Poincar\'e dual of $\no'$.  By Theorem \ref{thm:classifying-fibrations} $\alpha$ lies in a cone $\mathcal{C}_\varphi \subset H^1(N_\varphi; \ZZ)$ associated to $\varphi$ with other $1$-forms also coming from fibrations.
+%Furthermore, $\alpha'$ lies in the closure of $\mathcal{C}_\varphi$.
+%All positive integer linear combinations of $\alpha$ and $\alpha'$ are lattice elements of $\mathcal{C}_\varphi$.
+%Each linear combination of $\alpha$ and $\alpha'$ is Poincar\'e dual to an oriented sum of $\no$ and $\no'$ in $N$.  Under reasonably mild conditions on $\no$ and $\no'$, we can show that the fiber of $f$ is homeomorphic to the oriented sum $\no + \no'$ of $\no$ and $\no'$.
+
+\begin{prop}
   \label{thm:oriented-sum}
-  Let $\no$ be a non-orientable surface and $\varphi$ a homeomorphism of $\no$.
-  Let $N_\varphi$ be the mapping torus of $(\no,\varphi)$ and $f:N\rightarrow S^1$ the fibration.
-  Let $\no'$ be an incompressible surface embedded in $N$ that is transverse to the suspension flow direction associated to $f$.
+  Let $\no'$ be an incompressible surface embedded in $N$ that is transverse to the suspension flow direction associated to $\varphi$.
   Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ the Poincar\'e dual of $\no'$.
   If the oriented sum of $\no$ and $\no'$ is connected, then $\no + \no'$ is homeomorphic to the fiber of the fibration given by $\alpha + \alpha'$.
-\end{thm}
+\end{prop}
 \begin{proof}
   Let $p:\wt{N}\rightarrow N$ be the orientation double cover of $N$.
-  The surface $\no$ is incompressible because it is a fiber of $f$; therefore its pre-image under $p$ is also incompressible.
-  Since the surfaces $\no$ and $\no'$ are incompressible, the Thurston norms of  their duals $\alpha$ and $\alpha'$ are $2\chi_-(\no)$ and $2\chi_{-}(\no')$.
+  The surface $\no$ is incompressible because it is a fiber of $f$; therefore its pre-image under $p$ is also incompressible.  Therefore the Thurston norm of $\no$ of $\alpha$ is $2\chi_-(\no)$.  Likewise, the Thurston norm of $\alpha'$ is $2\chi_-(\no')$.
 
-  $\alpha$ and $\alpha'$ lie in a cone over a fibered face, which means the Thurston norm $x$ on $H^1(N;\ZZ)$ is linear function on that cone.
-  This lets us compute the Thurston norm of the oriented sum $\no + \no'$, which must be twice the Euler characteristic.
+ Both $\alpha$ and $\alpha'$ lie in a cone over a fibered face in $H^1(N;\ZZ)$.  Therefore the Thurston norm $x$ on $H^1(N;\ZZ)$ is linear function on that cone.
+ Since the Thurston norm is linear on oriented sums of $\no$ and $\no'$, we have:
   \begin{align*}
     x(\alpha + \alpha') &= x(\alpha) + x(\alpha') \\
                         &= 2\chi_-(\no) + 2\chi_-(\no') \\
                         &= 2\chi_-(\no + \no').
   \end{align*}
-  The last equality follows from the linearity of the oriented sum.
-  Because the pre-image of $\no + \no'$ in the orientation double cover of $N$ must be Thurston norm minimizing.
-  Therefore the surface $\no+\no'$ is incompressible.
+  %The last equality follows from the linearity of the oriented sum.
+  Because $2\chi_(\no+\no')$ achieves the Thurston norm of $\alpha+\alpha'$, the preimage $p^{-1}(\no+\no')$ achieves the Thurston norm of the pullback of $\alpha+\alpha'$ under $p$.  Therefore $p^{-1}(\no+\no')$ is incompressible.  Then $\no+\no'$ is also incompressible.
+  \becca[inline]{The previous version of what was above was incomplete.  Perhaps this version is too complete (I think it's correct though).}
 
   By Theorem \ref{thm:classifying-fibrations}, we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':N\rightarrow S^1$.
-  But the fiber of this fibration must be homeomorphic to $\no + \no'$, by Theorem \ref{thm:strong-duality}, since the Poincar\'e dual to $\no + \no'$ is $\alpha + \alpha'$, and $\no + \no'$ is incompressible.
+  By Theorem \ref{thm:strong-duality}, the fiber of $f''$ must be homeomorphic to $\no + \no'$.  %Since the Poincar\'e dual to $\no + \no'$ is $\alpha + \alpha'$, and $\no + \no'$ is incompressible.
 \end{proof}
 
-Theorem \ref{thm:oriented-sum} is the first step in answering the question posed at the beginning of this subsection.
-Given a pseudo-Anosov map on some non-orientable surface $\no$, we have a pseudo-Anosov map on a different non-orientable surface $\no'$, and we know the difference between the Euler characteristics, therefore genus, of $\no$ and $\no'$.
-The next step is to estimate the difference in their stretch factors.
+In the proof of Lemma \ref{lem:asymptotic}, we will use Proposition \ref{thm:oriented-sum} along with a theorem of Thurston to obtain a pseudo-Anosov homemorphism $\varphi_k$ of the surface of genus of genus $g+kg'$.  We the use Theorems \ref{thm:fm} and \ref{thm:alm} to obtain a upper bound on the stretch factor of $\varphi_k$.
 
-That is done using the following two theorems, due to Fried-Matsumoto (see \cite{fried1982flow}, \cite{fried1983transitive}, and \cite{matsumoto1987topological}) and Agol-Leininger-Margalit (see \cite{agol6983pseudo}) in the orientable case.
+The next step is to show that the stretch factor of the pseudo-Anosov on the new surfaces is less than the stretch factor of the original surface.  We use the following two theorems that hold for orientable 3-manifolds.
 
-\begin{thm}[Fried-Matsumoto]
+\begin{thm}[Fried \cite{fried1982flow},\cite{fried1983transitive},Matsumoto\cite{matsumoto1987topological}]
   \label{thm:fm}
-  Let $M$ be a hyperbolic $3$-manifold and let $\mathcal{K}$ be the union of cones in $H^1(M; \RR)$ whose lattice points correspond to fibrations over $S^1$.
+  Let $M$ be an orientable hyperbolic $3$-manifold and let $\mathcal{K}$ be the union of cones in $H^1(M; \RR)$ whose lattice points correspond to fibrations over $S^1$.
   There exists a strictly convex function $h: \mathcal{K} \to \RR$ satisfying the following properties.
   \begin{enumerate}[(i)]
   \item For all $c > 0$ and $u \in \mathcal{K}$, $h(cu) =  \frac{1}{c}h(u)$.
@@ -192,9 +191,107 @@ That is done using the following two theorems, due to Fried-Matsumoto (see \cite
   in $H^1(M;\RR)$. If $u \in \mathcal{K}$ and $v \in \overline{\mathcal{K}}$, then $h(u+v) < h(u)$.
 \end{thm}
 
-\begin{proof}[Proof of Theorems \ref{thm:fm} and \ref{thm:alm} for non-orientable $M$]
-Consider the pullback of $H^1(M; \RR)$ to $H^1(\wt{M}; \RR)$, where $\wt{M}$ is the orientation double cover, and restrict the function $h$ to the image of the pullback.
-It is easy to verify that the restriction satisfies all the listed properties as well.
+\begin{proof}[Proof of Lemma \ref{lem:asymptotic}]
+The oriented sum $\mathcal{S}=\no_g+k\no_{g'}$ constructed in Proposition \ref{thm:oriented-sum} is a surface of genus $g+kg'$, and is $\mathcal{S}$ is homeomorphic to a fiber of $N_\varphi$ given by $\alpha+k\alpha'$.  Let $\varphi_{\mathcal{S}}:\mathcal{S}\rightarrow\mathcal{S}$ be the fiber map of $N_\varphi$ over $\mathcal{S}$.  By Thurston's theorem, $\varphi_{\mathcal{S}}$ is pseudo-Anosov.  We claim that $\varphi_{\mathcal{S}}$ has stretch factor at most $\lambda$.
+
+Let $p:\wt{N}\rightarrow N_\varphi$ be the orientation double cover of $N_\varphi$. Let $h\mid_{N}$ be the restriction of $h$ to the pullback of $H^1(N_\varphi; \RR)$ to $H^1(\wt{N}; \RR)$.
+The restriction $h\mid_N$ satisfies all the properties of Theorems \ref{th:fm} and \ref{th:alm}.
+
+Let $\mathcal{K}$ be the cone in $H^1(N_\varphi;\RR)$ containing $\alpha$.  Since $\no_{g'}$ is transverse to the suspension flow in the direction of $\varphi$, we have that $\alpha'$ is in the closure of $\mathcal{K}$ in $H^1(N;\RR)$.  Let $\wt{\alpha}$ be the pullback of $\alpha$ under $p$ and let $\wt{\alpha'}$ be the pullback of $\alpha'$ under $p$.  Then $h\mid_N(\wt{\alpha}+\wt{\alpha'})<h\mid_N(\wt{\alpha})$.  By Theorem \ref{thm:fm}, $h(\wt{\alpha})$ is equal to the stretch factor of the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$. Let $\wt{\varphi}$ be the orientation preserving lift of $\varphi$ to $p^{-1}(\no)$.  Since $\wt{\alpha}$ is the pullback of $\alpha$, the $\wt{\varphi}$ is the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$.  By Proposition \ref{prop:2}, the stretch factor of $\wt{\varphi}=\lambda$.
 \end{proof}
 
-This answers the question we posed at the beginning of this subsection, and we use the results of this section in Section \ref{sec:application} to construct pseudo-Anosov maps with small stretch factors.
+
+%
+%In this section, we answer the following question:
+%\begin{question}
+%  If $\no_g$ has a pseudo-Anosov map with stretch factor $\lambda$, does there exist a pseudo-Anosov map on $\no_{g'}$ with stretch factor at most $\lambda$, for all $g' > g$?
+%\end{question}
+%\becca[inline]{This might just be a note to self: I don't understand what the difference between $\lambda$ and $\lambda'$ being controlled means.}
+%\sayantan[inline]{\sout{This refers to getting an upper bound on $|\ln \lambda - \ln \lambda^{\prime}|$ as a function of $g$ and $g'$. I've changed the question to the more precise version.} You were right in pointing out that the theorem at the end of this section doesn't answer the earlier question; rather it answers the following question, which is weaker, but good enough for our purposes.}
+%\becca[inline]{Thanks Sayantan.  Now that I understand, I think I don't like that we ask it as a question without providing the answer right away.  It's probably clearer just to say exactly what we are going to do in the section.}
+%To do so, we first prove Theorem \ref{thm:oriented-sum}, which allows us to construct different surfaces and pseudo-Anosov maps on them which have the same mapping torus.
+%
+%We will repeatedly use the following two facts:
+%\begin{enumerate}
+% % \label{thm:norm-minimizing}
+% \item A surface $S$ minimizes the Thurston norm in its homology class if and only if it is incompressible.
+%\item  If $M$ fibers over $S^1$, then the fiber is incompressible.
+%\end{enumerate}
+%\becca[inline]{Is the point that these facts are only known for orientable surfaces and we have to finagle a little to make them work for non-orientable in Theorem 3.2?}
+%\sayantan[inline]{Yes, that's right.}
+%
+%We also have the following theorem of Thurston relating hyperbolicity of mapping tori and pseudo-Anosov maps.
+%\begin{thm}[Thurston's Hyperbolization Theorem]
+ % If $M$ is the mapping torus of a surface $S$ and a homeomorphism $\varphi$, then $M$ is hyperbolic if and only if $\varphi$ is pseudo-Anosov.
+%\end{thm}
+%
+%%As a consequence, if we can decompose the mapping torus of a pseudo-Anosov map as the mapping torus of some other homeomorphism, then the other homeomorphism must also be pseudo-Anosov.
+%In particular, if a manifold is a mapping torus of two different homeomorphisms $\varphi$ and $\varphi'$, then $\varphi$ is pseudo-Anosov if and only if $\varphi'$ is pseudo-Anosov.
+%
+%Next, we characterize the possible fibers of a mapping torus.
+%
+%%Let $\no$ be a non-orientable surface, and $\varphi$ be a pseudo-Anosov homeomorphism.
+%%Let $N_\varphi$ be the associated mapping torus and $f:N\rightarrow S^1$ the associated fibration.
+%%Suppose we can construct another relatively oriented surface $\no'$ inside $N$ such that $\no'$ is transverse to the suspension flow direction associated to $f$. Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ be the Poincar\'e dual of $\no'$.  By Theorem \ref{thm:classifying-fibrations} $\alpha$ lies in a cone $\mathcal{C}_\varphi \subset H^1(N_\varphi; \ZZ)$ associated to $\varphi$ with other $1$-forms also coming from fibrations.
+%%Furthermore, $\alpha'$ lies in the closure of $\mathcal{C}_\varphi$.
+%%All positive integer linear combinations of $\alpha$ and $\alpha'$ are lattice elements of $\mathcal{C}_\varphi$.
+%%Each linear combination of $\alpha$ and $\alpha'$ is Poincar\'e dual to an oriented sum of $\no$ and $\no'$ in $N$.  Under reasonably mild conditions on $\no$ and $\no'$, we can show that the fiber of $f$ is homeomorphic to the oriented sum $\no + \no'$ of $\no$ and $\no'$.
+%
+%\begin{thm}
+ % \label{thm:oriented-sum}
+ % Let $\no$ be a non-orientable surface and $\varphi$ a homeomorphism of $\no$.
+ % Let $N_\varphi$ be the associated mapping torus and $f:N_\varphi\rightarrow S^1$ the fibration.
+ % Let $\no'$ be an incompressible surface embedded in $N$ that is transverse to the suspension flow direction associated to $f$.
+ % Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ the Poincar\'e dual of $\no'$.
+ % If the oriented sum of $\no$ and $\no'$ is connected, then $\no + \no'$ is homeomorphic to the fiber of the fibration given by $\alpha + \alpha'$.
+%\end{thm}
+%\begin{proof}
+ % Let $p:\wt{N}\rightarrow N$ be the orientation double cover of $N$.
+ % The surface $\no$ is incompressible because it is a fiber of $f$; therefore its pre-image under $p$ is also incompressible.  Therefore the Thurston norm of $\no$ of $\alpha$ is $2\chi_-(\no)$.  Likewise, the Thurston norm of $\alpha'$ is $2\chi_-(\no')$.
+%
+% Both $\alpha$ and $\alpha'$ lie in a cone over a fibered face in $H^1*N;\ZZ)$.  Therefore the Thurston norm $x$ on $H^1(N;\ZZ)$ is linear function on that cone.
+% Since the Thurston norm is linear on oriented sums of $\no$ and $\no'$, we have:
+ % \begin{align*}
+%    x(\alpha + \alpha') &= x(\alpha) + x(\alpha') \\
+   %                     &= 2\chi_-(\no) + 2\chi_-(\no') \\
+  %                      &= 2\chi_-(\no + \no').
+ % \end{align*}
+  %%The last equality follows from the linearity of the oriented sum.
+ % Because $2\chi_(\no+\no')$ achieves the Thurston norm of $\alpha+\alpha'$, the preimage $p^{-1}(\no+\no')$ achieves the Thurston norm of the pullback of $\alpha+\alpha'$ under $p$.  Therefore $p^{-1}(\no+\no')$ is incompressible.  Then $\no+\no'$ is also incompressible.
+ % \becca[inline]{The previous version of what was above was incomplete.  Perhaps this version is too complete (I think it's correct though).}
+
+ % By Theorem \ref{thm:classifying-fibrations}, we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':N\rightarrow S^1$.
+ % By Theorem \ref{thm:strong-duality}, the fiber of $f''$ must be homeomorphic to $\no + \no'$.  %Since the Poincar\'e dual to $\no + \no'$ is $\alpha + \alpha'$, and $\no + \no'$ is incompressible.
+%\end{proof}
+
+%Theorem \ref{thm:oriented-sum} is the first step in answering the question posed at the beginning of this subsection.
+%If $\no'$ in Theorem \ref{thm:oriented-sum} has Euler characteristic $-1$, then then the oriented sum $\no+k\no'$ has genus equal to the genus of $\no$ plus $k$.
+%\becca[inline]{If $\no'$ has Euler characteristic -1, can't we realize all genera greater than 2?}
+%The next step is to show that the stretch factor of the pseudo-Anosov on the new surfaces is lesser than the stretch factor of the original surface.
+
+%That is done using the following two theorems, due to Fried--Matsumoto \cite{fried1982flow}, \cite{fried1983transitive}, and \cite{matsumoto1987topological} and Agol--Leininger--Margalit  \cite{agol6983pseudo} in the orientable case.
+
+%\begin{thm}[Fried-Matsumoto]
+ % \label{thm:fm}
+ % Let $M$ be a hyperbolic $3$-manifold and let $\mathcal{K}$ be the union of cones in $H^1(M; \RR)$ whose lattice points correspond to fibrations over $S^1$.
+ % There exists a strictly convex function $h: \mathcal{K} \to \RR$ satisfying the following properties.
+ % \begin{enumerate}[(i)]
+ % \item For all $c > 0$ and $u \in \mathcal{K}$, $h(cu) =  \frac{1}{c}h(u)$.
+ % \item For every primitive lattice point $u \in \mathcal{K}$, $h(u) = \log(\lambda)$, where $\lambda$ is the
+ %   stretch factor of the pseudo-Anosov map associated to this lattice point.
+  %\item $h(u)$ goes to $\infty$ as $u$ approaches $\partial \mathcal{K}$.
+ % \end{enumerate}
+%\end{thm}
+%
+%\begin{thm}[Agol-Leininger-Margalit]
+ % \label{thm:alm}
+ % Let $\mathcal{K}$ be a fibered cone for a mapping torus $M$ and let $\overline{\mathcal{K}}$ be its closure in $H^1(M;\RR)$. If $u \in \mathcal{K}$ and $v \in \overline{\mathcal{K}}$, then $h(u+v) < h(u)$.
+%\end{thm}
+%
+%\begin{proof}[Proof of Theorems \ref{thm:fm} and \ref{thm:alm} for non-orientable $M$]
+%Consider the pullback of $H^1(M; \RR)$ to $H^1(\wt{M}; \RR)$, where $\wt{M}$ is the orientation double cover, and restrict the function $h$ to the image of the pullback.
+%It is easy to verify that the restriction satisfies all the listed properties as well.
+%\end{proof}
+%
+%
+%This answers the question we posed at the beginning of this subsection, and we use the results of this section in Section \ref{sec:application} to construct pseudo-Anosov maps with small stretch factors.
