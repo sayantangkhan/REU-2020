@@ -9,10 +9,8 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{enumerate}
-\usepackage{marginnote}
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{bbm}
-% \usepackage{thm-autoref}
 \usepackage[normalem]{ulem}
 \usepackage{hyperref}
 \hypersetup{
@@ -65,10 +63,10 @@
 
 \usepackage{import}
 \usepackage{xifthen}
-\usepackage{pdfpages} 
+\usepackage{pdfpages}
 \usepackage{transparent}
 
-\usepackage[textwidth=25mm]{todonotes}
+\usepackage[textwidth=25mm, disable]{todonotes}
 \newcommand{\becca}[2][]{\todo[#1,color=blue!40]{BW: #2}}
 %\newcommand{\becca}[2][]{}
 \newcommand{\caleb}[2][]{\todo[#1,color=red!40]{CP: #2}}
@@ -108,6 +106,8 @@
 
 \input{abstract}
 %\tableofcontents
+
+\listoftodos
 
 \input{introduction}
 \input{thurston-norm}

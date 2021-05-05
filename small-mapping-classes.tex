@@ -6,7 +6,7 @@ In this section, we construct mapping classes with small stretch factor on non-o
 
 \subsection{Mapping class groups of non-orientable surfaces}
 \label{sec:backgr-mapp-class}
-Let $\no$ be a non-orientable surface and let $\wt{\no}$ and the covering map $p:\wt{\no}\rightarrow \no$ be its orientation double covering space.  
+Let $\no$ be a non-orientable surface and let $\wt{\no}$ and the covering map $p:\wt{\no}\rightarrow \no$ be its orientation double covering space.
 Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift $\wt{\varphi}: \wt{\no} \to \wt{\no}$.
 
 
@@ -41,7 +41,7 @@ This inclusion also respects the Nielsen-Thurston classification of mapping clas
       \label{eq:stable-foliation}
       i(\gamma, \wt{\varphi}(\wt{\mathcal{F}_s})) &= \frac{1}{\lambda} \cdot i(\gamma, \wt{\mathcal{F}_s})
   \end{align}
-  
+
   To see that these identities hold, we partition $\gamma$ into short arcs $\{\gamma_i\}$ such that the restriction of the covering map $p$ to a neighbourhood of each arc is a homeomorphism.
   The local homeomorphism lets us compute the intersection number for each arc $\gamma_i$ by instead computing the intersection number on the surface $\no$.
   \begin{align}
@@ -65,13 +65,13 @@ and $B = \{b_1,\dots,b_m\}$ be multicurves in $S$.  A Penner construction is map
 \begin{enumerate}
 \item the complement of $A\cup B$ in $N$ consists of disks with at most one puncture or marked point,
     \item a Dehn twist about each curve in $A\cup B$ is included in the composition,
-    \item each Dehn twist about a curve in $A$ is a left-handed Dehn twist, and 
+    \item each Dehn twist about a curve in $A$ is a left-handed Dehn twist, and
     \item each Dehn twist about a rurve in $B$ is a right-handed Dehn twist.
 \end{enumerate}
-  A set of curves that satisfies the first condition is said to {\it fill} $S$.  Penner proves that this construction is pseudo-Anosov \cite{penner1988construction}. 
-  
- However, for non-orientable surfaces, there is not a well-defined notion of a left or right Dehn twist. Therefore we use the notion of an inconsistent marking, as follows.  
- 
+  A set of curves that satisfies the first condition is said to {\it fill} $S$.  Penner proves that this construction is pseudo-Anosov \cite{penner1988construction}.
+
+ However, for non-orientable surfaces, there is not a well-defined notion of a left or right Dehn twist. Therefore we use the notion of an inconsistent marking, as follows.
+
  \p{Inconsistent markings} Each two-sided curve $c$ on a non-orientable surface $\no$ has a neighborhood homeomorphic to an
 annulus $\mathcal{A}_c$. The homeomorphism $\phi: \mathcal{A}_c \xrightarrow{} \no$ is called a \textit{marking} of $c$. A pair consisting of a curve $c$ and the homeomorphism $\phi:\mathcal{A}_c\xrightarrow{} N$ is called a {\it marked curve}.  We define the Dehn twist $T_{c,\phi}(x)$ around a marked curve $(c,\phi)$ as:
 \begin{align*}
@@ -82,7 +82,7 @@ annulus $\mathcal{A}_c$. The homeomorphism $\phi: \mathcal{A}_c \xrightarrow{} \
   \end{cases}.
 \end{align*}
 Here $T$ is the left-handed Dehn twist on $\mathcal{A}_c$, i.e. $T(\theta,t) = (\theta + 2\pi t,t)$. If we fix an
-orientation of $\mathcal{A}_c$, then we can pushforward this orientation to $N$. Let 
+orientation of $\mathcal{A}_c$, then we can pushforward this orientation to $N$. Let
 $(c,\phi_c)$ and $(d,\phi_d)$ be two marked curves that intersect in a point $p$.  We say that $(c,\phi_c)$ and $(d,\phi_d)$ are {\it marked inconsistently} if the
 pushforward of the orientation of $\mathcal{A}_c$ and disagrees with the pushforward of the orientation of $\mathcal{A}_d$ in a neighborhood of $p$.
 
@@ -99,7 +99,7 @@ As above, if the set $\mathcal{C}$ satisfies the first condition, it is said to 
 \becca[inline]{Hmm, that inflates section 4 a lot.  I think it's the right call to move it, but we should rethink the structure of Section 4 and consider splitting it in to two (or more) sections.}
 \caleb[inline]{Alright, so we actually discuss the subspace spanned by the transverse measures specific to our set of curves in the proof of Lemma 4.3. And I think that's enough for our purposes, so I added some of the text below to the beginning of Step 4. I think it sounds a little awkward though.}
 
-\p{Train tracks} Penner not only proved that mapping classes constructed by the Penner construction are pseudo-Anosov, he also determines their stretch factor (see \cite{penner1988construction}).  %The proof that the Penner construction on non-orientable surfaces is pseudo-Anosov, and the computation of stretch factor are the same as in the orientable setting.  
+\p{Train tracks} Penner not only proved that mapping classes constructed by the Penner construction are pseudo-Anosov, he also determines their stretch factor (see \cite{penner1988construction}).  %The proof that the Penner construction on non-orientable surfaces is pseudo-Anosov, and the computation of stretch factor are the same as in the orientable setting.
 Let $\varphi$ be a pseudo-Anosov homeomorphism of $\no$.  A {\it train track} is an embedded graph in $\no$ such that for every vertex $v$ of valence three or greater, all edges adjacent to $v$ have the same tangent vector at $v$.  An {\it invariant train track for $\varphi$} is a train track track $\tau$ such that $\varphi(\tau)$ is homotopic to $\tau$.  Let $\mathcal{C}$ be a collection of curves in $\no$. %Consider now the collection of transverse measures on our train track $\tau$.
 For every curve $\gamma \in\mathcal{C}$,\becca[inline]{Do we need a condition on $\mathcal{C}$?  Filling, maybe?} there is an associated transverse measure
 $\mu_\gamma$ for $\tau$ that assigns $1$ to all edges lying in $\gamma$ and 0 to everything else. Let $V_\tau$
@@ -195,11 +195,10 @@ The next step is to show that the stretch factor of the pseudo-Anosov on the new
 The oriented sum $\mathcal{S}=\no_g+k\no_{g'}$ constructed in Proposition \ref{thm:oriented-sum} is a surface of genus $g+kg'$, and is $\mathcal{S}$ is homeomorphic to a fiber of $N_\varphi$ given by $\alpha+k\alpha'$.  Let $\varphi_{\mathcal{S}}:\mathcal{S}\rightarrow\mathcal{S}$ be the fiber map of $N_\varphi$ over $\mathcal{S}$.  By Thurston's theorem, $\varphi_{\mathcal{S}}$ is pseudo-Anosov.  We claim that $\varphi_{\mathcal{S}}$ has stretch factor at most $\lambda$.
 
 Let $p:\wt{N}\rightarrow N_\varphi$ be the orientation double cover of $N_\varphi$. Let $h\mid_{N}$ be the restriction of $h$ to the pullback of $H^1(N_\varphi; \RR)$ to $H^1(\wt{N}; \RR)$.
-The restriction $h\mid_N$ satisfies all the properties of Theorems \ref{th:fm} and \ref{th:alm}.
+The restriction $h\mid_N$ satisfies all the properties of Theorems \ref{thm:fm} and \ref{thm:alm}.
 
 Let $\mathcal{K}$ be the cone in $H^1(N_\varphi;\RR)$ containing $\alpha$.  Since $\no_{g'}$ is transverse to the suspension flow in the direction of $\varphi$, we have that $\alpha'$ is in the closure of $\mathcal{K}$ in $H^1(N;\RR)$.  Let $\wt{\alpha}$ be the pullback of $\alpha$ under $p$ and let $\wt{\alpha'}$ be the pullback of $\alpha'$ under $p$.  Then $h\mid_N(\wt{\alpha}+\wt{\alpha'})<h\mid_N(\wt{\alpha})$.  By Theorem \ref{thm:fm}, $h(\wt{\alpha})$ is equal to the stretch factor of the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$. Let $\wt{\varphi}$ be the orientation preserving lift of $\varphi$ to $p^{-1}(\no)$.  Since $\wt{\alpha}$ is the pullback of $\alpha$, the $\wt{\varphi}$ is the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$.  By Proposition \ref{prop:2}, the stretch factor of $\wt{\varphi}=\lambda$.
 \end{proof}
-
 
 %
 %In this section, we answer the following question:
