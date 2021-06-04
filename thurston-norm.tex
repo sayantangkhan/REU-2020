@@ -1,6 +1,6 @@
 \section{Thurston norm for non-orientable 3-manifolds}
 \label{sec:thur-norm-non-orientable}
-In his original manuscript defining what is now called the Thurston norm, Thurston defined a norm on $H_2(M;\RR)$ where $M$ is an orientable 3-manifold \cite{thurston1986norm}.  He wrote ``Most of this paper works also for non-orientable manifolds but for simplicity we only deal with the orientable case.''  However, the details are not explained in Thurston's work or in subsequent literature.  Therefore the goal of this section is to write the details of the Thurston norm for non-orientable 3-manifolds.  
+In his original manuscript defining what is now called the Thurston norm, Thurston defined a norm on $H_2(M;\RR)$ where $M$ is an orientable 3-manifold \cite{thurston1986norm}.  He wrote ``Most of this paper works also for non-orientable manifolds but for simplicity we only deal with the orientable case.''  However, the details are not explained in Thurston's work or in subsequent literature.  Therefore the goal of this section is to write the details of the Thurston norm for non-orientable 3-manifolds.
 We recall the Thurston norm for orientable manifolds in Section \ref{sec:backgr-thurst-norm} and then adapt it to the non-orientable setting.
 In Section \ref{sec:thurst-norm-cohom} we describe the challenge of defining the Thurston norm on $H_2(M;\RR)$ if $M$ is non-orientable and present the solution of defining the Thurston norm instead on $H^1(M;\RR)$.
 However, Poincar\'e duality does not hold for non-orientable manifolds.
@@ -83,7 +83,7 @@ Clearly, $N_{\varphi}$ fibers over $S^1$, and $\no$ is the fiber of this fibrati
 Our workaround for this problem will be to define a norm on the first cohomology $H^1(N_{\varphi})$ rather than the second homology $H_2(N_{\varphi})$.
 By Poincar\'e duality they are the same for orientable 3-manifolds, but that is not true for non-orientable $3$-manifolds.
 
-%\p{Non-orientable surfaces} A non-orientable surface can be obtained from an orientable surface $S$ by attaching {\it crosscaps}.  
+%\p{Non-orientable surfaces} A non-orientable surface can be obtained from an orientable surface $S$ by attaching {\it crosscaps}.
 %%We will visualize non-orientable surfaces by thinking of them as orientable surfaces with \emph{crosscaps} attached.
 %We attach a crosscap to $S$ by removing an open disk $D\subset S$, and identifying the boundary of that disc (on the surface) via the antipodal map.
 %In figures we depict a crosscap by a circle with an inscribed X.  For example, \autoref{fig:buildingblock} depicts an oriented surface of genus 5 and three boundary components with two crosscaps attached.
@@ -106,8 +106,8 @@ The associated map $f_{\alpha}:M\rightarrow S^1$ is given by:
 \begin{align}\label{form:map}
   f_{\alpha}(y) \coloneqq  \int_{y_0}^y \alpha \mod \ZZ.
 \end{align}
-The choice of basepoint does not affect the homotopy class of $f_\alpha$ 
-%Changing the basepoint or the representative $1$-form gives a different map to $S^1$ that is homotopic to the original map 
+The choice of basepoint does not affect the homotopy class of $f_\alpha$
+%Changing the basepoint or the representative $1$-form gives a different map to $S^1$ that is homotopic to the original map
 (see Section 5.1 of \cite{calegari2007foliations} for the details).
 %One can recover the $1$-form $\alpha$ from the map $f_{\alpha}$ by pulling back the canonical length form on $S^1$ along $f_{\alpha}$.
 
@@ -132,7 +132,7 @@ We claim that $[S]$ is the Poincar\'e dual to $\alpha$.
   The first part of the lemma follows from the fact that $S$ and $S'$ are homologous, i.e. $f^{-1}_{\alpha}([\theta, \theta'])$ is a singular $3$-chain that has $S$ and $S'$ as boundaries.
   From Stokes' theorem, we have the following:
   \begin{align*}
-    \int_{S - S'} \omega &= \int_{f_{\alpha}^{-1}([\theta, \theta'])} d\omega 
+    \int_{S - S'} \omega &= \int_{f_{\alpha}^{-1}([\theta, \theta'])} d\omega
                          = 0.
   \end{align*}
 
@@ -244,7 +244,7 @@ We will require that the embedded surfaces are \emph{relative oriented} in the (
   Let $M$ be a $3$-manifold, and $S$ an embedded surface in $M$.
   The surface $S$ is said to be \emph{relatively oriented with respect to $M$} if there is a nowhere vanishing vector field on $S$ that is transverse to the tangent plane of $S$.
   Two such vector fields are said to induce the same orientation if they induce the same local orientation after choosing a local frame for $S$.
-  A surface $S$ is \emph{relatively oriented} in $M$ if both $S$ and the choice of positive normal vector field are specified. 
+  A surface $S$ is \emph{relatively oriented} in $M$ if both $S$ and the choice of positive normal vector field are specified.
 
 %Note that relative orientability is a strictly weaker notion than orientability.
 If $S$ and $M$ are orientable, then $S$ is relatively oriented with respect to $M$.
@@ -323,7 +323,7 @@ We will refer to the 1-form $\alpha$ given in Theorem~\ref{thm:strong-duality} a
   Since $\wt{N}$ is orientable, the relative orientation of $\wt{\no}$ defines an orientation of $\wt{\no}$, and thus the homology class $[\wt{\no}]$ is well-defined.
 
   Next we show that $\iota$ reverses the orientation of $\wt{\no}$.  To do so, we first observe that because $\no$ is relatively oriented in $N$, the outward pointing transverse vector field on ${\no}$ must lift to an outward pointing transverse vector field on $\wt{\no}$.  Therefore $\iota$ preserves outward pointing vector fields on $\wt{\no}$.
-  
+
   Let $(v_1, v_2, v_3)$ be a local frame for some point in $\wt{\no}$ such that
   $v_3$ is the outward pointing transverse vector field.
   %This means $\iota$ takes outward pointing vector fields to outward pointing vector fields, and $\iota(v_3)$ must be outward pointing.
@@ -359,10 +359,10 @@ In the next lemma, we show that is indeed the case, i.e. $[\wt{\alpha}]$ is the 
 Let $N$ be a non-orientable 3-manifold.  Let $[\wt{\alpha}]\in H^1(\wt{N}, Z)$ and let $\wt{S}$ be the Poincar\'e dual of $[\wt{\alpha}]$ in $\wt{N}$.  There exists $[\alpha] \in H^1(N; \ZZ)$ such that $\wt{\alpha} = p^{\ast} \alpha$.
 \end{lem}
 \begin{proof}
- % To show that $[\wt{\alpha}]$ is the pullback of an element in $H^1(N; \ZZ)$, let $\gamma$ be a curve it $N$.  
+ % To show that $[\wt{\alpha}]$ is the pullback of an element in $H^1(N; \ZZ)$, let $\gamma$ be a curve it $N$.
  It will suffice to show that for any simple closed curve $\gamma$ in $N$, the integral of $\wt{\alpha}$ along any path lift of $\gamma$ is an integer.  Let $x_0\in N$ be a base point of $\gamma$.  Note that $\gamma$ has two (path) lifts $\wt{\gamma}_1,\wt{\gamma}_2$ under $p$ in $\wt{N}$, one based at each element of $p^{-1}(x_0)$.  Either $\wt{\gamma}_1,\wt{\gamma}_2$ are both simple closed curves based at the each of the two preimages $p^{-1}(x_0)$ or $\wt{\gamma}_1,\wt{\gamma}_2$ are both arcs between the two points of $p^{-1}(x_0)$.
-  If each lift $\wt{\gamma}_1,\wt{\gamma}_2$ of $\gamma$ is a closed curve in $\wt{N}$, the integral $\displaystyle\int_{\wt{\gamma}_i}\wt{\alpha}$ will be an integer since $\wt{\alpha} \in H^1(\wt{N}; \ZZ)$. 
-  
+  If each lift $\wt{\gamma}_1,\wt{\gamma}_2$ of $\gamma$ is a closed curve in $\wt{N}$, the integral $\displaystyle\int_{\wt{\gamma}_i}\wt{\alpha}$ will be an integer since $\wt{\alpha} \in H^1(\wt{N}; \ZZ)$.
+
  If each lift $\wt{\gamma}_1,\wt{\gamma}_2$ of $\gamma$ is an arc between the two preimages of $p^{-1}(x_0)$, we consider the simple closed curve $\wt{\gamma}=\wt{\gamma}_1\cup\wt{\gamma}_2$.  We note that $\iota(\wt{\gamma})=\wt{\gamma}$.
  % Let $\delta$ be such an arc, starting at a point $x_0 \in \wt{N}$.
  % Since its image in $N$ must close up, $\delta$ must necessarily end at $\iota(x_0)$.
@@ -453,7 +453,7 @@ It follows from the orientable version of Poincar\'e duality that $\wt{\no}$ and
 % \end{proof}
 
 
-  Note that the above proof does not tell us that $\no$ and $f_{\alpha}^{-1}(\theta)$ are isotopic.  Isotopy of the fibers of $N$ requires the isotopy between $\wt{\no}$ and $p^{-1}(f^{-1}_\alpha(\theta))$ to be $\iota^{\ast}$-invariant.  However, the theorem is sufficient for our application.
+  Note that the above proof does not tell us that $\no$ and $f_{\alpha}^{-1}(\theta)$ are isotopic.  Isotopy of the fibers of $N$ requires the isotopy between $\wt{\no}$ and $p^{-1}(f^{-1}_\alpha(\theta))$ to be $\iota^{\ast}$-equivariant.  However, the theorem is sufficient for our application.
 
 
 %If we associate to each fibration of $N$ the $1$-form obtained by pulling back the canonical form $d\theta$ on $\no^1$, we are able state a non-orientable version of Theorem \ref{thm:Thur1}.
@@ -470,7 +470,7 @@ We conclude the section with a non-orientable version of Theorem \ref{thm:Thur1}
 %Let $\wt{N}$ be the orientation double cover of $N$ with covering map $p:\wt{N}\rightarrow N$.
 For (i), we observe that by Theorem~\ref{thm:Thur1} the fibrations of $\wt{N}$ are in one-to-one correspondence with lattice points inside a union of cones over open faces of the unit ball in $H_2(\wt{N};\RR)$.  Let $\wt{\mathcal{K}}$ be the union of cones in $H_2(\wt{N};\RR)$.
  By Poincar\'e duality, $\wt{\mathcal{K}}$ is in one-to-one correspondence to a union of cones in $H^1(\wt{N};\RR)$, which we will call $\wt{\mathcal{K}}^\ast$
- 
+
   Because $H^1(N;\RR)$ is isomorphic to a subspace of $H^1(\wt{N};\RR)$, we can construct a union of cones in $H^1(N; \RR)$ by intersecting $p^\ast(H^1(N; \RR))$ with $\wt{\mathcal{K}}^\ast$.
   Indeed, every lattice point in $\wt{\mathcal{K}}^\ast$ corresponds to a fibration $f:N\to S^1$, since the pullback of $f$ to $H^1(\wt{N}; \ZZ)$ corresponds to a fibration of $\wt{N}$.
   Conversely, every fibration of $f:N\rightarrow S^1$ must lie in $\wt{\mathcal{K}}^\ast$, since the composition $f\circ p$ is a fibration of $\wt{N}\rightarrow S^1$.
@@ -488,7 +488,7 @@ This operation is well-known in the case of orientable $3$-manifolds (along with
 We then extend the construction to relatively oriented embedded surfaces.
 
 \paragraph{Oriented sum for oriented manifolds}
-Let $M$ be an orientable manifold.  
+Let $M$ be an orientable manifold.
 Let $S$ and $S'$ be orientable embedded surfaces in $M$.
 Assume that $S$ and $S'$ intersect transversally.
 Thus $S \cap S'$ is a disjoint union of copies of $S^1$.
