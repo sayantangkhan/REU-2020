@@ -459,7 +459,12 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
 
  % The resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, so we have
  % relative orientability by Proposition \ref{prop:relative-orientability}.
- Since $F_{n,k}$ is a non-orientable surface embedded in a non-orientable manifold $M_{n,k}$, Proposition \ref{prop:relative-orientability} tells us that $F_{n,k}$ is relatively orientable (in $M_{n,k}$).
+
+We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by gluing together the outwards pointing vector field on $\widehat{F}$ and the vector field on the annulus given by following $\gamma$ along the suspension flow.
+In general, one cannot glue together such vector fields without making it vanish somewhere, but we control how $\widehat{F}$ and the annulus intersect.
+We pick the outward direction over $\widehat{F}$ to be the forward flow direction, and the outward direction on the annulus to be the direction on $\gamma$ in $\widehat{F}$ pointing into the surface, and push that forward along the suspension flow until it reaches $\widehat{\gamma}$. One can verify that the pushed forward outward direction on $\widehat{\gamma}$ points away from the surface $\widehat{F}$. This fact lets us combine the outward direction in a consistent manner, and proves that the resulting surface $F_{n,k}$ is relatively orientable.
+
+% Since $F_{n,k}$ is a non-orientable surface embedded in a non-orientable manifold $M_{n,k}$, Proposition \ref{prop:relative-orientability} tells us that $F_{n,k}$ is relatively orientable (in $M_{n,k}$).
 
   The proof that $F_{n,k}$ can be isotoped to be transverse to the suspension flow is the same as the
   proof Yazdi uses \cite{yazdi2018pseudo}, which is a restatement of that of Leininger--Margalit \cite{leininger2013number}. We include it here for completeness.  

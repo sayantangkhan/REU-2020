@@ -100,7 +100,7 @@ By Poincar\'e duality they are the same for orientable 3-manifolds, but that is 
 To see why Poincar\'e duality fails for non-orientable 3-manifolds, we will work through the construction of the isomorphism between first homology and second cohomology for 3-manifolds.  Let $M$ be a 3-manifold.
 %\becca[inline]{This part of the construction works for non-orientable manifolds, right?  I therefore took out the requirement that $M$ is orientable in the setup.}
 %\sayantan[inline]{Yes, that is right.}
-To define the Poincare dual of $H^1(M;\ZZ)$, we first define a homotopy class of maps $M\rightarrow S^1$.  Then we construct an element of $H^2(M;\ZZ)$.
+To define the Poincar\'e dual of $H^1(M;\ZZ)$, we first define a homotopy class of maps $M\rightarrow S^1$.  Then we construct an element of $H^2(M;\ZZ)$.
 Let $\alpha$ be a 1-form on $M$ and $[\alpha]$ its class in $H^1(M; \ZZ)$.  Fix a basepoint $y_0\in M$.
 The associated map $f_{\alpha}:M\rightarrow S^1$ is given by:
 \begin{align}\label{form:map}
@@ -167,37 +167,39 @@ of $\wt{N}$.
 If $N=N_\varphi$ is the mapping torus of the non-orientable surface $\no$ and a self-homeomorphism $\varphi: \no \to \no$, then $\wt{N}$ is the mapping torus of $(\os, \wt{\varphi})$, where $\os$ is the orientation double cover of $\no$, and $\wt{\varphi}$ is the orientation preserving lift of $\varphi$.
 
 \p{Defining the Thurston norm on cohomology} In order to define the Thurston norm on $H^1(N;\ZZ)$, we first need to relate $H^1(N; \RR)$ and $H^1(\wt{N}; \RR)$.
-We do so by pulling back $H^1(N;\RR)$ to $H^1(\wt{N};\RR)$ via $p$.
+We do so by pulling back $H^1(N;\RR)$ to $H^1(\wt{N};\RR)$ via $p$. We also state the following lemma without proof (the proof is elementary).
 
 \begin{lem}
   \label{lem:injective}
   The pullback $p^{\ast}:H^1(N;\RR)\rightarrow H^1(\wt{N};\RR)$ maps $H^1(N; \RR)$ bijectively to the $\iota^{\ast}$-invariant subspace of   $H^1(\wt{N}; \RR)$.
 \end{lem}
-\begin{proof}
-  For any $1$-form $\alpha$ on $N$, $p^{\ast}(\alpha)$ will be $\iota^{\ast}$-invariant.
-  To check that $p^\ast$ is injective, consider a $1$-form $\alpha$ on $N$ such that $p^{\ast}(\alpha)$ is exact.
-  Then there exists a smooth function $g:\wt{N} \to \RR$ such that:
-    \begin{align*}
-        dg = p^{\ast} (\alpha).
-    \end{align*}
-    Since $p^{\ast}(\alpha)$ is $\iota^{\ast}$-invariant, we must have $dg = \iota^{\ast} dg$.
-    Because $\iota^\ast$ commutes with the exterior derivative, we have $dg = d(\iota^{\ast}g)$.
-    That means $g$ and $\iota^{\ast}g$ differ by a constant, but that constant must be $0$ since $\iota^2$ is the identity map.
-    Thus $g$ is $\iota$-equivariant and descends to a function $N\rightarrow \RR$. Therefore $\alpha$ must be exact, which proves injectivity of $p^{\ast}$.
-
-    To show surjectivity, let $[\wt{\alpha}]$ be an element in $H^1(\wt{N}; \RR)$ that is $\iota^{\ast}$-invariant.  We need to find a representative that is $\iota^\ast$ invariant that we can pushforward to $H^1(N;\RR)$.  To do so,  start with a representative $\wt\alpha$ of $[\wt{\alpha}]$.
-    Since $[\wt\alpha]$ is $\iota^\ast$-invariant, $\wt\alpha$ and $\iota^{\ast}(\wt\alpha)$ must differ by an exact form.
-    \begin{align*}
-        \wt\alpha - \iota^{\ast}(\wt\alpha) = dg
-    \end{align*}
-    Applying $\iota^\ast$ to both sides of the equality, we have $\iota^{\ast}dg = -dg$.
-    This means that the $1$-form $\beta = \wt\alpha - \frac{dg}{2}$ is an $\iota^{\ast}$-invariant representative of the cohomology class $[\wt\alpha]$.
-    Since $\beta$ is $\iota^{\ast}$-invariant, the pushforward of $\beta$ under $p$ is a well-defined 1-form on $N$.
+%\begin{proof}
+%  For any $1$-form $\alpha$ on $N$, $p^{\ast}(\alpha)$ will be $\iota^{\ast}$-invariant.
+%  To check that $p^\ast$ is injective, consider a $1$-form $\alpha$ on $N$ such that $p^{\ast}(\alpha)$ is exact.
+%  Then there exists a smooth function $g:\wt{N} \to \RR$ such that:
+%    \begin{align*}
+%        dg = p^{\ast} (\alpha).
+%    \end{align*}
+%    Since $p^{\ast}(\alpha)$ is $\iota^{\ast}$-invariant, we must have $dg = \iota^{\ast} dg$.
+%    Because $\iota^\ast$ commutes with the exterior derivative, we have $dg = d(\iota^{\ast}g)$.
+%    That means $g$ and $\iota^{\ast}g$ differ by a constant, but that constant must be $0$ since $\iota^2$ is the identity map.
+%    Thus $g$ is $\iota$-equivariant and descends to a function $N\rightarrow \RR$. Therefore $\alpha$ must be exact, which proves injectivity of $p^{\ast}$.
+%
+%    To show surjectivity, let $[\wt{\alpha}]$ be an element in $H^1(\wt{N}; \RR)$ that is $\iota^{\ast}$-invariant.  We need to find a representative that is $\iota^\ast$ invariant that we can pushforward to $H^1(N;\RR)$.  To do so,  start with a representative $\wt\alpha$ of $[\wt{\alpha}]$.
+%    Since $[\wt\alpha]$ is $\iota^\ast$-invariant, $\wt\alpha$ and $\iota^{\ast}(\wt\alpha)$ must differ by an exact form.
+%    \begin{align*}
+%        \wt\alpha - \iota^{\ast}(\wt\alpha) = dg
+%    \end{align*}
+%    Applying $\iota^\ast$ to both sides of the equality, we have $\iota^{\ast}dg = -dg$.
+%    This means that the $1$-form $\beta = \wt\alpha - \frac{dg}{2}$ is an $\iota^{\ast}$-invariant representative of the cohomology class $[\wt\alpha]$.
+%    Since $\beta$ is $\iota^{\ast}$-invariant, the pushforward of $\beta$ under $p$ is a well-defined 1-form on $N$.
+    
     %we can push it forward by the projection map $p$, defining the value of its pushforward locally.
     %This gives a well defined $1$-form on $N$, whose pullback is $\beta$, and proves surjectivity of $p^{\ast}$.
-\end{proof}
 
-  Note that if we change the coefficients in the statement of this lemma from $\RR$ to $\ZZ$, the proof of injectivity follows through, but the proof of surjectivity does not.
+%\end{proof}
+
+%  Note that if we change the coefficients in the statement of this lemma from $\RR$ to $\ZZ$, the proof of injectivity follows through, but the proof of surjectivity does not.
 
 
 Lemma \ref{lem:injective} tells us that $H^1(N; \RR)$ is a subspace of $H^1(\wt{N}; \RR)$, so we define the Thurston norm on $H^1(N; \RR)$ by restricting the Thurston norm to the subspace $p^*(H^1(N;\RR))$ of $H^1(\widetilde{N};\RR)$.
@@ -210,17 +212,19 @@ Lemma \ref{lem:injective} tells us that $H^1(N; \RR)$ is a subspace of $H^1(\wt{
   \end{align*}
 
 %We next see that the unit ball for the Thurston norm on $H^1(N;\RR)$ can be defined analogously to the orientable case.
-\begin{thm}
-  Let $B_1$ be the unit ball with respect to the dual Thurston norm on $\left( H^1(N; \RR) \right)^{\ast}$.  Then $B_1$ is a polyhedron whose vertices are lattice points $\{\pm \beta_1, \ldots \pm \beta_k\}$ that satisfy the following inequalities:
-  \begin{align*}
-    B_1 = \left\{ a\in H^1(N,\RR) \mid \left| \beta_i(a) \right| \leq 1 \text{ for $1\leq i \leq k$} \right\}.
-  \end{align*}
-\end{thm}
 
-\begin{proof}
-  For any $\alpha\in H^1(N; \ZZ)$, the norm $x(\alpha)$ is $\wt{x}(p^\ast\alpha)$ where $p^\ast(\alpha)\in H^1(\wt{N};\ZZ)$.  Therefore $x(\alpha)$ is always an integer.
-  The rest of the proof is identical to the original proof of Thurston \cite[Theorem 2]{thurston1986norm}.
-\end{proof}
+% Commenting out the theorem because it is not really used anywhere else.
+%\begin{thm}
+%  Let $B_1$ be the unit ball with respect to the dual Thurston norm on $\left( H^1(N; \RR) \right)^{\ast}$.  Then $B_1$ is a polyhedron whose vertices are lattice points $\{\pm \beta_1, \ldots \pm \beta_k\}$ that satisfy the following inequalities:
+%  \begin{align*}
+%    B_1 = \left\{ a\in H^1(N,\RR) \mid \left| \beta_i(a) \right| \leq 1 \text{ for $1\leq i \leq k$} %\right\}.
+%  \end{align*}
+%\end{thm}
+
+%\begin{proof}
+%  For any $\alpha\in H^1(N; \ZZ)$, the norm $x(\alpha)$ is $\wt{x}(p^\ast\alpha)$ where $p^\ast(\alpha)\in H^1(\wt{N};\ZZ)$.  Therefore $x(\alpha)$ is always an integer.
+%  The rest of the proof is identical to the original proof of Thurston \cite[Theorem 2]{thurston1986norm}.
+%\end{proof}
 
 Note that defining the Thurston norm on $H^1(N; \RR)$ rather than $H_2(N; \RR)$ is not quite satisfactory.
 In particular, fibers of fibrations are embedded surfaces in $N$.  In the orientable case, the embedded surfaces define the Thurston norm.
@@ -266,22 +270,22 @@ On the other hand, for orientable $M$ and $S$, if $S$ is relatively oriented wit
   This means that the surface $S'$ cannot be relatively oriented in $M$ (despite being orientable itself).
 
 \medskip
-However, if both $M$ and an embedded surface are non-orientable, the surface will be relatively oriented.
+%However, if both $M$ and an embedded surface are non-orientable, the surface will be relatively oriented.
 
-
-\begin{prop}
-  \label{prop:relative-orientability}
- Let $N$ be a non-orientable 3-manifold and let $\no$ is a connected embedded non-orientable surface in $N$.  Then $\no$ is relatively oriented in $N$.
-\end{prop}
-\begin{proof}
-Let $\wt{N}$ and the covering map $p:\wt{N}\rightarrow N$ be the orientation double covering space of $N$.  Finally, let $\wt{\no}$ be the preimage of $\no$ under $p$.  Let $\iota:\wt{N}\rightarrow\wt{N}$ be the orientation-reversing deck transformation.
-  The restriction of $\iota:\wt{N}\rightarrow\wt{N}$ to $\wt{\no}$ is an orientation reversing homeomorphism of $\wt{\no}$.
-  Let $(v_1, v_2)$ be a positively oriented local frame for the tangent space to $\wt{\no}$.
-  Let $n$ be an outward pointing transverse vector to $\wt{\no}$ so the local frame $(v_1, v_2, n)$ is positively oriented.
-  Since $\iota$ reverses the orientation of both $\wt{\no}$ and $\wt{N}$, $(\iota(v_1), \iota(v_2))$ and $(\iota(v_1), \iota(v_2), \iota(n))$ are both negatively oriented.
-  Thus $\iota(n)$ is outward pointing.
-  Therefore the outward pointing transverse direction on $\wt{\no}$ descends to an outward pointing transverse direction on $\no$, and $\no$ is relatively oriented in $N$.
-\end{proof}
+% Commented out because it is not necessary, and the proof/statement has gaps.
+%\begin{prop}
+%  \label{prop:relative-orientability}
+% Let $N$ be a non-orientable 3-manifold and let $\no$ is a connected embedded non-orientable surface in $N$.  Then $\no$ is relatively oriented in $N$.
+%\end{prop}
+%\begin{proof}
+%Let $\wt{N}$ and the covering map $p:\wt{N}\rightarrow N$ be the orientation double covering space of $N$.  Finally, let $\wt{\no}$ be the preimage of $\no$ under $p$.  Let $\iota:\wt{N}\rightarrow\wt{N}$ be the orientation-reversing deck transformation.
+%  The restriction of $\iota:\wt{N}\rightarrow\wt{N}$ to $\wt{\no}$ is an orientation reversing homeomorphism of $\wt{\no}$.
+%  Let $(v_1, v_2)$ be a positively oriented local frame for the tangent space to $\wt{\no}$.
+%  Let $n$ be an outward pointing transverse vector to $\wt{\no}$ so the local frame $(v_1, v_2, n)$ is positively oriented.
+%  Since $\iota$ reverses the orientation of both $\wt{\no}$ and $\wt{N}$, $(\iota(v_1), \iota(v_2))$ and $(\iota(v_1), \iota(v_2), \iota(n))$ are both negatively oriented.
+%  Thus $\iota(n)$ is outward pointing.
+%  Therefore the outward pointing transverse direction on $\wt{\no}$ descends to an outward pointing transverse direction on $\no$, and $\no$ is relatively oriented in $N$.
+%\end{proof}
 
 We also need to define the notion of \emph{incompressible surfaces} to state our version of Poincar\'e duality.
 
