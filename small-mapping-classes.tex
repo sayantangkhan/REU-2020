@@ -1,29 +1,29 @@
 \section{Mapping classes with small stretch factors}
 \label{sec:mapping-classes-with}
 
-In this section, we construct mapping classes with small stretch factor on non-orientable surfaces.
+In this section, we provide a strategy to compute pseudo-Anosov homeomorphisms with small stretch factors.
 %The key tools from \autoref{sec:thur-norm-non-orientable} are Theorems \ref{thm:strong-duality} and \ref{thm:classifying-fibrations}, and the operation of oriented sums for non-orientable surfaces.
 
 \subsection{Mapping class groups of non-orientable surfaces}
 \label{sec:backgr-mapp-class}
 Let $\no$ be a non-orientable surface and let $\wt{\no}$ and the covering map $p:\wt{\no}\rightarrow \no$ be its orientation double covering space.
-Every homeomorphism $\varphi: \no \to \no$, has a unique orientation preserving lift $\wt{\varphi}: \wt{\no} \to \wt{\no}$.
+Every homeomorphism $\varphi: \no \to \no$, has a unique orientation-preserving lift $\wt{\varphi}: \wt{\no} \to \wt{\no}$.
 
 
-A consequence is that lifting homeomorphisms induces a monomorphism between orientation preserving homeomorphisms of $\no$ and (orientation preserving) homeomorphisms of $\wt{\no}$.
+A consequence is that lifting homeomorphisms induces a monomorphism between homeomorphisms of $\no$ and orientation-preserving homeomorphisms of $\wt{\no}$.
 Every homotopy of $\no$ lifts to a homotopy of $\wt{\no}$.
 %Further, if $f,g:\no\to\no$ are homeomorphisms such that their orientation preserving lifts are homotopic, then $f$ and $g$ are homotopic.
 %\becca[inline]{Do we need this (the previous) sentence?  It does not follow naturally from the sentence before it and actually requires proof/citation.  But it is only required if we want the inclusion to be injective.}
 %\sayantan[inline]{We don't really need this to be injective, but the fact is probably folklore: we could prove it if we needed to, but it would be more elementary covering space stuff, and wouldn't add anything useful.}
 %\becca[inline]{That's what I thought (we could also just cite it, there's a paper that proves it somewhere out there).  But I think we should just remove that sentence.}
-Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation preserving) mapping class group of $\wt{\no}$.
+Therefore there is an inclusion from the mapping class group of $\no$ to the (orientation-preserving) mapping class group of $\wt{\no}$.
 This inclusion also respects the Nielsen-Thurston classification of mapping classes, both qualitatively, and quantitatively, as the following proposition shows.
 \begin{prop}
   \label{prop:2}
-  Let $\varphi:\no\rightarrow\no$ be a homeomorphism and let $\wt{\varphi}:\wt{\no}\rightarrow\wt{\no}$ be the orientation preserving lift of $\varphi$.  Then:
+  Let $\varphi:\no\rightarrow\no$ be a homeomorphism and let $\wt{\varphi}:\wt{\no}\rightarrow\wt{\no}$ be the orientation-preserving lift of $\varphi$.  Then:
   \begin{enumerate}[(i)]
   \item $\varphi$ is periodic if and only if $\wt{\varphi}$ is periodic,
-  \item $\varphi$ is reducible if and only if $\wt{\varphi}$, and
+  \item $\varphi$ is reducible if and only if $\wt{\varphi}$ is reducible, and
   \item $\varphi$ is pseudo-Anosov if and only if $\wt{\varphi}$ is pseudo-Anosov.  Moreover if $\varphi$ has stretch factor $\lambda$, then $\wt{\varphi}$ also has stretch factor $\lambda$.
   \end{enumerate}
 \end{prop}
@@ -60,7 +60,7 @@ This inclusion also respects the Nielsen-Thurston classification of mapping clas
       \label{eq:ratio}
       i(p(\gamma_i), \varphi(\mathcal{F}_u)) = \lambda \cdot i(p(\gamma_i), \mathcal{F}_u).
   \end{align}
-  Combining \eqref{eq:push1}, \eqref{eq:push2}, and \eqref{eq:ratio}, and summing over all $\gamma_i$ gives us \eqref{eq:unstable-foliation}. A similar argument also proves \eqref{eq:stable-foliation}.
+  Combining \eqref{eq:push1}, \eqref{eq:push2}, and \eqref{eq:ratio}, and summing over all $\gamma_i$ gives us that \eqref{eq:unstable-foliation} holds. A similar argument also verifiproves that \eqref{eq:stable-foliation} holds.
 \end{proof}
 
 
@@ -68,11 +68,11 @@ This inclusion also respects the Nielsen-Thurston classification of mapping clas
 \subsection{Constructing pseudo-Anosov maps on nearby surfaces using oriented sums}
 \label{sec:constr-psuedo-anos}
 %\becca[inline]{I rewrote the section.  The old version is in comments.}
-The goal of this section is to obtain an asymptotic upper bound on the minimum stretch factor of a pseudo-Anosov homeomorphism. We do this in Proposition \ref{prop:asymptotic}.
+The goal of this section is to prove that the stretch factor of any pseudo-Anosov homeomorphism provides an asymptotic upper bound for the minimum stretch factor.  We do this in Proposition \ref{prop:asymptotic}.
 
 
 \begin{prop}\label{prop:asymptotic}
-Let $\no_g$ be a non-orientable surface of genus $g$ and let $\varphi:\no_g\rightarrow \no_g$ be a pseudo-Anosov homeomorphism with stretch factor $\lambda$.  Let $N_\varphi$ be the mapping torus of $\no_g$ by $\varphi$.  Let $\no_{g'}$ be an incompressible surface embedded in $N_\varphi$ that is transverse to the supension flow associated to $\varphi$.  Then for all $k\in\ZZ^+$, there is a pseudo-Anosov homeomorphism of the oriented sum $\no_{g}+k\no_{g'}\rightarrow\no_{g}+k\no_{g'}$ with stretch factor at most $\lambda$.
+Let $\no_g$ be a non-orientable surface of genus $g$ and let $\varphi:\no_g\rightarrow \no_g$ be a pseudo-Anosov homeomorphism with stretch factor $\lambda$.  Let $N_\varphi$ be the mapping torus of $\no_g$ by $\varphi$.  Let $\no_{g'}$ be an incompressible surface embedded in $N_\varphi$ that is transverse to the supension flow associated to $\varphi$.  Then for all $k\in\ZZ^+$, there is a pseudo-Anosov homeomorphism of the oriented sum $\no_{g}+k\no_{g'}$ with stretch factor at most $\lambda$.
 \end{prop}
 
 Our strategy for proving Proposition \ref{prop:asymptotic} is to find fiber bundles of $N_{\varphi}$ over $S^1$ that have fiber $\no_g+k\no_{g'}$.  We then apply a special case of Thurston's hyperbolization theorem, which says that the mapping torus of an orientable surface $S$ by a homeomorphism $\varphi$ is hyperbolic if and only if $\varphi$ is pseudo-Anosov \cite[Theorem 0.1]{thurston_hyp}.  In particular, Thurston's theorem implies that if $M=M_\varphi$ fibers over $S^1$ in two ways, either both mondromies are pseudo-Anosov or neither monodromy is pseudo-Anosov.  Finally, we adapt theorems of Fried and Matsumoto (Theorem \ref{thm:fm}) and Agol--Leininger--Margalit (Theorem \ref{thm:alm}) to work for mapping tori with non-orientable fibers.
@@ -82,7 +82,7 @@ Our strategy for proving Proposition \ref{prop:asymptotic} is to find fiber bund
 We will repeatedly use the following two facts for orientable surfaces and 3-manifolds:
 \begin{enumerate}
  % \label{thm:norm-minimizing}
- \item An orientable surface minimizes the Thurston norm in its homology class if and only if it is incompressible.
+ \item An orientable surface $S$ minimizes the Thurston norm in its homology class if and only if $S$ is incompressible.
 \item  If an orientable 3-manifold $M$ fibers over $S^1$, then the fiber is incompressible.
 \end{enumerate}
 
@@ -99,7 +99,7 @@ We will repeatedly use the following two facts for orientable surfaces and 3-man
 
 \begin{prop}
   \label{thm:oriented-sum}
-  Let $\no'$ be an incompressible surface embedded in $N$ that is transverse to the suspension flow direction associated to $\varphi$.
+  Let $\no'$ be an incompressible surface embedded in $N$ that is transverse to the suspension flow associated to $\varphi$.
   Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ the Poincar\'e dual of $\no'$.
   If the oriented sum of $\no$ and $\no'$ is connected, then $\no + \no'$ is homeomorphic to the fiber of the fibration given by $\alpha + \alpha'$.
 \end{prop}
@@ -107,8 +107,8 @@ We will repeatedly use the following two facts for orientable surfaces and 3-man
   Let $p:\wt{N}\rightarrow N$ be the orientation double cover of $N$.
   The surface $\no$ is incompressible because it is a fiber of $f$; therefore $p^{-1}(\no)$ is also incompressible.  Then the Thurston norm of $\no$ of $\alpha$ is $2\chi_-(\no)$.  Likewise, the Thurston norm of $\alpha'$ is $2\chi_-(\no')$.
 
- Both $\alpha$ and $\alpha'$ lie in a cone over a fibered face in $H^1(N;\ZZ)$.  Therefore the Thurston norm $x$ on $H^1(N;\ZZ)$ is linear function on that cone.
- Since the Thurston norm is linear on oriented sums of $\no$ and $\no'$, we have:
+By \autoref{thm:classifying-fibrations} (ii), $\alpha'$ lies in the same cone in $H^1(N;\ZZ)$ as $\alpha$.  The Thurston norm $x$ on $H^1(N;\ZZ)$ is linear function on that cone.
+ Since the Thurston norm is also linear on oriented sums of $\no$ and $\no'$, we have:
   \begin{align*}
     x(\alpha + \alpha') &= x(\alpha) + x(\alpha') \\
                         &= 2\chi_-(\no) + 2\chi_-(\no') \\
@@ -118,7 +118,7 @@ We will repeatedly use the following two facts for orientable surfaces and 3-man
   Because $2\chi_-(\no+\no')$ achieves the Thurston norm of $\alpha+\alpha'$, the preimage $p^{-1}(\no+\no')$ achieves the Thurston norm of the pullback of $\alpha+\alpha'$ under $p$.  Therefore $p^{-1}(\no+\no')$ is incompressible.  Then $\no+\no'$ is also incompressible.
 
 
-  By Theorem \ref{thm:classifying-fibrations}, we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':N\rightarrow S^1$.
+  By Theorem \ref{thm:classifying-fibrations} (i), we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':N\rightarrow S^1$.
   By Theorem \ref{thm:strong-duality}, the fiber of $f''$ must be homeomorphic to $\no + \no'$.  %Since the Poincar\'e dual to $\no + \no'$ is $\alpha + \alpha'$, and $\no + \no'$ is incompressible.
 \end{proof}
 
@@ -126,14 +126,14 @@ In the proof of Proposition \ref{prop:asymptotic}, we will use Proposition \ref{
 
 %The next step is to show that the stretch factor of the pseudo-Anosov on the new surfaces is less than the stretch factor of the original surface.  We use the following two theorems that hold for orientable 3-manifolds.
 
-\begin{thm}[Fried \cite{fried1982flow},\cite{fried1983transitive},Matsumoto\cite{matsumoto1987topological}]
+\begin{thm}[Fried \cite{fried1982flow,fried1983transitive}, Matsumoto\cite{matsumoto1987topological}]
   \label{thm:fm}
   Let $M$ be an orientable hyperbolic $3$-manifold and let $\mathcal{K}$ be the union of cones in $H^1(M; \RR)$ whose lattice points correspond to fibrations over $S^1$.
-  There exists a strictly convex function $h: \mathcal{K} \to \RR$ satisfying the following properties.
+  There exists a strictly convex function $h: \mathcal{K} \to \RR$ satisfying the following properties:
   \begin{enumerate}[(i)]
-  \item For all $c > 0$ and $u \in \mathcal{K}$, $h(cu) =  \frac{1}{c}h(u)$.
+  \item For all $c > 0$ and $u \in \mathcal{K}$, $h(cu) =  \frac{1}{c}h(u)$,
   \item For every primitive lattice point $u \in \mathcal{K}$, $h(u) = \log(\lambda)$, where $\lambda$ is the
-    stretch factor of the pseudo-Anosov map associated to this lattice point.
+    stretch factor of the pseudo-Anosov map associated to this lattice point, and
   \item $h(u)$ goes to $\infty$ as $u$ approaches $\partial \mathcal{K}$.
   \end{enumerate}
 \end{thm}
@@ -153,7 +153,7 @@ The restriction $h\mid_N$ satisfies all the properties of Theorems \ref{thm:fm} 
 
  Let $\wt{\varphi}$ be the orientation preserving lift of $\varphi$ to $p^{-1}(\no)$.  Since $\wt{\alpha}$ is the pullback of $\alpha$, the $\wt{\varphi}$ is the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$.  By Proposition \ref{prop:2}, the stretch factor of $\wt{\varphi}$ is $\lambda$.
 
-Let $\mathcal{K}$ be the cone in $H^1(N_\varphi;\RR)$ containing $\alpha$.  Since $\no_{g'}$ is transverse to the suspension flow in the direction of $\varphi$, we have that $\alpha'$ is in the closure of $\mathcal{K}$ in $H^1(N;\RR)$.  Let $\wt{\alpha}$ be the pullback of $\alpha$ under $p$ and let $\wt{\alpha'}$ be the pullback of $\alpha'$ under $p$.  Then $h\mid_N(\wt{\alpha}+\wt{\alpha'})<h\mid_N(\wt{\alpha})$.  By Theorem \ref{thm:fm}, $h(\wt{\alpha})$ is equal to the stretch factor of the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$.  Therefore we have $h\mid_N(\wt{\alpha}+\wt{\alpha}')<\log(\lambda)$. It follows that the stretch factor of $\varphi_k$ is less than $\lambda$.
+Let $\mathcal{K}$ be the cone in $H^1(N_\varphi;\RR)$ containing $\alpha$.  Since $\no_{g'}$ is transverse to the suspension flow in the direction of $\varphi$, we have that $\alpha'$ is in the closure of $\mathcal{K}$ in $H^1(N;\RR)$.  Let $\wt{\alpha}$ be the pullback of $\alpha$ under $p$ and let $\wt{\alpha}'$ be the pullback of $\alpha'$ under $p$.  Then $h\mid_N(\wt{\alpha}+\wt{\alpha}')<h\mid_N(\wt{\alpha})$.  By Theorem \ref{thm:fm}, $h(\wt{\alpha})$ is equal to the stretch factor of the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$.  Therefore we have $h\mid_N(\wt{\alpha}+\wt{\alpha}')<\log(\lambda)$. It follows that the stretch factor of $\varphi_k$ is less than $\lambda$.
 \end{proof}
 
 %
