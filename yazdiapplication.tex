@@ -100,7 +100,7 @@ Thurston's fibered face theory. We have adapted  each of Yazdi's five steps to w
 
 We begin by defining a family of surfaces $P_{n,k}$. Let $S$ be an orientable surface of genus 5 with 3
 boundary components.  Call the boundary components $c,d$ and $e$. Choose an orientation of $S$ and let $c,d$ and $e$ inherit the induced orientations. We obtain a non-orientable surface $T$ from $S$ by adding two cross caps to $S$ (retaining the orientation of the boundary components of $S$). Let $p$ and $q$ be marked points in the boundary component $e$. In Step 5 we will remove $p$ and all copies.  Let  $r$ and
-$s$ be the components of $e\setminus\{p,q\}$. The resulting surface $N$ is shown in \autoref{fig:buildingblock}.
+$s$ be the components of $e\setminus\{p,q\}$. The resulting surface $T$ is shown in \autoref{fig:buildingblock}.
 
 \begin{figure}[ht]
     \centering
@@ -177,7 +177,7 @@ Let
 \end{proof}
 
 \p{Step 2: Constructing the maps}
-In what is now a classical paper, Penner gives a construction of pseudo-Anosov homeomorphisms both orientable and non-orientable surfaces \cite{penner1988construction}.  Below we outline the Penner construction for non-orientable surfaces following the details of Liechti--Strenner \cite[Section 2]{LS}.
+In what is now a classical paper, Penner gives a construction of pseudo-Anosov homeomorphisms on both orientable and non-orientable surfaces \cite{penner1988construction}.  Below we outline the Penner construction for non-orientable surfaces following the details of Liechti--Strenner \cite[Section 2]{LS}.
 
 %\p{The Penner construction} Let $S$ be an orientable surface.  Let $A = \{a_1,\dots,a_n\}$ and $B = \{b_1,\dots,b_m\}$ be multicurves in $S$.  A Penner construction is mapping class given as a composition of Dehn twists that satisfy the following:
 %\begin{enumerate}
@@ -457,19 +457,19 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
   \end{align*}
   It follows that for all $1\leq i\leq k$, the curve $f_{n,k}^i(\gamma)$ is $\rho_2^i(\widehat{\gamma})$.  
   For $1\leq i\leq k$, let $A_i$ be an annulus in $M_{n,k}$ that connects $f_{n,k}^{i-1}(\gamma)$ to $f_{n,k}^i(\gamma)$ obtained by following the suspension
-  flow of $f_{n,k}$ around $M_{n,k}$. We can now construct the embedded surface $F_{n,k}$ by taking the union of
-  $A_1,A_2,\dots,A_k$ and $\widehat{F}$. Since each $A_i$ has Euler characteristic 0 and the union of $\widehat{F}$ with $A_1,A_2,\dots, A_k$ has empty boundary we see $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
+  flow of $f_{n,k}$ around $M_{n,k}$. Let $A$ be the union of all of the $A_i$, which is also an annulus.  We can now construct the embedded surface $F_{n,k}$ by taking the union of
+  $A$ and $\widehat{F}$. The union of $\widehat{F}$ with $A$ has empty boundary, so $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
 
  % The resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, so we have
  % relative orientability by Proposition \ref{prop:relative-orientability}.
 
-We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by gluing together the outwards pointing vector field on $\widehat{F}$ and the vector field on the annulus given by following $\gamma$ along the suspension flow.
-In general, one cannot glue together such vector fields without making it vanish somewhere, but we control how $\widehat{F}$ and the annulus intersect: namely at the two boundary components of $\widehat{F}$, which are $\gamma$ and $\widehat{\gamma}$.
+We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by gluing together the outwards pointing vector fields on $\widehat{F}$ and $A$ given by following $\gamma$ along the suspension flow.
+In general, one cannot glue together such vector fields without making it vanish somewhere, but we control how $\widehat{F}$ and $A$ intersect: namely at $\gamma$ and $\widehat{\gamma}$.
 Choose the outward direction over $\widehat{F}$ to be the forward flow direction.
-Construct the outward direction over the annulus by constructing an outward vector field over $\gamma$: we define this to be the vector field that points into the surface $\widehat{F}$.
-We then pushforward this vector field in the flow direction; as a result of this, the vector field over $\widehat{\gamma}$ points away from the surface $\widehat{F}$.
-This follows from the fact that the homeomorphism $f_{n,k}$ maps the intersection of the tubular neighbourhood of $\gamma$ and $\widehat{F}$ to the intersection of the tubular neighbourhood of $\widehat{\gamma}$ and the complement of $\widehat{F}$.
-As a result of this, one can glue together the two non-vanishing vector fields over $\widehat{F}$ and thus annulus to a non-vanishing vector field over the surface $F_{n,k}$, proving the relative orientability of this surface.
+Construct the outward direction over $A$ by constructing an outward vector field over $\gamma$: we define this to be the vector field that points into the surface $\widehat{F}$.
+We then pushforward this vector field in the flow direction, the vector field over $\widehat{\gamma}$ points away from the surface $\widehat{F}$.
+Indeed, the homeomorphism $f_{n,k}$ maps the intersection of the tubular neighbourhood of $\gamma$ and $\widehat{F}$ to the intersection of the tubular neighbourhood of $\widehat{\gamma}$ and the complement of $\widehat{F}$.
+Therefore one can glue together the two non-vanishing vector fields over $\widehat{F}$ and $A$ to a non-vanishing vector field over the surface $F_{n,k}$, proving the relative orientability of this surface.
 
 % Since $F_{n,k}$ is a non-orientable surface embedded in a non-orientable manifold $M_{n,k}$, Proposition \ref{prop:relative-orientability} tells us that $F_{n,k}$ is relatively orientable (in $M_{n,k}$).
 

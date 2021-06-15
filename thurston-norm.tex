@@ -98,10 +98,10 @@ By Poincar\'e duality they are isomorphic for orientable 3-manifolds, but that i
 
 
 \p{Poincar\'e Duality}
-To see why Poincar\'e duality fails for non-orientable 3-manifolds, we will work through the construction of the isomorphism between first homology and second cohomology for 3-manifolds.  Let $M$ be a 3-manifold.
+To see why Poincar\'e duality fails for non-orientable 3-manifolds, we will work through the construction of the isomorphism between first cohomology and second homology for orientable 3-manifolds.  Let $M$ be a 3-manifold.
 %\becca[inline]{This part of the construction works for non-orientable manifolds, right?  I therefore took out the requirement that $M$ is orientable in the setup.}
 %\sayantan[inline]{Yes, that is right.}
-To define the Poincar\'e dual of $H^1(M;\ZZ)$, we first define a homotopy class of maps $M\rightarrow S^1$.  Then we construct an element of $H^2(M;\ZZ)$.
+To define the Poincar\'e dual of $H^1(M;\ZZ)$, we first define a homotopy class of maps $M\rightarrow S^1$.  Then we construct an element of $H_2(M;\ZZ)$.
 Let $\alpha$ be a 1-form on $M$ and $[\alpha]$ its class in $H^1(M; \ZZ)$.  Fix a basepoint $y_0\in M$.
 The associated map $f_{\alpha}:M\rightarrow S^1$ is given by:
 \begin{align}\label{form:map}
@@ -288,6 +288,18 @@ Now let $M$ be an orientable 3-manifold, and let $S$ be an orientable embedded s
 %  Therefore the outward pointing transverse direction on $\wt{\no}$ descends to an outward pointing transverse direction on $\no$, and $\no$ is relatively oriented in $N$.
 %\end{proof}
 
+The following lemma tells us that all the surfaces we will be working with are relatively oriented in the mapping torus.
+\begin{lem}
+  \label{lem:fibers-relatively-oriented}
+  Let $\no$ be the fiber of a fibration $f: N \to S^1$.
+  Then $\no$ is relatively oriented in $N$.
+\end{lem}
+\begin{proof}
+Consider a non-zero tangent vector $v$ pointing in the positive direction at a point $\theta \in S^1$.
+One can pull back the tangent vector $v$ to a nowhere vanishing vector field over $f^{-1}(\theta) = \no$ because $f$ is a fibration, i.e. a submersion.
+The pulled back vector field defines a relative orientation for $\no$ in $N$.
+\end{proof}
+
 We also need to define the notion of \emph{incompressible surfaces} to state our version of Poincar\'e duality.
 
 \p{Incompressible surfaces}
@@ -324,7 +336,7 @@ We will refer to the 1-form $\alpha$ given in Theorem~\ref{thm:strong-duality} a
   Then the Poincar\'e dual to $[\wt{\no}]$ is $\iota^{\ast}$-invariant.% where $\iota$ is the non-trivial deck transformation.
 \end{lem}
 \begin{proof}
-  The relative orientation of $\no$ in $N$ lifts to a relative orientation of $\wt{\no}$ in $\wt{N}$.
+  The non-vanishing vector field on $\no$ that is transverse to its tangent plane in $N$ lifts to a relative orientation of $\wt{\no}$ in $\wt{N}$.
   Since $\wt{N}$ is orientable, the relative orientation of $\wt{\no}$ defines an orientation of $\wt{\no}$, and thus the homology class $[\wt{\no}]$ is well-defined.
 
   Next we show that $\iota$ reverses the orientation of $\wt{\no}$.  To do so, we first observe that because $\no$ is relatively oriented in $N$, the outward pointing transverse vector field on ${\no}$ must lift to an outward pointing transverse vector field on $\wt{\no}$.  In particular, for any outward pointing vector $\wt{v}$ on $\no$, the vector $\iota(\wt{v})$ is also outward pointing.%Therefore $\iota$ preserves outward pointing vector fields on $\wt{\no}$.\becca[inline]{This statement doesn't follow.  What is true is that $iota$ preserves outward pointing vector fields that are lifts of vector fields of $\no$.  This is all we need, but its awkward to say.}
@@ -378,9 +390,9 @@ Let $N$ be a non-orientable 3-manifold.  Let $[\wt{\alpha}]\in H^1(\wt{N}, Z)$ a
   %\begin{align*}
    % \int_{\wt{\gamma}} \wt{\alpha} \in 2\ZZ.
   %\end{align*}
-  Without loss of generality, we can assume all intersections of the simple closed curve $\wt{\gamma}$ with the surface $\wt{\no}$ are transverse.
-  Since $\wt{\alpha}$ is a representative of the Poincar\'e dual to $[\wt{\no}]$, the integral of $\wt{\alpha}$ along $\wt{\gamma}$ is the signed intersection number of $\wt{\gamma}$ with $\wt{\no}$.
-  The intersection number must be even, for if $\wt{\gamma}$ and $\wt{\no}$ intersect at a point $y$, then they also intersect at $\iota(y)$. This proves the lemma.
+  Without loss of generality, we can assume all intersections of the simple closed curve $\wt{\gamma}$ with the surface $\wt{\os}$ are transverse.
+  Since $\wt{\alpha}$ is a representative of the Poincar\'e dual to $[\wt{\os}]$, the integral of $\wt{\alpha}$ along $\wt{\gamma}$ is the signed intersection number of $\wt{\gamma}$ with $\wt{\os}$.
+  The intersection number must be even, for if $\wt{\gamma}$ and $\wt{\os}$ intersect at a point $y$, then they also intersect at $\iota(y)$. This proves the lemma.
 \end{proof}
 
 The last lemma we need is the claim that lifts of incompressible surfaces are incompressible.
