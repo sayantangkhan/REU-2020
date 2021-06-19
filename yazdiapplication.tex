@@ -463,17 +463,20 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
  % The resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, so we have
  % relative orientability by Proposition \ref{prop:relative-orientability}.
 
-We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by gluing together the outwards pointing vector fields on $\widehat{F}$ and $A$ given by following $\gamma$ along the suspension flow.
-In general, one cannot glue together such vector fields without making it vanish somewhere, but we control how $\widehat{F}$ and $A$ intersect: namely at $\gamma$ and $\widehat{\gamma}$.
-Choose the outward direction over $\widehat{F}$ to be the forward flow direction.
-Construct the outward direction over $A$ by constructing an outward vector field over $\gamma$: we define this to be the vector field that points into the surface $\widehat{F}$.
-We then pushforward this vector field in the flow direction, the vector field over $\widehat{\gamma}$ points away from the surface $\widehat{F}$.
-Indeed, the homeomorphism $f_{n,k}$ maps the intersection of the tubular neighborhood of $\gamma$ and $\widehat{F}$ to the intersection of the tubular neighborhood of $\widehat{\gamma}$ and the complement of $\widehat{F}$.
-Therefore one can glue together the two non-vanishing vector fields over $\widehat{F}$ and $A$ to a non-vanishing vector field over the surface $F_{n,k}$, proving the relative orientability of this surface. See \autoref{fig:gluing-normal-field} for a picture of this gluing construction.
+  We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by combining the outwards pointing vector fields on $\widehat{F}$ and $A$ given by following $\gamma$ along the suspension flow.
+  Consider a small neighbourhood $U$ of $\gamma$: define two bump functions $c_1$ and $c_2$ supported in $U$ such that $c_1$ is $1$ on $A$, and decays to $0$ in $\widehat{F}$ and $c_2$ is $1$ on $\widehat{F}$ and decays to $0$ on $A$.
+  We add the vector fields $v_1$ on $\widehat{F}$ and $v_2$ on $A$ using these bump functions: the resulting vector field is $c_1 v_1 + c_2 v_2$.
+  Because of the way we defined the bump functions, this combined vector field agrees with both the vector fields outside of the support $U$ of the bump functions.
+  Observe that since $v_1$ points in the flow direction, and $v_2$ points into the surface, the new vector field $c_1 v_1 + c_2 v_2$ is transverse, in the neighbourhood of $\gamma$, to $F_{n,k}$ (see \autoref{fig:gluing-normal-field} for a picture of the resulting transverse vector field).
+
+  We perform a similar construction in a small neighbourhood of $\widehat{\gamma}$: in this case, the fact that the vector field on $\widehat{F}$ points in the flow direction, and the vector field on $A$ points away from the surface $\widehat{F}$ ensures that the new vector field is transverse, in a neighbourhood of $\widehat{\gamma}$, to the surface $F_{n,k}$.
+
+  A key fact we use in this construction is that the vector field along $A$ that starts pointing into $\widehat{F}$ at $\gamma$ comes back pointing away from the surface at $\widehat{\gamma}$: this is because the homeomorphism $f_{n,kj}$ maps the inner tubular neighbourhood of $\gamma$ to the outer tubular neighbourhood of $\widehat{\gamma}$, where inner and outer tubular neighbourhood are the half tubular neighbourhoods contained in $\widehat{F}$ and the complement respectively.
+  This fact about $f_{n,k}$ follows from its definition, i.e. following the four homeomorphisms whose composition is $f_{n,k}$.
 \begin{figure}[t]
   \centering
   \incfig[0.5]{gluing-normal-field}
-  \caption{Gluing the normal vector fields over $\widehat{F}$ and $A$. The left to right direction is the flow direction, and the up to down direction is the fiber direction. The yellow region is $\widehat{F}$ in the fiber and blue is the complement of $\widehat{F}$ in the fiber.}
+  \caption{Combining the vector fields over $\widehat{F}$ and $A$ by adding them after scaling with appropriate bump function. The right hand side picture shows that the resulting vector field is transverse to the surface $F_{n,k}$.}
   \label{fig:gluing-normal-field}
 \end{figure}
 
