@@ -463,10 +463,11 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
  % The resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, so we have
  % relative orientability by Proposition \ref{prop:relative-orientability}.
 
-  We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by combining the outwards pointing vector fields on $\widehat{F}$ and $A$ given by following $\gamma$ along the suspension flow.
-  Consider a small neighbourhood $U$ of $\gamma$: define two bump functions $c_1$ and $c_2$ supported in $U$ such that $c_1$ is $1$ on $A$, and decays to $0$ in $\widehat{F}$ and $c_2$ is $1$ on $\widehat{F}$ and decays to $0$ on $A$.
+  We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by combining the outwards pointing vector fields on $\widehat{F}$ and $A$ given by following $\gamma$ along the suspension flow.  Let $v_1$ be a vector field on $\widehat{F}$ pointing in the flow direction.  Define $v_2$ to be a vector field on $A$ as follows: on $\gamma$ define $v_2$ to be the vector field pointing in to $\widehat{F}$.  Flow the vector field along the suspension flow so $v_2$ is pointing away from $\widehat{F}$ on $\widehat{\gamma}$.
+  
+Let $U$ be a neighborhood of $\gamma$ in $F_{n,k}=\widehat{F}\cup A$. Define two bump functions $c_1$ and $c_2$ supported in $U$.  Let $c_1$ be $1$ on $\partial U\cap A$ and $0$ on $\widehat{F}$. Let $c_2$ be $1$ on $\partial U\cap \widehat{F}$ and $0$ on $A$.
   We add the vector fields $v_1$ on $\widehat{F}$ and $v_2$ on $A$ using these bump functions: the resulting vector field is $c_1 v_1 + c_2 v_2$.
-  Because of the way we defined the bump functions, this combined vector field agrees with both the vector fields outside of the support $U$ of the bump functions.
+ % Because of the way we defined the bump functions, this combined vector field agrees with both the vector fields outside of the support $U$ of the bump functions.
   Observe that since $v_1$ points in the flow direction, and $v_2$ points into the surface, the new vector field $c_1 v_1 + c_2 v_2$ is transverse, in the neighbourhood of $\gamma$, to $F_{n,k}$ (see \autoref{fig:gluing-normal-field} for a picture of the resulting transverse vector field).
 
   We perform a similar construction in a small neighbourhood of $\widehat{\gamma}$: in this case, the fact that the vector field on $\widehat{F}$ points in the flow direction, and the vector field on $A$ points away from the surface $\widehat{F}$ ensures that the new vector field is transverse, in a neighbourhood of $\widehat{\gamma}$, to the surface $F_{n,k}$.
@@ -476,7 +477,7 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
 \begin{figure}[t]
   \centering
   \incfig[0.5]{gluing-normal-field}
-  \caption{Combining the vector fields over $\widehat{F}$ and $A$ by adding them after scaling with appropriate bump function. The right hand side picture shows that the resulting vector field is transverse to the surface $F_{n,k}$.}
+  \caption{The left side shows the vector fields $v_1$ on $\widehat{F}$ and $v_2$ on $A$.  The upper picture is a neighborhood of $\gamma$ and the lower picture is a neighborhood of $\widehat{\gamma}$.  The right side shows the vector fields $c_1v_1+c_2v_2$ on neighborhoods of $\gamma$ and $\widehat{\gamma}$.}
   \label{fig:gluing-normal-field}
 \end{figure}
 
