@@ -241,7 +241,7 @@ In Section \ref{sec:weak-inverse-poinc}, we develop a (weak) version of Poincar\
 
 Let $M$ be a 3-manifold and $[\alpha]$ an element of $H^1(M;\RR)$.  Regardless of whether $M$ is orientable or not, we can construct a dual map $f_\alpha:M\rightarrow S^1$, using equation \eqref{form:map}.
 The preimage of a regular value $\theta$ is an embedded surface $f_{\alpha}^{-1}(\theta)$ in $M$.
-If we assume that $M$ is orientable Poincar\'e duality allows us to reverse this correspondence.  Indeed, let $S$ is an embedded surface in (the orientable manifold) $M$.  Poincar\'e duality determines a cohomology class in $H^1(M; \ZZ)$ corresponding to $S$.
+If we assume that $M$ is orientable, Poincar\'e duality allows us to reverse this correspondence.  Indeed, let $S$ is an embedded surface in (the orientable manifold) $M$.  Poincar\'e duality determines a cohomology class in $H^1(M; \ZZ)$ corresponding to $S$.
 Now let $\alpha$ be a $1$-form representative of an element of $H^1(M;\RR)$ and let $\theta$ be a regular value of $f_{\alpha}$.  The surfaces $f_{\alpha}^{-1}(\theta)$ and $S$ are homologous.
 In this section, we state a weak version of Poincar\'e duality for non-orientable surfaces in Theorem \ref{thm:strong-duality}.  This version of Poincar\'e duality will allow us to associate 1-forms to a certain subset of surfaces embedded in non-orientable 3-manifolds.
 We will require that the embedded surfaces are \emph{relative oriented} in the (non-orientable) 3-manifold.
@@ -254,23 +254,33 @@ We will require that the embedded surfaces are \emph{relative oriented} in the (
 
 %Note that relative orientability is a strictly weaker notion than orientability.
 If $S$ and $M$ are orientable, then $S$ is relatively oriented with respect to $M$.
-But even if $M$ is non-orientable, a non-orientable embedded surface $S$ may be relatively oriented in $M$.
-For instance, let $N_{\varphi}$ be a mapping torus and let $\pi:N_{\varphi}\rightarrow S^1$ be the projection map.
-The preimage of a non-vanishing vector field on $S^1$ under $\pi$ is a non-vanishing vector field on $N_{\varphi}$.  This vector field is always transverse to the fiber, so the fiber is relatively orientable with respect to $N_\varphi$
+But even if $M$ is non-orientable, a non-orientable embedded surface $S$ may be relatively oriented in $M$.  In particular, we have the following Lemma.
+\begin{lem}
+  \label{lem:fibers-relatively-oriented}
+  Let $\no$ be the fiber of a fibration $f: N \to S^1$.
+  Then $\no$ is relatively oriented in $N$.
+\end{lem}
+\begin{proof}
+Consider a non-zero tangent vector $v$ pointing in the positive direction at a point $\theta \in S^1$.
+One can pull back the tangent vector $v$ to a nowhere vanishing vector field over $f^{-1}(\theta) = \no$ because $f$ is a fibration, i.e. a submersion.
+The pulled back vector field defines a relative orientation for $\no$ in $N$.
+\end{proof}
+%For instance, let $N_{\varphi}$ be a mapping torus and let $\pi:N_{\varphi}\rightarrow S^1$ be the projection map.
+%The preimage of a non-vanishing vector field on $S^1$ under $\pi$ is a non-vanishing vector field on $N_{\varphi}$.  This vector field is always transverse to the fiber, so the fiber is relatively orientable with respect to $N_\varphi$.
 
-Now let $M$ be an orientable 3-manifold, and let $S$ be an orientable embedded surface.  If $S$ is relatively oriented with respect to $M$, then a choice of orientation on $S$ determines an orientation on $M$ and vice versa.
+\p{Orientable manifolds} Now let $M$ be an orientable 3-manifold, and let $S$ be an orientable embedded surface.  If $S$ is relatively oriented with respect to $M$, then a choice of orientation on $S$ determines an orientation on $M$ and vice versa.
 
-\p{An orientable surface that is not relatively oriented in a 3-manifold}
-  Let $S$ be the standard torus $\RR^2/\ZZ^2$, and let $\varphi$ map $(x,y)$ to $(-x, y)$.
-  Then $\varphi$ is an orientation-reversing homeomorphism.
-  The mapping torus $M_\varphi$ is non-orientable.
-  Let $\gamma$ be the line $x=0$ in $S$. %Then $\gamma$ is preserved by $\varphi$.
-  The image of $\gamma$ in $S$ under the suspension flow in $M$ is a subsurface of $M$, which we will call $S'$.
-  The normal direction to $S'$ when restricted to $S$ is $\frac{\partial}{\partial x}$.
-  Because the suspension flow reverses the direction of $\gamma$, the normal vector field cannot be continuously extended to all of $M$.
-  This means that the surface $S'$ cannot be relatively oriented in $M$ (despite being orientable itself).
-
-\medskip
+%\p{An orientable surface that is not relatively oriented in a 3-manifold}
+%  Let $S$ be the standard torus $\RR^2/\ZZ^2$, and let $\varphi$ map $(x,y)$ to $(-x, y)$.
+ % Then $\varphi$ is an orientation-reversing homeomorphism.
+ % The mapping torus $M_\varphi$ is non-orientable.
+ % Let $\gamma$ be the line $x=0$ in $S$. %Then $\gamma$ is preserved by $\varphi$.
+ % The image of $\gamma$ in $S$ under the suspension flow in $M$ is a subsurface of $M$, which we will call $S'$.
+ % The normal direction to $S'$ when restricted to $S$ is $\frac{\partial}{\partial x}$.
+ % Because the suspension flow reverses the direction of $\gamma$, the normal vector field cannot be continuously extended to all of $M$.
+ % This means that the surface $S'$ cannot be relatively oriented in $M$ (despite being orientable itself).
+%
+\smallskip
 %However, if both $M$ and an embedded surface are non-orientable, the surface will be relatively oriented.
 
 % Commented out because it is not necessary, and the proof/statement has gaps.
@@ -288,17 +298,7 @@ Now let $M$ be an orientable 3-manifold, and let $S$ be an orientable embedded s
 %  Therefore the outward pointing transverse direction on $\wt{\no}$ descends to an outward pointing transverse direction on $\no$, and $\no$ is relatively oriented in $N$.
 %\end{proof}
 
-The following lemma tells us that all the surfaces we will be working with are relatively oriented in the mapping torus.
-\begin{lem}
-  \label{lem:fibers-relatively-oriented}
-  Let $\no$ be the fiber of a fibration $f: N \to S^1$.
-  Then $\no$ is relatively oriented in $N$.
-\end{lem}
-\begin{proof}
-Consider a non-zero tangent vector $v$ pointing in the positive direction at a point $\theta \in S^1$.
-One can pull back the tangent vector $v$ to a nowhere vanishing vector field over $f^{-1}(\theta) = \no$ because $f$ is a fibration, i.e. a submersion.
-The pulled back vector field defines a relative orientation for $\no$ in $N$.
-\end{proof}
+
 
 We also need to define the notion of \emph{incompressible surfaces} to state our version of Poincar\'e duality.
 
@@ -336,13 +336,13 @@ We will refer to the 1-form $\alpha$ given in Theorem~\ref{thm:strong-duality} a
   Then the Poincar\'e dual to $[\wt{\no}]$ is $\iota^{\ast}$-invariant.% where $\iota$ is the non-trivial deck transformation.
 \end{lem}
 \begin{proof}
-  The non-vanishing vector field on $\no$ that is transverse to its tangent plane in $N$ lifts to a relative orientation of $\wt{\no}$ in $\wt{N}$.
-  Since $\wt{N}$ is orientable, the relative orientation of $\wt{\no}$ defines an orientation of $\wt{\no}$, and thus the homology class $[\wt{\no}]$ is well-defined.
+  The positive vector space on $\no$ that is transverse to its tangent plane in $N$ lifts to a relative orientation of $\wt{\no}$ in $\wt{N}$.
+  Since $\wt{\no}$ and $\wt{N}$ are orientable, the relative orientation of $\wt{\no}$ defines an orientation of $\wt{\no}$, and thus the homology class $[\wt{\no}]$ in $H_2(\wt{N};\RR)$ is well-defined.
 
   Next we show that $\iota$ reverses the orientation of $\wt{\no}$.  To do so, we first observe that because $\no$ is relatively oriented in $N$, the outward pointing transverse vector field on ${\no}$ must lift to an outward pointing transverse vector field on $\wt{\no}$.  In particular, for any outward pointing vector $\wt{v}$ on $\no$, the vector $\iota(\wt{v})$ is also outward pointing.%Therefore $\iota$ preserves outward pointing vector fields on $\wt{\no}$.\becca[inline]{This statement doesn't follow.  What is true is that $iota$ preserves outward pointing vector fields that are lifts of vector fields of $\no$.  This is all we need, but its awkward to say.}
 
-  Let $(v_1, v_2, v_3)$ be a local frame for some point in $\wt{\no}$ such that
-  $v_3$ is the outward pointing transverse vector field.
+  Lift an outward pointing transverse vector field on $\no$ to an outward pointing transverse vector field $\wt{V}$ on $\wt{\no}$.  Let $(v_1, v_2, v_3)$ be a local frame for some point in $\wt{\no}$ such that
+  $v_3$ is in $\wt{V}$.
   %This means $\iota$ takes outward pointing vector fields to outward pointing vector fields, and $\iota(v_3)$ must be outward pointing.
   Since $\iota$ reverses the orientation of $\wt{N}$ but preserves the direction of $v_3$, $\iota$ must reverse the orientation of the pair $(v_1, v_2)$.
   In particular, that means $\iota$ reverses the orientation of $\wt{\no}$.
@@ -420,7 +420,7 @@ We define the map $f_\alpha:N\rightarrow S^1$ according to equation (\ref{form:m
 The map $f_{\alpha} \circ p$ is a lift of $f_{\alpha}$ to $\wt{N}$ under $p$, and is therefore also a fibration.
   By Lemma \ref{lem:lift-of-incompressible}, $\wt{\no}$ is incompressible.
 It follows from the orientable version of Poincar\'e duality that $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1}(\theta))$ are homologous surfaces in $\wt{N}$.    Theorem \ref{thm:Thur2} then tells us $\wt{\no}$ must be isotopic to a fiber of $f_{\alpha} \circ p$.
-  Because $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ are homeomorphic and $p:\wt{\no}\rightarrow \no$ and $p:p^{-1}(f^{-1}_{\alpha}(\theta))\rightarrow f^{-1}_\alpha(\theta)$ are 2-fold covering maps, the surfaces $\no$ and $f_{\alpha}^{-1}(\theta)$ must also be homeomorphic.
+  The restriction of $p$ to the homeomorphic surfaces $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ determines two equivalent 2-fold covering maps  $p^{-1}(f^{-1}_{\alpha}(\theta))\rightarrow f^{-1}_\alpha(\theta)$.  Therefore the image surfaces $\no$ and $f_{\alpha}^{-1}(\theta)$ must also be homeomorphic.
 \end{proof}
 
 % We will now strengthen the conclusion of Theorem \ref{thm:Poincare-duality} to get a more concrete relationship between $\no$ and $f_{\alpha}^{-1}(\theta)$.
