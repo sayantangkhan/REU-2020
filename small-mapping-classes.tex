@@ -114,17 +114,16 @@ By \autoref{thm:classifying-fibrations} (ii), $\alpha'$ lies in the same cone in
                         &= 2\chi_-(\no) + 2\chi_-(\no') \\
                         &= 2\chi_-(\no + \no').
   \end{align*}
-  %The last equality follows from the linearity of the oriented sum.
+
   Because $2\chi_-(\no+\no')$ achieves the Thurston norm of $\alpha+\alpha'$, the preimage $p^{-1}(\no+\no')$ achieves the Thurston norm of the pullback of $\alpha+\alpha'$ under $p$.  Therefore $p^{-1}(\no+\no')$ is incompressible.  Then $\no+\no'$ is also incompressible.
 
 
   By Theorem \ref{thm:classifying-fibrations} (i), we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':N\rightarrow S^1$.
-  By Theorem \ref{thm:strong-duality}, the fiber of $f''$ must be homeomorphic to $\no + \no'$.  %Since the Poincar\'e dual to $\no + \no'$ is $\alpha + \alpha'$, and $\no + \no'$ is incompressible.
+  By Theorem \ref{thm:strong-duality}, the fiber of $f''$ must be homeomorphic to $\no + \no'$.  
 \end{proof}
 
 In the proof of Proposition \ref{prop:asymptotic}, we will use Proposition \ref{thm:oriented-sum} along with a theorem of Thurston to obtain a pseudo-Anosov homemorphism $\varphi_k$ of the surface of genus of genus $g+kg'$.  We the use Theorems \ref{thm:fm} and \ref{thm:alm} to obtain a upper bound on the stretch factor of $\varphi_k$.
 
-%The next step is to show that the stretch factor of the pseudo-Anosov on the new surfaces is less than the stretch factor of the original surface.  We use the following two theorems that hold for orientable 3-manifolds.
 
 \begin{thm}[Fried \cite{fried1982flow,fried1983transitive}, Matsumoto\cite{matsumoto1987topological}]
   \label{thm:fm}
@@ -156,97 +155,3 @@ The restriction $h\mid_N$ satisfies all the properties of Theorems \ref{thm:fm} 
 Let $\mathcal{K}$ be the cone in $H^1(N_\varphi;\RR)$ containing $\alpha$.  Since $\no_{g'}$ is transverse to the suspension flow in the direction of $\varphi$, we have that $\alpha'$ is in the closure of $\mathcal{K}$ in $H^1(N;\RR)$.  Let $\wt{\alpha}$ be the pullback of $\alpha$ under $p$ and let $\wt{\alpha}'$ be the pullback of $\alpha'$ under $p$.  Then $h\mid_N(\wt{\alpha}+\wt{\alpha}')<h\mid_N(\wt{\alpha})$.  By Theorem \ref{thm:fm}, $h(\wt{\alpha})$ is equal to the stretch factor of the pseudo-Anosov homeomorphism associated to $\wt{\alpha}$.  Therefore we have $h\mid_N(\wt{\alpha}+\wt{\alpha}')<\log(\lambda)$. It follows that the stretch factor of $\varphi_k$ is less than $\lambda$.
 \end{proof}
 
-%
-%In this section, we answer the following question:
-%\begin{question}
-%  If $\no_g$ has a pseudo-Anosov map with stretch factor $\lambda$, does there exist a pseudo-Anosov map on $\no_{g'}$ with stretch factor at most $\lambda$, for all $g' > g$?
-%\end{question}
-%\becca[inline]{This might just be a note to self: I don't understand what the difference between $\lambda$ and $\lambda'$ being controlled means.}
-%\sayantan[inline]{\sout{This refers to getting an upper bound on $|\ln \lambda - \ln \lambda^{\prime}|$ as a function of $g$ and $g'$. I've changed the question to the more precise version.} You were right in pointing out that the theorem at the end of this section doesn't answer the earlier question; rather it answers the following question, which is weaker, but good enough for our purposes.}
-%\becca[inline]{Thanks Sayantan.  Now that I understand, I think I don't like that we ask it as a question without providing the answer right away.  It's probably clearer just to say exactly what we are going to do in the section.}
-%To do so, we first prove Theorem \ref{thm:oriented-sum}, which allows us to construct different surfaces and pseudo-Anosov maps on them which have the same mapping torus.
-%
-%We will repeatedly use the following two facts:
-%\begin{enumerate}
-% % \label{thm:norm-minimizing}
-% \item A surface $S$ minimizes the Thurston norm in its homology class if and only if it is incompressible.
-%\item  If $M$ fibers over $S^1$, then the fiber is incompressible.
-%\end{enumerate}
-%\becca[inline]{Is the point that these facts are only known for orientable surfaces and we have to finagle a little to make them work for non-orientable in Theorem 3.2?}
-%\sayantan[inline]{Yes, that's right.}
-%
-%We also have the following theorem of Thurston relating hyperbolicity of mapping tori and pseudo-Anosov maps.
-%\begin{thm}[Thurston's Hyperbolization Theorem]
- % If $M$ is the mapping torus of a surface $S$ and a homeomorphism $\varphi$, then $M$ is hyperbolic if and only if $\varphi$ is pseudo-Anosov.
-%\end{thm}
-%
-%%As a consequence, if we can decompose the mapping torus of a pseudo-Anosov map as the mapping torus of some other homeomorphism, then the other homeomorphism must also be pseudo-Anosov.
-%In particular, if a manifold is a mapping torus of two different homeomorphisms $\varphi$ and $\varphi'$, then $\varphi$ is pseudo-Anosov if and only if $\varphi'$ is pseudo-Anosov.
-%
-%Next, we characterize the possible fibers of a mapping torus.
-%
-%%Let $\no$ be a non-orientable surface, and $\varphi$ be a pseudo-Anosov homeomorphism.
-%%Let $N_\varphi$ be the associated mapping torus and $f:N\rightarrow S^1$ the associated fibration.
-%%Suppose we can construct another relatively oriented surface $\no'$ inside $N$ such that $\no'$ is transverse to the suspension flow direction associated to $f$. Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ be the Poincar\'e dual of $\no'$.  By Theorem \ref{thm:classifying-fibrations} $\alpha$ lies in a cone $\mathcal{C}_\varphi \subset H^1(N_\varphi; \ZZ)$ associated to $\varphi$ with other $1$-forms also coming from fibrations.
-%%Furthermore, $\alpha'$ lies in the closure of $\mathcal{C}_\varphi$.
-%%All positive integer linear combinations of $\alpha$ and $\alpha'$ are lattice elements of $\mathcal{C}_\varphi$.
-%%Each linear combination of $\alpha$ and $\alpha'$ is Poincar\'e dual to an oriented sum of $\no$ and $\no'$ in $N$.  Under reasonably mild conditions on $\no$ and $\no'$, we can show that the fiber of $f$ is homeomorphic to the oriented sum $\no + \no'$ of $\no$ and $\no'$.
-%
-%\begin{thm}
- % \label{thm:oriented-sum}
- % Let $\no$ be a non-orientable surface and $\varphi$ a homeomorphism of $\no$.
- % Let $N_\varphi$ be the associated mapping torus and $f:N_\varphi\rightarrow S^1$ the fibration.
- % Let $\no'$ be an incompressible surface embedded in $N$ that is transverse to the suspension flow direction associated to $f$.
- % Let $\alpha$ be the Poincar\'e dual of $\no$ and $\alpha'$ the Poincar\'e dual of $\no'$.
- % If the oriented sum of $\no$ and $\no'$ is connected, then $\no + \no'$ is homeomorphic to the fiber of the fibration given by $\alpha + \alpha'$.
-%\end{thm}
-%\begin{proof}
- % Let $p:\wt{N}\rightarrow N$ be the orientation double cover of $N$.
- % The surface $\no$ is incompressible because it is a fiber of $f$; therefore its pre-image under $p$ is also incompressible.  Therefore the Thurston norm of $\no$ of $\alpha$ is $2\chi_-(\no)$.  Likewise, the Thurston norm of $\alpha'$ is $2\chi_-(\no')$.
-%
-% Both $\alpha$ and $\alpha'$ lie in a cone over a fibered face in $H^1*N;\ZZ)$.  Therefore the Thurston norm $x$ on $H^1(N;\ZZ)$ is linear function on that cone.
-% Since the Thurston norm is linear on oriented sums of $\no$ and $\no'$, we have:
- % \begin{align*}
-%    x(\alpha + \alpha') &= x(\alpha) + x(\alpha') \\
-   %                     &= 2\chi_-(\no) + 2\chi_-(\no') \\
-  %                      &= 2\chi_-(\no + \no').
- % \end{align*}
-  %%The last equality follows from the linearity of the oriented sum.
- % Because $2\chi_(\no+\no')$ achieves the Thurston norm of $\alpha+\alpha'$, the preimage $p^{-1}(\no+\no')$ achieves the Thurston norm of the pullback of $\alpha+\alpha'$ under $p$.  Therefore $p^{-1}(\no+\no')$ is incompressible.  Then $\no+\no'$ is also incompressible.
- % \becca[inline]{The previous version of what was above was incomplete.  Perhaps this version is too complete (I think it's correct though).}
-
- % By Theorem \ref{thm:classifying-fibrations}, we have that $\alpha + \alpha'$ corresponds to some other fibration $f'':N\rightarrow S^1$.
- % By Theorem \ref{thm:strong-duality}, the fiber of $f''$ must be homeomorphic to $\no + \no'$.  %Since the Poincar\'e dual to $\no + \no'$ is $\alpha + \alpha'$, and $\no + \no'$ is incompressible.
-%\end{proof}
-
-%Theorem \ref{thm:oriented-sum} is the first step in answering the question posed at the beginning of this subsection.
-%If $\no'$ in Theorem \ref{thm:oriented-sum} has Euler characteristic $-1$, then then the oriented sum $\no+k\no'$ has genus equal to the genus of $\no$ plus $k$.
-%\becca[inline]{If $\no'$ has Euler characteristic -1, can't we realize all genera greater than 2?}
-%The next step is to show that the stretch factor of the pseudo-Anosov on the new surfaces is lesser than the stretch factor of the original surface.
-
-%That is done using the following two theorems, due to Fried--Matsumoto \cite{fried1982flow}, \cite{fried1983transitive}, and \cite{matsumoto1987topological} and Agol--Leininger--Margalit  \cite{agol6983pseudo} in the orientable case.
-
-%\begin{thm}[Fried-Matsumoto]
- % \label{thm:fm}
- % Let $M$ be a hyperbolic $3$-manifold and let $\mathcal{K}$ be the union of cones in $H^1(M; \RR)$ whose lattice points correspond to fibrations over $S^1$.
- % There exists a strictly convex function $h: \mathcal{K} \to \RR$ satisfying the following properties.
- % \begin{enumerate}[(i)]
- % \item For all $c > 0$ and $u \in \mathcal{K}$, $h(cu) =  \frac{1}{c}h(u)$.
- % \item For every primitive lattice point $u \in \mathcal{K}$, $h(u) = \log(\lambda)$, where $\lambda$ is the
- %   stretch factor of the pseudo-Anosov map associated to this lattice point.
-  %\item $h(u)$ goes to $\infty$ as $u$ approaches $\partial \mathcal{K}$.
- % \end{enumerate}
-%\end{thm}
-%
-%\begin{thm}[Agol-Leininger-Margalit]
- % \label{thm:alm}
- % Let $\mathcal{K}$ be a fibered cone for a mapping torus $M$ and let $\overline{\mathcal{K}}$ be its closure in $H^1(M;\RR)$. If $u \in \mathcal{K}$ and $v \in \overline{\mathcal{K}}$, then $h(u+v) < h(u)$.
-%\end{thm}
-%
-%\begin{proof}[Proof of Theorems \ref{thm:fm} and \ref{thm:alm} for non-orientable $M$]
-%Consider the pullback of $H^1(M; \RR)$ to $H^1(\wt{M}; \RR)$, where $\wt{M}$ is the orientation double cover, and restrict the function $h$ to the image of the pullback.
-%It is easy to verify that the restriction satisfies all the listed properties as well.
-%\end{proof}
-%
-%
-%This answers the question we posed at the beginning of this subsection, and we use the results of this section in Section \ref{sec:application} to construct pseudo-Anosov maps with small stretch factors.

@@ -1,7 +1,7 @@
 \section{Thurston norm for non-orientable 3-manifolds}
 \label{sec:thur-norm-non-orientable}
 Thurston defined a norm on $H_2(M;\RR)$ where $M$ is an orientable 3-manifold \cite{thurston1986norm}, and this norm is now called the Thurston norm.  In his manuscript, Thurston wrote ``Most of this paper works also for non-orientable manifolds but for simplicity we only deal with the orientable case.''  However, the details are not explained in Thurston's work or in subsequent literature.  Therefore the goal of this section is to write the details of the Thurston norm for non-orientable 3-manifolds.
-We recall the Thurston norm for orientable manifolds in Section \ref{sec:backgr-thurst-norm} and then adapt it to the non-orientable setting.
+We recall the Thurston norm for orientable manifolds in Section \ref{sec:backgr-thurst-norm}.
 In Section \ref{sec:thurst-norm-cohom} we describe the challenge of defining the Thurston norm on $H_2(M;\RR)$ if $M$ is non-orientable and present the solution of defining the Thurston norm instead on $H^1(M;\RR)$.
 However, Poincar\'e duality does not hold for non-orientable manifolds.
 We therefore define a condition -- {\it relative orientability} -- on a pair consisting of a manifold and an embedded surface.
@@ -23,7 +23,7 @@ Finally in Section \ref{sec:oriented-sums}, we define the oriented sum for relat
 \label{sec:backgr-thurst-norm}
 In this section we recall the Thurston norm for orientable surfaces and how it detects when a 3-manifold fibers over a circle.
 
-\p{Mapping tori} Let $S$ be a surface, and let $\varphi: S \to S$ be a homeomorphism.  A {\it mapping torus} of $S$ by $\varphi$ is a $3$-manifold $M_\varphi$ given by the identification:
+\p{Mapping tori} Let $S$ be a surface, and let $\varphi: S \to S$ be a homeomorphism.  A {\it mapping torus} of $S$ by $\varphi$ is the $3$-manifold $M_\varphi$ given by the identification:
 \begin{align*}
   M_\varphi \coloneqq \frac{S \times [0,1]}{(x,1) \sim (\varphi(x), 0)}.
 \end{align*}
@@ -31,7 +31,7 @@ In this section we recall the Thurston norm for orientable surfaces and how it d
 A mapping torus is \emph{fibration over $S^1$}, denoted $S\rightarrow M_\varphi\rightarrow S^1$.
 A fibration defines a flow on $M$, called the \emph{suspension flow}, where for any $x_0\in S$ and $t_0\in S^1$ the pair $(x_0,t_0)$ is sent to $(x_0,t_0+t)$.
 The fiber of a fibration is the preimage of any point $\theta \in S^1$ under the projection map from $M_{\varphi} \to S^1$.
-If we do not specify $\theta$, the fiber as a subset of $M_\varphi$ is only well defined up to isotopy.   The homology class of the fiber in $H_2(M_{\varphi}; \RR)$ is well defined.
+If we do not specify $\theta$, the fiber as a subset of $M_\varphi$ is only well defined up to isotopy.   The homology class of the fiber in $H_2(M_{\varphi}; \RR)$ is well-defined.
 
 A natural inverse question is to determine when a 3-manifold fibers over a circle, and the possible fibers.  To this end, Thurston established a correspondence between second cohomology of 3-manifolds and surfaces embedded in 3-manifolds.
 
@@ -65,7 +65,7 @@ We use the restatement of Yazdi \cite{yazdi2018pseudo}.
 \end{enumerate}
 \end{thm}
 The class $[F]$ has orientation such that the positive flow direction is pointing outwards relative to the surface.
-An open face of the unit ball is said to be a \emph{fibered face} if the cone over the face contains the fibers of the corresponding fibration.
+An open face of the unit ball is said to be a \emph{fibered face} if the cone over the face contains the fibers of a fibration.
 %The takeaway from this theorem is to determine if a surface $S$ embedded in a $3$-manifold is homologous to the fiber of some fibration, it suffices to check whether the homology class $[S]$ lies in one of the open cones corresponding to the fibrations.
 
 The goal for the rest of this section is to prove a version of Theorem \ref{thm:Thur1} for compact non-orientable $3$-manifolds.
@@ -112,7 +112,7 @@ The choice of basepoint does not affect the homotopy class of $f_\alpha$
 (see Section 5.1 of \cite{calegari2007foliations} for the details).
 %One can recover the $1$-form $\alpha$ from the map $f_{\alpha}$ by pulling back the canonical length form on $S^1$ along $f_{\alpha}$.
 
-Now let $\theta \in S^1$ be a regular value so that $S = f^{-1}(\theta)$ is a surface.
+Now let $\theta \in S^1$ be a regular value so that $S = f^{-1}_{\alpha}(\theta)$ is a surface.
 To construct the associated element of $H_2(M;\ZZ)$, we choose an orientation on $S$ by assigning positive values of $\alpha$ to the outward pointing normal vectors on $S$.
 Then $S$ inherits an orientation from the orientation on $M$, and we have defined a
 fundamental class $[S]\in H_2(M;\ZZ)$.
@@ -239,12 +239,13 @@ In Section \ref{sec:weak-inverse-poinc}, we develop a (weak) version of Poincar\
 \subsection{Weak inverse to the Poincar\'e duality map}
 \label{sec:weak-inverse-poinc}
 
-Let $M$ be a 3-manifold and $[\alpha]$ an element of $H^1(M;\RR)$.  Regardless of whether $M$ is orientable or not, we can construct a dual map $f_\alpha:M\rightarrow S^1$, using equation \eqref{form:map}.
-The preimage of a regular value $\theta$ is an embedded surface $f_{\alpha}^{-1}(\theta)$ in $M$.
-If we assume that $M$ is orientable, Poincar\'e duality allows us to reverse this correspondence.  Indeed, let $S$ is an embedded surface in (the orientable manifold) $M$.  Poincar\'e duality determines a cohomology class in $H^1(M; \ZZ)$ corresponding to $S$.
-Now let $\alpha$ be a $1$-form representative of an element of $H^1(M;\RR)$ and let $\theta$ be a regular value of $f_{\alpha}$.  The surfaces $f_{\alpha}^{-1}(\theta)$ and $S$ are homologous.
-In this section, we state a weak version of Poincar\'e duality for non-orientable surfaces in Theorem \ref{thm:strong-duality}.  This version of Poincar\'e duality will allow us to associate 1-forms to a certain subset of surfaces embedded in non-orientable 3-manifolds.
-We will require that the embedded surfaces are \emph{relative oriented} in the (non-orientable) 3-manifold.
+%Let $M$ be a 3-manifold and $[\alpha]$ an element of $H^1(M;\RR)$.  Regardless of whether $M$ is orientable or not, we can construct a dual map $f_\alpha:M\rightarrow S^1$, using equation \eqref{form:map}.
+%The preimage of a regular value $\theta$ is an embedded surface $f_{\alpha}^{-1}(\theta)$ in $M$.
+%If we assume that $M$ is orientable, Poincar\'e duality allows us to reverse this correspondence.  Indeed, let $S$ is an embedded surface in (the orientable manifold) $M$.  Poincar\'e duality determines a cohomology class in $H^1(M; \ZZ)$ corresponding to $S$.
+%Now let $\alpha$ be a $1$-form representative of an element of $H^1(M;\RR)$ and let $\theta$ be a regular value of $f_{\alpha}$.  The surfaces $f_{\alpha}^{-1}(\theta)$ and $S$ are homologous.
+%In this section, we state a weak version of Poincar\'e duality for non-orientable surfaces in Theorem \ref{thm:strong-duality}.  This version of Poincar\'e duality will allow us to associate 1-forms to a certain subset of surfaces embedded in non-orientable 3-manifolds.
+%We will require that the embedded surfaces are \emph{relative oriented} in the (non-orientable) 3-manifold.
+We state and prove a weak version of Poincar\'e duality for {\it relative oriented} (non-orientable) surfaces embedded in 3-manifolds as Theorem \ref{thm:strong-duality}.
 
 \p{Relative oriented surfaces}
   Let $M$ be a $3$-manifold, and $S$ an embedded surface in $M$.
@@ -336,7 +337,7 @@ We will refer to the 1-form $\alpha$ given in Theorem~\ref{thm:strong-duality} a
   Then the Poincar\'e dual to $[\wt{\no}]$ is $\iota^{\ast}$-invariant.% where $\iota$ is the non-trivial deck transformation.
 \end{lem}
 \begin{proof}
-  The positive vector space on $\no$ that is transverse to its tangent plane in $N$ lifts to a relative orientation of $\wt{\no}$ in $\wt{N}$.
+  A positive vector field on $\no$ that is transverse to its tangent plane in $N$ lifts to a relative orientation of $\wt{\no}$ in $\wt{N}$.
   Since $\wt{\no}$ and $\wt{N}$ are orientable, the relative orientation of $\wt{\no}$ defines an orientation of $\wt{\no}$, and thus the homology class $[\wt{\no}]$ in $H_2(\wt{N};\RR)$ is well-defined.
 
   Next we show that $\iota$ reverses the orientation of $\wt{\no}$.  To do so, we first observe that because $\no$ is relatively oriented in $N$, the outward pointing transverse vector field on ${\no}$ must lift to an outward pointing transverse vector field on $\wt{\no}$.  In particular, for any outward pointing vector $\wt{v}$ on $\no$, the vector $\iota(\wt{v})$ is also outward pointing.%Therefore $\iota$ preserves outward pointing vector fields on $\wt{\no}$.\becca[inline]{This statement doesn't follow.  What is true is that $iota$ preserves outward pointing vector fields that are lifts of vector fields of $\no$.  This is all we need, but its awkward to say.}
@@ -369,7 +370,7 @@ We will refer to the 1-form $\alpha$ given in Theorem~\ref{thm:strong-duality} a
 \end{proof}
 
 As above, we will denote the Poincar\'e dual to $[\wt{\no}]$ by $[\wt{\alpha}]$.  The class $[\wt{\alpha}]$ is an $\iota^{\ast}$-invariant element of $H^1(\wt{N}; \ZZ)$, but it is not clear that $[\wt{\alpha}]$ is the pullback of an element of $H^1(N; \ZZ)$ under $p$.
-In the next lemma, we show that is indeed the case, i.e. $[\wt{\alpha}]$ is the pullback of an element in $H^1(N; \ZZ)$.
+In the next lemma, we show that is indeed the case.%, i.e. $[\wt{\alpha}]$ is the pullback of an element in $H^1(N; \ZZ)$.
 \begin{lem}
   \label{lem:PD2}
   % Let $N$ be a non-orientable 3-manifold and let $\wt{N}$ and the map $p:\wt{N}\to N$ be its orientation double cover.
@@ -378,7 +379,7 @@ Let $N$ be a non-orientable 3-manifold.  Let $[\wt{\alpha}]\in H^1(\wt{N}, Z)$ a
 \begin{proof}
  % To show that $[\wt{\alpha}]$ is the pullback of an element in $H^1(N; \ZZ)$, let $\gamma$ be a curve it $N$.
  It will suffice to show that for any simple closed curve $\gamma$ in $N$, the integral of $\wt{\alpha}$ along any path lift of $\gamma$ is an integer.  Let $x_0\in N$ be a base point of $\gamma$.  Note that $\gamma$ has two (path) lifts $\wt{\gamma}_1,\wt{\gamma}_2$ under $p$ in $\wt{N}$, one based at each element of $p^{-1}(x_0)$.  Either $\wt{\gamma}_1,\wt{\gamma}_2$ are both simple closed curves based at the each of the two preimages $p^{-1}(x_0)$ or $\wt{\gamma}_1,\wt{\gamma}_2$ are both arcs between the two points of $p^{-1}(x_0)$.
-  If each lift $\wt{\gamma}_1,\wt{\gamma}_2$ of $\gamma$ is a closed curve in $\wt{N}$, the integral $\displaystyle\int_{\wt{\gamma}_i}\wt{\alpha}$ will be an integer since $[\wt{\alpha}] \in H^1(\wt{N}; \ZZ)$.
+  If each lift $\wt{\gamma}_1,\wt{\gamma}_2$ of $\gamma$ is a closed curve in $\wt{N}$, the integral $\displaystyle\int_{\wt{\gamma}_i}\wt{\alpha}$ will be an integer since $[\wt{\alpha}] \in H^1(\wt{N}; \ZZ)$ for $i=1,2$.
 
  If each lift $\wt{\gamma}_1,\wt{\gamma}_2$ of $\gamma$ is an arc between the two preimages of $p^{-1}(x_0)$, we consider the simple closed curve $\wt{\gamma}=\wt{\gamma}_1\cup\wt{\gamma}_2$.  We note that $\iota(\wt{\gamma})=\wt{\gamma}$.
  % Let $\delta$ be such an arc, starting at a point $x_0 \in \wt{N}$.
@@ -398,7 +399,7 @@ Let $N$ be a non-orientable 3-manifold.  Let $[\wt{\alpha}]\in H^1(\wt{N}, Z)$ a
 The last lemma we need is the claim that lifts of incompressible surfaces are incompressible.
 \begin{lem}
   \label{lem:lift-of-incompressible}
-  Let $N$ be a non-orientable 3-manifold.  If $\no$ is a relatively oriented incompressible surface in $N$, then $\wt{\no}=p^{-1}(\no)$ is also incompressible in $\wt{N}$.
+  Let $N$ be a non-orientable 3-manifold.  If $\no$ is a relatively oriented incompressible surface in $N$, then $\wt{\no}=p^{-1}(\no)$ is incompressible in $\wt{N}$.
 \end{lem}
 \begin{proof}
   Because $\no$ is incompressible in $N$, the map on fundamental groups induced by inclusion $\no\rightarrow N$ is injective.
@@ -420,7 +421,7 @@ We define the map $f_\alpha:N\rightarrow S^1$ according to equation (\ref{form:m
 The map $f_{\alpha} \circ p$ is a lift of $f_{\alpha}$ to $\wt{N}$ under $p$, and is therefore also a fibration.
   By Lemma \ref{lem:lift-of-incompressible}, $\wt{\no}$ is incompressible.
 It follows from the orientable version of Poincar\'e duality that $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1}(\theta))$ are homologous surfaces in $\wt{N}$.    Theorem \ref{thm:Thur2} then tells us $\wt{\no}$ must be isotopic to a fiber of $f_{\alpha} \circ p$.
-  The restriction of $p$ to the homeomorphic surfaces $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ determines two equivalent 2-fold covering maps  $p^{-1}(f^{-1}_{\alpha}(\theta))\rightarrow f^{-1}_\alpha(\theta)$.  Therefore the image surfaces $\no$ and $f_{\alpha}^{-1}(\theta)$ must also be homeomorphic.
+  The restriction of $p$ to the homeomorphic surfaces $\wt{\no}$ and $p^{-1}(f_{\alpha}^{-1})(\theta)$ determines two equivalent 2-fold covering maps $\wt{\no}\rightarrow \no$ and  $p^{-1}(f^{-1}_{\alpha}(\theta))\rightarrow f^{-1}_\alpha(\theta)$.  Therefore the image surfaces $\no$ and $f_{\alpha}^{-1}(\theta)$ must also be homeomorphic.
 \end{proof}
 
 % We will now strengthen the conclusion of Theorem \ref{thm:Poincare-duality} to get a more concrete relationship between $\no$ and $f_{\alpha}^{-1}(\theta)$.
@@ -504,7 +505,7 @@ The oriented sum of two embedded surfaces in $M$ is additive in both the Euler c
 This operation is well-known in the case of orientable $3$-manifolds (along with orientable embedded surfaces), but we will sketch the relevant details.
 We then extend the construction to relatively oriented embedded surfaces.
 
-\paragraph{Oriented sum for oriented manifolds}
+\p{Oriented sum for oriented manifolds}
 Let $M$ be an orientable manifold.
 Let $S$ and $S'$ be orientable embedded surfaces in $M$.
 Assume that $S$ and $S'$ intersect transversally.
@@ -535,16 +536,14 @@ The operation of taking oriented sums is additive on Euler characteristic, as we
   [S''] &= [S] + [S'].
 \end{align*}
 
-\paragraph{Oriented sum for non-orientable manifolds}
-
-Let $N$ be a non-orientable manifold and let $\no$ and $\no'$ be embedded surfaces in $N$ that are relatively oriented.
+\p{Oriented sum for non-orientable manifolds} Let $N$ be a non-orientable 3-manifold and let $\no$ and $\no'$ be embedded surfaces in $N$ that are relatively oriented.
 We define the oriented sum on $\no$ and $\no'$ as follows.
 As above, let $p:\wt{N}\rightarrow N$ be the orientation double cover and let $\iota$ be the orientation reversing deck transformation of $\wt{N}$.
 Let $\wt{\no}=p^{-1}(\no)$ and $\wt{\no}'=p^{-1}(\no')$, which are embedded oriented surfaces in $\wt{N}$.
-The oriented sum of $\no$ and $\no'$ is the image under $p$ of the oriented sum of $\wt{\no}$ and $\wt{\no}'$ (as defined above for oriented surfaces in oriented manifolds).
+The oriented sum of $\no$ and $\no'$ is the image under $p$ of the oriented sum of $\wt{\no}$ and $\wt{\no}'$. %(as defined above for oriented surfaces in oriented manifolds).
 %We need to show that this operation is well-defined.
 
-To see that the operation is well defined, we recall that $\iota$ preserves the relative orientation of $\wt{\no}$ and $\wt{\no}'$.  Therefore $\iota$ leaves the outward normal vector fields on $\wt{\no}$ and $\wt{\no}'$ invariant (see the proof of Lemma \ref{lem:PD1}).
+To see that the operation is well-defined, we recall that $\iota$ preserves the relative orientation of $\wt{\no}$ and $\wt{\no}'$.  Therefore $\iota$ leaves the outward normal vector fields on $\wt{\no}$ and $\wt{\no}'$ invariant (see the proof of Lemma \ref{lem:PD1}).
 Thus a leaf $L$ of $\wt{\no}$ is surgered with a leaf of $L'$ of $\wt{\no}'$ if and only if $\iota(L)$ and $\iota(L')$ are surgered.
 Therefore surgery factors through $p$ and $[\no]+[\no']$ is well-defined for non-orientable surfaces.
 
