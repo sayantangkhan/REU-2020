@@ -19,21 +19,21 @@ Let $\no_{g,n}$ be a non-orientable surface of genus $g$ with $n$ punctures, and
 
 
 Observe that the lower bound for the non-orientable case follows easily from the lower bound for the orientable case.
-Indeed, let $\varphi$ be a pseudo-Anosov map with the minimal stretch factor on $\no_{g,n}$. The orientation double cover of $\no_{g,n}$ is $\os_{G-1,2n}$ where $G=2g$.  Note that in the non-orientable case we measure genus as the number of copies of the projective plane attached to $S^2$ via a connect sum and in the orientable case we measure genus as the number of copies of the torus attached to $S^2$ via a connected sum. Let $\wt{\varphi}:\os_{G-1, 2n}\to\os_{G-1,2n}$ be the orientation preserving lift of $\varphi$.
+Indeed, let $\varphi$ be a pseudo-Anosov map with the minimal stretch factor on $\no_{g,n}$. The orientation double cover of $\no_{g,n}$ is $\os_{G,2n}$, where $G = g-1$.  Note that in the non-orientable case we measure genus as the number of copies of the projective plane attached to $S^2$ via a connect sum and in the orientable case we measure genus as the number of copies of the torus attached to $S^2$ via a connected sum. Let $\wt{\varphi}:\os_{G, 2n}\to\os_{G,2n}$ be the orientation preserving lift of $\varphi$.
 By Proposition \ref{prop:2}, $\wt{\varphi}$ has the same
-stretch factor as $\varphi$. The former is bounded below by $\frac{B_1}{G-1}$, and thus the stretch factor of $\varphi$ is bounded
+stretch factor as $\varphi$. The logarithm of the former is bounded below by $\frac{B_1}{G}$ (where $B_1$ is given by Yazdi \cite{yazdi2018pseudo}), and thus the stretch factor of $\varphi$ is bounded
 below as well. The more challenging part of the proof is showing that the upper bound holds. 
 
-We will closely follow Yazdi's construction, which proceeds in five steps that we will reorder for clarity.  In steps 1 and 2, we construct a family of psuedo-Anosov homeomorphisms
-of $\no_{g_i,n}$, where $\{g_i\}$ is an unbounded increasing sequence. However the sequence $\{g_i\}$ does not contain all natural numbers.  In step 3 we gives an upper bound to the stretch factor of the previously constructed homeomorphisms. In steps 4 and 5, we construct pseudo-Anosov maps on surfaces of genera that do not belong to the sequence $\{g_i\}$. It is in steps 4 and 5 that we uses
+We will closely follow Yazdi's construction, which proceeds in five steps, though we will reorder them for clarity.  In steps 1 and 2, we construct a family of psuedo-Anosov homeomorphisms
+of $\no_{g_i,n}$, where $\{g_i\}$ is an unbounded increasing sequence. However the sequence $\{g_i\}$ does not contain all natural numbers.  In step 3 we give an upper bound to the stretch factor of the previously constructed homeomorphisms. In steps 4 and 5, we construct pseudo-Anosov maps on surfaces of genera that do not belong to the sequence $\{g_i\}$. It is in steps 4 and 5 that we uses
 Thurston's fibered face theory. We have adapted  each of Yazdi's five steps to work for non-orientable surfaces.
 
 \p{Step 1: Constructing the surfaces}
 
 
 We begin by defining a family of surfaces $P_{n,k}$. Let $S$ be an orientable surface of genus 5 with 3
-boundary components.  Call the boundary components $c,d$ and $e$. Choose an orientation of $S$ and let $c,d$ and $e$ inherit the induced orientations. We obtain a non-orientable surface $T$ from $S$ by adding two cross caps to $S$ (retaining the orientation of the boundary components of $S$). Let $p$ and $q$ be marked points in the boundary component $e$. In Step 5 we will remove $p$ and all copies.  Let  $r$ and
-$s$ be the components of $e\setminus\{p,q\}$. The resulting surface $T$ is shown in \autoref{fig:buildingblock}.
+boundary components.  Call the boundary components $c,d$ and $e$. Choose an orientation of $S$ and let $c,d$ and $e$ inherit the induced orientations. Let $p$ and $q$ be marked points in the boundary component $e$. In Step 5 we will remove $p$ and all its copies.  Let  $r$ and
+$s$ be the components of $e\setminus\{p,q\}$. We obtain a non-orientable surface $T$ from $S$ by adding two cross caps to $S$ (retaining the orientation of the boundary components of $S$).  The resulting surface $T$ is shown in \autoref{fig:buildingblock}.
 
 \begin{figure}[ht]
     \centering
@@ -48,9 +48,8 @@ Let $T_{i,j}$ be copies of the surface $T$, where $i,j \in \mathbb{Z}$. Let $c_{
 \end{align*}
 for all integers $i$ and $j$. The gluing $\sim$ is given by orientation-reversing identifications:
 \begin{align}
-\label{identification}
-  c_{i,j} &\sim d_{i+1,j} \\
-  r_{i,j} &\sim s_{i,j+1}.
+  c_{i,j} &\sim d_{i+1,j} \label{identification1}\\
+  r_{i,j} &\sim s_{i,j+1}.\label{identification2}
 \end{align}
 
 We have two
@@ -79,7 +78,7 @@ Let
   \begin{align*}
     U = \left. \left( \bigcup_{j =0}^{k-1} T_{0,j} \right)\right/\sim'
   \end{align*}
-  where $\sim'$ is given by (\ref{identification}) and by identifying $r_{i,k-1}$ and $s_{i,0}$.
+  where $\sim'$ is given by (\ref{identification1}) and (\ref{identification2}) and by identifying $r_{i,k-1}$ and $s_{i,0}$.
   Then $U$ is a compact, non-orientable surface of genus $12k$ with $2k$ boundary components. 
   The surface $P_{n,k}$ consists of $n$ copies of $U$ identified along the $2k$ boundary components.  Therefore the Euler characteristic of $P_{n,k}$ is:
   \begin{align*}
@@ -88,10 +87,9 @@ Let
                   &= -n(14k - 2).
   \end{align*}
   Since $P_{n,k}$ is a non-orientable surface with empty boundary, we have that:
-  \begin{align*}
-    g_{n,k} = n(14k-2) + 2.
-%    \vspace{-30pt}
-  \end{align*}
+  \begin{equation*}
+    g_{n,k} = n(14k-2) + 2. \qedhere
+  \end{equation*}
 \end{proof}
 
 \p{Step 2: Constructing the maps}
@@ -102,8 +100,8 @@ In what is now a classical paper, Penner gives a construction of pseudo-Anosov h
  \p{Inconsistent markings} Let $\no$ be a non-orientable surface and let $c$ be a two-sided curve in $\no$.  There exists a neighborhood of $c$ that is homeomorphic to an annulus.  Let $\mathcal{A}_c$ be an annulus and let $\zeta_c: \mathcal{A}_c \xrightarrow{} \no$ be the homeomorphism that maps to a neighborhood of $c$.  The homeomorphism $\zeta_c$ is called a \textit{marking} of $c$. A pair consisting of a curve $c$ and $\zeta_c$ is called a {\it marked curve}.
  If we fix an
 orientation of $\mathcal{A}_c$, then we can pushforward this orientation to $\no$. Let
-$(c,\zeta_c)$ and let $(d,\zeta_d)$ be two marked curves that intersect at one point $p$.  We say that $(c,\zeta_c)$ and $(d,\zeta_d)$ are {\it marked inconsistently} if the
-pushforward of the orientation of $\mathcal{A}_c$ and disagrees with the pushforward of the orientation of $\mathcal{A}_d$ in a neighborhood of $p$.  We emphasize that we can also say that two disjoint curves are inconsistently marked.
+$(c,\zeta_c)$ and $(d,\zeta_d)$ be two marked curves that intersect at one point $p$.  We say that $(c,\zeta_c)$ and $(d,\zeta_d)$ are {\it marked inconsistently} if the
+pushforward of the orientation of $\mathcal{A}_c$ disagrees with the pushforward of the orientation of $\mathcal{A}_d$ in a neighborhood of $p$.  We emphasize that we can also say that two disjoint curves are inconsistently marked.
 
 \p{Dehn twists} We define the Dehn twist $\phi_{c,\zeta_c}(x)$ around a marked curve $(c,\zeta_c)$ as:
 \begin{align*}
@@ -199,9 +197,9 @@ Then the spectral radius of $A^{\ell-1}$ is at most $4D^4$.
 \noindent With this result in hand, we can find an upper bound for the stretch factor of $f_{n,k}$
 
 \begin{lem}\label{lem:upperbound}
-  Let $\lambda_{n,k}$ be the stretch factor of $f_{n,k}$. Then there exists a universal positive constant $C'$ such that for every $n \geq 1$ and $k \geq 3$, we have the following upper bound on $\log(\lambda_{n,k})$.
+  Let $\lambda_{n,k}$ be the stretch factor of $f_{n,k}$. Then there exists a universal positive constant $C'$ such that for every $n \geq 1$ and $k \geq 3$, we have the following upper bound:
   \begin{align*}
-   \log(\lambda_{n,k}) \leq C'\frac{n}{g_{n,k}}
+   \log(\lambda_{n,k}) \leq C'\frac{n}{g_{n,k}}.
   \end{align*}
 \end{lem}
 
@@ -223,9 +221,8 @@ Furthermore, $f_{n,k}$ acts linearly on this cone, and leaves the cone invariant
 Consider now the transverse measure $\mu_{\delta}$ for any curve $\delta$ in $\widehat{\mathcal{A}}$.
 This transverse measure is carried by $\tau$, and thus $\mu_{\delta}$ belongs in the cone of measures $V_{\tau}$.
 Let $H$ be the subspace spanned by $\{\mu_\delta \mid \delta\subset\widehat{\mathcal{A}}\}$.
-This linear subspace is also left invariant by $f_{n,k}$, so we can restrict our attention to the matrix of $f_{n,k}$ with respect to the basis
-given by the $\{\mu_\delta \mid \delta\subset\widehat{\mathcal{A}}\}$. Let $M$
-be the matrix representing this linear action on $H$.  Let $\Gamma$ be the adjacency graph for $M$. Work of Penner \cite{penner1988construction} tells us that the Perron--Frobenius eigenvalue of $M$ is the stretch factor of $f_{n,k}$.
+This linear subspace is also left invariant by $f_{n,k}$.  Let $M$
+be the matrix representing the linear action of $f_{n,k}$ on $H$ with respect to the basis $\{\mu_\delta \mid \delta\subset\widehat{\mathcal{A}}\}$.  Let $\Gamma$ be the adjacency graph for $M$. Work of Penner \cite{penner1988construction} tells us that the Perron--Frobenius eigenvalue of $M$ is the stretch factor of $f_{n,k}$.
 
 
 To bound the spectral radius of $M$, we need to show that $\Gamma$ satisfies
@@ -234,16 +231,15 @@ the criteria of Lemma \ref{lem:spectral}.
 
 
 \begin{enumerate}[(i)]
-\item There exists a constant $D'$, independent of $n$ and
-  $k$, such that for every curve $\delta \in \widehat{\mathcal{A}}$, the geometric
-  intersection number between $\delta$ and every curve in $\overline{\mathcal{A}}$ is at most $D'$. %Recall from \autoref{sec:backgr-mapp-class} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of transverse measures on our invariant train track corresponding to connected curves in $\widehat{\mathcal{A}}$ as $M$.
+\item There exists a constant $D'$, independent of $n$ and $k$, such that for every curve $\delta \in \widehat{\mathcal{A}}$, the geometric
+  intersection number between $\delta$ and every curve in $\overline{\mathcal{A}}$ is at most $D'$.  %Recall from \autoref{sec:backgr-mapp-class} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of transverse measures on our invariant train track corresponding to connected curves in $\widehat{\mathcal{A}}$ as $M$.
   Recall that $f_{n,k}=\rho_2\circ\Phi\circ\Phi_b\circ\Phi_r$.  Let $M_1,M_2,M_3$ and $M_4$ be the matrices describing the linear action of $\Phi_r,\,\Phi_b,\,\Phi$ and $\rho_2$ on $H$, respectively. The matrix
   $M$ can then be written as a product:
   \begin{align*}
     M = M_4M_3M_2M_1.
   \end{align*}
   For a curve $\delta \in \widehat{\mathcal{A}}$, the $L^1$-norm of $M_i(\mu_\delta)$ is bounded above by the geometric intersection of
-  $f_{n,k}(\delta)$ with the curves in $\overline{\mathcal{A}}$.  Thus each of $M_1$, $M_2$ and $M_3$ will change the norm by
+  $f_{n,k}(\delta)$ with the curves in $\overline{\mathcal{A}}$.  Thus each of $M_1$, $M_2$, and $M_3$ will change the norm by
   a factor of at most $(1 + D')$. Since $\rho_2$ will not change intersection numbers, $M_4$ will preserve the
   $L^1$-norm. If we let $D = (1 + D')^3$, then the outward degree of each vertex in $\Gamma$ is at most $D$.
 
@@ -254,8 +250,8 @@ $3 \leq i \leq k$ as the vertices of $\Gamma$ corresponding to elements in
 $\rho_2^{i-2}(\overline{\mathcal{A}})$.
 \item Suppose that $v \in V_i$ for $i \neq 1,3$, is a vertex
   that corresponds to $\mu_\delta$ for a curve $\delta \in \widehat{\mathcal{A}}$.  % Then $\delta$ must be a curve in $\rho_2^{i-2}(\overline{\mathcal{A}})$, for $i \neq 1,3$.
-  Then $\delta$ is disjoint from all curves in $\overline{\mathcal{A}}$.  The action of $\Phi\circ\Phi_b\circ\Phi_r$ on $\widehat{\mathcal{A}}$ will preserve the set $\rho_2^{(i-2)\mod k}(\overline{\mathcal{A}})$ (and therefore $\delta$) for each $i\neq 1,3$.  %Therefore the action of $\phi\circ\phi_b\circ\phi_r$ on $H$ will send $\mu_\gamma$ to a sum of $\mu_\eta$ where $\eta$ corresponds to elements of $V_i$.
-  Then $\rho_2$ will rotate the curve $\Phi\circ \Phi_b\circ\Phi_r(\delta)$ to $\rho_2^{(i-1)\mod k}(\overline{\mathcal{A}})$. That is: $f_{n,k}=\rho_2\circ\Phi\circ\Phi_b\circ\Phi_r$ maps $\mu_\delta\in H$ to $$\sum_{\zeta\in \mathcal{Z}}\mu_\zeta$$ where $\mathcal{Z}$ is a subset of $\rho_2^{(i-1)\mod k}(\overline{\mathcal{A}})$.  Therefore $f_{n,k}$ maps $v$ to a subset of $V_{i+1}$.
+  Then $\delta$ is disjoint from all curves in $\overline{\mathcal{A}}$.  The action of $\Phi\circ\Phi_b\circ\Phi_r$ on $\widehat{\mathcal{A}}$ will preserve the set $\rho_2^{(i-2)\mod k}(\overline{\mathcal{A}})$ for each $i\neq 1,3$.  In particular, $\{\mu_\delta \mid \delta\subset\widehat{\mathcal{A}}\}$ will also be in $\rho_2^{(i-2)\mod k}(\overline{\mathcal{A}})$.  %Therefore the action of $\phi\circ\phi_b\circ\phi_r$ on $H$ will send $\mu_\gamma$ to a sum of $\mu_\eta$ where $\eta$ corresponds to elements of $V_i$.
+  Then $\rho_2$ will rotate the curve $\Phi\circ \Phi_b\circ\Phi_r(\delta)$ into the set $\rho_2^{(i-1)\mod k}(\overline{\mathcal{A}})$. That is: $f_{n,k}=\rho_2\circ\Phi\circ\Phi_b\circ\Phi_r$ maps $\mu_\delta\in H$ to $$\sum_{\zeta\in \mathcal{Z}}\mu_\zeta$$ where $\mathcal{Z}$ is a subset of $\rho_2^{(i-1)\mod k}(\overline{\mathcal{A}})$.  Therefore $f_{n,k}$ maps $v$ to a subset of $V_{i+1}$.
 \item To verify the third condition, we first look at the vertices $v \in V_1$ such that $v^+ \not\subset V_2$. Such vertices will correspond to the curves in $\rho_2^{-1}(\overline{\mathcal{A}})$ that $\Phi\circ\Phi_b\circ\Phi_r$ maps to curves that are not in $\rho_2(\overline{\mathcal{A}})$.  Because $\rho_1$ and $\rho_2$ commute, we can write the curves of $\rho_2^{-1}(\overline{\mathcal{A}})$ as:
     $$\rho_2^{-1}(\overline{\mathcal{A}})=\rho_2^{-1}(\mathcal{A})\cup\rho_1(\rho_2^{-1}(\mathcal{A}))\cup\cdots\cup\rho_1^{n-1}(\rho_2^{-1}(\mathcal{A})).$$  The elements of $v^+$ that are not in $V_2$ correspond to the images of curves in $\rho_2^{-1}(\overline{\mathcal{A}})$ under $f_{n,k}$ that are not in $\overline{\mathcal{A}}$.
 As in Yazdi, the only curves in $\rho_2^{-1}(\overline{\mathcal{A}})$ that intersect curves in $\overline{\mathcal{A}}$ are those in the set:
@@ -330,7 +326,7 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
   It follows that for all $1\leq i\leq k$, the curve $f_{n,k}^i(\gamma)$ is $\rho_2^i(\widehat{\gamma})$.
   For $1\leq i\leq k$, let $A_i$ be an annulus in $M_{n,k}$ that connects $f_{n,k}^{i-1}(\gamma)$ to $f_{n,k}^i(\gamma)$ obtained by following the suspension
   flow of $f_{n,k}$ around $M_{n,k}$. Let $A$ be the union of all of the $A_i$, which is also an annulus.  We can now construct the embedded surface $F_{n,k}$ by taking the union of
-  $A$ and $\widehat{F}$. The union of $\widehat{F}$ with $A$ has empty boundary, so $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
+  $A$ and $\widehat{F}$. The union of $\widehat{F}$ with $A$ has empty boundary and Euler characteristic 0, so $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
 
  % The resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, so we have
  % relative orientability by Proposition \ref{prop:relative-orientability}.
@@ -373,7 +369,7 @@ Let $\pi:M_{n,k}\rightarrow S^1$ be the projection map and let $t_0$ be such tha
 
 \p{Step 5: Filling in the Gaps}
 Recall that the family of surfaces $P_{n,k}$ that we have constructed have genera in the set $\{(14k-2)n+2\}$.
-We now want to construct surfaces of genera not in the set $\{(14k-2)n+2\}$ and pseudo-Anosov homeomorphisms of those surfaces that have small stretch factors.  To do this we use the mapping torus $M_{n,k}= (P_{n,k},f_{n,k})$. Recall from Proposition \ref{lem:genus3} that there exists a relatively incompressible surface $F_{n,k}$ in $M_{n,k}$ that is homeomorphic to $\no_3$.  Let $P_{n,k}^r$ be the oriented sum of $P_{n,k}$ and
+We now want to construct surfaces of genera not in the set $\{(14k-2)n+2\}$ and pseudo-Anosov homeomorphisms of those surfaces that have small stretch factors.  To do this we use the mapping torus $M_{n,k}$ of $P_{n,k}$ by $f_{n,k}:P_{n,k}\to P_{n,k}$. By Proposition \ref{lem:genus3}, there exists a relatively incompressible surface $F_{n,k}$ in $M_{n,k}$ that is homeomorphic to $\no_3$.  Let $P_{n,k}^r$ be the oriented sum of $P_{n,k}$ and
 $rF_{n,k}$, as defined in Proposition $\ref{thm:oriented-sum}$.  The surfaces $P_{n,k}^r$ will be surfaces of the remaining genera.
 
 \begin{lem}
@@ -392,7 +388,7 @@ $rF_{n,k}$, as defined in Proposition $\ref{thm:oriented-sum}$.  The surfaces $P
   \end{align*}
   Since $P_{n,k}^r$ has no boundary or punctures, we have that the genus of $P_{n,k}^r$ is $g_{n,k}+r$.
 
-  By Lemma \ref{lem:genus3} we know that $F_{n,k}$ is incompressible and transverse to the suspension flow of given by $f_{n,k}$.  Therefore by Proposition \ref{prop:asymptotic}, there is a pseudo-Anosov homeomorphism of $P_{n,k}^r=P_{n,k}+rF_{n,k}$.
+  By Lemma \ref{lem:genus3} we know that $F_{n,k}$ is incompressible and transverse to the suspension flow given by $f_{n,k}$.  Therefore by Proposition \ref{prop:asymptotic}, there is a pseudo-Anosov homeomorphism $f_{n,k}^r$ of $P_{n,k}^r=P_{n,k}+rF_{n,k}$.
   
 
  As in Yazdi \cite[Lemma 3.5]{yazdibounds}, $f_{n,k}$ fixes the $2n$ singularities of the stable foliation that are the intersection points of the axis of $\rho_1$ with
@@ -421,7 +417,7 @@ Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r:P_{n,k}^r\rightarrow P
   \begin{align*}
     h([\omega]) &< h([\alpha]) &&\text{(Convexity of $h$)}\\
                 &\leq C'\frac{n}{g_{n,k}} &&\text{(Lemma \ref{lem:upperbound})}\\
-                &\leq 2C'\frac{n}{g^r_{n,k}}&&\text{(upper bound for $g_{n,k}^r$)}.
+                &\leq 2C'\frac{n}{g^r_{n,k}}&&\text{(upper bound for $g_{n,k}^r$)}.\qedhere
   \end{align*}
 \end{proof}
 
