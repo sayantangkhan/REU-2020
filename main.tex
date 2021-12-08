@@ -26,13 +26,13 @@
 \newtheorem*{unthm}{Theorem}
 
 \newtheorem{lem}[thm]{Lemma}
-% \newcommand{\lemautorefname}{Lemma}
-
 \newtheorem{claim}[thm]{Claim}
 \newtheorem{prop}[thm]{Proposition}
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{conj}[thm]{Conjecture}
 
+\theoremstyle{definition}
+\newtheorem{question}[thm]{Question}
 
 \theoremstyle{definition}
 \newtheorem{example}[thm]{Example}
@@ -40,15 +40,13 @@
 \theoremstyle{definition}
 \newtheorem{fact}[thm]{Fact}
 
-\theoremstyle{definition}
-\newtheorem*{question}{Question}
-
 \theoremstyle{remark}
 \newtheorem*{rem}{Remark}
 
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
 
+\theoremstyle{thm}
 \newtheorem{manualtheoreminner}{Theorem}
 \newenvironment{manualtheorem}[1]{%
   \renewcommand\themanualtheoreminner{#1}%
@@ -57,8 +55,6 @@
 
 \usepackage[top=2cm, bottom=2cm, inner=2cm, outer=2cm]{geometry}
 
-% \usepackage{gentium}
-% \usepackage[euler-digits,small]{eulervm}
 \usepackage{enumerate}
 \usepackage{xcolor}
 
@@ -67,7 +63,21 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 
+% Making paragraphs bolder
+\makeatletter
+\def\paragraph{\@startsection{paragraph}{4}%
+  \z@\z@{-\fontdimen2\font}%
+  {\normalfont\bfseries}}
+\makeatother
 
+% Spacing for paragraph
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{2ex \@plus 1ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
 
 \newcommand*{\incfig}[2][1]{%
     \def\svgscale{#1}
@@ -89,7 +99,7 @@
 \author{Sayantan Khan}
 \address{Department of Mathematics, University of Michigan, 530 Church Street, Ann Arbor, MI 48109}
 \email{saykhan@umich.edu}
-\urladdr{\url{http://www-personal.umich.edu/~saykhan/}}
+\urladdr{\url{https://www-personal.umich.edu/~saykhan/}}
 
 \author{Caleb Partin}
 \address{Department of Mathematics, Georgia Institute of Technology, 686 Cherry Street, Atlanta, GA 30332}
@@ -116,15 +126,11 @@
 \maketitle
 
 \input{abstract}
-%\tableofcontents
-
-
 
 \input{introduction}
 \input{thurston-norm}
 \input{small-mapping-classes}
 \input{yazdiapplication}
-% \input{notation}
 
 \bibliographystyle{plain}
 \bibliography{references}

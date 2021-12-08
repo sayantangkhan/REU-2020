@@ -14,22 +14,17 @@ Let $\no_{g,n}$ be a non-orientable surface of genus $g$ with $n$ punctures, and
   \end{align*}
 \end{manualtheorem}
 
-
-
-
-
 Observe that the lower bound for the non-orientable case follows easily from the lower bound for the orientable case.
 Indeed, let $\varphi$ be a pseudo-Anosov map with the minimal stretch factor on $\no_{g,n}$. The orientation double cover of $\no_{g,n}$ is $\os_{G,2n}$, where $G = g-1$.  Note that in the non-orientable case we measure genus as the number of copies of the projective plane attached to $S^2$ via a connect sum and in the orientable case we measure genus as the number of copies of the torus attached to $S^2$ via a connected sum. Let $\wt{\varphi}:\os_{G, 2n}\to\os_{G,2n}$ be the orientation preserving lift of $\varphi$.
 By Proposition \ref{prop:2}, $\wt{\varphi}$ has the same
 stretch factor as $\varphi$. The logarithm of the former is bounded below by $\frac{B_1}{G}$ (where $B_1$ is given by Yazdi \cite{yazdi2018pseudo}), and thus the stretch factor of $\varphi$ is bounded
-below as well. The more challenging part of the proof is showing that the upper bound holds. 
+below as well. The more challenging part of the proof is showing that the upper bound holds.
 
 We will closely follow Yazdi's construction, which proceeds in five steps, though we will reorder them for clarity.  In steps 1 and 2, we construct a family of psuedo-Anosov homeomorphisms
 of $\no_{g_i,n}$, where $\{g_i\}$ is an unbounded increasing sequence. However the sequence $\{g_i\}$ does not contain all natural numbers.  In step 3 we give an upper bound to the stretch factor of the previously constructed homeomorphisms. In steps 4 and 5, we construct pseudo-Anosov maps on surfaces of genera that do not belong to the sequence $\{g_i\}$. It is in steps 4 and 5 that we uses
 Thurston's fibered face theory. We have adapted  each of Yazdi's five steps to work for non-orientable surfaces.
 
-\p{Step 1: Constructing the surfaces}
-
+\subsection*{Step 1: Constructing the surfaces}
 
 We begin by defining a family of surfaces $P_{n,k}$. Let $S$ be an orientable surface of genus 5 with 3
 boundary components.  Call the boundary components $c,d$ and $e$. Choose an orientation of $S$ and let $c,d$ and $e$ inherit the induced orientations. Let $p$ and $q$ be marked points in the boundary component $e$. In Step 5 we will remove $p$ and all its copies.  Let  $r$ and
@@ -79,7 +74,7 @@ Let
     U = \left. \left( \bigcup_{j =0}^{k-1} T_{0,j} \right)\right/\sim'
   \end{align*}
   where $\sim'$ is given by (\ref{identification1}) and (\ref{identification2}) and by identifying $r_{i,k-1}$ and $s_{i,0}$.
-  Then $U$ is a compact, non-orientable surface of genus $12k$ with $2k$ boundary components. 
+  Then $U$ is a compact, non-orientable surface of genus $12k$ with $2k$ boundary components.
   The surface $P_{n,k}$ consists of $n$ copies of $U$ identified along the $2k$ boundary components.  Therefore the Euler characteristic of $P_{n,k}$ is:
   \begin{align*}
     \chi(P_{n,k}) &= n \cdot \chi(U)\\
@@ -92,18 +87,18 @@ Let
   \end{equation*}
 \end{proof}
 
-\p{Step 2: Constructing the maps}
+\subsection*{Step 2: Constructing the maps}
 In what is now a classical paper, Penner gives a construction of pseudo-Anosov homeomorphisms on both orientable and non-orientable surfaces \cite{penner1988construction}.  Below we outline the Penner construction for non-orientable surfaces following the details of Liechti--Strenner \cite[Section 2]{LS}.
 
 
 
- \p{Inconsistent markings} Let $\no$ be a non-orientable surface and let $c$ be a two-sided curve in $\no$.  There exists a neighborhood of $c$ that is homeomorphic to an annulus.  Let $\mathcal{A}_c$ be an annulus and let $\zeta_c: \mathcal{A}_c \xrightarrow{} \no$ be the homeomorphism that maps to a neighborhood of $c$.  The homeomorphism $\zeta_c$ is called a \textit{marking} of $c$. A pair consisting of a curve $c$ and $\zeta_c$ is called a {\it marked curve}.
+ \paragraph{Inconsistent markings} Let $\no$ be a non-orientable surface and let $c$ be a two-sided curve in $\no$.  There exists a neighborhood of $c$ that is homeomorphic to an annulus.  Let $\mathcal{A}_c$ be an annulus and let $\zeta_c: \mathcal{A}_c \xrightarrow{} \no$ be the homeomorphism that maps to a neighborhood of $c$.  The homeomorphism $\zeta_c$ is called a \textit{marking} of $c$. A pair consisting of a curve $c$ and $\zeta_c$ is called a {\it marked curve}.
  If we fix an
 orientation of $\mathcal{A}_c$, then we can pushforward this orientation to $\no$. Let
 $(c,\zeta_c)$ and $(d,\zeta_d)$ be two marked curves that intersect at one point $p$.  We say that $(c,\zeta_c)$ and $(d,\zeta_d)$ are {\it marked inconsistently} if the
 pushforward of the orientation of $\mathcal{A}_c$ disagrees with the pushforward of the orientation of $\mathcal{A}_d$ in a neighborhood of $p$.  We emphasize that we can also say that two disjoint curves are inconsistently marked.
 
-\p{Dehn twists} We define the Dehn twist $\phi_{c,\zeta_c}(x)$ around a marked curve $(c,\zeta_c)$ as:
+\paragraph{Dehn twists} We define the Dehn twist $\phi_{c,\zeta_c}(x)$ around a marked curve $(c,\zeta_c)$ as:
 \begin{align*}
   \phi_{c,\zeta_c}(x) =
   \begin{cases}
@@ -113,7 +108,7 @@ pushforward of the orientation of $\mathcal{A}_c$ disagrees with the pushforward
 \end{align*}
 Here $\tau_c$ is the left-handed Dehn twist on $\mathcal{A}_c$, i.e. $\tau_c(\theta,t) = (\theta + 2\pi t,t)$.
 
-\p{The Penner construction for non-orientable surfaces} Let $\mathcal{C}$ be a set of marked essential simple closed curves in $\no$ such that no two curves in $\mathcal{C}$ are homotopic.  A Penner construction on $\no$ is a composition of Dehn twists about the marked curves in $\mathcal{C}$ such that:
+\paragraph{The Penner construction for non-orientable surfaces} Let $\mathcal{C}$ be a set of marked essential simple closed curves in $\no$ such that no two curves in $\mathcal{C}$ are homotopic.  A Penner construction on $\no$ is a composition of Dehn twists about the marked curves in $\mathcal{C}$ such that:
 \begin{enumerate}
 \item the complement of curves in $\mathcal{C}$ in $\no$ consists of disks with at most one puncture or marked point,
     \item the marked curves $(c_i,\zeta_i),(c_j,\zeta_j)\in\mathcal{C}$ with $i\neq j$ are marked inconsistently,
@@ -123,7 +118,7 @@ Here $\tau_c$ is the left-handed Dehn twist on $\mathcal{A}_c$, i.e. $\tau_c(\th
 
 
 
-\p{Construction of $f_{n,k}$} We now construct homeomorphisms $f_{n,k}: P_{n,k} \to P_{n,k}$ that are defined as a composition of specific Dehn twists
+\paragraph{Construction of $f_{n,k}$} We now construct homeomorphisms $f_{n,k}: P_{n,k} \to P_{n,k}$ that are defined as a composition of specific Dehn twists
 followed by a finite order mapping class. The key insight is that a power of this map will be a composition of
 Dehn twists that satisfy the criteria to be a Penner construction.  Therefore $f_{n,k}$ is pseudo-Anosov. Here we are using the rotational symmetry of the $P_{n,k}$.
 
@@ -136,7 +131,7 @@ Dehn twists that satisfy the criteria to be a Penner construction.  Therefore $f
 
 
 
-Let $\{\alpha_1,\cdots,\alpha_8\}$ be the multi-curve in $T_{0,0}$ as shown in \autoref{fig:curves}.  Let $\{\beta_1,\cdots,\beta_7\}$ be the multi-curve in $T_{0,0}\cup T_{0,1}\cup T_{1,0}$ shown in \autoref{fig:curves}. 
+Let $\{\alpha_1,\cdots,\alpha_8\}$ be the multi-curve in $T_{0,0}$ as shown in \autoref{fig:curves}.  Let $\{\beta_1,\cdots,\beta_7\}$ be the multi-curve in $T_{0,0}\cup T_{0,1}\cup T_{1,0}$ shown in \autoref{fig:curves}.
 
 For any $\alpha_i$, we choose a marking $\zeta_{\alpha_i}$ to be orientation-preserving.  For any $\beta_j$ let $\zeta_{\beta_j}$ be
 orientation reversing. From here forward, we will think of $\alpha_i$ and $\beta_j$ as (inconsistently) marked curves but we will suppress the marking maps. These choices give an inconsistent marking of $\{\alpha_1,\cdots,\alpha_8\}\cup\{\beta_1,\cdots,\beta_7\}$.
@@ -154,9 +149,6 @@ as the composition of Dehn twists about all of the marked curves in $\overline{\
 As with $\overline{\mathcal{R}}$, the Dehn twists about curves in $\overline{\mathcal{B}}$
 commute.
 
-
-
-
 Let $\alpha_1,\beta_1 \subset T_{0,0}$ be the (marked) curves in \autoref{fig:curves}. Let $\Phi$ be the composition
 of Dehn twists along all the curves $\alpha_1, \rho_1(\alpha_1), \dots, \rho_1^{n-1}(\alpha_1)$ followed by
 Dehn twists along all the curves $\beta_1,\rho_1(\beta_1),\dots,\rho_1^{n-1}(\beta_1)$. Define the map $f_{n,k}$
@@ -166,11 +158,11 @@ as:
 \end{align*}
 Since the curves about which we twist to construct $f_{n,k}$ satisfy the conditions of Penner's construction, $f_{n,k}$ is a pseudo-Anosov homeomorphism.
 
-\p{Step 3: Bounding the Stretch Factor}
+\subsection*{Step 3: Bounding the Stretch Factor}
 Following Yazdi, our next goal is to find an upper bound for the stretch factor of the pseudo-Anosov homeomorphisms $f_{n,k}$.
 
 
-\p{Train tracks} Let $S$ be a surface.  A \textit{train track} in $S$ is graph embedded in $S$ with that property that for every vertex $v$ of valence three or greater, all edges adjacent to $v$ have the same tangent vector at $v$. Let $\varphi:S\rightarrow S$ be a pseudo-Anosov homeomorphism.  The map $\varphi$ is equipped with a train track whose image under $\varphi$ is homotopic to itself.  Such a train track is an \textit{invariant train track} associated to $\varphi$. Invariant train tracks have an associated matrix whose Perron-Frobenius eigenvalue is the stretch factor of $\varphi$.
+\paragraph{Train tracks} Let $S$ be a surface.  A \textit{train track} in $S$ is graph embedded in $S$ with that property that for every vertex $v$ of valence three or greater, all edges adjacent to $v$ have the same tangent vector at $v$. Let $\varphi:S\rightarrow S$ be a pseudo-Anosov homeomorphism.  The map $\varphi$ is equipped with a train track whose image under $\varphi$ is homotopic to itself.  Such a train track is an \textit{invariant train track} associated to $\varphi$. Invariant train tracks have an associated matrix whose Perron-Frobenius eigenvalue is the stretch factor of $\varphi$.
 
 
 Yazdi uses the Lemma \ref{lem:spectral} to bound the spectral radius of the associated matrices.
@@ -232,7 +224,7 @@ the criteria of Lemma \ref{lem:spectral}.
 
 \begin{enumerate}[(i)]
 \item There exists a constant $D'$, independent of $n$ and $k$, such that for every curve $\delta \in \widehat{\mathcal{A}}$, the geometric
-  intersection number between $\delta$ and every curve in $\overline{\mathcal{A}}$ is at most $D'$.  %Recall from \autoref{sec:backgr-mapp-class} that we refer to the linear action of $f_{n,k}$ on the subspace of the cone of transverse measures on our invariant train track corresponding to connected curves in $\widehat{\mathcal{A}}$ as $M$.
+  intersection number between $\delta$ and every curve in $\overline{\mathcal{A}}$ is at most $D'$.
   Recall that $f_{n,k}=\rho_2\circ\Phi\circ\Phi_b\circ\Phi_r$.  Let $M_1,M_2,M_3$ and $M_4$ be the matrices describing the linear action of $\Phi_r,\,\Phi_b,\,\Phi$ and $\rho_2$ on $H$, respectively. The matrix
   $M$ can then be written as a product:
   \begin{align*}
@@ -258,7 +250,7 @@ As in Yazdi, the only curves in $\rho_2^{-1}(\overline{\mathcal{A}})$ that inter
 \begin{align*}
     \mathcal{X} = \{ \rho_1^i(\rho_2^{-1}(\beta_7))\,\mid\,0\leq i\leq n-1\}.
   \end{align*}
-  Therefore $\Phi\circ\Phi_b\circ\Phi_r$ maps curves in $\mathcal{X}$ to curves in $\rho_2^{-1}(\overline{\mathcal{A}})\cup\overline{\mathcal{A}}$.  Then $f_{n,k}=\rho_2\circ\Phi\circ\Phi_b\circ\Phi_r$ maps curves in $\mathcal{X}$ to curves in $\overline{\mathcal{A}}\cup\rho_2(\overline{\mathcal{A}}).$  
+  Therefore $\Phi\circ\Phi_b\circ\Phi_r$ maps curves in $\mathcal{X}$ to curves in $\rho_2^{-1}(\overline{\mathcal{A}})\cup\overline{\mathcal{A}}$.  Then $f_{n,k}=\rho_2\circ\Phi\circ\Phi_b\circ\Phi_r$ maps curves in $\mathcal{X}$ to curves in $\overline{\mathcal{A}}\cup\rho_2(\overline{\mathcal{A}}).$
 For any curve in $\mathcal{X}$, the corresponding vertex $v\in V_1$ will have
   $v^+ \subset V_2 \cup V_3.$  Moreover, $f_{n,k}$ maps the curves $\rho_2^{-1}(\overline{\mathcal{A}})\setminus \mathcal{X}$ to curves in $\overline{\mathcal{A}}$.  Thus for any vertex $v\in V_1$ that does not correspond to an element of $\mathcal{X}$, the set $v^+$ is contained in $V_2$.
 \item  Similarly, we look for the $v \in V_3$ such that $v^+ \not\subset V_4$.  Such vertices will correspond to the curves in $\rho_2(\overline{\mathcal{A}})$ that $\Phi\circ\Phi_b\circ\Phi_r$ maps to curves that are not in $\rho_2^2(\overline{\mathcal{A}})$.  As above, we have: $$\rho_2(\overline{\mathcal{A}})=\rho_2(\mathcal{A})\cup\rho_1(\rho_2(\mathcal{A}))\cup\cdots\cup\rho_1^{n-1}(\rho_2(\mathcal{A})).$$
@@ -289,11 +281,11 @@ On the other hand, we know $g_{n,k} = (14k - 2)n + 2 \leq 14kn$ by Lemma \ref{le
 Let $C' \coloneqq 28\log(4D^4)$ to complete the result.
 \end{proof}
 
-\p{Step 4: The Mapping Torus}
+\subsection*{Step 4: The Mapping Torus}
 
 We have now constructed an infinite family of non-orientable surfaces $P_{n,k}$ and pseudo-Anosov homeomorphisms $f_{n,k}:P_{n,k}\to P_{n,k}$, but this is not
 enough. In Lemma \ref{lem:genera}, we show that $\{P_{n,k}\}$ does not include surfaces of infinitely many genera. We use the strategy of McMullen \cite{mcmullen2000polynomial} and our extension of the Thurston's
-fibered face theory to fill in the gaps. 
+fibered face theory to fill in the gaps.
 
 Next we follow the strategy of Leininger--Margalit \cite{leininger2013number} to find a surface embedded in the mapping torus of minimal genus.  In our situation, this means that we will construct an embedded surface homeomorphic to $\no_3$.
 
@@ -321,21 +313,17 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
   \begin{align*}
     f_{n,k}(\gamma) &= \rho_2 \circ \Phi \circ \Phi_b \circ \Phi_r(\gamma) \\
                     &= \rho_2 \circ \Phi(\gamma) \\
-                    &= \rho_2(\widehat{\gamma}) 
+                    &= \rho_2(\widehat{\gamma})
   \end{align*}
   It follows that for all $1\leq i\leq k$, the curve $f_{n,k}^i(\gamma)$ is $\rho_2^i(\widehat{\gamma})$.
   For $1\leq i\leq k$, let $A_i$ be an annulus in $M_{n,k}$ that connects $f_{n,k}^{i-1}(\gamma)$ to $f_{n,k}^i(\gamma)$ obtained by following the suspension
   flow of $f_{n,k}$ around $M_{n,k}$. Let $A$ be the union of all of the $A_i$, which is also an annulus.  We can now construct the embedded surface $F_{n,k}$ by taking the union of
   $A$ and $\widehat{F}$. The union of $\widehat{F}$ with $A$ has empty boundary and Euler characteristic 0, so $F_{n,k}$ is homeomorphic to $\mathcal{N}_3$.
 
- % The resulting surface is an embedded non-orientable surface in a non-orientable $3$-manifold, so we have
- % relative orientability by Proposition \ref{prop:relative-orientability}.
-
   We now need to show that $F_{n,k}$ is relatively orientable. We construct a outwards pointing normal vector field by combining the outwards pointing vector fields on $\widehat{F}$ and $A$ given by following $\gamma$ along the suspension flow.  Let $v_1$ be a vector field on $\widehat{F}$ pointing in the flow direction.  Define $v_2$ to be a vector field on $A$ as follows: on $\gamma$ define $v_2$ to be the vector field pointing in to $\widehat{F}$.  Flow the vector field along the suspension flow so $v_2$ is pointing away from $\widehat{F}$ on $\widehat{\gamma}$.
-  
+
 Let $U$ be a neighborhood of $\gamma$ in $F_{n,k}=\widehat{F}\cup A$. Define two bump functions $c_1$ and $c_2$ supported in $U$.  Let $c_1$ be $1$ on $\partial U\cap A$ and $0$ on $\widehat{F}$. Let $c_2$ be $1$ on $\partial U\cap \widehat{F}$ and $0$ on $A$.
   We add the vector fields $v_1$ on $\widehat{F}$ and $v_2$ on $A$ using these bump functions: the resulting vector field is $c_1 v_1 + c_2 v_2$.
- % Because of the way we defined the bump functions, this combined vector field agrees with both the vector fields outside of the support $U$ of the bump functions.
   Observe that since $v_1$ points in the flow direction, and $v_2$ points into the surface, the new vector field $c_1 v_1 + c_2 v_2$ is transverse, in the neighborhood of $\gamma$, to $F_{n,k}$ (see \autoref{fig:gluing-normal-field} for a picture of the resulting transverse vector field).
 
   We perform a similar construction in a small neighborhood of $\widehat{\gamma}$: in this case, the fact that the vector field on $\widehat{F}$ points in the flow direction, and the vector field on $A$ points away from the surface $\widehat{F}$ ensures that the new vector field is transverse, in a neighborhood of $\widehat{\gamma}$, to the surface $F_{n,k}$.
@@ -367,7 +355,7 @@ Let $\pi:M_{n,k}\rightarrow S^1$ be the projection map and let $t_0$ be such tha
 
 
 
-\p{Step 5: Filling in the Gaps}
+\subsection*{Step 5: Filling in the Gaps}
 Recall that the family of surfaces $P_{n,k}$ that we have constructed have genera in the set $\{(14k-2)n+2\}$.
 We now want to construct surfaces of genera not in the set $\{(14k-2)n+2\}$ and pseudo-Anosov homeomorphisms of those surfaces that have small stretch factors.  To do this we use the mapping torus $M_{n,k}$ of $P_{n,k}$ by $f_{n,k}:P_{n,k}\to P_{n,k}$. By Proposition \ref{lem:genus3}, there exists a relatively incompressible surface $F_{n,k}$ in $M_{n,k}$ that is homeomorphic to $\no_3$.  Let $P_{n,k}^r$ be the oriented sum of $P_{n,k}$ and
 $rF_{n,k}$, as defined in Proposition $\ref{thm:oriented-sum}$.  The surfaces $P_{n,k}^r$ will be surfaces of the remaining genera.
@@ -389,7 +377,7 @@ $rF_{n,k}$, as defined in Proposition $\ref{thm:oriented-sum}$.  The surfaces $P
   Since $P_{n,k}^r$ has no boundary or punctures, we have that the genus of $P_{n,k}^r$ is $g_{n,k}+r$.
 
   By Lemma \ref{lem:genus3} we know that $F_{n,k}$ is incompressible and transverse to the suspension flow given by $f_{n,k}$.  Therefore by Proposition \ref{prop:asymptotic}, there is a pseudo-Anosov homeomorphism $f_{n,k}^r$ of $P_{n,k}^r=P_{n,k}+rF_{n,k}$.
-  
+
 
  As in Yazdi \cite[Lemma 3.5]{yazdibounds}, $f_{n,k}$ fixes the $2n$ singularities of the stable foliation that are the intersection points of the axis of $\rho_1$ with
   $P_{n,k}$. By Lemma \ref{lem:genus3}, the surface $F_{n,k}$ can be isotoped to be transverse to
@@ -422,13 +410,13 @@ Let $\lambda_{n,k}^r$ be the stretch factor of $f_{n,k}^r:P_{n,k}^r\rightarrow P
 \end{proof}
 
 
-In the initial construction of $P_{n,k}$, there were $2n$  marked points, which were singularities of the map $f_{n,k}$.  By the construction of $P_{n,k}^r$, these marked points are also singularities of $f^r_{n,k}$.  Now we puncture $P_{n,k}^r$ at $n$ of these marked points.  We could think of this as removing all copies of the point $p$ in the construction of $P_{n,k}$ in step 1. %as a map on a non-orientable surface of genus $g^r_{n,k}$ with $n$ punctures. Also note from above weknow $g^r_{n,k}$ covers all natural numbers between $g_{n,k}$ and $g_{n,k+1}$, thus this set of genera for all $r$ covers all natural numbers larger than $g_{n,3} = 40n + 2$.
+In the initial construction of $P_{n,k}$, there were $2n$  marked points, which were singularities of the map $f_{n,k}$.  By the construction of $P_{n,k}^r$, these marked points are also singularities of $f^r_{n,k}$.  Now we puncture $P_{n,k}^r$ at $n$ of these marked points.  We could think of this as removing all copies of the point $p$ in the construction of $P_{n,k}$ in step 1.
 
 We can now give a proof of \autoref{thm:stretch1}.
 
 
 \begin{proof}[Proof of \autoref{thm:stretch1}]
-As above, the lower bound follows easily from the lower bound in the orientable setting.  
+As above, the lower bound follows easily from the lower bound in the orientable setting.
 
   To find the upper bound, let $C'=\frac{C}{2}$ be the value given in Lemma \ref{lem:bound}. Let $B'_2(n)$ be the
   following quantity:
