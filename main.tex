@@ -1,4 +1,4 @@
-\documentclass[11pt, notitlepage]{amsart}
+\documentclass[microtype]{gtpart}     % Basic GT/GTM/AGT style
 \usepackage[utf8]{inputenc}
 
 % \usepackage[nottoc]{tocbibind}
@@ -9,8 +9,6 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usepackage{enumerate}
-\usepackage{amsmath}
-\usepackage{amsfonts, amssymb, amsthm}
 \usepackage{bbm}
 \usepackage[normalem]{ulem}
 \usepackage{calc}
@@ -21,7 +19,6 @@
   linkcolor    = blue, %Colour of internal links
   citecolor   = blue %Colour of citations
 }
-\newcommand{\p}[1]{\bigskip\noindent{\bf#1.}}
 
 \newtheorem{thm}{Theorem}[section]
 \newtheorem*{unthm}{Theorem}
@@ -53,8 +50,6 @@
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
 
-\usepackage[top=2cm, bottom=2cm, inner=2cm, outer=2cm]{geometry}
-
 \usepackage{enumerate}
 \usepackage{xcolor}
 
@@ -62,22 +57,6 @@
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
-
-% Making paragraphs bolder
-\makeatletter
-\def\paragraph{\@startsection{paragraph}{4}%
-  \z@\z@{-\fontdimen2\font}%
-  {\normalfont\bfseries}}
-\makeatother
-
-% Spacing for paragraph
-\makeatletter
-\renewcommand{\paragraph}{%
-  \@startsection{paragraph}{4}%
-  {\z@}{2ex \@plus 1ex \@minus .2ex}{-1em}%
-  {\normalfont\normalsize\bfseries}%
-}
-\makeatother
 
 \newcommand*{\incfig}[2][1]{%
     \def\svgscale{#1}
@@ -99,7 +78,7 @@
 \author{Sayantan Khan}
 \address{Department of Mathematics, University of Michigan, 530 Church Street, Ann Arbor, MI 48109}
 \email{saykhan@umich.edu}
-\urladdr{\url{https://www-personal.umich.edu/~saykhan/}}
+\urladdr{https://www-personal.umich.edu/~saykhan/}
 
 \author{Caleb Partin}
 \address{Department of Mathematics, Georgia Institute of Technology, 686 Cherry Street, Atlanta, GA 30332}
@@ -108,18 +87,18 @@
 \author{Rebecca R. Winarski}
 \address{ Department of Mathematics and Computer Science, College of the Holy Cross, 1 College Street, Worcester, MA 01610}
 \email{rwinarski@holycross.edu}
-\urladdr{\url{https://sites.google.com/site/rebeccawinarski/}}
+\urladdr{https://sites.google.com/site/rebeccawinarski/}
 
 % give a separate \keyword and \subject line for each keyword/phrase or
 % subject class eg \keyword{framed link} \subject{primary}{msc2010}{57M25}
 
-% \keyword{pseudo-Anosov}
-% \keyword{mapping class group}
-% \keyword{dilatation}
-% \keyword{stretch factor}
-% \keyword{non-orientable surfaces}
-% \subject{primary}{msc2010}{37E30}
-% \subject{secondary}{msc2010}{37B40}
+\keyword{pseudo-Anosov}
+\keyword{mapping class group}
+\keyword{dilatation}
+\keyword{stretch factor}
+\keyword{non-orientable surfaces}
+\subject{primary}{msc2010}{37E30}
+\subject{secondary}{msc2010}{37B40}
 
 %  Fill in the reference number if your article is stored on the arXiv
 %  eg \arxivreference{math.GT/0512347} or \arxivreference{1203.4984}.
@@ -127,7 +106,7 @@
 %  prefix arxiv: or math.NT/ or anything else. Just the reference
 %  number is sufficient.
 
-% \arxivreference{2107.04068}
+\arxivreference{2107.04068}
 
 \def\sectionautorefname{Section}
 \def\thmautorefname{Theorem}
@@ -139,16 +118,203 @@
 \makeatother
 
 \begin{document}
-\maketitle
-
 \input{abstract}
+
+\maketitle
 
 \input{introduction}
 \input{thurston-norm}
 \input{small-mapping-classes}
 \input{yazdiapplication}
 
-\bibliographystyle{plain}
-\bibliography{references}
+\bibliographystyle{gtart}
+\begin{thebibliography}{10}
+
+\bibitem{AD}
+John~W. Aaber and Nathan Dunfield.
+\newblock Closed surface bundles of least volume.
+\newblock {\em Algebr. Geom. Topol.}, 10(4):2315--2342, 2010.
+
+\bibitem{agol6983pseudo}
+Ian Agol, Christopher~J. Leininger, and Dan Margalit.
+\newblock {Pseudo-Anosov stretch factors and homology of mapping tori}.
+\newblock {\em Journal of the London Mathematical Society}, 93(3):664--682, 04
+  2016.
+
+\bibitem{aramayona2009injections}
+Javier Aramayona, Christopher~J Leininger, and Juan Souto.
+\newblock Injections of mapping class groups.
+\newblock {\em Geometry \& Topology}, 13(5):2523--2541, 2009.
+
+\bibitem{AY}
+Pierre Arnoux and Jean-Christophe Yoccoz.
+\newblock Construction de diff\'{e}omorphismes pseudo-{A}nosov.
+\newblock {\em C. R. Acad. Sci. Paris S\'{e}r. I Math.}, 292(1):75--78, 1981.
+
+\bibitem{bauer}
+Max Bauer.
+\newblock An upper bound for the least dilatation.
+\newblock {\em Trans. Amer. Math. Soc.}, 330(1):361--370, 1992.
+
+\bibitem{calegari2007foliations}
+Danny Calegari.
+\newblock {\em Foliations and the geometry of 3-manifolds}.
+\newblock Oxford University Press on Demand, 2007.
+
+\bibitem{CH}
+Jin-Hwan Cho and Ji-Young Ham.
+\newblock The minimal dilatation of a genus-two surface.
+\newblock {\em Experiment. Math.}, 17(3):257--267, 2008.
+
+\bibitem{FLP}
+Albert Fathi, Fran\c{c}ois Laudenbach, and Valentin Po\'{e}naru.
+\newblock {\em Thurston's work on surfaces}, volume~48 of {\em Mathematical
+  Notes}.
+\newblock Princeton University Press, Princeton, NJ, 2012.
+\newblock Translated from the 1979 French original by Djun M. Kim and Dan
+  Margalit.
+
+\bibitem{fried1982flow}
+David Fried.
+\newblock Flow equivalence, hyperbolic systems and a new zeta function for
+  flows.
+\newblock {\em Commentarii Mathematici Helvetici}, 57(1):237--259, 1982.
+
+\bibitem{fried1983transitive}
+David Fried.
+\newblock Transitive anosov flows and pseudo-anosov maps.
+\newblock {\em Topology}, 22(3):299--303, 1983.
+
+\bibitem{HS}
+Ji-Young Ham and Won~Taek Song.
+\newblock The minimum dilatation of pseudo-{A}nosov 5-braids.
+\newblock {\em Experiment. Math.}, 16(2):167--179, 2007.
+
+\bibitem{hironaka}
+Eriko Hironaka.
+\newblock Small dilatation mapping classes coming from the simplest hyperbolic
+  braid.
+\newblock {\em Algebr. Geom. Topol.}, 10(4):2041--2060, 2010.
+
+\bibitem{HK}
+Eriko Hironaka and Eiko Kin.
+\newblock A family of pseudo-{A}nosov braids with small dilatation.
+\newblock {\em Algebr. Geom. Topol.}, 6:699--738, 2006.
+
+\bibitem{HK20}
+Susumu Hirose and Eiko Kin.
+\newblock A construction of pseudo-{A}nosov braids with small normalized
+  entropies.
+\newblock {\em New York J. Math.}, 26:562--597, 2020.
+
+\bibitem{ivanov}
+N.~V. Ivanov.
+\newblock Coefficients of expansion of pseudo-{A}nosov homeomorphisms.
+\newblock {\em Zap. Nauchn. Sem. Leningrad. Otdel. Mat. Inst. Steklov. (LOMI)},
+  167(Issled. Topol. 6):111--116, 191, 1988.
+
+\bibitem{KTbounds}
+Eiko Kin and Mitsuhiko Takasawa.
+\newblock Pseudo-{A}nosovs on closed surfaces having small entropy and the
+  {W}hitehead sister link exterior.
+\newblock {\em J. Math. Soc. Japan}, 65(2):411--446, 2013.
+
+\bibitem{KT}
+Eiko Kin and Mitsuhiko Takasawa.
+\newblock The boundary of a fibered face of the magic 3-manifold and the
+  asymptotic behavior of minimal pseudo-{A}nosov dilatations.
+\newblock {\em Hiroshima Math. J.}, 46(3):271--287, 2016.
+
+\bibitem{LT}
+Erwan Lanneau and Jean-Luc Thiffeault.
+\newblock On the minimum dilatation of pseudo-{A}nosov homeromorphisms on
+  surfaces of small genus.
+\newblock {\em Ann. Inst. Fourier (Grenoble)}, 61(1):105--144, 2011.
+
+\bibitem{leininger2013number}
+Christopher~J Leininger and Dan Margalit.
+\newblock On the number and location of short geodesics in moduli space.
+\newblock {\em Journal of Topology}, 6(1):30--48, 2013.
+
+\bibitem{LS}
+Livio Liechti and Bal\'{a}zs Strenner.
+\newblock Minimal pseudo-{A}nosov stretch factors on nonoriented surfaces.
+\newblock {\em Algebr. Geom. Topol.}, 20(1):451--485, 2020.
+
+\bibitem{Loving}
+Marissa Loving.
+\newblock Least dilatation of pure surface braids.
+\newblock {\em Algebr. Geom. Topol.}, 19(2):941--964, 2019.
+\newblock Appendix written jointly with Hugo Parlier.
+
+\bibitem{matsumoto1987topological}
+Shigenori Matsumoto.
+\newblock Topological entropy and thurston’s norm of atoroidal surface
+  bundles over the circle.
+\newblock {\em J. Fac. Sci. Univ. Tokyo Sect. IA Math}, 34(3):763--778, 1987.
+
+\bibitem{mcmullen2000polynomial}
+Curtis~T McMullen.
+\newblock Polynomial invariants for fibered 3-manifolds and teichm{\"u}ller
+  geodesics for foliations.
+\newblock In {\em Annales scientifiques de l’Ecole normale sup{\'e}rieure},
+  volume~33, pages 519--560. Elsevier, 2000.
+
+\bibitem{minakawa}
+Hiroyuki Minakawa.
+\newblock Examples of pseudo-{A}nosov homeomorphisms with small dilatations.
+\newblock {\em J. Math. Sci. Univ. Tokyo}, 13(2):95--111, 2006.
+
+\bibitem{penner1988construction}
+Robert~C Penner.
+\newblock A construction of pseudo-anosov homeomorphisms.
+\newblock {\em Transactions of the American Mathematical Society},
+  310(1):179--197, 1988.
+
+\bibitem{penner1991bounds}
+Robert~C Penner.
+\newblock Bounds on least dilatations.
+\newblock {\em Proceedings of the American Mathematical Society},
+  113(2):443--450, 1991.
+
+\bibitem{SKL}
+Won~Taek Song, Ki~Hyoung Ko, and J\'{e}r\^{o}me~E. Los.
+\newblock Entropies of braids.
+\newblock {\em J. Knot Theory Ramifications}, 11(4):647--666, 2002.
+\newblock Knots 2000 Korea, Vol. 2 (Yongpyong).
+
+\bibitem{thurston1986norm}
+William~P Thurston.
+\newblock A norm for the homology of 3-manifolds.
+\newblock {\em Memoirs of the American Mathematical Society}, 59(339):99--130,
+  1986.
+
+\bibitem{thurston_hyp}
+William~P. Thurston.
+\newblock Hyperbolic structures on 3-manifolds, ii: Surface groups and
+  3-manifolds which fiber over the circle, 1998.
+
+\bibitem{tsai2009asymptotic}
+Chia-Yen Tsai.
+\newblock The asymptotic behavior of least pseudo-anosov dilatations.
+\newblock {\em Geometry \& Topology}, 13(4):2253--2278, 2009.
+
+\bibitem{valdivia}
+Aaron~D. Valdivia.
+\newblock Sequences of pseudo-{A}nosov mapping classes and their asymptotic
+  behavior.
+\newblock {\em New York J. Math.}, 18:609--620, 2012.
+
+\bibitem{yazdibounds}
+Mehdi Yazdi.
+\newblock Lower bound for dilatations.
+\newblock {\em J. Topol.}, 11(3):602--614, 2018.
+
+\bibitem{yazdi2018pseudo}
+Mehdi Yazdi.
+\newblock Pseudo-anosov maps with small stretch factors on punctured surfaces.
+\newblock {\em Algebraic {\&} Geometric Topology}, 20(4):2095--2128, July 2020.
+
+\end{thebibliography}
 
 \end{document}
