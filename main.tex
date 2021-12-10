@@ -31,6 +31,12 @@
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{conj}[thm]{Conjecture}
 
+\newtheorem{manualtheoreminner}{Theorem}
+\newenvironment{manualtheorem}[1]{%
+  \renewcommand\themanualtheoreminner{#1}%
+  \manualtheoreminner
+}{\endmanualtheoreminner}
+
 \theoremstyle{definition}
 \newtheorem{question}[thm]{Question}
 
@@ -46,12 +52,6 @@
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
 
-\theoremstyle{thm}
-\newtheorem{manualtheoreminner}{Theorem}
-\newenvironment{manualtheorem}[1]{%
-  \renewcommand\themanualtheoreminner{#1}%
-  \manualtheoreminner
-}{\endmanualtheoreminner}
 
 \usepackage[top=2cm, bottom=2cm, inner=2cm, outer=2cm]{geometry}
 
