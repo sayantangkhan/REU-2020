@@ -2,3 +2,6 @@
 /build/
 /auto/
 /ltximg/
+/main.aux
+/main.log
+/main.out
