@@ -1,27 +1,27 @@
 %%%%%%%%%%%%%%%%%          gtpart.cls       %%%%%%%%%%%%%%%%%%
 %
-%  Format file for articles written in LaTeX for publication in 
-%   Geometry & Topology Publications.  This version inputs hyperref  
+%  Format file for articles written in LaTeX for publication in
+%   Geometry & Topology Publications.  This version inputs hyperref
 %   and uses Times fonts where possible.  It is for use from 2006
 %   onwards.  It is common to GT, AGT and GTM, uses MSP metadata
-%   format and duplicates as far as practicable MSP style.    
+%   format and duplicates as far as practicable MSP style.
 %
-%                                      Colin Rourke, December 2006 
+%                                      Colin Rourke, December 2006
 %
 %  For full instructions see gtpartdoc.pdf (available from the same
 %   directory as this file).
 %
-%      (gtart.cls v1.6 -- hyperref + times + MSP metadata) 
+%      (gtart.cls v1.6 -- hyperref + times + MSP metadata)
 %
 %%  Check for fairly recent version of latex2e :
 %
 \NeedsTeXFormat{LaTeX2e}[1994/12/01]
 %
-\LoadClass[11pt]{article}  
-\usepackage{amsthm,amssymb} 
+\LoadClass[11pt]{article}
+\usepackage{amsthm,amssymb}
 \usepackage[leqno]{amsmath}
 \newif\ifmicrotype
-\DeclareOption{microtype}{\microtypetrue} 
+\DeclareOption{microtype}{\microtypetrue}
 \ProcessOptions\relax
 \AtBeginDocument{%
   \def\tempaa{\thesection.\arabic{equation}}%
@@ -36,7 +36,7 @@
   \DeclareMathSizes{10.95}{10.95}{8}{6}% from msp.cls
 }
 %
-%  Times fonts and Times math symbols 
+%  Times fonts and Times math symbols
 %
 \renewcommand{\sfdefault}{cmr}
 \DeclareFontFamily{OT1}{ptm}{}
@@ -45,31 +45,31 @@
 \DeclareFontShape{OT1}{ptm}{m}{sl}{ <->ptmro}{}
 \DeclareFontShape{OT1}{ptm}{m}{sc}{ <-> ptmrc}{}
 \DeclareFontShape{OT1}{ptm}{b}{n} { <-> ptmb}{}
-\DeclareFontShape{OT1}{ptm}{b}{it}{ <-> ptmbi}{}     
+\DeclareFontShape{OT1}{ptm}{b}{it}{ <-> ptmbi}{}
 \DeclareFontShape{OT1}{ptm}{bx}{n} {<->ssub * ptm/b/n}{}
 \DeclareFontShape{OT1}{ptm}{bx}{it}{<->ssub * ptm/b/it}{}
 \def\rmdefault{ptm}
 \DeclareSymbolFont{bold}{OT1}{ptm}{b}{n}
-\DeclareMathAlphabet{\mathbf}{OT1}{ptm}{b}{n}  
+\DeclareMathAlphabet{\mathbf}{OT1}{ptm}{b}{n}
 \DeclareMathAlphabet{\mathrm}{OT1}{ptm}{m}{n}
-\let\bBB=\mathbb 
-\let\Bbb=\mathbb  
+\let\bBB=\mathbb
+\let\Bbb=\mathbb
 %
-\DeclareFontFamily{OT1}{psy}{}      
+\DeclareFontFamily{OT1}{psy}{}
 \DeclareFontShape{OT1}{psy}{m}{n}{ <-> s * [0.9] psyr}{}
 %
-\DeclareFontFamily{OMS}{ptm}{}     
+\DeclareFontFamily{OMS}{ptm}{}
 \DeclareFontShape{OMS}{ptm}{m}{n}{ <8> <9> <10> gen * cmsy }{}
-\DeclareFontFamily{OMS}{cmtt}{}     
+\DeclareFontFamily{OMS}{cmtt}{}
 \DeclareFontShape{OMS}{cmtt}{m}{n}{ <8> <9> <10> gen * cmsy }{}
 
-\SetSymbolFont{operators}{normal}{OT1}{ptm}{m}{n}   
-\SetSymbolFont{operators}{bold}{OT1}{ptm}{b}{n}     
+\SetSymbolFont{operators}{normal}{OT1}{ptm}{m}{n}
+\SetSymbolFont{operators}{bold}{OT1}{ptm}{b}{n}
 %
 \DeclareSymbolFont{emsy}{OT1}{ptm}{m}{it}
 \DeclareSymbolFont{emsr}{OT1}{ptm}{m}{n}
-\DeclareSymbolFont{emcmr}{OT1}{cmr}{m}{n}   
-\DeclareSymbolFont{emsymb}{OT1}{psy}{m}{n}  
+\DeclareSymbolFont{emcmr}{OT1}{cmr}{m}{n}
+\DeclareSymbolFont{emsymb}{OT1}{psy}{m}{n}
 %
 \DeclareMathSymbol a{\mathalpha}{emsy}{"61}
 \DeclareMathSymbol b{\mathalpha}{emsy}{"62}
@@ -128,7 +128,7 @@
 \def\Bullet{\leavevmode\unkern{$\m@th\bullet$}\kern.32em\ignorespaces}
 \def\Regis{\leavevmode\raise.5ex\hbox{$\m@th\regis$}}
 \DeclareMathSymbol +{\mathbin}{emcmr}{`+}
-\DeclareMathSymbol ={\mathrel}{emcmr}{`=}  
+\DeclareMathSymbol ={\mathrel}{emcmr}{`=}
 \DeclareMathSymbol{\Gamma}{\mathalpha}{emcmr}{"00}
 \DeclareMathSymbol{\Delta}{\mathalpha}{emcmr}{"01}
 \DeclareMathSymbol{\Theta}{\mathalpha}{emcmr}{"02}
@@ -146,17 +146,17 @@
 %
 \def\`#1{{\accent"12 #1}}            % grave accent
 \def\H#1{{\accent"CD #1}}            % double acute accent
-\chardef\J="11                  
-\def\j{{\sf\J}}                      % j without dot 
+\chardef\J="11
+\def\j{{\sf\J}}                      % j without dot
 \chardef\AA="C8                      % Angstrom
-\chardef\gbp="A3                     % pound sign           
+\chardef\gbp="A3                     % pound sign
 \chardef\TIL="81                     % tilde on line
-\chardef\endash="B1                
-\chardef\emdash="D0                
+\chardef\endash="B1
+\chardef\emdash="D0
 \chardef\pourmille="BD               % %sign
 \chardef\aoben="E3                   % ^a
 \chardef\ooben="EB                   % ^o
-\def\S{\leavevmode\unkern{\char"A7}\kern.1em\ignorespaces} 
+\def\S{\leavevmode\unkern{\char"A7}\kern.1em\ignorespaces}
 \def\D#1{{\accent"C7 #1}}            % overdot
 \DeclareMathAccent{\dot}{\mathalpha}{operators}{"C7} % ditto math mode
 %
@@ -188,7 +188,7 @@
 %
 %  hyperref stuff
 %
-\usepackage{hyperref}  
+\usepackage{hyperref}
 \hypersetup{%
   bookmarksnumbered=true,%
   bookmarks=true,%
@@ -207,12 +207,12 @@
 %
 \def\arxiv#1{\relax\ifhmode\unskip\qua\fi
     \href{http://arxiv.org/abs/#1}%
-{\tt arXiv:\penalty -100\unskip#1}}    
+{\tt arXiv:\penalty -100\unskip#1}}
 \let\arXiv\arxiv
 \def\MR#1{\relax\ifhmode\unskip\qua\fi
     \href{http://www.ams.org/mathscinet-getitem?mr=#1}{MR#1}}
 %
-\def\xox#1{\csname xx#1\endcsname} %%% used by 
+\def\xox#1{\csname xx#1\endcsname} %%% used by
 \let\xxarXiv\arxiv\let\xxMR\MR     %%% gtart.bst
 \def\xxZBL#1{}
 \def\xxJFM#1{}
@@ -230,14 +230,14 @@
 %                   \let\c@lemma\c@theorem
 %                  \makeatother
 %
-%  To work correctly the environment name must have a corrresponding 
+%  To work correctly the environment name must have a corrresponding
 %  \XXXautorefname defined.  The following command does the job:
 %
 \def\makeautorefname#1#2{\expandafter\def\csname#1autorefname\endcsname{#2}}
 %
-%  Some standard autorefnames.  If the environment name for an autoref 
+%  Some standard autorefnames.  If the environment name for an autoref
 %  you need is not listed below, add a similar line to your TeX file:
-%  
+%
 \makeautorefname{equation}{Equation}%
 \makeautorefname{footnote}{footnote}%
 \makeautorefname{item}{item}%
@@ -373,27 +373,27 @@
 \voffset 12.5truemm
 %
 \newskip\stdskip                      % standard vertical space
-\stdskip=6.6pt plus3.3pt minus3.3pt    
+\stdskip=6.6pt plus3.3pt minus3.3pt
 %
-\setlength{\textheight}{7.5in}          
-\setlength{\textwidth}{5.2in}         
-\flushbottom                           
-\setlength{\parindent}{0pt}            
+\setlength{\textheight}{7.5in}
+\setlength{\textwidth}{5.2in}
+\flushbottom
+\setlength{\parindent}{0pt}
 \setlength{\parskip}{\stdskip}
 \setlength{\medskipamount}{\stdskip}
-\setlength{\mathsurround}{0.8pt}     
-\setlength{\labelsep}{0.75em} 
+\setlength{\mathsurround}{0.8pt}
+\setlength{\labelsep}{0.75em}
 \newcommand{\stdspace}{\hskip 0.75em plus 0.15em \ignorespaces}
-\let\qua\stdspace  %  useful abbreviation 
+\let\qua\stdspace  %  useful abbreviation
 \renewcommand{\baselinestretch}{1.05}  %   open up a tad to match msp
 %
 %  Some style commands (\ppar is for principal paragraph breaks, \sh is
-%  for subheadings and \rk for remarks etc -- see also theorem style 
+%  for subheadings and \rk for remarks etc -- see also theorem style
 %  below ) :
 %
-\newcommand{\ppar}{\par\goodbreak\medskip} 
+\newcommand{\ppar}{\par\goodbreak\medskip}
 \newcommand{\sh}[1]{\penalty-800\ppar{\bf #1}\par\medskip\nobreak}
-\newcommand{\rk}[1]{\ppar{\bf #1}\stdspace}    
+\newcommand{\rk}[1]{\ppar{\bf #1}\stdspace}
 %
 %
 %   Theorem style.  There are two recommended styles :
@@ -403,9 +403,9 @@
 %   and statement in slanted type.
 %
 %   definition : (alias remark)  for definitions, remarks etc with
-%   heading bold and left justified, optional note unbracketed in 
+%   heading bold and left justified, optional note unbracketed in
 %   slanted type and statement in roman type.
-%   
+%
 %
 %  Redefine the amsthm styles plain, definition and remark to GTP style:
 %
@@ -419,9 +419,9 @@
 {\rm}{}{\bf}{}{0.75em}{\thmname{#1}\thmnumber{ #2}\thmnote{\rm\stdspace(#3)}}
 %
 %  Default theorem style :
-\theoremstyle{plain}               
+\theoremstyle{plain}
 %
-%  adapt the amsthm proof environment to GTP style 
+%  adapt the amsthm proof environment to GTP style
 %
 \renewenvironment{proof}[1][\proofname]{\par
   \pushQED{\qed}%
@@ -435,10 +435,10 @@
 %                 Knuth's \square macro :
 %
 \def\sqr#1#2{{\vcenter{\vbox{\hrule  height.#2pt
-	\hbox{\vrule width.#2pt height#1pt \kern#1pt \vrule width.#2pt}
-	\hrule height.#2pt}}}}
+        \hbox{\vrule width.#2pt height#1pt \kern#1pt \vrule width.#2pt}
+        \hrule height.#2pt}}}}
 %
-\def\sq{\sqr55}           %    A small square for end-of-proofs. 
+\def\sq{\sqr55}           %    A small square for end-of-proofs.
 \def\qedsymbol{$\sqr55$}  %   (Define other size squares by varing the
 %                         %   the two numbers.)
 %
@@ -531,7 +531,7 @@
       arbitrary number of commands of the form}
       \@message{\string\subject{primary}{MSC2000}{99X88},}
       \@message{\string\subject{secondary}{MSC2000}{77X66}... etc.}
-       \@message{ }} 
+       \@message{ }}
 %
 %  keywords (only used for publication)
 %
@@ -540,20 +540,20 @@
       \string\keyword}\@message{You can use an
       arbitrary number of commands of the form}
       \@message{\string\keyword{keyword},}
-      \@message{\string\keyword{key phrase}... etc.}\@message{ }} 
+      \@message{\string\keyword{key phrase}... etc.}\@message{ }}
 %
 %  dedicatory and thanks
 %
 \def\dedicatory#1{\def\thededicatory{#1}\@message{ }
 \@message{Dedications are only permitted in exceptional cases.}
 \@message{Please consult the managing editors before adding a dedication.}
-\@message{Thanks etc should be given as acknowledgements at the end} 
+\@message{Thanks etc should be given as acknowledgements at the end}
 \@message{of your introduction or at the end of the paper.}
 \@message{ }\relax}
 %
 \def\thanks#1{\@message{ }
 \@message{Thanks should not appear on the title page.}
-\@message{Please give thanks as acknowledgements at the end of your 
+\@message{Please give thanks as acknowledgements at the end of your
 introduction}\@message{or at the end of the paper.}
 \@message{ }\relax}
 %
@@ -585,7 +585,7 @@ introduction}\@message{or at the end of the paper.}
 \def\arxivreference#1{\relax}
 \def\arxivpassword#1{\relax}
 %
-%   metadata items used in running heads etc 
+%   metadata items used in running heads etc
 %
 \def\volumenumber#1{\relax}
 \def\volumename#1{\relax}
@@ -617,13 +617,13 @@ introduction}\@message{or at the end of the paper.}
 % start of definition of \maketitle
 %
 \long\def\maketitle{
-\count0=\thestartpage\ 
+\count0=\thestartpage\
 \vglue 10pt plus 3pt minus 3pt %% top space
 %
 % title :
 %
 {\parskip=0pt\leftskip 0pt plus 1fil{\def\\{\par\smallskip}\Large
-\bf\thetitle}\par\vskip 3pt}  
+\bf\thetitle}\par\vskip 3pt}
 
 \medskip
 %
@@ -631,11 +631,11 @@ introduction}\@message{or at the end of the paper.}
 %
 {\parskip=0pt\leftskip 0pt plus 1fil{\sc\theauthors}
 \par}
- 
+
 \vglue 20pt plus 3pt minus 3pt
 %
 % abstract :
-% 
+%
 {\small\leftskip 25pt\rightskip 25pt\parskip 4pt plus 2pt
 \theabstract
 %
@@ -653,32 +653,32 @@ introduction}\@message{or at the end of the paper.}
 %
 %  journal titles in GTP style
 %
-\def\gt{{\mathsurround=0pt\it $\cal G\mskip-2mu$eometry \&\ 
+\def\gt{{\mathsurround=0pt\it $\cal G\mskip-2mu$eometry \&\
 $\cal T\!\!$opology}}                %  The journal title in recommended style
-\def\gtm{{\mathsurround=0pt\it $\cal G\mskip-2mu$eometry \&\ 
+\def\gtm{{\mathsurround=0pt\it $\cal G\mskip-2mu$eometry \&\
 $\cal T\!\!$opology $\cal M\mskip-1mu$onographs}}  %  for monographs
-\def\agt{{\mathsurround=0pt\it$\cal A\mskip-.7mu$lgebraic \&\ 
+\def\agt{{\mathsurround=0pt\it$\cal A\mskip-.7mu$lgebraic \&\
 $\cal G\mskip-2mu$eometric $\cal T\!\!$opology}}  % AGT
 \def\jtitle{\gt} %default
 \def\stitle{gt} %default
 \def\gtart{\mockuptrue}
 \def\agtart{\def\jtitle{\agt}  %%% sets AGT as the journal title
-\def\stitle{agt}\mockuptrue} 
+\def\stitle{agt}\mockuptrue}
 \def\gtmonart{\def\jtitle{\gtm} %%% sets GTM as the journal title
 \def\stitle{gtm}\mockuptrue}
 %
 %  headline and footline
 %
-\def\@oddhead{{\small\it\ifnum\count0=\thestartpage 
+\def\@oddhead{{\small\it\ifnum\count0=\thestartpage
 \ifmockup\jtitle\ \thevolumenumber\ (\thepublicationyear)
 \thestartpage--\theendpage
 \hfill {\bf\number\count0}\fi\else\ifodd\count0
 \def\\{\unskip\space}\ifx\theshorttitle\relax \thetitle \else\theshorttitle\fi\hfill
 {\bf\number\count0}\else{\bf\number\count0}
-\hfill\ifx\theshortauthors\relax 
+\hfill\ifx\theshortauthors\relax
 \theauthors\else\theshortauthors\fi\fi\fi}}
 \let\@evenhead\@oddhead
-\def\@oddfoot{{\ifmockup\small\it\ifnum\count0=\thestartpage 
+\def\@oddfoot{{\ifmockup\small\it\ifnum\count0=\thestartpage
 {\it Published: \publisheddate}\hfil
                        \rm\href{http://dx.doi.org/\theshortdoi}{DOI: \thedoi}
 \else \jtitle\ \thevolumenumber\ (\thepublicationyear)\hfill\fi\fi}}
@@ -742,12 +742,12 @@ $\cal G\mskip-2mu$eometric $\cal T\!\!$opology}}  % AGT
 %  set displayskips to correct values :
 %
 \AtBeginDocument{\setlength{\abovedisplayskip}{\stdskip}
-\setlength{\belowdisplayskip}{\stdskip}}  
+\setlength{\belowdisplayskip}{\stdskip}}
 %
 %  get the biblio style correct (10pt with small gaps):
 %
 \let\@thebibliography@\thebibliography
-\def\thebibliography#1 {\@thebibliography@{999}\small\parskip0pt 
+\def\thebibliography#1 {\@thebibliography@{999}\small\parskip0pt
 plus2pt\relax\addcontentsline{toc}{section}{Bibliography}}
 %
 %
@@ -755,7 +755,7 @@ plus2pt\relax\addcontentsline{toc}{section}{Bibliography}}
 %
 \let\@itemize@\itemize
 \def\itemize{\@itemize@\parskip 0pt\relax}
-\def\@listi{\leftmargin28.5pt\parsep 0pt\topsep 0pt 
+\def\@listi{\leftmargin28.5pt\parsep 0pt\topsep 0pt
  \itemsep4pt plus3pt minus2pt}
 \let\@listI\@listi
 \@listi
@@ -766,7 +766,7 @@ plus2pt\relax\addcontentsline{toc}{section}{Bibliography}}
 \renewcommand{\labelenumii}{{\rm (\theenumii)}}
 \renewcommand{\labelenumiii}{{\rm (\theenumiii)}}
 
-%  and spacing to match \itemize 
+%  and spacing to match \itemize
 %
 \let\@enumerate@\enumerate
 \def\enumerate{\@enumerate@\parskip 0pt\relax}
@@ -811,9 +811,9 @@ plus2pt\relax\addcontentsline{toc}{section}{Bibliography}}
 \endinput
 %
 % History of gtart.cls:
-% Version 1.1:  14 December 97   
+% Version 1.1:  14 December 97
 % Version 1.2:  (update for AGT) 18 October 00
 % Version 1.3:  \gtart, \makegtmontitle and \gtmonart added 5.01.01
 % Version 1.4:  hyperef version (new file name: gtart_h.cls 15.02.04)
-% Version 1.5:  hyperef+times+MSP m-data (new file name: gtpart.cls 20.12.06) 
+% Version 1.5:  hyperef+times+MSP m-data (new file name: gtpart.cls 20.12.06)
 % Version 1.6:  bug-fix for hyperref 6.75 (26.11.07)

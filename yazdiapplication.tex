@@ -199,9 +199,9 @@ Then the spectral radius of $A^{\ell-1}$ is at most $4D^4$.
 
   We define the following unions of marked curves:
 \begin{align*}
-  \mathcal{A} &\coloneqq \mathcal{B} \cup \mathcal{R} \cup \{\alpha_1,\beta_1\} =\bigcup_{i=1}^8\alpha_i\cup\bigcup_{j=1}^7\beta_j\\
+  \mathcal{A} &\coloneqq \mathcal{B} \cup \mathcal{R} \cup \{\alpha_1,\beta_1\} =\bigcup_{i=1}^8\alpha_i\cup\bigcup_{j=1}^7\beta_j,\\
   \smallskip
-  \overline{\mathcal{A}} &\coloneqq \mathcal{A} \cup \rho_1(\mathcal{A}) \cup \dots \cup \rho_1^{n-1}(\mathcal{A}) \\
+  \overline{\mathcal{A}} &\coloneqq \mathcal{A} \cup \rho_1(\mathcal{A}) \cup \dots \cup \rho_1^{n-1}(\mathcal{A}),\text{ and}\\
   \widehat{\mathcal{A}} &\coloneqq \overline{\mathcal{A}} \cup \rho_2\left(\overline{\mathcal{A}}\right) \cup \dots \cup \rho_2^{k-1}\left(\overline{\mathcal{A}}\right).
 \end{align*}
 
@@ -312,7 +312,7 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
   \begin{align*}
     f_{n,k}(\gamma) &= \rho_2 \circ \Phi \circ \Phi_b \circ \Phi_r(\gamma) \\
                     &= \rho_2 \circ \Phi(\gamma) \\
-                    &= \rho_2(\widehat{\gamma})
+                    &= \rho_2(\widehat{\gamma}).
   \end{align*}
   It follows that for all $1\leq i\leq k$, the curve $f_{n,k}^i(\gamma)$ is $\rho_2^i(\widehat{\gamma})$.
   For $1\leq i\leq k$, let $A_i$ be an annulus in $M_{n,k}$ that connects $f_{n,k}^{i-1}(\gamma)$ to $f_{n,k}^i(\gamma)$ obtained by following the suspension
@@ -323,7 +323,7 @@ the closure $\overline{\mathcal{K}_{n,k}}$.
 
 Let $U$ be a neighborhood of $\gamma$ in $F_{n,k}=\widehat{F}\cup A$. Define two bump functions $c_1$ and $c_2$ supported in $U$.  Let $c_1$ be $1$ on $\partial U\cap A$ and $0$ on $\widehat{F}$. Let $c_2$ be $1$ on $\partial U\cap \widehat{F}$ and $0$ on $A$.
   We add the vector fields $v_1$ on $\widehat{F}$ and $v_2$ on $A$ using these bump functions: the resulting vector field is $c_1 v_1 + c_2 v_2$.
-  Observe that since $v_1$ points in the flow direction, and $v_2$ points into the surface, the new vector field $c_1 v_1 + c_2 v_2$ is transverse, in the neighborhood of $\gamma$, to $F_{n,k}$ (see \autoref{fig:gluing-normal-field} for a picture of the resulting transverse vector field).
+  Observe that since $v_1$ points in the flow direction, and $v_2$ points into the surface, the new vector field $c_1 v_1 + c_2 v_2$ is transverse to $F_{n,k}$ in the neighborhood of $\gamma$ (see \autoref{fig:gluing-normal-field} for a picture of the resulting transverse vector field).
 
   We perform a similar construction in a small neighborhood of $\widehat{\gamma}$: in this case, the fact that the vector field on $\widehat{F}$ points in the flow direction, and the vector field on $A$ points away from the surface $\widehat{F}$ ensures that the new vector field is transverse, in a neighborhood of $\widehat{\gamma}$, to the surface $F_{n,k}$.
 
